@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "buildscape:black_sand_item"
+    }
+  },
+  "result": {
+    "item": "buildscape:black_sandstone_item",
+    "count": 1
+  }
+}

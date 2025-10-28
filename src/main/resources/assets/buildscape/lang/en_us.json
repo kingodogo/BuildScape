@@ -1,0 +1,21 @@
+{
+  "itemGroup.buildscape": "Buildscape",
+  "block.buildscape.polished_stone_block": "Polished Stone Block",
+  "item.buildscape.polished_stone_item": "Polished Stone Block",
+  "block.buildscape.black_sand": "Black Sand",
+  "item.buildscape.black_sand_item": "Black Sand",
+  "block.buildscape.blue_sand": "Blue Sand",
+  "item.buildscape.blue_sand_item": "Blue Sand",
+  "block.buildscape.green_sand": "Green Sand",
+  "item.buildscape.green_sand_item": "Green Sand",
+  "block.buildscape.orange_sand": "Orange Sand",
+  "item.buildscape.orange_sand_item": "Orange Sand",
+  "block.buildscape.pink_sand": "Pink Sand",
+  "item.buildscape.pink_sand_item": "Pink Sand",
+  "block.buildscape.red_sand": "Red Sand",
+  "item.buildscape.red_sand_item": "Red Sand",
+  "block.buildscape.white_sand": "White Sand",
+  "item.buildscape.white_sand_item": "White Sand",
+  "block.buildscape.yellow_sand": "Yellow Sand",
+  "item.buildscape.yellow_sand_item": "Yellow Sand"
+}
