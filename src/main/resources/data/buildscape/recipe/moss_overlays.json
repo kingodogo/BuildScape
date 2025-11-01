@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": { "item": "minecraft:moss_carpet" }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "buildscape:moss_overlay_item",
+    "count": 2
+  }
+}
+

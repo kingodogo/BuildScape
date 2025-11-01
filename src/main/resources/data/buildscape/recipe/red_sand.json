@@ -1,20 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    "SS",
-    "SD"
-  ],
   "key": {
-    "S": {
+    "B": {
       "item": "minecraft:sand"
     },
     "D": {
       "item": "minecraft:red_dye"
     }
   },
+  "pattern": [
+    "BBB",
+    "BDB",
+    "BBB"
+  ],
   "result": {
-    "id": "buildscape:red_sand",
-    "count": 1
+    "count": 8,
+    "id": "buildscape:red_sand_item"
   }
 }

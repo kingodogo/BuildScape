@@ -6,6 +6,7 @@
     "north": "buildscape:block/pink_sandstone",
     "south": "buildscape:block/pink_sandstone",
     "west": "buildscape:block/pink_sandstone",
-    "east": "buildscape:block/pink_sandstone"
+    "east": "buildscape:block/pink_sandstone",
+    "particle": "buildscape:block/pink_sandstone"
   }
 }

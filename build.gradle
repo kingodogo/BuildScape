@@ -21,7 +21,7 @@ group = mod_group_id
 version = mod_version
 
 base {
-    archivesName = mod_id
+    archivesName = "buildscape-1.21.1-forge"
 }
 
 java {
@@ -207,6 +207,110 @@ tasks.named('jar', Jar).configure {
                     "Implementation-Version"  : project.jar.archiveVersion,
                     "Implementation-Vendor"   : mod_authors,
                     "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")])
+    }
+    
+    // Include the refmap in the JAR for mixin to work
+    from("${project.buildDir}/tmp/compileJava/${mod_id}.refmap.json") {
+        into(".")
+    }
+    
+    finalizedBy 'copyJarToRoot'
+    finalizedBy 'generateHashes'
+}
+
+// Jar signing configuration
+// Create keystore if it doesn't exist
+def keystoreFile = file("${project.rootDir}/buildscape.keystore")
+def keystoreProps = new Properties()
+def keystorePropsFile = file("${project.rootDir}/keystore.properties")
+
+if (keystorePropsFile.exists()) {
+    keystoreProps.load(new FileInputStream(keystorePropsFile))
+}
+
+// Task to create keystore if it doesn't exist
+task createKeystore {
+    onlyIf { !keystoreFile.exists() }
+    
+    doLast {
+        println "Creating new keystore for signing..."
+        exec {
+            commandLine 'keytool', '-genkeypair',
+                '-alias', 'buildscape',
+                '-keyalg', 'RSA',
+                '-keysize', '2048',
+                '-validity', '36500',
+                '-keystore', keystoreFile.getAbsolutePath(),
+                '-storepass', keystoreProps.getProperty('storePassword', 'buildscape123'),
+                '-keypass', keystoreProps.getProperty('keyPassword', 'buildscape123'),
+                '-dname', 'CN=BuildScape, OU=Mod Development, O=Kingodogo, L=Unknown, ST=Unknown, C=US',
+                '-storetype', 'PKCS12'
+        }
+        println "Keystore created successfully at ${keystoreFile.getAbsolutePath()}"
+    }
+}
+
+// Sign jar task
+task signJar(type: Exec, dependsOn: [jar, createKeystore]) {
+    def jarFile = jar.archiveFile.get().asFile
+    def storePass = keystoreProps.getProperty('storePassword', 'buildscape123')
+    def keyPass = keystoreProps.getProperty('keyPassword', 'buildscape123')
+    def alias = keystoreProps.getProperty('alias', 'buildscape')
+    
+    commandLine 'jarsigner',
+        '-keystore', keystoreFile.getAbsolutePath(),
+        '-storepass', storePass,
+        '-keypass', keyPass,
+        jarFile.getAbsolutePath(),
+        alias
+    
+    doLast {
+        println "Jar signed successfully!"
+    }
+}
+
+// Copy jar to root folder
+task copyJarToRoot(type: Copy, dependsOn: jar) {
+    doNotTrackState("Copying to root directory with existing files")
+    
+    from jar.archiveFile
+    into project.rootDir
+    rename { fileName -> "buildscape-1.21.1-forge.jar" }
+    
+    doLast {
+        println "Jar copied to root folder: ${project.rootDir}/buildscape-1.21.1-forge.jar"
+    }
+}
+
+// Generate hashes for the jar
+task generateHashes(dependsOn: copyJarToRoot) {
+    def jarFile = file("${project.rootDir}/buildscape-1.21.1-forge.jar")
+    
+    doFirst {
+        println "Generating hashes for ${jarFile.name}..."
+    }
+    
+    doLast {
+        if (!jarFile.exists()) {
+            throw new GradleException("Jar file not found: ${jarFile.getAbsolutePath()}")
+        }
+        
+        // Generate SHA256 hash using PowerShell
+        def sha256File = file("${project.rootDir}/buildscape-1.21.1-forge.sha256")
+        exec {
+            commandLine 'powershell', '-NoProfile', '-Command',
+                "\$hash = (Get-FileHash -Path '${jarFile.getAbsolutePath().replace('\\', '/')}' -Algorithm SHA256).Hash; Set-Content -Path '${sha256File.getAbsolutePath().replace('\\', '/')}' -Value \$hash -NoNewline"
+        }
+        
+        // Generate MD5 hash using PowerShell
+        def md5File = file("${project.rootDir}/buildscape-1.21.1-forge.md5")
+        exec {
+            commandLine 'powershell', '-NoProfile', '-Command',
+                "\$hash = (Get-FileHash -Path '${jarFile.getAbsolutePath().replace('\\', '/')}' -Algorithm MD5).Hash; Set-Content -Path '${md5File.getAbsolutePath().replace('\\', '/')}' -Value \$hash -NoNewline"
+        }
+        
+        println "SHA256 hash saved to: ${sha256File.name}"
+        println "MD5 hash saved to: ${md5File.name}"
     }
 }
 

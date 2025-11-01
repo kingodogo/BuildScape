@@ -20,11 +20,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.POLISHED_STONE_ITEM.get(), 4)
-                .pattern("##")
-                .pattern("##")
-                .define('#', Items.STONE)
-                .unlockedBy("has_stone", has(Items.STONE))
-                .save(pRecipeOutput);
+
     }
 }
