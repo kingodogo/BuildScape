@@ -1,38 +1,36 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "bonus_rolls": 0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "buildscape:red_mosaic_glass_item",
-          "conditions": [
-            {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": []
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantment": "minecraft:silk_touch",
-                "levels": {
-                  "min": 1
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ]
+﻿{
+    "pools":  [
+                  {
+                      "bonus_rolls":  0,
+                      "entries":  [
+                                      {
+                                          "conditions":  [
+                                                             {
+                                                                 "condition":  "minecraft:match_tool",
+                                                                 "predicate":  {
+                                                                                   "enchantments":  [
+                                                                                                        {
+                                                                                                            "levels":  {
+                                                                                                                           "min":  1
+                                                                                                                       },
+                                                                                                            "enchantment":  "minecraft:silk_touch"
+                                                                                                        }
+                                                                                                    ]
+                                                                               }
+                                                             }
+                                                         ],
+                                          "name":  "buildscape:red_mosaic_glass_item",
+                                          "type":  "minecraft:item"
+                                      }
+                                  ],
+                      "rolls":  1,
+                      "conditions":  [
+                                         {
+                                             "condition":  "minecraft:survives_explosion"
+                                         }
+                                     ]
+                  }
+              ],
+    "type":  "minecraft:block",
+    "random_sequence":  "buildscape:blocks/red_mosaic_glass"
 }

@@ -290,52 +290,52 @@ public class ModBlocks {
     
     // Tile blocks
     public static final RegistryObject<Block> BLACK_TILES = BLOCKS.register("black_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BLACK).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BLACK).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> BLUE_TILES = BLOCKS.register("blue_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BLUE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BLUE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> BROWN_TILES = BLOCKS.register("brown_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BROWN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BROWN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> CYAN_TILES = BLOCKS.register("cyan_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_CYAN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_CYAN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> GRAY_TILES = BLOCKS.register("gray_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_GRAY).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_GRAY).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> GREEN_TILES = BLOCKS.register("green_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_GREEN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_GREEN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> LIGHT_BLUE_TILES = BLOCKS.register("light_blue_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_LIGHT_BLUE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> LIGHT_GRAY_TILES = BLOCKS.register("light_gray_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_LIGHT_GRAY).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_LIGHT_GRAY).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> LIME_TILES = BLOCKS.register("lime_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_LIGHT_GREEN).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> MAGENTA_TILES = BLOCKS.register("magenta_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_MAGENTA).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_MAGENTA).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> ORANGE_TILES = BLOCKS.register("orange_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_ORANGE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_ORANGE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> PINK_TILES = BLOCKS.register("pink_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_PINK).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_PINK).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> PURPLE_TILES = BLOCKS.register("purple_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_PURPLE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_PURPLE).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> RED_TILES = BLOCKS.register("red_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_RED).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_RED).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> WHITE_TILES = BLOCKS.register("white_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.SNOW).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.SNOW).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     public static final RegistryObject<Block> YELLOW_TILES = BLOCKS.register("yellow_tiles", 
-        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+        () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     // Mosaic glass blocks
     public static final RegistryObject<Block> BLACK_MOSAIC_GLASS = BLOCKS.register("black_mosaic_glass", 
@@ -546,105 +546,105 @@ public class ModBlocks {
     
     // Tiles stairs
     public static final RegistryObject<Block> BLACK_TILES_STAIRS = BLOCKS.register("black_tiles_stairs",
-        () -> new StairBlock(BLACK_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(BLACK_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BLUE_TILES_STAIRS = BLOCKS.register("blue_tiles_stairs",
-        () -> new StairBlock(BLUE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(BLUE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BROWN_TILES_STAIRS = BLOCKS.register("brown_tiles_stairs",
-        () -> new StairBlock(BROWN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(BROWN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> CYAN_TILES_STAIRS = BLOCKS.register("cyan_tiles_stairs",
-        () -> new StairBlock(CYAN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(CYAN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> GRAY_TILES_STAIRS = BLOCKS.register("gray_tiles_stairs",
-        () -> new StairBlock(GRAY_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(GRAY_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> GREEN_TILES_STAIRS = BLOCKS.register("green_tiles_stairs",
-        () -> new StairBlock(GREEN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(GREEN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIGHT_BLUE_TILES_STAIRS = BLOCKS.register("light_blue_tiles_stairs",
-        () -> new StairBlock(LIGHT_BLUE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(LIGHT_BLUE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIGHT_GRAY_TILES_STAIRS = BLOCKS.register("light_gray_tiles_stairs",
-        () -> new StairBlock(LIGHT_GRAY_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(LIGHT_GRAY_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIME_TILES_STAIRS = BLOCKS.register("lime_tiles_stairs",
-        () -> new StairBlock(LIME_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(LIME_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> MAGENTA_TILES_STAIRS = BLOCKS.register("magenta_tiles_stairs",
-        () -> new StairBlock(MAGENTA_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(MAGENTA_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> ORANGE_TILES_STAIRS = BLOCKS.register("orange_tiles_stairs",
-        () -> new StairBlock(ORANGE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(ORANGE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> PINK_TILES_STAIRS = BLOCKS.register("pink_tiles_stairs",
-        () -> new StairBlock(PINK_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(PINK_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> PURPLE_TILES_STAIRS = BLOCKS.register("purple_tiles_stairs",
-        () -> new StairBlock(PURPLE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(PURPLE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> RED_TILES_STAIRS = BLOCKS.register("red_tiles_stairs",
-        () -> new StairBlock(RED_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(RED_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> WHITE_TILES_STAIRS = BLOCKS.register("white_tiles_stairs",
-        () -> new StairBlock(WHITE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(WHITE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> YELLOW_TILES_STAIRS = BLOCKS.register("yellow_tiles_stairs",
-        () -> new StairBlock(YELLOW_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(YELLOW_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     // Tiles slabs
     public static final RegistryObject<Block> BLACK_TILES_SLAB = BLOCKS.register("black_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BLUE_TILES_SLAB = BLOCKS.register("blue_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BROWN_TILES_SLAB = BLOCKS.register("brown_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> CYAN_TILES_SLAB = BLOCKS.register("cyan_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> GRAY_TILES_SLAB = BLOCKS.register("gray_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> GREEN_TILES_SLAB = BLOCKS.register("green_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIGHT_BLUE_TILES_SLAB = BLOCKS.register("light_blue_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIGHT_GRAY_TILES_SLAB = BLOCKS.register("light_gray_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIME_TILES_SLAB = BLOCKS.register("lime_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> MAGENTA_TILES_SLAB = BLOCKS.register("magenta_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> ORANGE_TILES_SLAB = BLOCKS.register("orange_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> PINK_TILES_SLAB = BLOCKS.register("pink_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> PURPLE_TILES_SLAB = BLOCKS.register("purple_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> RED_TILES_SLAB = BLOCKS.register("red_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> WHITE_TILES_SLAB = BLOCKS.register("white_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> YELLOW_TILES_SLAB = BLOCKS.register("yellow_tiles_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     // Tiles walls
     public static final RegistryObject<Block> BLACK_TILES_WALL = BLOCKS.register("black_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BLUE_TILES_WALL = BLOCKS.register("blue_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BROWN_TILES_WALL = BLOCKS.register("brown_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> CYAN_TILES_WALL = BLOCKS.register("cyan_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> GRAY_TILES_WALL = BLOCKS.register("gray_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> GREEN_TILES_WALL = BLOCKS.register("green_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIGHT_BLUE_TILES_WALL = BLOCKS.register("light_blue_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIGHT_GRAY_TILES_WALL = BLOCKS.register("light_gray_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> LIME_TILES_WALL = BLOCKS.register("lime_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> MAGENTA_TILES_WALL = BLOCKS.register("magenta_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> ORANGE_TILES_WALL = BLOCKS.register("orange_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> PINK_TILES_WALL = BLOCKS.register("pink_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> PURPLE_TILES_WALL = BLOCKS.register("purple_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> RED_TILES_WALL = BLOCKS.register("red_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> WHITE_TILES_WALL = BLOCKS.register("white_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> YELLOW_TILES_WALL = BLOCKS.register("yellow_tiles_wall",
-        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops()));
+        () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
     // Vanilla block variants (only blocks that exist in 1.21.1)
     public static final RegistryObject<Block> POLISHED_BASALT_STAIRS = BLOCKS.register("polished_basalt_stairs",
