@@ -1,0 +1,62 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:tuff"
+    },
+    "title": {
+      "translate": "advancement.buildscape.tuff.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.tuff.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_tuff": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:tuff",
+              "minecraft:tuff_bricks",
+              "minecraft:polished_tuff",
+              "buildscape:bit_polished_tuff_item",
+              "buildscape:bit_tuff_bricks_item"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:bit_chiseled_tuff_from_tuff_stonecutting",
+      "buildscape:bit_chiseled_tuff_bricks_from_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_from_tuff_stonecutting",
+      "buildscape:bit_tuff_bricks_from_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_stairs_crafting",
+      "buildscape:bit_polished_tuff_slab_crafting",
+      "buildscape:bit_polished_tuff_wall_crafting",
+      "buildscape:bit_polished_tuff_stairs_from_bit_polished_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_stairs_from_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_slab_from_bit_polished_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_slab_from_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_wall_from_bit_polished_tuff_stonecutting",
+      "buildscape:bit_polished_tuff_wall_from_tuff_stonecutting",
+      "buildscape:bit_tuff_bricks_stairs_crafting",
+      "buildscape:bit_tuff_bricks_slab_crafting",
+      "buildscape:bit_tuff_bricks_wall_crafting",
+      "buildscape:bit_tuff_bricks_stairs_from_bit_tuff_bricks_stonecutting",
+      "buildscape:bit_tuff_bricks_stairs_from_tuff_stonecutting",
+      "buildscape:bit_tuff_bricks_slab_from_bit_tuff_bricks_stonecutting",
+      "buildscape:bit_tuff_bricks_slab_from_tuff_stonecutting",
+      "buildscape:bit_tuff_bricks_wall_from_bit_tuff_bricks_stonecutting",
+      "buildscape:bit_tuff_bricks_wall_from_tuff_stonecutting"
+    ]
+  }
+}

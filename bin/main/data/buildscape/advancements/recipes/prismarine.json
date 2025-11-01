@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:prismarine_bricks"
+    },
+    "title": {
+      "translate": "advancement.buildscape.prismarine.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.prismarine.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_prismarine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:prismarine",
+              "minecraft:prismarine_bricks",
+              "minecraft:dark_prismarine"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:prismarine_bricks_wall_crafting",
+      "buildscape:dark_prismarine_wall_crafting"
+    ]
+  }
+}
+

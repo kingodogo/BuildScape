@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildscape:pink_tiles_item"
+  },
+  "result": {
+    "id": "buildscape:pink_tiles_stairs_item",
+    "count": 1
+  }
+}

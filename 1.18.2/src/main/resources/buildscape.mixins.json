@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kingodogo.buildscape.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "buildscape.refmap.json",
+  "mixins": [
+    "WallBlockMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

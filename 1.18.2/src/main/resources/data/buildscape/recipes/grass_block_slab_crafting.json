@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "minecraft:grass_block"
+    }
+  },
+  "pattern": [
+    "BBB"
+  ],
+  "result":{"count":6,"item":"buildscape:grass_block_slab_item"}
+}

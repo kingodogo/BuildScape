@@ -1,0 +1,14 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": { "item": "buildscape:mud_slab_item" }
+  },
+  "result": {
+    "item": "buildscape:mud",
+    "count": 1
+  }
+}

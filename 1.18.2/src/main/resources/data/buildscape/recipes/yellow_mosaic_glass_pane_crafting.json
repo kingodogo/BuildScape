@@ -1,0 +1,14 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "item": "buildscape:yellow_mosaic_glass_item"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GGG"
+  ],
+  "result":{"count":16,"item":"buildscape:yellow_mosaic_glass_pane_item"}
+}

@@ -1,0 +1,8 @@
+﻿{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:moss_block"
+  },
+  "result":"buildscape:moss_block_slab_item","count":1
+}
+

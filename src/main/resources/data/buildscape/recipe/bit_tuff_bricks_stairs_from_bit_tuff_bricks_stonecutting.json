@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildscape:bit_tuff_bricks_item"
+  },
+  "result": {
+    "count": 1,
+    "id": "buildscape:bit_tuff_bricks_stairs_item"
+  }
+}
+

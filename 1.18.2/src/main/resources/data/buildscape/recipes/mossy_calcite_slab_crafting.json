@@ -1,0 +1,7 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": { "B": { "item": "buildscape:mossy_calcite_item" } },
+  "pattern": [ "BBB" ],
+  "result": { "item": "buildscape:mossy_calcite_slab_item", "count": 6 }
+}

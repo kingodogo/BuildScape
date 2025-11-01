@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "buildscape:bit_weathered_copper_block_item"
+    }
+  },
+  "pattern": [
+    "SSS"
+  ],
+  "result":{"count":6,"item":"buildscape:bit_weathered_copper_block_slab_item"}
+}

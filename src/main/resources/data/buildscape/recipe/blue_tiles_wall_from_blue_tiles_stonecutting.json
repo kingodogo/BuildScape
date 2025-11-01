@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildscape:blue_tiles_item"
+  },
+  "result": {
+    "id": "buildscape:blue_tiles_wall_item",
+    "count": 1
+  }
+}

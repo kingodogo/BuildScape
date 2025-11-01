@@ -1,0 +1,125 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sand"
+    },
+    "title": {
+      "translate": "advancement.buildscape.sand.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.sand.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sand",
+              "minecraft:red_sand",
+              "buildscape:black_sand_item",
+              "buildscape:blue_sand_item",
+              "buildscape:green_sand_item",
+              "buildscape:orange_sand_item",
+              "buildscape:pink_sand_item",
+              "buildscape:white_sand_item",
+              "buildscape:yellow_sand_item"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:black_sand",
+      "buildscape:blue_sand",
+      "buildscape:green_sand",
+      "buildscape:orange_sand",
+      "buildscape:pink_sand",
+      "buildscape:red_sand",
+      "buildscape:white_sand",
+      "buildscape:yellow_sand",
+      "buildscape:black_sandstone_crafting",
+      "buildscape:blue_sandstone_crafting",
+      "buildscape:green_sandstone_crafting",
+      "buildscape:orange_sandstone_crafting",
+      "buildscape:pink_sandstone_crafting",
+      "buildscape:red_sandstone_crafting",
+      "buildscape:white_sandstone_crafting",
+      "buildscape:yellow_sandstone_crafting",
+      "buildscape:black_sandstone_slab_crafting",
+      "buildscape:blue_sandstone_slab_crafting",
+      "buildscape:green_sandstone_slab_crafting",
+      "buildscape:orange_sandstone_slab_crafting",
+      "buildscape:pink_sandstone_slab_crafting",
+      "buildscape:red_sandstone_slab_crafting",
+      "buildscape:white_sandstone_slab_crafting",
+      "buildscape:yellow_sandstone_slab_crafting",
+      "buildscape:black_sandstone_stairs_crafting",
+      "buildscape:blue_sandstone_stairs_crafting",
+      "buildscape:green_sandstone_stairs_crafting",
+      "buildscape:orange_sandstone_stairs_crafting",
+      "buildscape:pink_sandstone_stairs_crafting",
+      "buildscape:red_sandstone_stairs_crafting",
+      "buildscape:white_sandstone_stairs_crafting",
+      "buildscape:yellow_sandstone_stairs_crafting",
+      "buildscape:black_sandstone_wall_crafting",
+      "buildscape:blue_sandstone_wall_crafting",
+      "buildscape:green_sandstone_wall_crafting",
+      "buildscape:orange_sandstone_wall_crafting",
+      "buildscape:pink_sandstone_wall_crafting",
+      "buildscape:red_sandstone_wall_crafting",
+      "buildscape:white_sandstone_wall_crafting",
+      "buildscape:yellow_sandstone_wall_crafting",
+      "buildscape:black_smooth_sandstone_smelting",
+      "buildscape:blue_smooth_sandstone_smelting",
+      "buildscape:green_smooth_sandstone_smelting",
+      "buildscape:orange_smooth_sandstone_smelting",
+      "buildscape:pink_smooth_sandstone_smelting",
+      "buildscape:red_smooth_sandstone_smelting",
+      "buildscape:white_smooth_sandstone_smelting",
+      "buildscape:yellow_smooth_sandstone_smelting",
+      "buildscape:black_smooth_sandstone_slab_crafting",
+      "buildscape:blue_smooth_sandstone_slab_crafting",
+      "buildscape:green_smooth_sandstone_slab_crafting",
+      "buildscape:orange_smooth_sandstone_slab_crafting",
+      "buildscape:pink_smooth_sandstone_slab_crafting",
+      "buildscape:red_smooth_sandstone_slab_crafting",
+      "buildscape:white_smooth_sandstone_slab_crafting",
+      "buildscape:yellow_smooth_sandstone_slab_crafting",
+      "buildscape:black_smooth_sandstone_stairs_crafting",
+      "buildscape:blue_smooth_sandstone_stairs_crafting",
+      "buildscape:green_smooth_sandstone_stairs_crafting",
+      "buildscape:orange_smooth_sandstone_stairs_crafting",
+      "buildscape:pink_smooth_sandstone_stairs_crafting",
+      "buildscape:red_smooth_sandstone_stairs_crafting",
+      "buildscape:white_smooth_sandstone_stairs_crafting",
+      "buildscape:yellow_smooth_sandstone_stairs_crafting",
+      "buildscape:black_mosaic_glass_from_black_stained_glass",
+      "buildscape:blue_mosaic_glass_from_blue_stained_glass",
+      "buildscape:brown_mosaic_glass_from_brown_stained_glass",
+      "buildscape:cyan_mosaic_glass_from_cyan_stained_glass",
+      "buildscape:gray_mosaic_glass_from_gray_stained_glass",
+      "buildscape:green_mosaic_glass_from_green_stained_glass",
+      "buildscape:light_blue_mosaic_glass_from_light_blue_stained_glass",
+      "buildscape:light_gray_mosaic_glass_from_light_gray_stained_glass",
+      "buildscape:lime_mosaic_glass_from_lime_stained_glass",
+      "buildscape:magenta_mosaic_glass_from_magenta_stained_glass",
+      "buildscape:orange_mosaic_glass_from_orange_stained_glass",
+      "buildscape:pink_mosaic_glass_from_pink_stained_glass",
+      "buildscape:purple_mosaic_glass_from_purple_stained_glass",
+      "buildscape:red_mosaic_glass_from_red_stained_glass",
+      "buildscape:white_mosaic_glass_from_white_stained_glass",
+      "buildscape:yellow_mosaic_glass_from_yellow_stained_glass"
+    ]
+  }
+}
+

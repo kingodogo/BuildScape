@@ -1,0 +1,132 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:white_concrete"
+    },
+    "title": {
+      "translate": "advancement.buildscape.concrete.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.concrete.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_concrete": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:white_concrete",
+              "minecraft:orange_concrete",
+              "minecraft:magenta_concrete",
+              "minecraft:light_blue_concrete",
+              "minecraft:yellow_concrete",
+              "minecraft:lime_concrete",
+              "minecraft:pink_concrete",
+              "minecraft:gray_concrete",
+              "minecraft:light_gray_concrete",
+              "minecraft:cyan_concrete",
+              "minecraft:purple_concrete",
+              "minecraft:blue_concrete",
+              "minecraft:brown_concrete",
+              "minecraft:green_concrete",
+              "minecraft:red_concrete",
+              "minecraft:black_concrete",
+              "minecraft:white_concrete_powder",
+              "minecraft:orange_concrete_powder",
+              "minecraft:magenta_concrete_powder",
+              "minecraft:light_blue_concrete_powder",
+              "minecraft:yellow_concrete_powder",
+              "minecraft:lime_concrete_powder",
+              "minecraft:pink_concrete_powder",
+              "minecraft:gray_concrete_powder",
+              "minecraft:light_gray_concrete_powder",
+              "minecraft:cyan_concrete_powder",
+              "minecraft:purple_concrete_powder",
+              "minecraft:blue_concrete_powder",
+              "minecraft:brown_concrete_powder",
+              "minecraft:green_concrete_powder",
+              "minecraft:red_concrete_powder",
+              "minecraft:black_concrete_powder"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:black_tiles",
+      "buildscape:blue_tiles",
+      "buildscape:brown_tiles",
+      "buildscape:cyan_tiles",
+      "buildscape:gray_tiles",
+      "buildscape:green_tiles",
+      "buildscape:light_blue_tiles",
+      "buildscape:light_gray_tiles",
+      "buildscape:lime_tiles",
+      "buildscape:magenta_tiles",
+      "buildscape:orange_tiles",
+      "buildscape:pink_tiles",
+      "buildscape:purple_tiles",
+      "buildscape:red_tiles",
+      "buildscape:white_tiles",
+      "buildscape:yellow_tiles",
+      "buildscape:black_tiles_stairs_crafting",
+      "buildscape:blue_tiles_stairs_crafting",
+      "buildscape:brown_tiles_stairs_crafting",
+      "buildscape:cyan_tiles_stairs_crafting",
+      "buildscape:gray_tiles_stairs_crafting",
+      "buildscape:green_tiles_stairs_crafting",
+      "buildscape:light_blue_tiles_stairs_crafting",
+      "buildscape:light_gray_tiles_stairs_crafting",
+      "buildscape:lime_tiles_stairs_crafting",
+      "buildscape:magenta_tiles_stairs_crafting",
+      "buildscape:orange_tiles_stairs_crafting",
+      "buildscape:pink_tiles_stairs_crafting",
+      "buildscape:purple_tiles_stairs_crafting",
+      "buildscape:red_tiles_stairs_crafting",
+      "buildscape:white_tiles_stairs_crafting",
+      "buildscape:yellow_tiles_stairs_crafting",
+      "buildscape:black_tiles_slab_crafting",
+      "buildscape:blue_tiles_slab_crafting",
+      "buildscape:brown_tiles_slab_crafting",
+      "buildscape:cyan_tiles_slab_crafting",
+      "buildscape:gray_tiles_slab_crafting",
+      "buildscape:green_tiles_slab_crafting",
+      "buildscape:light_blue_tiles_slab_crafting",
+      "buildscape:light_gray_tiles_slab_crafting",
+      "buildscape:lime_tiles_slab_crafting",
+      "buildscape:magenta_tiles_slab_crafting",
+      "buildscape:orange_tiles_slab_crafting",
+      "buildscape:pink_tiles_slab_crafting",
+      "buildscape:purple_tiles_slab_crafting",
+      "buildscape:red_tiles_slab_crafting",
+      "buildscape:white_tiles_slab_crafting",
+      "buildscape:yellow_tiles_slab_crafting",
+      "buildscape:black_tiles_wall_crafting",
+      "buildscape:blue_tiles_wall_crafting",
+      "buildscape:brown_tiles_wall_crafting",
+      "buildscape:cyan_tiles_wall_crafting",
+      "buildscape:gray_tiles_wall_crafting",
+      "buildscape:green_tiles_wall_crafting",
+      "buildscape:light_blue_tiles_wall_crafting",
+      "buildscape:light_gray_tiles_wall_crafting",
+      "buildscape:lime_tiles_wall_crafting",
+      "buildscape:magenta_tiles_wall_crafting",
+      "buildscape:orange_tiles_wall_crafting",
+      "buildscape:pink_tiles_wall_crafting",
+      "buildscape:purple_tiles_wall_crafting",
+      "buildscape:red_tiles_wall_crafting",
+      "buildscape:white_tiles_wall_crafting",
+      "buildscape:yellow_tiles_wall_crafting"
+    ]
+  }
+}
+

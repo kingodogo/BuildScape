@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    { "item": "buildscape:calcite_slab_item" },
+    { "item": "minecraft:vine" }
+  ],
+  "result": {
+    "id": "buildscape:mossy_calcite_slab_item",
+    "count": 1
+  }
+}
+

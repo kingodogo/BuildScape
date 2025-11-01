@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:bedrock"
+    },
+    "title": {
+      "translate": "advancement.buildscape.bedrock.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.bedrock.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bedrock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bedrock"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:bedrock_slab_crafting",
+      "buildscape:bedrock_stairs_crafting",
+      "buildscape:bedrock_wall_crafting",
+      "buildscape:bedrock_pane_crafting",
+      "buildscape:bedrock_bars_crafting",
+      "buildscape:bedrock_slab_from_bedrock_stonecutting",
+      "buildscape:bedrock_stairs_from_bedrock_stonecutting",
+      "buildscape:bedrock_wall_from_bedrock_stonecutting",
+      "buildscape:bedrock_pane_from_bedrock_stonecutting",
+      "buildscape:bedrock_bars_from_bedrock_stonecutting"
+    ]
+  }
+}
+

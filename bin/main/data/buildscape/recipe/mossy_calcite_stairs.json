@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "M": { "item": "buildscape:mossy_calcite_item" }
+  },
+  "pattern": [
+    "M  ",
+    "MM ",
+    "MMM"
+  ],
+  "result": { "id": "buildscape:mossy_calcite_stairs_item", "count": 4 }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "minecraft:dripstone_block"
+    }
+  },
+  "pattern": [
+    "SSS"
+  ],
+  "result":{"count":6,"item":"buildscape:dripstone_block_slab_item"}
+}

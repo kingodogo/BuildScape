@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:dripstone_block"
+    },
+    "title": {
+      "translate": "advancement.buildscape.dripstone.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.dripstone.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dripstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dripstone_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:dripstone_block_stairs_crafting",
+      "buildscape:dripstone_block_slab_crafting",
+      "buildscape:dripstone_block_wall_crafting",
+      "buildscape:dripstone_block_stairs_from_dripstone_block_stonecutting",
+      "buildscape:dripstone_block_slab_from_dripstone_block_stonecutting",
+      "buildscape:dripstone_block_wall_from_dripstone_block_stonecutting"
+    ]
+  }
+}
+

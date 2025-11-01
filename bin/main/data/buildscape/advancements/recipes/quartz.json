@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:quartz_block"
+    },
+    "title": {
+      "translate": "advancement.buildscape.quartz.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.quartz.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quartz": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:quartz_block",
+              "minecraft:smooth_quartz",
+              "minecraft:quartz_bricks"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:quartz_block_wall_crafting",
+      "buildscape:smooth_quartz_wall_crafting",
+      "buildscape:quartz_bricks_stairs_crafting",
+      "buildscape:quartz_bricks_slab_crafting",
+      "buildscape:quartz_bricks_wall_crafting",
+      "buildscape:quartz_bricks_stairs_from_quartz_bricks_stonecutting",
+      "buildscape:quartz_bricks_slab_from_quartz_bricks_stonecutting",
+      "buildscape:quartz_bricks_wall_from_quartz_bricks_stonecutting"
+    ]
+  }
+}
+
