@@ -3,15 +3,10 @@ package com.kingodogo.buildscape.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class FallingSandBlock extends Block {
     
@@ -40,17 +35,8 @@ public class FallingSandBlock extends Block {
         checkAndStartFalling(level, pos);
     }
     
-    @Override
-    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> drops = new ArrayList<>();
-        if (dropItem != null && dropItem.isPresent()) {
-            drops.add(new ItemStack(dropItem.get()));
-        } else {
-            // Fallback to default behavior
-            return super.getDrops(state, builder);
-        }
-        return drops;
-    }
+    // Drops are handled via loot tables (ModBlockLootTableRegistry)
+    // Removed getDrops() override to allow loot tables to work properly
 
     private void checkAndStartFalling(Level level, BlockPos pos) {
         if (isFree(level, pos) && !level.isClientSide) {

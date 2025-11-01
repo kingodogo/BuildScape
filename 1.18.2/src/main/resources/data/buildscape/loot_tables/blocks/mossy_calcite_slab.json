@@ -3,17 +3,23 @@
   "pools": [
     {
       "rolls": 1,
-      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "buildscape:mossy_calcite_slab_item",
-          "conditions": [
+          "functions": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": []
-              }
+              "function": "minecraft:set_count",
+              "count": 2,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "buildscape:mossy_calcite_slab",
+                  "properties": {
+                    "type": "double"
+                  }
+                }
+              ]
             }
           ]
         }

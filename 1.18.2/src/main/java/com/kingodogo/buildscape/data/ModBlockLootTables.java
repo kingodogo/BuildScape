@@ -5,7 +5,6 @@ import com.kingodogo.buildscape.block.SilkTouchOnlyGlassBlock;
 import com.kingodogo.buildscape.block.SilkTouchOnlyPaneBlock;
 import com.kingodogo.buildscape.item.ModItems;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -18,7 +17,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
 
 // [Architect]: Block loot table provider for data generation
 // Generates loot tables for all mod blocks
@@ -49,8 +47,6 @@ public class ModBlockLootTables extends ModLootTableProvider {
             RegistryObject<Item> item = itemMap.get(itemPath);
             
             if (item != null) {
-                ResourceLocation itemLocation = ResourceLocation.fromNamespaceAndPath("buildscape", itemPath);
-                
                 if (isMosaicGlass) {
                     // Mosaic glass requires Silk Touch
                     lootTables.put(blockInstance, createSilkTouchTable(item.get()));

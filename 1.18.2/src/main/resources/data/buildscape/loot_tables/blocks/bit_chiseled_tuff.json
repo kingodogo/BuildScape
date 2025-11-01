@@ -1,28 +1,21 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "rolls": 1,
-      "bonus_rolls": 0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "buildscape:bit_chiseled_tuff_item",
-          "conditions": [
-            {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": []
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ]
-    }
-  ]
+﻿{
+    "pools":  [
+                  {
+                      "bonus_rolls":  0,
+                      "entries":  [
+                                      {
+                                          "name":  "buildscape:bit_chiseled_tuff_item",
+                                          "type":  "minecraft:item"
+                                      }
+                                  ],
+                      "rolls":  1,
+                      "conditions":  [
+                                         {
+                                             "condition":  "minecraft:survives_explosion"
+                                         }
+                                     ]
+                  }
+              ],
+    "type":  "minecraft:block",
+    "random_sequence":  "buildscape:blocks/bit_chiseled_tuff"
 }
