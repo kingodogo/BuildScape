@@ -1,0 +1,49 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:polished_basalt"
+    },
+    "title": {
+      "translate": "advancement.buildscape.basalt.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.basalt.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_basalt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:basalt",
+              "minecraft:polished_basalt",
+              "minecraft:smooth_basalt"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:polished_basalt_stairs_crafting",
+      "buildscape:polished_basalt_slab_crafting",
+      "buildscape:polished_basalt_wall_crafting",
+      "buildscape:polished_basalt_stairs_from_polished_basalt_stonecutting",
+      "buildscape:polished_basalt_slab_from_polished_basalt_stonecutting",
+      "buildscape:polished_basalt_wall_from_polished_basalt_stonecutting",
+      "buildscape:smooth_basalt_stairs_crafting",
+      "buildscape:smooth_basalt_slab_crafting",
+      "buildscape:smooth_basalt_stairs_from_smooth_basalt_stonecutting",
+      "buildscape:smooth_basalt_slab_from_smooth_basalt_stonecutting"
+    ]
+  }
+}
+

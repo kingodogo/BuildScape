@@ -1,0 +1,5 @@
+﻿{
+  "type": "minecraft:stonecutting",
+  "ingredient": { "item": "buildscape:red_tiles_item" },
+  "result":"buildscape:red_tiles_slab_item","count":2
+}

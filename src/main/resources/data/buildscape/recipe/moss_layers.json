@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+
+  "key": {
+    "M": {
+      "item": "minecraft:moss_block"
+    }
+  },
+  "pattern": [
+    "MMM"
+  ],
+  "result": {
+    "id": "buildscape:moss_layers_item",
+    "count": 8
+  }
+}

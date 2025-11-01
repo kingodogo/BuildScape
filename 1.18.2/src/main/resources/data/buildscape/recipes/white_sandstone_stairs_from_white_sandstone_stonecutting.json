@@ -1,0 +1,8 @@
+﻿{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "buildscape:white_sandstone_item"
+  },
+  "result":"buildscape:white_sandstone_stairs_item","count":1
+}
+

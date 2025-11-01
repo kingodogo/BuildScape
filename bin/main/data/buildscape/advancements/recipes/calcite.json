@@ -1,0 +1,50 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:calcite"
+    },
+    "title": {
+      "translate": "advancement.buildscape.calcite.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.calcite.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_calcite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:calcite"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:calcite_stairs_crafting",
+      "buildscape:calcite_slab_crafting",
+      "buildscape:calcite_wall_crafting",
+      "buildscape:mossy_calcite",
+      "buildscape:mossy_calcite_from_calcite_and_moss",
+      "buildscape:mossy_calcite_stairs_from_calcite_stairs",
+      "buildscape:mossy_calcite_slab_from_calcite_slab",
+      "buildscape:mossy_calcite_wall_from_calcite_wall",
+      "buildscape:mossy_calcite_stairs",
+      "buildscape:mossy_calcite_slab",
+      "buildscape:mossy_calcite_wall",
+      "buildscape:calcite_stairs_from_calcite_stonecutting",
+      "buildscape:calcite_slab_from_calcite_stonecutting",
+      "buildscape:calcite_wall_from_calcite_stonecutting"
+    ]
+  }
+}

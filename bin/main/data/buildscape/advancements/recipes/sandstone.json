@@ -1,0 +1,71 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sandstone"
+    },
+    "title": {
+      "translate": "advancement.buildscape.sandstone.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.sandstone.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sandstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sandstone",
+              "minecraft:red_sandstone",
+              "minecraft:cut_sandstone",
+              "minecraft:smooth_sandstone",
+              "buildscape:black_sandstone_item",
+              "buildscape:blue_sandstone_item",
+              "buildscape:green_sandstone_item",
+              "buildscape:orange_sandstone_item",
+              "buildscape:pink_sandstone_item",
+              "buildscape:white_sandstone_item",
+              "buildscape:yellow_sandstone_item"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:black_sandstone_slab_from_black_sandstone_stonecutting",
+      "buildscape:blue_sandstone_slab_from_blue_sandstone_stonecutting",
+      "buildscape:green_sandstone_slab_from_green_sandstone_stonecutting",
+      "buildscape:orange_sandstone_slab_from_orange_sandstone_stonecutting",
+      "buildscape:pink_sandstone_slab_from_pink_sandstone_stonecutting",
+      "buildscape:red_sandstone_slab_from_red_sandstone_stonecutting",
+      "buildscape:white_sandstone_slab_from_white_sandstone_stonecutting",
+      "buildscape:yellow_sandstone_slab_from_yellow_sandstone_stonecutting",
+      "buildscape:black_sandstone_stairs_from_black_sandstone_stonecutting",
+      "buildscape:blue_sandstone_stairs_from_blue_sandstone_stonecutting",
+      "buildscape:green_sandstone_stairs_from_green_sandstone_stonecutting",
+      "buildscape:orange_sandstone_stairs_from_orange_sandstone_stonecutting",
+      "buildscape:pink_sandstone_stairs_from_pink_sandstone_stonecutting",
+      "buildscape:red_sandstone_stairs_from_red_sandstone_stonecutting",
+      "buildscape:white_sandstone_stairs_from_white_sandstone_stonecutting",
+      "buildscape:yellow_sandstone_stairs_from_yellow_sandstone_stonecutting",
+      "buildscape:black_sandstone_wall_from_black_sandstone_stonecutting",
+      "buildscape:blue_sandstone_wall_from_blue_sandstone_stonecutting",
+      "buildscape:green_sandstone_wall_from_green_sandstone_stonecutting",
+      "buildscape:orange_sandstone_wall_from_orange_sandstone_stonecutting",
+      "buildscape:pink_sandstone_wall_from_pink_sandstone_stonecutting",
+      "buildscape:red_sandstone_wall_from_red_sandstone_stonecutting",
+      "buildscape:white_sandstone_wall_from_white_sandstone_stonecutting",
+      "buildscape:yellow_sandstone_wall_from_yellow_sandstone_stonecutting"
+    ]
+  }
+}
+

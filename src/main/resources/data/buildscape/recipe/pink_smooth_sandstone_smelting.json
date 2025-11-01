@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "buildscape:pink_sandstone_item"
+  },
+  "result": {
+    "id": "buildscape:pink_smooth_sandstone_item"
+  }
+}

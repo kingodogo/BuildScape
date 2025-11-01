@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    { "item": "minecraft:calcite" },
+    { "item": "minecraft:moss_block" }
+  ],
+  "result": {
+    "id": "buildscape:mossy_calcite_item",
+    "count": 1
+  }
+}
+

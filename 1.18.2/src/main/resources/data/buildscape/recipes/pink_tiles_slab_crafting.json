@@ -1,0 +1,9 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": { "B": { "item": "buildscape:pink_tiles_item" } },
+  "pattern": [
+    "BBB"
+  ],
+  "result":{"count":6,"item":"buildscape:pink_tiles_slab_item"}
+}

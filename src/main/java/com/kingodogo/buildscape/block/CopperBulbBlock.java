@@ -2,6 +2,8 @@ package com.kingodogo.buildscape.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -47,16 +49,30 @@ public abstract class CopperBulbBlock extends Block {
     }
     
     @Override
+    public boolean canConnectRedstone(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        return false;
+    }
+    
+    @Override
     public void neighborChanged(BlockState state, net.minecraft.world.level.Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
         if (!level.isClientSide) {
             boolean powered = level.hasNeighborSignal(pos);
             boolean wasPowered = state.getValue(POWERED);
             boolean currentlyLit = state.getValue(LIT);
             
-            // Only toggle when power changes from off to on (rising edge)
+            // Only toggle on rising edge (power goes from off to on)
             if (powered && !wasPowered) {
-                // Toggle the lit state
-                level.setBlock(pos, state.setValue(LIT, !currentlyLit).setValue(POWERED, true), 2);
+                // Toggle the lit state and update powered state in one call
+                boolean newLitState = !currentlyLit;
+                level.setBlock(pos, state.setValue(LIT, newLitState).setValue(POWERED, true), 2);
+                
+                // Play sound when the bulb state changes (both on and off)
+                // Use the vanilla copper bulb sound events
+                if (newLitState) {
+                    level.playSound(null, pos, SoundEvents.COPPER_BULB_TURN_ON, SoundSource.BLOCKS, 0.3f, 1.0f);
+                } else {
+                    level.playSound(null, pos, SoundEvents.COPPER_BULB_TURN_OFF, SoundSource.BLOCKS, 0.3f, 1.0f);
+                }
             } else if (!powered && wasPowered) {
                 // Update powered state when power is removed
                 level.setBlock(pos, state.setValue(POWERED, false), 2);

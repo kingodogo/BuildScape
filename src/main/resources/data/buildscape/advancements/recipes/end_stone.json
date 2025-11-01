@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:end_stone"
+    },
+    "title": {
+      "translate": "advancement.buildscape.end_stone.title"
+    },
+    "description": {
+      "translate": "advancement.buildscape.end_stone.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_stone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:end_stone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "buildscape:end_stone_stairs_crafting",
+      "buildscape:end_stone_slab_crafting",
+      "buildscape:end_stone_wall_crafting",
+      "buildscape:end_stone_stairs_from_end_stone_stonecutting",
+      "buildscape:end_stone_slab_from_end_stone_stonecutting",
+      "buildscape:end_stone_wall_from_end_stone_stonecutting"
+    ]
+  }
+}
+
