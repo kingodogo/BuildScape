@@ -9,14 +9,17 @@ import net.minecraftforge.registries.RegistryObject;
 
 import com.kingodogo.buildscape.BuildScape;
 
+// <colored> Block registry class - registers all custom blocks for the BuildScape mod
 public class ModBlocks {
-    
+
+    // <colored> DeferredRegister for block registration
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BuildScape.MODID);
-    
-    public static final RegistryObject<Block> POLISHED_STONE_BLOCK = BLOCKS.register("polished_stone_block", 
+
+    // <colored> Polished stone block
+    public static final RegistryObject<Block> POLISHED_STONE_BLOCK = BLOCKS.register("polished_stone_block",
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).mapColor(MapColor.STONE).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
-    
-    // Bit copper variants - Fresh
+
+    // <colored> Bit copper variants - Fresh
     public static final RegistryObject<Block> BIT_CHISELED_COPPER = BLOCKS.register("bit_chiseled_copper", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_ORANGE).strength(3.0f, 6.0f).requiresCorrectToolForDrops()));
     
@@ -59,7 +62,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BIT_CUT_COPPER_WALL = BLOCKS.register("bit_cut_copper_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER)));
     
-    // Bit copper variants - Exposed
+    // <colored> Bit copper variants - Exposed
     public static final RegistryObject<Block> BIT_EXPOSED_CHISELED_COPPER = BLOCKS.register("bit_exposed_chiseled_copper", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_COPPER).mapColor(MapColor.TERRACOTTA_LIGHT_GRAY).strength(3.0f, 6.0f).requiresCorrectToolForDrops()));
     
@@ -102,7 +105,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BIT_EXPOSED_CUT_COPPER_WALL = BLOCKS.register("bit_exposed_cut_copper_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER)));
     
-    // Bit copper variants - Weathered
+    // <colored> Bit copper variants - Weathered
     public static final RegistryObject<Block> BIT_WEATHERED_CHISELED_COPPER = BLOCKS.register("bit_weathered_chiseled_copper", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_COPPER).mapColor(MapColor.WARPED_NYLIUM).strength(3.0f, 6.0f).requiresCorrectToolForDrops()));
     
@@ -145,7 +148,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BIT_WEATHERED_CUT_COPPER_WALL = BLOCKS.register("bit_weathered_cut_copper_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER)));
     
-    // Bit copper variants - Oxidized
+    // <colored> Bit copper variants - Oxidized
     public static final RegistryObject<Block> BIT_OXIDIZED_CHISELED_COPPER = BLOCKS.register("bit_oxidized_chiseled_copper", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_COPPER).mapColor(MapColor.WARPED_STEM).strength(3.0f, 6.0f).requiresCorrectToolForDrops()));
     
@@ -188,7 +191,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BIT_OXIDIZED_CUT_COPPER_WALL = BLOCKS.register("bit_oxidized_cut_copper_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.COPPER)));
     
-    // Tuff variant blocks
+    // <colored> Tuff variant blocks
     public static final RegistryObject<Block> BIT_CHISELED_TUFF = BLOCKS.register("bit_chiseled_tuff", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF).mapColor(MapColor.TERRACOTTA_GRAY).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
     
@@ -263,7 +266,7 @@ public class ModBlocks {
             .strength(0.5f)
             .sound(net.minecraft.world.level.block.SoundType.SAND)));
     
-    // Sandstone blocks
+    // <colored> Sandstone blocks
     public static final RegistryObject<Block> BLACK_SANDSTONE = BLOCKS.register("black_sandstone", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).mapColor(MapColor.COLOR_BLACK).strength(0.8f).requiresCorrectToolForDrops()));
     
@@ -288,7 +291,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SANDSTONE = BLOCKS.register("yellow_sandstone", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).mapColor(MapColor.COLOR_YELLOW).strength(0.8f).requiresCorrectToolForDrops()));
     
-    // Tile blocks
+    // <colored> Tile blocks
     public static final RegistryObject<Block> BLACK_TILES = BLOCKS.register("black_tiles", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_BLACK).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
@@ -337,7 +340,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_TILES = BLOCKS.register("yellow_tiles", 
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(3.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
-    // Mosaic glass blocks
+    // <colored> Mosaic glass blocks
     public static final RegistryObject<Block> BLACK_MOSAIC_GLASS = BLOCKS.register("black_mosaic_glass", 
         () -> new SilkTouchOnlyGlassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).mapColor(MapColor.COLOR_BLACK).strength(0.3f).requiresCorrectToolForDrops()));
     
@@ -386,10 +389,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_MOSAIC_GLASS = BLOCKS.register("yellow_mosaic_glass", 
         () -> new SilkTouchOnlyGlassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).mapColor(MapColor.COLOR_YELLOW).strength(0.3f)));
     
-    // Grass, podzol, dirt, mud, and mycelium slabs
-    // public static final RegistryObject<Block> GRASS_BLOCK_SLAB = BLOCKS.register("grass_block_slab",
-    //     () -> new GrassSlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
-    
+    // <colored> Grass, podzol, dirt, mud, and mycelium slabs
     public static final RegistryObject<Block> PODZOL_SLAB = BLOCKS.register("podzol_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PODZOL).strength(0.5f)));
     
@@ -402,7 +402,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MYCELIUM_SLAB = BLOCKS.register("mycelium_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MYCELIUM).strength(0.6f)));
     
-    // Smooth sandstone blocks
+    // <colored> Smooth sandstone blocks
     public static final RegistryObject<Block> BLACK_SMOOTH_SANDSTONE = BLOCKS.register("black_smooth_sandstone",
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_SANDSTONE).mapColor(MapColor.COLOR_BLACK).strength(0.8f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLUE_SMOOTH_SANDSTONE = BLOCKS.register("blue_smooth_sandstone",
@@ -420,7 +420,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SMOOTH_SANDSTONE = BLOCKS.register("yellow_smooth_sandstone",
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_SANDSTONE).mapColor(MapColor.COLOR_YELLOW).strength(0.8f).requiresCorrectToolForDrops()));
     
-    // Mosaic glass panes
+    // <colored> Mosaic glass panes
     public static final RegistryObject<Block> BLACK_MOSAIC_GLASS_PANE = BLOCKS.register("black_mosaic_glass_pane",
         () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).mapColor(MapColor.COLOR_BLACK).strength(0.3f)));
     public static final RegistryObject<Block> BLUE_MOSAIC_GLASS_PANE = BLOCKS.register("blue_mosaic_glass_pane",
@@ -454,7 +454,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_MOSAIC_GLASS_PANE = BLOCKS.register("yellow_mosaic_glass_pane",
         () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).mapColor(MapColor.COLOR_YELLOW).strength(0.3f)));
     
-    // Sandstone stairs
+    // <colored> Sandstone stairs
     public static final RegistryObject<Block> BLACK_SANDSTONE_STAIRS = BLOCKS.register("black_sandstone_stairs",
         () -> new StairBlock(BLACK_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_STAIRS).strength(0.8f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLUE_SANDSTONE_STAIRS = BLOCKS.register("blue_sandstone_stairs",
@@ -472,7 +472,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SANDSTONE_STAIRS = BLOCKS.register("yellow_sandstone_stairs",
         () -> new StairBlock(YELLOW_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_STAIRS).strength(0.8f).requiresCorrectToolForDrops()));
     
-    // Sandstone slabs
+    // <colored> Sandstone slabs
     public static final RegistryObject<Block> BLACK_SANDSTONE_SLAB = BLOCKS.register("black_sandstone_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_SLAB).strength(0.8f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLUE_SANDSTONE_SLAB = BLOCKS.register("blue_sandstone_slab",
@@ -490,7 +490,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SANDSTONE_SLAB = BLOCKS.register("yellow_sandstone_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_SLAB).strength(0.8f).requiresCorrectToolForDrops()));
     
-    // Sandstone walls
+    // <colored> Sandstone walls
     public static final RegistryObject<Block> BLACK_SANDSTONE_WALL = BLOCKS.register("black_sandstone_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_WALL).strength(0.8f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLUE_SANDSTONE_WALL = BLOCKS.register("blue_sandstone_wall",
@@ -508,7 +508,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SANDSTONE_WALL = BLOCKS.register("yellow_sandstone_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_WALL).strength(0.8f).requiresCorrectToolForDrops()));
     
-    // Smooth sandstone slabs
+    // <colored> Smooth sandstone slabs
     public static final RegistryObject<Block> BLACK_SMOOTH_SANDSTONE_SLAB = BLOCKS.register("black_smooth_sandstone_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.STONE)));
     public static final RegistryObject<Block> BLUE_SMOOTH_SANDSTONE_SLAB = BLOCKS.register("blue_smooth_sandstone_slab",
@@ -526,7 +526,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SMOOTH_SANDSTONE_SLAB = BLOCKS.register("yellow_smooth_sandstone_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.STONE)));
     
-    // Smooth sandstone stairs
+    // <colored> Smooth sandstone stairs
     public static final RegistryObject<Block> BLACK_SMOOTH_SANDSTONE_STAIRS = BLOCKS.register("black_smooth_sandstone_stairs",
         () -> new StairBlock(BLACK_SMOOTH_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.STONE)));
     public static final RegistryObject<Block> BLUE_SMOOTH_SANDSTONE_STAIRS = BLOCKS.register("blue_smooth_sandstone_stairs",
@@ -544,7 +544,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_SMOOTH_SANDSTONE_STAIRS = BLOCKS.register("yellow_smooth_sandstone_stairs",
         () -> new StairBlock(YELLOW_SMOOTH_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.STONE)));
     
-    // Tiles stairs
+    // <colored> Tiles stairs
     public static final RegistryObject<Block> BLACK_TILES_STAIRS = BLOCKS.register("black_tiles_stairs",
         () -> new StairBlock(BLACK_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BLUE_TILES_STAIRS = BLOCKS.register("blue_tiles_stairs",
@@ -578,7 +578,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_TILES_STAIRS = BLOCKS.register("yellow_tiles_stairs",
         () -> new StairBlock(YELLOW_TILES.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.5f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
-    // Tiles slabs
+    // <colored> Tiles slabs
     public static final RegistryObject<Block> BLACK_TILES_SLAB = BLOCKS.register("black_tiles_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BLUE_TILES_SLAB = BLOCKS.register("blue_tiles_slab",
@@ -612,7 +612,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_TILES_SLAB = BLOCKS.register("yellow_tiles_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
-    // Tiles walls
+    // <colored> Tiles walls
     public static final RegistryObject<Block> BLACK_TILES_WALL = BLOCKS.register("black_tiles_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> BLUE_TILES_WALL = BLOCKS.register("blue_tiles_wall",
@@ -646,7 +646,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_TILES_WALL = BLOCKS.register("yellow_tiles_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(2.0f, 6.0f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
-    // Vanilla block variants (only blocks that exist in 1.21.1)
+    // <colored> Vanilla block variants (only blocks that exist in 1.21.1)
     public static final RegistryObject<Block> POLISHED_BASALT_STAIRS = BLOCKS.register("polished_basalt_stairs",
         () -> new StairBlock(Blocks.POLISHED_BASALT.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(1.25f, 4.2f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.BASALT)));
     public static final RegistryObject<Block> POLISHED_BASALT_SLAB = BLOCKS.register("polished_basalt_slab",
@@ -685,6 +685,10 @@ public class ModBlocks {
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(-1.0f, 3600000.0f)));
     public static final RegistryObject<Block> BEDROCK_PANE = BLOCKS.register("bedrock_pane",
         () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).strength(-1.0f, 3600000.0f).sound(net.minecraft.world.level.block.SoundType.STONE)));
+    public static final RegistryObject<Block> OBSIDIAN_STAIRS = BLOCKS.register("obsidian_stairs",
+        () -> new StairBlock(Blocks.OBSIDIAN.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(50.0f, 1200.0f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> OBSIDIAN_SLAB = BLOCKS.register("obsidian_slab",
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(50.0f, 1200.0f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PRISMARINE_BRICKS_WALL = BLOCKS.register("prismarine_bricks_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DARK_PRISMARINE_WALL = BLOCKS.register("dark_prismarine_wall",
@@ -702,7 +706,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMETHYST_BLOCK_SLAB = BLOCKS.register("amethyst_block_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(1.5f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.AMETHYST)));
     
-    // Mossy calcite
+    // <colored> Mossy calcite
     public static final RegistryObject<Block> MOSSY_CALCITE = BLOCKS.register("mossy_calcite",
         () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).strength(0.75f, 0.75f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     public static final RegistryObject<Block> MOSSY_CALCITE_STAIRS = BLOCKS.register("mossy_calcite_stairs",
@@ -712,7 +716,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOSSY_CALCITE_WALL = BLOCKS.register("mossy_calcite_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(0.75f, 0.75f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.CALCITE)));
     
-    // Moss layers and overlay blocks
+    // <colored> Moss layers and overlay blocks
     public static final RegistryObject<Block> MOSS_LAYERS = BLOCKS.register("moss_layers",
         () -> new MossLayersBlock(BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_GREEN)

@@ -21,7 +21,7 @@ group = mod_group_id
 version = mod_version
 
 base {
-    archivesName = "buildscape-1.21.1-forge-v1.5.0"
+    archivesName = "buildscape-1.21.1-forge-v1.2.0"
 }
 
 java {
@@ -275,16 +275,16 @@ task copyJarToRoot(type: Copy, dependsOn: jar) {
     
     from jar.archiveFile
     into project.rootDir
-    rename { fileName -> "buildscape-1.21.1-forge-v1.5.0.jar" }
+    rename { fileName -> "buildscape-1.21.1-forge-v1.2.0.jar" }
     
     doLast {
-        println "Jar copied to root folder: ${project.rootDir}/buildscape-1.21.1-forge-v1.5.0.jar"
+        println "Jar copied to root folder: ${project.rootDir}/buildscape-1.21.1-forge-v1.2.0.jar"
     }
 }
 
 // Generate hashes for the jar
 task generateHashes(dependsOn: copyJarToRoot) {
-    def jarFile = file("${project.rootDir}/buildscape-1.21.1-forge-v1.5.0.jar")
+    def jarFile = file("${project.rootDir}/buildscape-1.21.1-forge-v1.2.0.jar")
     
     doFirst {
         println "Generating hashes for ${jarFile.name}..."
@@ -296,14 +296,14 @@ task generateHashes(dependsOn: copyJarToRoot) {
         }
         
         // Generate SHA256 hash using PowerShell
-        def sha256File = file("${project.rootDir}/buildscape-1.21.1-forge-v1.5.0.sha256")
+        def sha256File = file("${project.rootDir}/buildscape-1.21.1-forge-v1.2.0.sha256")
         exec {
             commandLine 'powershell', '-NoProfile', '-Command',
                 "\$hash = (Get-FileHash -Path '${jarFile.getAbsolutePath().replace('\\', '/')}' -Algorithm SHA256).Hash; Set-Content -Path '${sha256File.getAbsolutePath().replace('\\', '/')}' -Value \$hash -NoNewline"
         }
         
         // Generate MD5 hash using PowerShell
-        def md5File = file("${project.rootDir}/buildscape-1.21.1-forge-v1.5.0.md5")
+        def md5File = file("${project.rootDir}/buildscape-1.21.1-forge-v1.2.0.md5")
         exec {
             commandLine 'powershell', '-NoProfile', '-Command',
                 "\$hash = (Get-FileHash -Path '${jarFile.getAbsolutePath().replace('\\', '/')}' -Algorithm MD5).Hash; Set-Content -Path '${md5File.getAbsolutePath().replace('\\', '/')}' -Value \$hash -NoNewline"

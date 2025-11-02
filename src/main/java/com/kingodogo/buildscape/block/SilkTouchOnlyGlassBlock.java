@@ -14,30 +14,29 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import java.util.List;
 
+// <item> Glass block that only drops when broken with Silk Touch enchantment
 public class SilkTouchOnlyGlassBlock extends TransparentBlock {
     public SilkTouchOnlyGlassBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 
+    // <item> Returns drops only if tool has Silk Touch enchantment
     @Override
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
         ItemStack tool = builder.getOptionalParameter(LootContextParams.TOOL);
         if (tool == null) {
-            return List.of(); // No tool = no drop
+            return List.of();
         }
 
-        // Check for Silk Touch enchantment
+        // <item> Check for Silk Touch enchantment
         Holder<Enchantment> silkTouch = builder.getLevel().registryAccess()
             .registryOrThrow(Registries.ENCHANTMENT)
             .getHolderOrThrow(Enchantments.SILK_TOUCH);
-        
+
         if (EnchantmentHelper.getItemEnchantmentLevel(silkTouch, tool) > 0) {
-            // Has Silk Touch, use loot table
             return super.getDrops(state, builder);
         }
-        
-        // No Silk Touch = no drop
+
         return List.of();
     }
 }
-

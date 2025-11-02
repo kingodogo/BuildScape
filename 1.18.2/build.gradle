@@ -185,6 +185,9 @@ tasks.named('processResources', ProcessResources).configure {
                              mod_authors         : mod_authors, mod_description: mod_description,]
 
     inputs.properties replaceProperties
+    
+    // Handle duplicates: prefer main resources over generated resources
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
         expand replaceProperties + [project: project]
@@ -203,10 +206,10 @@ tasks.named('jar', Jar).configure {
                     "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")])
     }
     
-    // Include the refmap in the JAR for mixin to work
-    from("${project.buildDir}/tmp/compileJava/${mod_id}.refmap.json") {
-        into(".")
-    }
+    // Exclude entries that start with '.' or contain '..' to prevent ZIP file system errors
+    exclude { it.path.startsWith('.') || it.path.contains('..') }
+    
+    // The refmap is automatically included by the Mixin Gradle plugin via the addMixinsToJar task
 }
 
 tasks.withType(JavaCompile).configureEach {

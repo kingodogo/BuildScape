@@ -1,21 +1,20 @@
-﻿{
-    "pools":  [
-                  {
-                      "bonus_rolls":  0,
-                      "entries":  [
-                                      {
-                                          "name":  "buildscape:mossy_calcite_wall_item",
-                                          "type":  "minecraft:item"
-                                      }
-                                  ],
-                      "rolls":  1,
-                      "conditions":  [
-                                         {
-                                             "condition":  "minecraft:survives_explosion"
-                                         }
-                                     ]
-                  }
-              ],
-    "type":  "minecraft:block",
-    "random_sequence":  "buildscape:blocks/mossy_calcite_wall"
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "buildscape:mossy_calcite_wall_item"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
 }

@@ -1,11 +1,13 @@
 package com.kingodogo.buildscape.block;
 
+import com.kingodogo.buildscape.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import java.util.List;
 import java.util.Random;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Explosion;
@@ -16,14 +18,12 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-/**
- * MossLayersBlock - Behaves exactly like SnowLayerBlock but uses moss textures
- * [Blocksmith]: Implements layer stacking, placement logic, and moss block conversion
- */
+// Moss layers item - stackable moss layers block
 public class MossLayersBlock extends SnowLayerBlock {
     
     public MossLayersBlock(Properties properties) {
@@ -71,34 +71,27 @@ public class MossLayersBlock extends SnowLayerBlock {
     }
     
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
-        // [Blocksmith]: Convert to full moss block when max layers reached
+        // Convert to full moss block when max layers reached
         if (state.getValue(LAYERS) == 8) {
             level.setBlock(pos, Blocks.MOSS_BLOCK.defaultBlockState(), 3);
-        } else {
-            // [Blocksmith]: Add moss particles when breaking moss layers
-            for (int i = 0; i < 6; i++) {
-                level.addParticle(ParticleTypes.MYCELIUM, 
-                    (double)pos.getX() + level.getRandom().nextDouble(), 
-                    (double)pos.getY() + level.getRandom().nextDouble(), 
-                    (double)pos.getZ() + level.getRandom().nextDouble(), 
-                    0.0D, 0.0D, 0.0D);
-            }
         }
         super.playerWillDestroy(level, pos, state, player);
     }
     
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
-        // [Blocksmith]: Convert to full moss block when max layers reached
+        // Convert to full moss block when max layers reached
         if (state.getValue(LAYERS) == 8) {
             level.setBlock(pos, Blocks.MOSS_BLOCK.defaultBlockState(), 3);
         }
         super.randomTick(state, level, pos, random);
     }
     
+    // Disabled random mycelium particle effect
+    /*
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, Random random) {
-        // [Blocksmith]: Use moss particles instead of snow particles
+        // Use moss particles instead of snow particles
         if (random.nextInt(10) == 0) {
             level.addParticle(ParticleTypes.MYCELIUM, 
                 (double)pos.getX() + random.nextDouble(), 
@@ -107,33 +100,17 @@ public class MossLayersBlock extends SnowLayerBlock {
                 0.0D, 0.0D, 0.0D);
         }
     }
+    */
     
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
-        // [Blocksmith]: Use moss particles for breaking instead of snow
-        if (!state.is(newState.getBlock())) {
-            // Add multiple particles for better effect
-            for (int i = 0; i < 8; i++) {
-                level.addParticle(ParticleTypes.MYCELIUM, 
-                    (double)pos.getX() + level.getRandom().nextDouble(), 
-                    (double)pos.getY() + level.getRandom().nextDouble(), 
-                    (double)pos.getZ() + level.getRandom().nextDouble(), 
-                    0.0D, 0.0D, 0.0D);
-            }
-        }
+        // No particles needed
         super.onRemove(state, level, pos, newState, isMoving);
     }
     
     @Override
     public void wasExploded(Level level, BlockPos pos, Explosion explosion) {
-        // [Blocksmith]: Use moss particles for explosion instead of snow
-        for (int i = 0; i < 10; i++) {
-            level.addParticle(ParticleTypes.MYCELIUM, 
-                (double)pos.getX() + level.getRandom().nextDouble(), 
-                (double)pos.getY() + level.getRandom().nextDouble(), 
-                (double)pos.getZ() + level.getRandom().nextDouble(), 
-                0.0D, 0.0D, 0.0D);
-        }
+        // No particles needed
         super.wasExploded(level, pos, explosion);
     }
     
@@ -168,4 +145,41 @@ public class MossLayersBlock extends SnowLayerBlock {
         }
         return false;
     }
+    
+    // Override getDrops to drop items based on layer count
+    @Override
+    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+        // Get the layer count from the block state
+        int layerCount = state.getValue(LAYERS);
+        
+        // Create a list with the appropriate number of items
+        // Each layer should drop one moss layer item
+        return List.of(new ItemStack(ModItems.MOSS_LAYERS_ITEM.get(), layerCount));
+    }
+    
+    // Ensure destroy speed is properly calculated for tool efficiency
+    @Override
+    public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
+        float destroySpeed = state.getDestroySpeed(level, pos);
+        if (destroySpeed == -1.0F) {
+            return 0.0F;
+        }
+        
+        int efficiencyLevel = net.minecraft.world.item.enchantment.EnchantmentHelper.getBlockEfficiency(player);
+        ItemStack tool = player.getMainHandItem();
+        
+        float speedMultiplier = 1.0F;
+        if (!tool.isEmpty()) {
+            speedMultiplier = tool.getDestroySpeed(state);
+        }
+        
+        if (speedMultiplier > 1.0F) {
+            int efficiencyBonus = efficiencyLevel > 0 ? efficiencyLevel * efficiencyLevel + 1 : 0;
+            speedMultiplier += (float)efficiencyBonus;
+        }
+        
+        float difficultyModifier = player.hasCorrectToolForDrops(state) ? 30.0F : 100.0F;
+        return speedMultiplier / destroySpeed / difficultyModifier;
+    }
 }
+// Kingodogo finished the project at 2025-11-02 12:13:45

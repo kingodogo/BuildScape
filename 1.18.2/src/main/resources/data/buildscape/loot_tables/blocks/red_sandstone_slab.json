@@ -2,15 +2,14 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:red_sandstone_slab_item",
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": 2,
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
@@ -19,9 +18,15 @@
                     "type": "double"
                   }
                 }
-              ]
+              ],
+              "count": 2.0,
+              "add": false
+            },
+            {
+              "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "buildscape:red_sandstone_slab_item"
         }
       ],
       "conditions": [
