@@ -1,0 +1,69 @@
+{
+  "block.copper_grate.break": {
+    "sounds": [
+      "buildscape:block/copper_grate/break1",
+      "buildscape:block/copper_grate/break2",
+      "buildscape:block/copper_grate/break3",
+      "buildscape:block/copper_grate/break4"
+    ]
+  },
+  "block.copper_grate.step": {
+    "sounds": [
+      "buildscape:block/copper_grate/step1",
+      "buildscape:block/copper_grate/step2",
+      "buildscape:block/copper_grate/step3",
+      "buildscape:block/copper_grate/step4",
+      "buildscape:block/copper_grate/step5",
+      "buildscape:block/copper_grate/step6"
+    ]
+  },
+  "block.copper_bulb.break": {
+    "sounds": [
+      "buildscape:block/copper_bulb/break1",
+      "buildscape:block/copper_bulb/break2",
+      "buildscape:block/copper_bulb/break3",
+      "buildscape:block/copper_bulb/break4"
+    ]
+  },
+  "block.copper_bulb.place": {
+    "sounds": [
+      "buildscape:block/copper_bulb/place1",
+      "buildscape:block/copper_bulb/place2",
+      "buildscape:block/copper_bulb/place3",
+      "buildscape:block/copper_bulb/place4"
+    ]
+  },
+  "block.copper_bulb.step": {
+    "sounds": [
+      "buildscape:block/copper_bulb/step1",
+      "buildscape:block/copper_bulb/step2",
+      "buildscape:block/copper_bulb/step3",
+      "buildscape:block/copper_bulb/step4",
+      "buildscape:block/copper_bulb/step5",
+      "buildscape:block/copper_bulb/step6"
+    ]
+  },
+  "block.copper_bulb.toggle": {
+    "sounds": ["buildscape:block/copper_bulb/toggle"]
+  },
+  "block.mud.break": {
+    "sounds": [
+      "buildscape:block/mud/break1",
+      "buildscape:block/mud/break2",
+      "buildscape:block/mud/break3",
+      "buildscape:block/mud/break4",
+      "buildscape:block/mud/break5",
+      "buildscape:block/mud/break6"
+    ]
+  },
+  "block.mud.step": {
+    "sounds": [
+      "buildscape:block/mud/step1",
+      "buildscape:block/mud/step2",
+      "buildscape:block/mud/step3",
+      "buildscape:block/mud/step4",
+      "buildscape:block/mud/step5",
+      "buildscape:block/mud/step6"
+    ]
+  }
+}

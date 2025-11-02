@@ -24,25 +24,23 @@
     "facing=east,half=top,shape=inner_left": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_right": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=east,half=top,shape=straight": {
@@ -72,30 +70,29 @@
     },
     "facing=north,half=bottom,shape=straight": {
       "model": "buildscape:block/blue_sandstone_stairs",
-      "y": 270
+      "y": 270,
+      "uvlock": true
     },
     "facing=north,half=top,shape=inner_left": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 0,
+      "y": 270,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 0,
+      "y": 270,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_right": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=north,half=top,shape=straight": {
@@ -106,7 +103,6 @@
     },
     "facing=south,half=bottom,shape=inner_left": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
-      "y": 0,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=inner_right": {
@@ -116,7 +112,6 @@
     },
     "facing=south,half=bottom,shape=outer_left": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
-      "y": 0,
       "uvlock": true
     },
     "facing=south,half=bottom,shape=outer_right": {
@@ -126,30 +121,31 @@
     },
     "facing=south,half=bottom,shape=straight": {
       "model": "buildscape:block/blue_sandstone_stairs",
-      "y": 90
+      "y": 90,
+      "uvlock": true
     },
     "facing=south,half=top,shape=inner_left": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 270,
+      "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_right": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 270,
+      "y": 180,
       "uvlock": true
     },
     "facing=south,half=top,shape=straight": {
@@ -180,36 +176,37 @@
     },
     "facing=west,half=bottom,shape=straight": {
       "model": "buildscape:block/blue_sandstone_stairs",
-      "y": 180
+      "y": 180,
+      "uvlock": true
     },
     "facing=west,half=top,shape=inner_left": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 270,
+      "y": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
       "model": "buildscape:block/blue_sandstone_stairs_inner",
       "x": 180,
-      "y": 0,
+      "y": 270,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 270,
+      "y": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_right": {
       "model": "buildscape:block/blue_sandstone_stairs_outer",
       "x": 180,
-      "y": 0,
+      "y": 270,
       "uvlock": true
     },
     "facing=west,half=top,shape=straight": {
       "model": "buildscape:block/blue_sandstone_stairs",
       "x": 180,
-      "y": 0,
+      "y": 180,
       "uvlock": true
     }
   }

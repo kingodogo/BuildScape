@@ -1,36 +1,33 @@
-﻿{
-    "pools":  [
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "enchantments": [
                   {
-                      "bonus_rolls":  0,
-                      "entries":  [
-                                      {
-                                          "conditions":  [
-                                                             {
-                                                                 "condition":  "minecraft:match_tool",
-                                                                 "predicate":  {
-                                                                                   "enchantments":  [
-                                                                                                        {
-                                                                                                            "levels":  {
-                                                                                                                           "min":  1
-                                                                                                                       },
-                                                                                                            "enchantment":  "minecraft:silk_touch"
-                                                                                                        }
-                                                                                                    ]
-                                                                               }
-                                                             }
-                                                         ],
-                                          "name":  "buildscape:red_mosaic_glass_pane_item",
-                                          "type":  "minecraft:item"
-                                      }
-                                  ],
-                      "rolls":  1,
-                      "conditions":  [
-                                         {
-                                             "condition":  "minecraft:survives_explosion"
-                                         }
-                                     ]
+                    "enchantment": "minecraft:silk_touch",
+                    "levels": {
+                      "min": 1
+                    }
                   }
-              ],
-    "type":  "minecraft:block",
-    "random_sequence":  "buildscape:blocks/red_mosaic_glass_pane"
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ],
+          "name": "buildscape:red_mosaic_glass_pane_item"
+        }
+      ]
+    }
+  ]
 }

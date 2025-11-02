@@ -18,28 +18,29 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+// <item> Grate block that can be waterlogged and prevents water from flowing out
 public class WaterloggableGrateBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    
-    // Use full block shape to prevent water spillage
+
+    // <item> Use full block shape to prevent water spillage
     private static final VoxelShape SHAPE = Shapes.block();
-    
+
     public WaterloggableGrateBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
     }
-    
+
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(WATERLOGGED);
     }
-    
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
         return this.defaultBlockState().setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
     }
-    
+
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
         if (state.getValue(WATERLOGGED)) {
@@ -47,28 +48,28 @@ public class WaterloggableGrateBlock extends Block implements SimpleWaterloggedB
         }
         return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
-    
+
     @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
-    
+
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
-    
+
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
-    
+
     @Override
     public boolean propagatesSkylightDown(BlockState state, BlockGetter reader, BlockPos pos) {
         return !state.getValue(WATERLOGGED);
     }
-    
-    // Prevent water from flowing out by making it not replaceable
+
+    // <item> Prevent water from flowing out by making it not replaceable
     @Override
     public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
         return false;

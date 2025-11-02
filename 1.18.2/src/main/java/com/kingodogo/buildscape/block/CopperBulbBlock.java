@@ -1,7 +1,11 @@
 package com.kingodogo.buildscape.block;
 
+import com.kingodogo.buildscape.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -60,7 +64,10 @@ public abstract class CopperBulbBlock extends Block {
             // Only toggle on rising edge (power goes from off to on)
             if (powered && !wasPowered) {
                 // Toggle the lit state and update powered state in one call
-                level.setBlock(pos, state.setValue(LIT, !currentlyLit).setValue(POWERED, true), 2);
+                BlockState newState = state.setValue(LIT, !currentlyLit).setValue(POWERED, true);
+                level.setBlock(pos, newState, 2);
+                // Play toggle sound
+                level.playSound(null, pos, ModSounds.COPPER_BULB_TOGGLE.get(), SoundSource.BLOCKS, 0.5f, 1.0f);
             } else if (!powered && wasPowered) {
                 // Update powered state when power is removed
                 level.setBlock(pos, state.setValue(POWERED, false), 2);
@@ -84,5 +91,33 @@ public abstract class CopperBulbBlock extends Block {
     @Override
     public int getAnalogOutputSignal(BlockState state, net.minecraft.world.level.Level level, BlockPos pos) {
         return state.getValue(LIT) ? 15 : 0;
+    }
+    
+    /**
+     * Ensure destroy speed is properly calculated for tool efficiency
+     * This allows tools and efficiency enchantments to affect block breaking speed
+     */
+    @Override
+    public float getDestroyProgress(BlockState state, Player player, BlockGetter level, BlockPos pos) {
+        float destroySpeed = state.getDestroySpeed(level, pos);
+        if (destroySpeed == -1.0F) {
+            return 0.0F;
+        }
+        
+        int efficiencyLevel = net.minecraft.world.item.enchantment.EnchantmentHelper.getBlockEfficiency(player);
+        ItemStack tool = player.getMainHandItem();
+        
+        float speedMultiplier = 1.0F;
+        if (!tool.isEmpty()) {
+            speedMultiplier = tool.getDestroySpeed(state);
+        }
+        
+        if (speedMultiplier > 1.0F) {
+            int efficiencyBonus = efficiencyLevel > 0 ? efficiencyLevel * efficiencyLevel + 1 : 0;
+            speedMultiplier += (float)efficiencyBonus;
+        }
+        
+        float difficultyModifier = player.hasCorrectToolForDrops(state) ? 30.0F : 100.0F;
+        return speedMultiplier / destroySpeed / difficultyModifier;
     }
 }

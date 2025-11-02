@@ -12,8 +12,13 @@ public class ModItems {
     
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BuildScape.MODID);
     
+    // Helper method to create BlockItem with creative tab
+    private static Item.Properties createBlockItemProperties() {
+        return new Item.Properties().tab(BuildScape.BUILDSCAPE_TAB);
+    }
+    
     public static final RegistryObject<Item> BLACK_SAND_ITEM = ITEMS.register("black_sand_item", 
-        () -> new BlockItem(ModBlocks.BLACK_SAND.get(), new Item.Properties()));
+        () -> new BlockItem(ModBlocks.BLACK_SAND.get(), createBlockItemProperties()));
     
     public static final RegistryObject<Item> BLUE_SAND_ITEM = ITEMS.register("blue_sand_item", 
         () -> new BlockItem(ModBlocks.BLUE_SAND.get(), new Item.Properties()));
@@ -233,6 +238,10 @@ public class ModItems {
     public static final RegistryObject<Item> YELLOW_MOSAIC_GLASS_PANE_ITEM = ITEMS.register("yellow_mosaic_glass_pane_item", 
         () -> new BlockItem(ModBlocks.YELLOW_MOSAIC_GLASS_PANE.get(), new Item.Properties()));
     
+    // Disabled obsidian glass pane for now
+    // public static final RegistryObject<Item> OBSIDIAN_GLASS_PANE_ITEM = ITEMS.register("obsidian_glass_pane_item", 
+    //     () -> new BlockItem(ModBlocks.OBSIDIAN_GLASS_PANE.get(), new Item.Properties()));
+    
     // Copper variant items
     public static final RegistryObject<Item> BIT_CHISELED_COPPER_ITEM = ITEMS.register("bit_chiseled_copper_item", 
         () -> new BlockItem(ModBlocks.BIT_CHISELED_COPPER.get(), new Item.Properties()));
@@ -307,8 +316,26 @@ public class ModItems {
     public static final RegistryObject<Item> BIT_POLISHED_TUFF_ITEM = ITEMS.register("bit_polished_tuff_item", 
         () -> new BlockItem(ModBlocks.BIT_POLISHED_TUFF.get(), new Item.Properties()));
     
+    public static final RegistryObject<Item> BIT_POLISHED_TUFF_STAIRS_ITEM = ITEMS.register("bit_polished_tuff_stairs_item",
+        () -> new BlockItem(ModBlocks.BIT_POLISHED_TUFF_STAIRS.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> BIT_POLISHED_TUFF_SLAB_ITEM = ITEMS.register("bit_polished_tuff_slab_item",
+        () -> new BlockItem(ModBlocks.BIT_POLISHED_TUFF_SLAB.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> BIT_POLISHED_TUFF_WALL_ITEM = ITEMS.register("bit_polished_tuff_wall_item",
+        () -> new BlockItem(ModBlocks.BIT_POLISHED_TUFF_WALL.get(), new Item.Properties()));
+    
     public static final RegistryObject<Item> BIT_TUFF_BRICKS_ITEM = ITEMS.register("bit_tuff_bricks_item", 
         () -> new BlockItem(ModBlocks.BIT_TUFF_BRICKS.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> BIT_TUFF_BRICKS_STAIRS_ITEM = ITEMS.register("bit_tuff_bricks_stairs_item",
+        () -> new BlockItem(ModBlocks.BIT_TUFF_BRICKS_STAIRS.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> BIT_TUFF_BRICKS_SLAB_ITEM = ITEMS.register("bit_tuff_bricks_slab_item",
+        () -> new BlockItem(ModBlocks.BIT_TUFF_BRICKS_SLAB.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> BIT_TUFF_BRICKS_WALL_ITEM = ITEMS.register("bit_tuff_bricks_wall_item",
+        () -> new BlockItem(ModBlocks.BIT_TUFF_BRICKS_WALL.get(), new Item.Properties()));
     
     // Sandstone stairs items
     public static final RegistryObject<Item> BLACK_SANDSTONE_STAIRS_ITEM = ITEMS.register("black_sandstone_stairs_item", 
@@ -539,6 +566,18 @@ public class ModItems {
         () -> new BlockItem(ModBlocks.BEDROCK_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<Item> BEDROCK_WALL_ITEM = ITEMS.register("bedrock_wall_item",
         () -> new BlockItem(ModBlocks.BEDROCK_WALL.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> BEDROCK_PANE_ITEM = ITEMS.register("bedrock_pane_item",
+        () -> new BlockItem(ModBlocks.BEDROCK_PANE.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> OBSIDIAN_STAIRS_ITEM = ITEMS.register("obsidian_stairs_item",
+        () -> new BlockItem(ModBlocks.OBSIDIAN_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OBSIDIAN_SLAB_ITEM = ITEMS.register("obsidian_slab_item",
+        () -> new BlockItem(ModBlocks.OBSIDIAN_SLAB.get(), new Item.Properties()));
+    // Disabled obsidian wall for now
+    // public static final RegistryObject<Item> OBSIDIAN_WALL_ITEM = ITEMS.register("obsidian_wall_item",
+    //     () -> new BlockItem(ModBlocks.OBSIDIAN_WALL.get(), new Item.Properties()));
+    
     public static final RegistryObject<Item> PRISMARINE_BRICKS_WALL_ITEM = ITEMS.register("prismarine_bricks_wall_item",
         () -> new BlockItem(ModBlocks.PRISMARINE_BRICKS_WALL.get(), new Item.Properties()));
     public static final RegistryObject<Item> DARK_PRISMARINE_WALL_ITEM = ITEMS.register("dark_prismarine_wall_item",
@@ -625,7 +664,11 @@ public class ModItems {
     public static final RegistryObject<Item> DIRT_SLAB_ITEM = ITEMS.register("dirt_slab_item",
         () -> new BlockItem(ModBlocks.DIRT_SLAB.get(), new Item.Properties()));
     
-    // MUD_SLAB_ITEM removed - MUD block doesn't exist in 1.18.2
+    public static final RegistryObject<Item> MUD_ITEM = ITEMS.register("mud",
+        () -> new BlockItem(ModBlocks.MUD.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Item> MUD_SLAB_ITEM = ITEMS.register("mud_slab_item",
+        () -> new BlockItem(ModBlocks.MUD_SLAB.get(), new Item.Properties()));
     
     public static final RegistryObject<Item> MYCELIUM_SLAB_ITEM = ITEMS.register("mycelium_slab_item",
         () -> new BlockItem(ModBlocks.MYCELIUM_SLAB.get(), new Item.Properties()));
@@ -637,3 +680,4 @@ public class ModItems {
     public static final RegistryObject<Item> MOSS_OVERLAY_ITEM = ITEMS.register("moss_overlay_item",
         () -> new BlockItem(ModBlocks.MOSS_OVERLAY.get(), new Item.Properties()));
 }
+// Kingodogo finished the project at 2025-11-02 12:13:45
