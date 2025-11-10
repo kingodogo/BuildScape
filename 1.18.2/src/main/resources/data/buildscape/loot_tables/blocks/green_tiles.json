@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:green_tiles_item"
+          "name": "buildscape:green_tiles"
         }
       ],
       "conditions": [

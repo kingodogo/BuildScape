@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:quartz_bricks"
   },
-  "result":"buildscape:quartz_bricks_slab_item","count":1
+  "result":"buildscape:quartz_bricks_slab","count":1
 }
 

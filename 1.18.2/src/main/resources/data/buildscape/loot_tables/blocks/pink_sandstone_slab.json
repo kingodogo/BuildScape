@@ -26,7 +26,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "buildscape:pink_sandstone_slab_item"
+          "name": "buildscape:pink_sandstone_slab"
         }
       ],
       "conditions": [

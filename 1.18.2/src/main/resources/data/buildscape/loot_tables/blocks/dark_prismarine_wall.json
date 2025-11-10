@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:dark_prismarine_wall_item"
+          "name": "buildscape:dark_prismarine_wall"
         }
       ],
       "conditions": [

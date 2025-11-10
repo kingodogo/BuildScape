@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_weathered_cut_copper_wall_item"
+          "name": "buildscape:bit_weathered_cut_copper_wall"
         }
       ],
       "conditions": [

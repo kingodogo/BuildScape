@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
@@ -11,5 +11,5 @@
     "BBB",
     "BBB"
   ],
-  "result":{"count":6,"item":"buildscape:end_stone_wall_item"}
+  "result":{"count":6,"item":"buildscape:end_stone_wall"}
 }

@@ -125,3 +125,18 @@ keystore.properties
 # Hash files (optional - remove if you want to commit them)
 *.sha256
 *.md5
+
+# Development guides and documentation (not meant for git)
+*_GUIDE.md
+*_GUIDE*.md
+*_SUMMARY*.md
+*_COMPLETE.md
+*_PROPERTIES.md
+*CHANGELOG*.md
+**/tools/README*.md
+**/README_*.md
+
+# Python scripts and folders containing them
+*.py
+**/tools/
+**/unused/

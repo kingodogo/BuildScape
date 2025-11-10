@@ -1,5 +1,5 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
-  "ingredient": { "item": "buildscape:cyan_tiles_item" },
-  "result":"buildscape:cyan_tiles_slab_item","count":2
+  "ingredient": { "item": "buildscape:cyan_tiles" },
+  "result":"buildscape:cyan_tiles_slab","count":2
 }

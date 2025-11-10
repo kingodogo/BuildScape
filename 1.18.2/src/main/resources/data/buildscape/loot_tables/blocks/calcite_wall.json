@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:calcite_wall_item"
+          "name": "buildscape:calcite_wall"
         }
       ],
       "conditions": [

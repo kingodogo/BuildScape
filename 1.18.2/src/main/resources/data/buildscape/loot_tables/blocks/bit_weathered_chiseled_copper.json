@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_weathered_chiseled_copper_item"
+          "name": "buildscape:bit_weathered_chiseled_copper"
         }
       ],
       "conditions": [

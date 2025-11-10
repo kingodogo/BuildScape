@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
@@ -11,5 +11,5 @@
     "CC ",
     "CCC"
   ],
-  "result":{"count":4,"item":"buildscape:dripstone_block_stairs_item"}
+  "result":{"count":4,"item":"buildscape:dripstone_block_stairs"}
 }

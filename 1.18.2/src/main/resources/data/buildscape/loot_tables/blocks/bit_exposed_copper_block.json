@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_exposed_copper_block_item"
+          "name": "buildscape:bit_exposed_copper_block"
         }
       ],
       "conditions": [

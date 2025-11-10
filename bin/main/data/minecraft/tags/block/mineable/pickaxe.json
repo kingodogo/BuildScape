@@ -151,8 +151,6 @@
     "buildscape:magenta_tiles_slab",
     "buildscape:magenta_tiles_stairs",
     "buildscape:magenta_tiles_wall",
-    "buildscape:moss_layers",
-    "buildscape:moss_overlay",
     "buildscape:mossy_calcite",
     "buildscape:mossy_calcite_slab",
     "buildscape:mossy_calcite_stairs",
@@ -238,6 +236,8 @@
     "buildscape:yellow_tiles",
     "buildscape:yellow_tiles_slab",
     "buildscape:yellow_tiles_stairs",
-    "buildscape:yellow_tiles_wall"
+    "buildscape:yellow_tiles_wall",
+    "buildscape:obsidian_stairs",
+    "buildscape:obsidian_slab"
   ]
 }

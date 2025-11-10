@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:end_stone_wall_item"
+          "name": "buildscape:end_stone_wall"
         }
       ],
       "conditions": [

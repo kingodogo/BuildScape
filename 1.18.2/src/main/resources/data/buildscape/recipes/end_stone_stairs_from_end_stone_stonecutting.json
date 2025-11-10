@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:end_stone"
   },
-  "result":"buildscape:end_stone_stairs_item","count":1
+  "result":"buildscape:end_stone_stairs","count":1
 }
 

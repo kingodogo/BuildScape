@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_copper_block_stairs_item"
+          "name": "buildscape:bit_copper_block_stairs"
         }
       ],
       "conditions": [

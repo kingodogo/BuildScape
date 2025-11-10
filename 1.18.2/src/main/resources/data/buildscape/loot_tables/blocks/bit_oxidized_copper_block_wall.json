@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_oxidized_copper_block_wall_item"
+          "name": "buildscape:bit_oxidized_copper_block_wall"
         }
       ],
       "conditions": [

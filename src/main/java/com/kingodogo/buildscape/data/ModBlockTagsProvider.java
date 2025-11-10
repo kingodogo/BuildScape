@@ -320,6 +320,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(otherStoneBlocks);
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(otherStoneBlocks);
 
+        // <item> Obsidian blocks are handled via JSON tag files (needs_diamond_tool.json and mineable/pickaxe.json)
+
         // <item> Bedrock variants don't need tool tags (unbreakable)
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
             ModBlocks.BEDROCK_STAIRS.get(),

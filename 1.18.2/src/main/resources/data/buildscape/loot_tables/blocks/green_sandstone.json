@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:green_sandstone_item"
+          "name": "buildscape:green_sandstone"
         }
       ],
       "conditions": [

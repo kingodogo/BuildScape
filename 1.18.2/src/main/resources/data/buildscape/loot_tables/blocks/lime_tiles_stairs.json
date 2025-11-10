@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:lime_tiles_stairs_item"
+          "name": "buildscape:lime_tiles_stairs"
         }
       ],
       "conditions": [

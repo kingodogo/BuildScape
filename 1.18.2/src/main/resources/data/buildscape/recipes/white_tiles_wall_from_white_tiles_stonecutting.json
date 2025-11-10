@@ -1,5 +1,5 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
-  "ingredient": { "item": "buildscape:white_tiles_item" },
-  "result":"buildscape:white_tiles_wall_item","count":1
+  "ingredient": { "item": "buildscape:white_tiles" },
+  "result":"buildscape:white_tiles_wall","count":1
 }

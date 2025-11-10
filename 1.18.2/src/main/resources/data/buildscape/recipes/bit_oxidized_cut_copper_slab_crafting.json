@@ -1,13 +1,13 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "S": {
-      "item": "buildscape:bit_oxidized_cut_copper_item"
+      "item": "buildscape:bit_oxidized_cut_copper"
     }
   },
   "pattern": [
     "SSS"
   ],
-  "result":{"count":6,"item":"buildscape:bit_oxidized_cut_copper_slab_item"}
+  "result":{"count":6,"item":"buildscape:bit_oxidized_cut_copper_slab"}
 }

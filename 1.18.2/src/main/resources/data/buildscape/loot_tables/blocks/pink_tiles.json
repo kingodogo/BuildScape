@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:pink_tiles_item"
+          "name": "buildscape:pink_tiles"
         }
       ],
       "conditions": [

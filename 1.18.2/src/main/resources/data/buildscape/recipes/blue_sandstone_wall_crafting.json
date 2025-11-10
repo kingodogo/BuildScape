@@ -1,9 +1,9 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "B": {
-      "item": "buildscape:blue_sandstone_item"
+      "item": "buildscape:blue_sandstone"
     }
   },
   "pattern": [
@@ -11,5 +11,5 @@
     "BBB",
     "BBB"
   ],
-  "result":{"count":6,"item":"buildscape:blue_sandstone_wall_item"}
+  "result":{"count":6,"item":"buildscape:blue_sandstone_wall"}
 }

@@ -6,7 +6,8 @@
   "refmap": "buildscape.refmap.json",
   "mixins": [
     "WallBlockMixin",
-    "IronBarsBlockMixin"
+    "IronBarsBlockMixin",
+    "FenceBlockMixin"
   ],
   "client": [
   ],

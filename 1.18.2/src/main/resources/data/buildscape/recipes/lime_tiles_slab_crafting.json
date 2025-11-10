@@ -1,9 +1,9 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "key": { "B": { "item": "buildscape:lime_tiles_item" } },
+  "key": { "B": { "item": "buildscape:lime_tiles" } },
   "pattern": [
     "BBB"
   ],
-  "result":{"count":6,"item":"buildscape:lime_tiles_slab_item"}
+  "result":{"count":6,"item":"buildscape:lime_tiles_slab"}
 }

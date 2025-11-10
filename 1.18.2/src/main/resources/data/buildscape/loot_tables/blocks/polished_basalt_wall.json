@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:polished_basalt_wall_item"
+          "name": "buildscape:polished_basalt_wall"
         }
       ],
       "conditions": [

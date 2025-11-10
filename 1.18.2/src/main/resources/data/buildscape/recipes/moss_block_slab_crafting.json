@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
@@ -9,5 +9,5 @@
   "pattern": [
     "SSS"
   ],
-  "result":{"count":6,"item":"buildscape:moss_block_slab_item"}
+  "result":{"count":6,"item":"buildscape:moss_block_slab"}
 }

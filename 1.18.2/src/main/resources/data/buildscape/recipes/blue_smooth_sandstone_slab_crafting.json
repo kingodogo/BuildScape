@@ -1,13 +1,13 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "S": {
-      "item": "buildscape:blue_smooth_sandstone_item"
+      "item": "buildscape:blue_smooth_sandstone"
     }
   },
   "pattern": [
     "SSS"
   ],
-  "result":{"count":6,"item":"buildscape:blue_smooth_sandstone_slab_item"}
+  "result":{"count":6,"item":"buildscape:blue_smooth_sandstone_slab"}
 }

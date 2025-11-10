@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:dirt"
   },
-  "result":"buildscape:dirt_slab_item","count":2
+  "result":"buildscape:dirt_slab","count":2
 }
 

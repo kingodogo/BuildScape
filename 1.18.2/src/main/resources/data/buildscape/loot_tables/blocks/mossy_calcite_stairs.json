@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:mossy_calcite_stairs_item"
+          "name": "buildscape:mossy_calcite_stairs"
         }
       ],
       "conditions": [

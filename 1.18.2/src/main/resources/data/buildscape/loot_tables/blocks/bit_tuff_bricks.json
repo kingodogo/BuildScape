@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_tuff_bricks_item"
+          "name": "buildscape:bit_tuff_bricks"
         }
       ],
       "conditions": [

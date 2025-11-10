@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_oxidized_copper_bulb_item"
+          "name": "buildscape:bit_oxidized_copper_bulb"
         }
       ],
       "conditions": [

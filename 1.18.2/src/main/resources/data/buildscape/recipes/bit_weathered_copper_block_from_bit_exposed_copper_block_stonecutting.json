@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "buildscape:bit_exposed_copper_block_item"
+    "item": "buildscape:bit_exposed_copper_block"
   },
-  "result":"buildscape:bit_weathered_copper_block_item","count":1
+  "result": "buildscape:bit_weathered_copper_block",
+  "count": 1
 }
-

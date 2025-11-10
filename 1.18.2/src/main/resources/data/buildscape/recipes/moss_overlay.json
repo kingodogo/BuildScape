@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "##"
@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "buildscape:moss_overlay_item",
+    "item": "buildscape:moss_overlay",
     "count": 2
   }
 }

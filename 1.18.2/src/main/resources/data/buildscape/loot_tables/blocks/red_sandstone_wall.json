@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:red_sandstone_wall_item"
+          "name": "buildscape:red_sandstone_wall"
         }
       ],
       "conditions": [

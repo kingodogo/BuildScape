@@ -48,12 +48,22 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> MUD_PLACE = MUD_STEP;
     public static final RegistryObject<SoundEvent> MUD_HIT = MUD_STEP;
     public static final RegistryObject<SoundEvent> MUD_FALL = MUD_STEP;
+    
+    // --- Decorated Pot Sound Events ---
+    public static final RegistryObject<SoundEvent> DECORATED_POT_PLACE = registerSoundEvent("block.decorated_pot.place");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_BREAK = registerSoundEvent("block.decorated_pot.break");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_HIT = registerSoundEvent("block.decorated_pot.hit");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_STEP = registerSoundEvent("block.decorated_pot.step");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_FALL = registerSoundEvent("block.decorated_pot.fall");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_INSERT_ITEM = registerSoundEvent("block.decorated_pot.insert_item");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_INSERT_FAIL = registerSoundEvent("block.decorated_pot.insert_fail");
+    public static final RegistryObject<SoundEvent> DECORATED_POT_SHATTER = registerSoundEvent("block.decorated_pot.shatter");
 
     // --- Sound Types using ForgeSoundType ---
     // Lazy initialization with safe Supplier wrappers that check if RegistryObjects are ready
     private static ForgeSoundType copperGrateSounds = null;
     private static ForgeSoundType copperBulbSounds = null;
-    private static ForgeSoundType mudSounds = null;
+    // Mud sounds: don't cache to allow volume/pitch changes from sounds.json to take effect
     
     public static ForgeSoundType COPPER_GRATE_SOUNDS() {
         if (copperGrateSounds == null) {
@@ -144,43 +154,42 @@ public class ModSounds {
     }
     
     public static ForgeSoundType MUD_SOUNDS() {
-        if (mudSounds == null) {
-            try {
-                // Create Suppliers that safely get the SoundEvents
-                Supplier<SoundEvent> breakSound = () -> {
-                    if (MUD_BREAK.isPresent()) {
-                        return MUD_BREAK.get();
-                    }
-                    LOGGER.warn("Mud break sound not ready, using GRAVEL fallback");
-                    return net.minecraft.sounds.SoundEvents.GRAVEL_BREAK;
-                };
-                Supplier<SoundEvent> stepSound = () -> {
-                    if (MUD_STEP.isPresent()) {
-                        return MUD_STEP.get();
-                    }
-                    LOGGER.warn("Mud step sound not ready, using GRAVEL fallback");
-                    return net.minecraft.sounds.SoundEvents.GRAVEL_STEP;
-                };
-                
-                mudSounds = new ForgeSoundType(1f, 1f,
-                    breakSound, 
-                    stepSound, 
-                    stepSound, // place
-                    stepSound, // hit
-                    stepSound); // fall
-                LOGGER.info("Mud ForgeSoundType initialized successfully");
-            } catch (Exception e) {
-                LOGGER.error("Failed to create mud sound type: " + e.getMessage(), e);
-                // Create fallback ForgeSoundType using vanilla gravel sounds
-                return new ForgeSoundType(1f, 1f,
-                    () -> net.minecraft.sounds.SoundEvents.GRAVEL_BREAK,
-                    () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
-                    () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
-                    () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
-                    () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP);
-            }
+        // Don't cache - always create new instance so volume/pitch from sounds.json takes effect
+        // Volume and pitch are set in sounds.json (0.4 volume, 0.9 pitch), so use 1.0f here
+        try {
+            // Create Suppliers that safely get the SoundEvents
+            Supplier<SoundEvent> breakSound = () -> {
+                if (MUD_BREAK.isPresent()) {
+                    return MUD_BREAK.get();
+                }
+                LOGGER.warn("Mud break sound not ready, using GRAVEL fallback");
+                return net.minecraft.sounds.SoundEvents.GRAVEL_BREAK;
+            };
+            Supplier<SoundEvent> stepSound = () -> {
+                if (MUD_STEP.isPresent()) {
+                    return MUD_STEP.get();
+                }
+                LOGGER.warn("Mud step sound not ready, using GRAVEL fallback");
+                return net.minecraft.sounds.SoundEvents.GRAVEL_STEP;
+            };
+            
+            // Volume and pitch are set in sounds.json, so use 1.0f here (will be overridden by JSON)
+            return new ForgeSoundType(1.0f, 1.0f,
+                breakSound, 
+                stepSound, 
+                stepSound, // place
+                stepSound, // hit
+                stepSound); // fall
+        } catch (Exception e) {
+            LOGGER.error("Failed to create mud sound type: " + e.getMessage(), e);
+            // Create fallback ForgeSoundType using vanilla gravel sounds
+            return new ForgeSoundType(1.0f, 1.0f,
+                () -> net.minecraft.sounds.SoundEvents.GRAVEL_BREAK,
+                () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
+                () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
+                () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
+                () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP);
         }
-        return mudSounds;
     }
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {

@@ -1,8 +1,0 @@
-﻿{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "buildscape:purple_mosaic_glass_item"
-  },
-  "result":"buildscape:purple_mosaic_glass_pane_item","count":1
-}
-

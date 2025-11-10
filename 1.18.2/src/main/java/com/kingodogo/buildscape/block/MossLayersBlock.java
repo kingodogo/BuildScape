@@ -48,15 +48,33 @@ public class MossLayersBlock extends SnowLayerBlock {
     @Override
     public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
         int i = state.getValue(LAYERS);
+        
+        // Allow replacing with same type of layer block if layers < 8
         if (context.getItemInHand().is(this.asItem()) && i < 8) {
             if (context.replacingClickedOnBlock()) {
                 return context.getClickedFace() == Direction.UP;
             } else {
                 return true;
             }
-        } else {
-            return i == 1;
         }
+        
+        // IMPORTANT: Check if trying to place any other type of layer block
+        // This check happens at ALL layer counts, not just when i == 1
+        net.minecraft.world.item.Item heldItem = context.getItemInHand().getItem();
+        if (heldItem instanceof net.minecraft.world.item.BlockItem) {
+            net.minecraft.world.level.block.Block heldBlock = ((net.minecraft.world.item.BlockItem) heldItem).getBlock();
+            // If it's any layer block (wool layers, moss layers, or vanilla snow) but NOT the same type, prevent replacement
+            if (heldBlock instanceof SnowLayerBlock && heldBlock != this) {
+                return false; // Don't allow replacing with any other layer block type
+            }
+        }
+        
+        // Only allow replacement with non-layer blocks when layer count is 1
+        if (i == 1) {
+            return true;
+        }
+        
+        return false;
     }
     
     @Override
@@ -154,7 +172,7 @@ public class MossLayersBlock extends SnowLayerBlock {
         
         // Create a list with the appropriate number of items
         // Each layer should drop one moss layer item
-        return List.of(new ItemStack(ModItems.MOSS_LAYERS_ITEM.get(), layerCount));
+        return List.of(new ItemStack(ModItems.MOSS_LAYERS.get(), layerCount));
     }
     
     // Ensure destroy speed is properly calculated for tool efficiency

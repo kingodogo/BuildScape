@@ -1,14 +1,14 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "B": {
-      "item": "buildscape:yellow_sand_item"
+      "item": "buildscape:yellow_sand"
     }
   },
   "pattern": [
     "BB",
     "BB"
   ],
-  "result":{"count":1,"item":"buildscape:yellow_sandstone_item"}
+  "result":{"count":1,"item":"buildscape:yellow_sandstone"}
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "###"
@@ -7,7 +7,7 @@
     "#": { "item": "buildscape:mud" }
   },
   "result": {
-    "item": "buildscape:mud_slab_item",
+    "item": "buildscape:mud_slab",
     "count": 6
   }
 }

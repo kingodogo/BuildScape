@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:prismarine_bricks_wall_item"
+          "name": "buildscape:prismarine_bricks_wall"
         }
       ],
       "conditions": [
