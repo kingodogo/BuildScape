@@ -15,14 +15,6 @@ public class ModBlocks {
     
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BuildScape.MODID);
     
-    // Polished stone block - strength matches vanilla STONE for consistency
-    public static final RegistryObject<Block> POLISHED_STONE_BLOCK = BLOCKS.register("polished_stone_block", 
-        () -> new ModBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
-            .strength(1.5f, 6.0f)
-            .requiresCorrectToolForDrops()
-            .sound(net.minecraft.world.level.block.SoundType.STONE)
-));
-    
     // Colored sand variants - strength matches vanilla SAND for balanced mining time
     public static final RegistryObject<Block> BLACK_SAND = BLOCKS.register("black_sand", 
         () -> new FallingSandBlock(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_BLACK)
@@ -717,6 +709,185 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
             .noOcclusion()));
     public static final RegistryObject<Block> YELLOW_MOSAIC_GLASS_PANE = BLOCKS.register("yellow_mosaic_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    // Glazed glass blocks
+    public static final RegistryObject<Block> BLACK_GLAZED_GLASS = BLOCKS.register("black_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> BLUE_GLAZED_GLASS = BLOCKS.register("blue_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLUE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> BROWN_GLAZED_GLASS = BLOCKS.register("brown_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BROWN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> CYAN_GLAZED_GLASS = BLOCKS.register("cyan_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_CYAN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> GRAY_GLAZED_GLASS = BLOCKS.register("gray_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_GRAY)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> GREEN_GLAZED_GLASS = BLOCKS.register("green_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_GREEN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> LIGHT_BLUE_GLAZED_GLASS = BLOCKS.register("light_blue_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_LIGHT_BLUE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> LIGHT_GRAY_GLAZED_GLASS = BLOCKS.register("light_gray_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_LIGHT_GRAY)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> LIME_GLAZED_GLASS = BLOCKS.register("lime_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_LIGHT_GREEN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> MAGENTA_GLAZED_GLASS = BLOCKS.register("magenta_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_MAGENTA)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> ORANGE_GLAZED_GLASS = BLOCKS.register("orange_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_ORANGE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> PINK_GLAZED_GLASS = BLOCKS.register("pink_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_PINK)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> PURPLE_GLAZED_GLASS = BLOCKS.register("purple_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_PURPLE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> RED_GLAZED_GLASS = BLOCKS.register("red_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_RED)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> WHITE_GLAZED_GLASS = BLOCKS.register("white_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.SNOW)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> YELLOW_GLAZED_GLASS = BLOCKS.register("yellow_glazed_glass", 
+        () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    // Glazed glass panes
+    public static final RegistryObject<Block> BLACK_GLAZED_GLASS_PANE = BLOCKS.register("black_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> BLUE_GLAZED_GLASS_PANE = BLOCKS.register("blue_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLUE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> BROWN_GLAZED_GLASS_PANE = BLOCKS.register("brown_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BROWN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> CYAN_GLAZED_GLASS_PANE = BLOCKS.register("cyan_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_CYAN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> GRAY_GLAZED_GLASS_PANE = BLOCKS.register("gray_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_GRAY)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> GREEN_GLAZED_GLASS_PANE = BLOCKS.register("green_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_GREEN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> LIGHT_BLUE_GLAZED_GLASS_PANE = BLOCKS.register("light_blue_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_LIGHT_BLUE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> LIGHT_GRAY_GLAZED_GLASS_PANE = BLOCKS.register("light_gray_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_LIGHT_GRAY)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> LIME_GLAZED_GLASS_PANE = BLOCKS.register("lime_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_LIGHT_GREEN)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> MAGENTA_GLAZED_GLASS_PANE = BLOCKS.register("magenta_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_MAGENTA)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> ORANGE_GLAZED_GLASS_PANE = BLOCKS.register("orange_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_ORANGE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> PINK_GLAZED_GLASS_PANE = BLOCKS.register("pink_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_PINK)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> PURPLE_GLAZED_GLASS_PANE = BLOCKS.register("purple_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_PURPLE)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> RED_GLAZED_GLASS_PANE = BLOCKS.register("red_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_RED)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> WHITE_GLAZED_GLASS_PANE = BLOCKS.register("white_glazed_glass_pane",
+        () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.SNOW)
+            .strength(0.3f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    public static final RegistryObject<Block> YELLOW_GLAZED_GLASS_PANE = BLOCKS.register("yellow_glazed_glass_pane",
         () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_YELLOW)
             .strength(0.3f)
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
@@ -1715,6 +1886,15 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false)));
     
+    public static final RegistryObject<Block> SNOW_OVERLAY = BLOCKS.register("snow_overlay",
+        () -> new SnowOverlayBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.SNOW)
+            .strength(0.4f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false)));
+    
     // Concrete stairs - strength matches vanilla CONCRETE (1.8f) for consistency
     public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = BLOCKS.register("black_concrete_stairs",
         () -> new ModStairBlock(Blocks.BLACK_CONCRETE.defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
@@ -1974,35 +2154,31 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.WOOD)
             .noOcclusion()));
     
-    // Quartz pillar (renamed original pillar)
+    // Quartz pillar (renamed original pillar) - matches quartz block: 0.8f
     public static final RegistryObject<Block> QUARTZ_PILLAR = BLOCKS.register("quartz_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.QUARTZ)
             .strength(0.8f)
-            .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.STONE)
             .noOcclusion()));
 
-    // Stone pillar (using imported stone textures)
+    // Stone pillar - matches stone: 1.5f hardness, 6.0f resistance
     public static final RegistryObject<Block> STONE_PILLAR = BLOCKS.register("stone_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
-            .strength(0.8f)
-            .requiresCorrectToolForDrops()
+            .strength(1.5f, 6.0f)
             .sound(net.minecraft.world.level.block.SoundType.STONE)
             .noOcclusion()));
 
-    // Deepslate pillar variant
+    // Deepslate pillar variant - matches deepslate: 3.0f hardness, 6.0f resistance
     public static final RegistryObject<Block> DEEPSLATE_PILLAR = BLOCKS.register("deepslate_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
-            .strength(1.5f, 6.0f)
-            .requiresCorrectToolForDrops()
+            .strength(3.0f, 6.0f)
             .sound(net.minecraft.world.level.block.SoundType.DEEPSLATE)
             .noOcclusion()));
 
-    // Mossy pillar variant
+    // Mossy pillar variant - matches mossy cobblestone: 2.0f hardness, 6.0f resistance
     public static final RegistryObject<Block> MOSSY_PILLAR = BLOCKS.register("mossy_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GREEN)
-            .strength(0.8f)
-            .requiresCorrectToolForDrops()
+            .strength(2.0f, 6.0f)
             .sound(net.minecraft.world.level.block.SoundType.STONE)
             .noOcclusion()));
     
@@ -2045,7 +2221,7 @@ public class ModBlocks {
         () -> new DecoratedPotBlock());
     
     // Wool layers - stackable wool layers for all 16 colors
-    public static final RegistryObject<Block> BLACK_WOOL_LAYERS = BLOCKS.register("black_wool_layers",
+    public static final RegistryObject<Block> BLACK_CARPET_LAYERS = BLOCKS.register("black_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2053,7 +2229,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "black"));
-    public static final RegistryObject<Block> BLUE_WOOL_LAYERS = BLOCKS.register("blue_wool_layers",
+    public static final RegistryObject<Block> BLUE_CARPET_LAYERS = BLOCKS.register("blue_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BLUE)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2061,7 +2237,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "blue"));
-    public static final RegistryObject<Block> BROWN_WOOL_LAYERS = BLOCKS.register("brown_wool_layers",
+    public static final RegistryObject<Block> BROWN_CARPET_LAYERS = BLOCKS.register("brown_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2069,7 +2245,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "brown"));
-    public static final RegistryObject<Block> CYAN_WOOL_LAYERS = BLOCKS.register("cyan_wool_layers",
+    public static final RegistryObject<Block> CYAN_CARPET_LAYERS = BLOCKS.register("cyan_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_CYAN)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2077,7 +2253,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "cyan"));
-    public static final RegistryObject<Block> GRAY_WOOL_LAYERS = BLOCKS.register("gray_wool_layers",
+    public static final RegistryObject<Block> GRAY_CARPET_LAYERS = BLOCKS.register("gray_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_GRAY)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2085,7 +2261,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "gray"));
-    public static final RegistryObject<Block> GREEN_WOOL_LAYERS = BLOCKS.register("green_wool_layers",
+    public static final RegistryObject<Block> GREEN_CARPET_LAYERS = BLOCKS.register("green_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2093,7 +2269,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "green"));
-    public static final RegistryObject<Block> LIGHT_BLUE_WOOL_LAYERS = BLOCKS.register("light_blue_wool_layers",
+    public static final RegistryObject<Block> LIGHT_BLUE_CARPET_LAYERS = BLOCKS.register("light_blue_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_BLUE)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2101,7 +2277,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "light_blue"));
-    public static final RegistryObject<Block> LIGHT_GRAY_WOOL_LAYERS = BLOCKS.register("light_gray_wool_layers",
+    public static final RegistryObject<Block> LIGHT_GRAY_CARPET_LAYERS = BLOCKS.register("light_gray_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_GRAY)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2109,7 +2285,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "light_gray"));
-    public static final RegistryObject<Block> LIME_WOOL_LAYERS = BLOCKS.register("lime_wool_layers",
+    public static final RegistryObject<Block> LIME_CARPET_LAYERS = BLOCKS.register("lime_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_LIGHT_GREEN)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2117,7 +2293,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "lime"));
-    public static final RegistryObject<Block> MAGENTA_WOOL_LAYERS = BLOCKS.register("magenta_wool_layers",
+    public static final RegistryObject<Block> MAGENTA_CARPET_LAYERS = BLOCKS.register("magenta_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_MAGENTA)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2125,7 +2301,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "magenta"));
-    public static final RegistryObject<Block> ORANGE_WOOL_LAYERS = BLOCKS.register("orange_wool_layers",
+    public static final RegistryObject<Block> ORANGE_CARPET_LAYERS = BLOCKS.register("orange_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_ORANGE)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2133,7 +2309,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "orange"));
-    public static final RegistryObject<Block> PINK_WOOL_LAYERS = BLOCKS.register("pink_wool_layers",
+    public static final RegistryObject<Block> PINK_CARPET_LAYERS = BLOCKS.register("pink_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_PINK)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2141,7 +2317,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "pink"));
-    public static final RegistryObject<Block> PURPLE_WOOL_LAYERS = BLOCKS.register("purple_wool_layers",
+    public static final RegistryObject<Block> PURPLE_CARPET_LAYERS = BLOCKS.register("purple_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_PURPLE)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2149,7 +2325,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "purple"));
-    public static final RegistryObject<Block> RED_WOOL_LAYERS = BLOCKS.register("red_wool_layers",
+    public static final RegistryObject<Block> RED_CARPET_LAYERS = BLOCKS.register("red_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_RED)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2157,7 +2333,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "red"));
-    public static final RegistryObject<Block> WHITE_WOOL_LAYERS = BLOCKS.register("white_wool_layers",
+    public static final RegistryObject<Block> WHITE_CARPET_LAYERS = BLOCKS.register("white_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.SNOW)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2165,7 +2341,7 @@ public class ModBlocks {
             .isRedstoneConductor((state, reader, pos) -> false)
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "white"));
-    public static final RegistryObject<Block> YELLOW_WOOL_LAYERS = BLOCKS.register("yellow_wool_layers",
+    public static final RegistryObject<Block> YELLOW_CARPET_LAYERS = BLOCKS.register("yellow_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_YELLOW)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.WOOL)
@@ -2174,9 +2350,155 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "yellow"));
     
+    // Leaf layers - stackable leaf layers for all leaf types with full transparency
+    public static final RegistryObject<Block> OAK_LEAF_LAYERS = BLOCKS.register("oak_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.PLANT)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "oak"));
+    
+    public static final RegistryObject<Block> SPRUCE_LEAF_LAYERS = BLOCKS.register("spruce_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.PODZOL)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "spruce"));
+    
+    public static final RegistryObject<Block> BIRCH_LEAF_LAYERS = BLOCKS.register("birch_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.SAND)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "birch"));
+    
+    public static final RegistryObject<Block> JUNGLE_LEAF_LAYERS = BLOCKS.register("jungle_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.DIRT)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "jungle"));
+    
+    public static final RegistryObject<Block> ACACIA_LEAF_LAYERS = BLOCKS.register("acacia_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_ORANGE)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "acacia"));
+    
+    public static final RegistryObject<Block> DARK_OAK_LEAF_LAYERS = BLOCKS.register("dark_oak_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.COLOR_BROWN)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "dark_oak"));
+    
+    public static final RegistryObject<Block> AZALEA_LEAF_LAYERS = BLOCKS.register("azalea_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.PLANT)
+            .strength(0.2f)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.AZALEA_SOUNDS())
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "azalea"));
+    
+    public static final RegistryObject<Block> FLOWERING_AZALEA_LEAF_LAYERS = BLOCKS.register("flowering_azalea_leaf_layers",
+        () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.PLANT)
+            .strength(0.2f)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.AZALEA_SOUNDS())
+            .noOcclusion()
+            .isRedstoneConductor((state, reader, pos) -> false)
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false), "flowering_azalea"));
+    
+    // Leaf hedges (walls) - for all leaf types
+    public static final RegistryObject<Block> OAK_LEAF_HEDGE = BLOCKS.register("oak_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
+            .strength(0.2F)
+            .sound(net.minecraft.world.level.block.SoundType.AZALEA_LEAVES)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.OAK_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> SPRUCE_LEAF_HEDGE = BLOCKS.register("spruce_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PODZOL)
+            .strength(0.2F)
+            .sound(net.minecraft.world.level.block.SoundType.AZALEA_LEAVES)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.SPRUCE_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> BIRCH_LEAF_HEDGE = BLOCKS.register("birch_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.SAND)
+            .strength(0.2F)
+            .sound(net.minecraft.world.level.block.SoundType.AZALEA_LEAVES)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.BIRCH_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> JUNGLE_LEAF_HEDGE = BLOCKS.register("jungle_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.DIRT)
+            .strength(0.2F)
+            .sound(net.minecraft.world.level.block.SoundType.AZALEA_LEAVES)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.JUNGLE_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> ACACIA_LEAF_HEDGE = BLOCKS.register("acacia_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_ORANGE)
+            .strength(0.2F)
+            .sound(net.minecraft.world.level.block.SoundType.AZALEA_LEAVES)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.ACACIA_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> DARK_OAK_LEAF_HEDGE = BLOCKS.register("dark_oak_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BROWN)
+            .strength(0.2F)
+            .sound(net.minecraft.world.level.block.SoundType.AZALEA_LEAVES)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.DARK_OAK_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> AZALEA_LEAF_HEDGE = BLOCKS.register("azalea_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
+            .strength(0.2F)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.AZALEA_SOUNDS())
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.AZALEA_LEAF_HEDGE));
+    
+    public static final RegistryObject<Block> FLOWERING_AZALEA_LEAF_HEDGE = BLOCKS.register("flowering_azalea_leaf_hedge",
+        () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
+            .strength(0.2F)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.AZALEA_SOUNDS())
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false),
+            ModItems.FLOWERING_AZALEA_LEAF_HEDGE));
+    
     // Hay bale slab
     public static final RegistryObject<Block> HAY_BALE_SLAB = BLOCKS.register("hay_bale_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_YELLOW)
+        () -> new HayBaleSlabBlock(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_YELLOW)
             .strength(0.5f)
             .sound(net.minecraft.world.level.block.SoundType.GRASS)));
     
@@ -2245,6 +2567,19 @@ public class ModBlocks {
             .strength(0.5f)
             .sound(net.minecraft.world.level.block.SoundType.BAMBOO)
             .noCollission()));
+    
+    // Bamboo door and trapdoor
+    public static final RegistryObject<Block> BAMBOO_DOOR = BLOCKS.register("bamboo_door",
+        () -> new ModDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_YELLOW)
+            .strength(3.0f)
+            .sound(net.minecraft.world.level.block.SoundType.BAMBOO)
+            .noOcclusion()));
+    public static final RegistryObject<Block> BAMBOO_TRAPDOOR = BLOCKS.register("bamboo_trapdoor",
+        () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_YELLOW)
+            .strength(3.0f)
+            .sound(net.minecraft.world.level.block.SoundType.BAMBOO)
+            .noOcclusion()
+            .isValidSpawn((state, reader, pos, entityType) -> false)));
     
     // Wood walls - oak, spruce, dark_oak, jungle, acacia, bamboo_block
     public static final RegistryObject<Block> OAK_WOOD_WALL = BLOCKS.register("oak_wood_wall",
@@ -2928,5 +3263,377 @@ public class ModBlocks {
             .noOcclusion()
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false)));
+    
+    // Copper chains - climbable chains with copper oxidation variants
+    public static final RegistryObject<Block> COPPER_CHAIN = BLOCKS.register("copper_chain",
+        () -> new ClimbableChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE)
+            .strength(3.0f, 6.0f)
+            .requiresCorrectToolForDrops()
+            .sound(net.minecraft.world.level.block.SoundType.CHAIN)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false)));
+    public static final RegistryObject<Block> EXPOSED_COPPER_CHAIN = BLOCKS.register("exposed_copper_chain",
+        () -> new ClimbableChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_ORANGE)
+            .strength(3.0f, 6.0f)
+            .requiresCorrectToolForDrops()
+            .sound(net.minecraft.world.level.block.SoundType.CHAIN)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false)));
+    public static final RegistryObject<Block> WEATHERED_COPPER_CHAIN = BLOCKS.register("weathered_copper_chain",
+        () -> new ClimbableChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_WART_BLOCK)
+            .strength(3.0f, 6.0f)
+            .requiresCorrectToolForDrops()
+            .sound(net.minecraft.world.level.block.SoundType.CHAIN)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false)));
+    public static final RegistryObject<Block> OXIDIZED_COPPER_CHAIN = BLOCKS.register("oxidized_copper_chain",
+        () -> new ClimbableChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM)
+            .strength(3.0f, 6.0f)
+            .requiresCorrectToolForDrops()
+            .sound(net.minecraft.world.level.block.SoundType.CHAIN)
+            .noOcclusion()
+            .isSuffocating((state, reader, pos) -> false)
+            .isViewBlocking((state, reader, pos) -> false)));
+    
+    // Rose Vines - can attach to walls, floors, and ceilings
+    public static final RegistryObject<Block> RED_ROSE_VINES = BLOCKS.register("red_rose_vines",
+        () -> new RoseVinesBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_RED)
+            .strength(0.2f)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.VINE_SOUNDS())
+            .noCollission()
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> BLACK_ROSE_VINES = BLOCKS.register("black_rose_vines",
+        () -> new RoseVinesBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_BLACK)
+            .strength(0.2f)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.VINE_SOUNDS())
+            .noCollission()
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> BLUE_ROSE_VINES = BLOCKS.register("blue_rose_vines",
+        () -> new RoseVinesBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_BLUE)
+            .strength(0.2f)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.VINE_SOUNDS())
+            .noCollission()
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> WHITE_ROSE_VINES = BLOCKS.register("white_rose_vines",
+        () -> new RoseVinesBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.SNOW)
+            .strength(0.2f)
+            .sound(com.kingodogo.buildscape.sound.ModSounds.VINE_SOUNDS())
+            .noCollission()
+            .noOcclusion()));
+    
+    // Monet Flowers - can be placed on dirt blocks, bonemealed to drop copies
+    // Initially obtained from Wandering Trader
+    public static final RegistryObject<Block> RED_MONETS = BLOCKS.register("red_monets",
+        () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> BLUE_MONETS = BLOCKS.register("blue_monets",
+        () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BLUE)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> PURPLE_MONETS = BLOCKS.register("purple_monets",
+        () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> LIGHT_BLUE_MONETS = BLOCKS.register("light_blue_monets",
+        () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_LIGHT_BLUE)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> PINK_MONETS = BLOCKS.register("pink_monets",
+        () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PINK)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> YELLOW_MONETS = BLOCKS.register("yellow_monets",
+        () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_YELLOW)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    // Clover - 4 stages, can be placed on any full block, bonemeal drops 1
+    public static final RegistryObject<Block> CLOVER = BLOCKS.register("clover",
+        () -> new CloverBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
+            .noCollission()
+            .instabreak()
+            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+    
+    // Petals - 4 stages, can be placed on any full block, bonemeal drops 1
+    public static final RegistryObject<Block> RED_PETAL = BLOCKS.register("red_petal",
+        () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
+            .noCollission()
+            .instabreak()
+            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+
+    public static final RegistryObject<Block> BLUE_PETAL = BLOCKS.register("blue_petal",
+        () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BLUE)
+            .noCollission()
+            .instabreak()
+            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+
+    public static final RegistryObject<Block> ORANGE_PETAL = BLOCKS.register("orange_petal",
+        () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_ORANGE)
+            .noCollission()
+            .instabreak()
+            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+
+    public static final RegistryObject<Block> PINK_PETAL = BLOCKS.register("pink_petal",
+        () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PINK)
+            .noCollission()
+            .instabreak()
+            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+
+    public static final RegistryObject<Block> PURPLE_PETAL = BLOCKS.register("purple_petal",
+        () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
+            .noCollission()
+            .instabreak()
+            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+    
+    // Colored Spore Blossoms - decorative blocks with falling particles
+    // Uses vanilla spore blossom base texture with custom center textures
+    // Particle colors: Red #fe4a4e, Cyan #1fdee2, Blue #4a7df4, Purple #a146f2, Orange #f76e32
+    public static final RegistryObject<Block> RED_SPORE_BLOSSOM = BLOCKS.register("red_spore_blossom",
+        () -> new ColoredSporeBlossomBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.SPORE_BLOSSOM),
+            ColoredSporeBlossomBlock.hexToVector3f("#fe4a4e"),
+            ColoredSporeBlossomBlock.hexToRGB("#fe4a4e")));
+    
+    public static final RegistryObject<Block> CYAN_SPORE_BLOSSOM = BLOCKS.register("cyan_spore_blossom",
+        () -> new ColoredSporeBlossomBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_CYAN)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.SPORE_BLOSSOM),
+            ColoredSporeBlossomBlock.hexToVector3f("#1fdee2"),
+            ColoredSporeBlossomBlock.hexToRGB("#1fdee2")));
+    
+    public static final RegistryObject<Block> BLUE_SPORE_BLOSSOM = BLOCKS.register("blue_spore_blossom",
+        () -> new ColoredSporeBlossomBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BLUE)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.SPORE_BLOSSOM),
+            ColoredSporeBlossomBlock.hexToVector3f("#4a7df4"),
+            ColoredSporeBlossomBlock.hexToRGB("#4a7df4")));
+    
+    public static final RegistryObject<Block> PURPLE_SPORE_BLOSSOM = BLOCKS.register("purple_spore_blossom",
+        () -> new ColoredSporeBlossomBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.SPORE_BLOSSOM),
+            ColoredSporeBlossomBlock.hexToVector3f("#a146f2"),
+            ColoredSporeBlossomBlock.hexToRGB("#a146f2")));
+    
+    public static final RegistryObject<Block> ORANGE_SPORE_BLOSSOM = BLOCKS.register("orange_spore_blossom",
+        () -> new ColoredSporeBlossomBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_ORANGE)
+            .noCollission()
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.SPORE_BLOSSOM),
+            ColoredSporeBlossomBlock.hexToVector3f("#f76e32"),
+            ColoredSporeBlossomBlock.hexToRGB("#f76e32")));
+    
+    // Big Candles - decorative candles with lit/unlit states
+    // Stage 1: Light level 12 (currently implemented)
+    // Stage 2: Light level 13 (commented out for future)
+    // Stage 3: Light level 14 (commented out for future)
+    // Stage 4: Light level 15 (commented out for future)
+    public static final RegistryObject<Block> BIG_CANDLE = BLOCKS.register("big_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_WHITE_CANDLE = BLOCKS.register("big_white_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_ORANGE_CANDLE = BLOCKS.register("big_orange_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_MAGENTA_CANDLE = BLOCKS.register("big_magenta_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_LIGHT_BLUE_CANDLE = BLOCKS.register("big_light_blue_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_YELLOW_CANDLE = BLOCKS.register("big_yellow_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_LIME_CANDLE = BLOCKS.register("big_lime_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_PINK_CANDLE = BLOCKS.register("big_pink_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_GRAY_CANDLE = BLOCKS.register("big_gray_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_LIGHT_GRAY_CANDLE = BLOCKS.register("big_light_gray_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_CYAN_CANDLE = BLOCKS.register("big_cyan_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_PURPLE_CANDLE = BLOCKS.register("big_purple_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_BLUE_CANDLE = BLOCKS.register("big_blue_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_BROWN_CANDLE = BLOCKS.register("big_brown_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_GREEN_CANDLE = BLOCKS.register("big_green_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_RED_CANDLE = BLOCKS.register("big_red_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_BLACK_CANDLE = BLOCKS.register("big_black_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_AMETHYST_CANDLE = BLOCKS.register("big_amethyst_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    public static final RegistryObject<Block> BIG_SCULK_CANDLE = BLOCKS.register("big_sculk_candle",
+        () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+            .instabreak()
+            .sound(net.minecraft.world.level.block.SoundType.CANDLE)
+            .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
+    
+    // Snow blocks
+    public static final RegistryObject<Block> SNOW_BRICKS = BLOCKS.register("snow_bricks",
+        () -> new ModBlock(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)));
+    
+    public static final RegistryObject<Block> SNOW_BRICKS_STAIRS = BLOCKS.register("snow_bricks_stairs",
+        () -> new ModStairBlock(SNOW_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)));
+    
+    public static final RegistryObject<Block> SNOW_BRICKS_SLAB = BLOCKS.register("snow_bricks_slab",
+        () -> new SlabBlock(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)));
+    
+    public static final RegistryObject<Block> SNOW_BRICKS_WALL = BLOCKS.register("snow_bricks_wall",
+        () -> new WallBlock(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
+            .strength(0.2f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)));
+    
+    // Snow block stairs and slab (using vanilla snow block)
+    public static final RegistryObject<Block> SNOW_STAIRS = BLOCKS.register("snow_stairs",
+        () -> new ModStairBlock(Blocks.SNOW_BLOCK.defaultBlockState(), BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
+            .strength(0.1f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)));
+    
+    public static final RegistryObject<Block> SNOW_SLAB = BLOCKS.register("snow_slab",
+        () -> new SlabBlock(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
+            .strength(0.1f)
+            .sound(net.minecraft.world.level.block.SoundType.SNOW)));
+    
+    public static final RegistryObject<Block> SNOWY_GRASS_BLOCK = BLOCKS.register("snowy_grass_block",
+        () -> new SnowyGrassBlock(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.GRASS)
+            .strength(0.6f)
+            .randomTicks()
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> SNOWY_GRASS_BLOCK_STAIRS = BLOCKS.register("snowy_grass_block_stairs",
+        () -> new ModStairBlock(SNOWY_GRASS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.GRASS)
+            .strength(0.6f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    public static final RegistryObject<Block> SNOWY_GRASS_BLOCK_SLAB = BLOCKS.register("snowy_grass_block_slab",
+        () -> new SlabBlock(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.GRASS)
+            .strength(0.6f)
+            .sound(net.minecraft.world.level.block.SoundType.GRASS)));
+    
+    // Icicle blocks
+    public static final RegistryObject<Block> ICICLE = BLOCKS.register("icicle",
+        () -> new PointedIcicleBlock(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE)
+            .strength(0.5f)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()
+            .randomTicks()
+            .dynamicShape()));
+    
+    public static final RegistryObject<Block> ICICLE_BLOCK = BLOCKS.register("icicle_block",
+        () -> new IcicleBlock(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE)
+            .strength(0.5f)
+            .friction(0.989F)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
+    
+    public static final RegistryObject<Block> PACKED_ICICLE_BLOCK = BLOCKS.register("packed_icicle_block",
+        () -> new PackedIcicleBlock(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE)
+            .strength(0.5f)
+            .friction(0.989F)
+            .sound(net.minecraft.world.level.block.SoundType.GLASS)
+            .noOcclusion()));
 }
 // Kingodogo finished the project at 2025-11-02 12:13:45

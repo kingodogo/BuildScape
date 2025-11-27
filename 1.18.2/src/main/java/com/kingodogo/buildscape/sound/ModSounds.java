@@ -58,6 +58,13 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> DECORATED_POT_INSERT_ITEM = registerSoundEvent("block.decorated_pot.insert_item");
     public static final RegistryObject<SoundEvent> DECORATED_POT_INSERT_FAIL = registerSoundEvent("block.decorated_pot.insert_fail");
     public static final RegistryObject<SoundEvent> DECORATED_POT_SHATTER = registerSoundEvent("block.decorated_pot.shatter");
+    
+    // --- Flower Bed Sound Events (for petals and clovers) ---
+    public static final RegistryObject<SoundEvent> FLOWER_BED_BREAK = registerSoundEvent("block.flower_bed.break");
+    public static final RegistryObject<SoundEvent> FLOWER_BED_STEP = registerSoundEvent("block.flower_bed.step");
+    public static final RegistryObject<SoundEvent> FLOWER_BED_PLACE = registerSoundEvent("block.flower_bed.place");
+    public static final RegistryObject<SoundEvent> FLOWER_BED_HIT = registerSoundEvent("block.flower_bed.hit");
+    public static final RegistryObject<SoundEvent> FLOWER_BED_FALL = registerSoundEvent("block.flower_bed.fall");
 
     // --- Sound Types using ForgeSoundType ---
     // Lazy initialization with safe Supplier wrappers that check if RegistryObjects are ready
@@ -190,6 +197,96 @@ public class ModSounds {
                 () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP,
                 () -> net.minecraft.sounds.SoundEvents.GRAVEL_STEP);
         }
+    }
+
+    // Petals & Clover use cherry leaves sounds (FLOWERING_AZALEA in 1.18.2)
+    // Note: This method is kept for backwards compatibility but is no longer used
+    // Petals and clover now use FLOWER_BED_SOUNDS() instead
+    public static com.kingodogo.buildscape.block.CustomSoundType PETAL_CLOVER_SOUNDS() {
+        return new com.kingodogo.buildscape.block.CustomSoundType(
+            0.8f, 0.96f,  // break volume, pitch
+            0.12f, 1.2f,  // step volume, pitch
+            0.8f, 0.96f,  // place volume, pitch
+            0.2f, 0.6f,   // hit volume, pitch
+            0.4f, 0.9f,   // fall volume, pitch
+            () -> net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_BREAK,
+            () -> net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_STEP,
+            () -> net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_PLACE,
+            () -> net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_HIT,
+            () -> net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_FALL);
+    }
+    
+    // Flower bed sounds for petals and clover
+    public static com.kingodogo.buildscape.block.CustomSoundType FLOWER_BED_SOUNDS() {
+        return new com.kingodogo.buildscape.block.CustomSoundType(
+            0.8f, 0.96f,  // break volume, pitch
+            0.4f, 1.2f,   // step volume, pitch (increased from 0.12)
+            0.8f, 0.96f,  // place volume, pitch
+            0.2f, 0.6f,   // hit volume, pitch
+            0.4f, 0.9f,   // fall volume, pitch
+            () -> {
+                if (FLOWER_BED_BREAK.isPresent()) {
+                    return FLOWER_BED_BREAK.get();
+                }
+                LOGGER.warn("Flower bed break sound not ready, using FLOWERING_AZALEA fallback");
+                return net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_BREAK;
+            },
+            () -> {
+                if (FLOWER_BED_STEP.isPresent()) {
+                    return FLOWER_BED_STEP.get();
+                }
+                LOGGER.warn("Flower bed step sound not ready, using FLOWERING_AZALEA fallback");
+                return net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_STEP;
+            },
+            () -> {
+                if (FLOWER_BED_PLACE.isPresent()) {
+                    return FLOWER_BED_PLACE.get();
+                }
+                LOGGER.warn("Flower bed place sound not ready, using FLOWERING_AZALEA fallback");
+                return net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_PLACE;
+            },
+            () -> {
+                if (FLOWER_BED_HIT.isPresent()) {
+                    return FLOWER_BED_HIT.get();
+                }
+                LOGGER.warn("Flower bed hit sound not ready, using FLOWERING_AZALEA fallback");
+                return net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_HIT;
+            },
+            () -> {
+                if (FLOWER_BED_FALL.isPresent()) {
+                    return FLOWER_BED_FALL.get();
+                }
+                LOGGER.warn("Flower bed fall sound not ready, using FLOWERING_AZALEA fallback");
+                return net.minecraft.sounds.SoundEvents.FLOWERING_AZALEA_FALL;
+            });
+    }
+    
+    public static com.kingodogo.buildscape.block.CustomSoundType VINE_SOUNDS() {
+        return new com.kingodogo.buildscape.block.CustomSoundType(
+            0.9f, 0.8f,   // break volume, pitch
+            0.15f, 1.0f,  // step volume, pitch
+            0.9f, 0.8f,   // place volume, pitch
+            0.25f, 0.5f,  // hit volume, pitch
+            0.5f, 0.75f,  // fall volume, pitch
+            () -> net.minecraft.sounds.SoundEvents.VINE_BREAK,
+            () -> net.minecraft.sounds.SoundEvents.VINE_STEP,
+            () -> net.minecraft.sounds.SoundEvents.VINE_PLACE,
+            () -> net.minecraft.sounds.SoundEvents.VINE_HIT,
+            () -> net.minecraft.sounds.SoundEvents.VINE_FALL);
+    }
+    
+    public static com.kingodogo.buildscape.block.CustomSoundType AZALEA_SOUNDS() {
+        return new com.kingodogo.buildscape.block.CustomSoundType(
+            1.0f, 1.0f,   // break volume, pitch
+            1.0f, 1.0f,   // step volume, pitch
+            1.0f, 1.0f,   // place volume, pitch
+            1.0f, 1.0f,   // hit volume, pitch
+            1.0f, 1.0f,   // fall volume, pitch
+            () -> net.minecraft.sounds.SoundEvents.AZALEA_BREAK,
+            () -> net.minecraft.sounds.SoundEvents.AZALEA_STEP,
+            () -> net.minecraft.sounds.SoundEvents.AZALEA_PLACE,
+            () -> net.minecraft.sounds.SoundEvents.AZALEA_HIT,
+            () -> net.minecraft.sounds.SoundEvents.AZALEA_FALL);
     }
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {

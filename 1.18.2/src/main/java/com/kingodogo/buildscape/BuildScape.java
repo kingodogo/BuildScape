@@ -85,8 +85,12 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BIT_OXIDIZED_COPPER_BULB.get()));
             items.add(new ItemStack(ModItems.BIT_OXIDIZED_COPPER_GRATE.get()));
             
-            // Iron chain (vanilla) -> large iron chain -> ancient steel chain -> large ancient steel chain -> gold chain -> large gold chain -> diamond chain -> large diamond chain -> emerald chain -> large emerald chain -> netherite chain -> large netherite chain
+            // Iron chain (vanilla) -> copper chains -> large iron chain -> ancient steel chain -> large ancient steel chain -> gold chain -> large gold chain -> diamond chain -> large diamond chain -> emerald chain -> large emerald chain -> netherite chain -> large netherite chain
             items.add(new ItemStack(Items.CHAIN));
+            items.add(new ItemStack(ModItems.COPPER_CHAIN.get()));
+            items.add(new ItemStack(ModItems.EXPOSED_COPPER_CHAIN.get()));
+            items.add(new ItemStack(ModItems.WEATHERED_COPPER_CHAIN.get()));
+            items.add(new ItemStack(ModItems.OXIDIZED_COPPER_CHAIN.get()));
             items.add(new ItemStack(ModItems.LARGE_IRON_CHAIN.get()));
             items.add(new ItemStack(ModItems.ANCIENT_STEEL_CHAIN.get()));
             items.add(new ItemStack(ModItems.LARGE_ANCIENT_STEEL_CHAIN.get()));
@@ -214,16 +218,22 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_STAIRS.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_SLAB.get()));
+            items.add(new ItemStack(ModItems.BAMBOO_BLOCK_WALL.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_FENCE.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_FENCE_GATE.get()));
+            items.add(new ItemStack(ModItems.BAMBOO_BLOCK_PRESSURE_PLATE.get()));
+            items.add(new ItemStack(ModItems.BAMBOO_DOOR.get()));
+            items.add(new ItemStack(ModItems.BAMBOO_TRAPDOOR.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_BUTTON.get()));
             
             // Stripped bamboo blocks
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_STAIRS.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_SLAB.get()));
+            items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_WALL.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_FENCE.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_FENCE_GATE.get()));
+            items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_PRESSURE_PLATE.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_BUTTON.get()));
             
             // Wood walls
@@ -617,6 +627,73 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_MOSAIC_GLASS.get()));
             items.add(new ItemStack(ModItems.PINK_MOSAIC_GLASS_PANE.get()));
             
+            // Colored glazed glass - grouped by color (glazed glass -> pane)
+            // Order: white, light grey, gray, black, brown, red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink
+            
+            // White glazed glass
+            items.add(new ItemStack(ModItems.WHITE_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.WHITE_GLAZED_GLASS_PANE.get()));
+            
+            // Light gray glazed glass
+            items.add(new ItemStack(ModItems.LIGHT_GRAY_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.LIGHT_GRAY_GLAZED_GLASS_PANE.get()));
+            
+            // Gray glazed glass
+            items.add(new ItemStack(ModItems.GRAY_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.GRAY_GLAZED_GLASS_PANE.get()));
+            
+            // Black glazed glass
+            items.add(new ItemStack(ModItems.BLACK_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.BLACK_GLAZED_GLASS_PANE.get()));
+            
+            // Brown glazed glass
+            items.add(new ItemStack(ModItems.BROWN_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.BROWN_GLAZED_GLASS_PANE.get()));
+            
+            // Red glazed glass
+            items.add(new ItemStack(ModItems.RED_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.RED_GLAZED_GLASS_PANE.get()));
+            
+            // Orange glazed glass
+            items.add(new ItemStack(ModItems.ORANGE_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.ORANGE_GLAZED_GLASS_PANE.get()));
+            
+            // Yellow glazed glass
+            items.add(new ItemStack(ModItems.YELLOW_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.YELLOW_GLAZED_GLASS_PANE.get()));
+            
+            // Lime glazed glass
+            items.add(new ItemStack(ModItems.LIME_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.LIME_GLAZED_GLASS_PANE.get()));
+            
+            // Green glazed glass
+            items.add(new ItemStack(ModItems.GREEN_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.GREEN_GLAZED_GLASS_PANE.get()));
+            
+            // Cyan glazed glass
+            items.add(new ItemStack(ModItems.CYAN_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.CYAN_GLAZED_GLASS_PANE.get()));
+            
+            // Light blue glazed glass
+            items.add(new ItemStack(ModItems.LIGHT_BLUE_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.LIGHT_BLUE_GLAZED_GLASS_PANE.get()));
+            
+            // Blue glazed glass
+            items.add(new ItemStack(ModItems.BLUE_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.BLUE_GLAZED_GLASS_PANE.get()));
+            
+            // Purple glazed glass
+            items.add(new ItemStack(ModItems.PURPLE_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.PURPLE_GLAZED_GLASS_PANE.get()));
+            
+            // Magenta glazed glass
+            items.add(new ItemStack(ModItems.MAGENTA_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.MAGENTA_GLAZED_GLASS_PANE.get()));
+            
+            // Pink glazed glass
+            items.add(new ItemStack(ModItems.PINK_GLAZED_GLASS.get()));
+            items.add(new ItemStack(ModItems.PINK_GLAZED_GLASS_PANE.get()));
+            
             // Decorated Pots
             items.add(new ItemStack(ModItems.DECORATED_POT.get()));
             items.add(new ItemStack(ModItems.WHITE_DECORATED_POT.get()));
@@ -636,21 +713,41 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_DECORATED_POT.get()));
             
             // Wool layers - all 16 colors
-            items.add(new ItemStack(ModItems.WHITE_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.GRAY_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.BLACK_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.BROWN_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.RED_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.ORANGE_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.YELLOW_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.LIME_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.GREEN_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.CYAN_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.LIGHT_BLUE_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.BLUE_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.PURPLE_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.MAGENTA_WOOL_LAYERS.get()));
-            items.add(new ItemStack(ModItems.PINK_WOOL_LAYERS.get()));
+            items.add(new ItemStack(ModItems.WHITE_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.GRAY_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.BLACK_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.BROWN_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.RED_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.ORANGE_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.YELLOW_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.LIME_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.GREEN_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.CYAN_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.LIGHT_BLUE_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.BLUE_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.PURPLE_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.MAGENTA_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.PINK_CARPET_LAYERS.get()));
+            
+            // Leaf layers - all leaf types
+            items.add(new ItemStack(ModItems.OAK_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.SPRUCE_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.BIRCH_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.JUNGLE_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.ACACIA_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.DARK_OAK_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.AZALEA_LEAF_LAYERS.get()));
+            items.add(new ItemStack(ModItems.FLOWERING_AZALEA_LEAF_LAYERS.get()));
+            
+            // Leaf hedges - all leaf types
+            items.add(new ItemStack(ModItems.OAK_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.SPRUCE_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.BIRCH_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.JUNGLE_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.ACACIA_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.DARK_OAK_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.AZALEA_LEAF_HEDGE.get()));
+            items.add(new ItemStack(ModItems.FLOWERING_AZALEA_LEAF_HEDGE.get()));
             
             // Pillars
             items.add(new ItemStack(ModItems.STONE_PILLAR.get()));
@@ -673,6 +770,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.MOSS_BLOCK_SLAB.get()));
             items.add(new ItemStack(ModItems.MOSS_LAYERS.get()));
             items.add(new ItemStack(ModItems.MOSS_OVERLAY.get()));
+            items.add(new ItemStack(ModItems.SNOW_OVERLAY.get()));
             
             // Various slabs
             items.add(new ItemStack(ModItems.PODZOL_SLAB.get()));
@@ -726,6 +824,77 @@ public class BuildScape {
             // Mushroom shelves
             items.add(new ItemStack(ModItems.BROWN_MUSHROOM_SHELVES.get()));
             items.add(new ItemStack(ModItems.RED_MUSHROOM_SHELVES.get()));
+            
+            // Rose Vines
+            items.add(new ItemStack(ModItems.RED_ROSE_VINES.get()));
+            items.add(new ItemStack(ModItems.BLACK_ROSE_VINES.get()));
+            items.add(new ItemStack(ModItems.BLUE_ROSE_VINES.get()));
+            items.add(new ItemStack(ModItems.WHITE_ROSE_VINES.get()));
+            
+            // Monet Flowers
+            items.add(new ItemStack(ModItems.RED_MONETS.get()));
+            items.add(new ItemStack(ModItems.BLUE_MONETS.get()));
+            items.add(new ItemStack(ModItems.PURPLE_MONETS.get()));
+            items.add(new ItemStack(ModItems.LIGHT_BLUE_MONETS.get()));
+            items.add(new ItemStack(ModItems.PINK_MONETS.get()));
+            items.add(new ItemStack(ModItems.YELLOW_MONETS.get()));
+            
+            // Clover
+            items.add(new ItemStack(ModItems.CLOVER.get()));
+            
+            // Petals
+            items.add(new ItemStack(ModItems.RED_PETAL.get()));
+            items.add(new ItemStack(ModItems.BLUE_PETAL.get()));
+            items.add(new ItemStack(ModItems.ORANGE_PETAL.get()));
+            items.add(new ItemStack(ModItems.PINK_PETAL.get()));
+            items.add(new ItemStack(ModItems.PURPLE_PETAL.get()));
+            
+            // Colored Spore Blossoms
+            items.add(new ItemStack(ModItems.RED_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.CYAN_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.BLUE_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.PURPLE_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.ORANGE_SPORE_BLOSSOM.get()));
+            
+            // Snow blocks
+            items.add(new ItemStack(ModItems.SNOW_BRICKS.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS_STAIRS.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS_SLAB.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS_WALL.get()));
+            items.add(new ItemStack(ModItems.SNOW_STAIRS.get()));
+            items.add(new ItemStack(ModItems.SNOW_SLAB.get()));
+            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK.get()));
+            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK_STAIRS.get()));
+            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK_SLAB.get()));
+            
+            // Copper nugget
+            items.add(new ItemStack(ModItems.COPPER_NUGGET.get()));
+            
+            // Big Candles
+            items.add(new ItemStack(ModItems.BIG_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_WHITE_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_ORANGE_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_MAGENTA_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_LIGHT_BLUE_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_YELLOW_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_LIME_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_PINK_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_GRAY_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_LIGHT_GRAY_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_CYAN_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_PURPLE_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_BLUE_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_BROWN_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_GREEN_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_RED_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_BLACK_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_AMETHYST_CANDLE.get()));
+            items.add(new ItemStack(ModItems.BIG_SCULK_CANDLE.get()));
+            
+            // Icicles
+            items.add(new ItemStack(ModItems.ICICLE.get()));
+            items.add(new ItemStack(ModItems.ICICLE_BLOCK.get()));
+            items.add(new ItemStack(ModItems.PACKED_ICICLE_BLOCK.get()));
         }
     };
 
@@ -743,6 +912,7 @@ public class BuildScape {
         ModItems.ITEMS.register(modEventBus);
         com.kingodogo.buildscape.particle.ModParticles.PARTICLES.register(modEventBus);
         com.kingodogo.buildscape.block.ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        com.kingodogo.buildscape.entity.ModEntities.ENTITIES.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -783,6 +953,180 @@ public class BuildScape {
     }
     
     @SubscribeEvent
+    public void onWandererTrades(net.minecraftforge.event.village.WandererTradesEvent event) {
+        // Add Monet flowers to Wandering Trader trades
+        // Using lambda that returns MerchantOffer: (trader, rand) -> new MerchantOffer(...)
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.RED_MONETS.get(), 1),
+            2, // Max uses
+            1, // XP reward
+            0.05f // Price multiplier
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.BLUE_MONETS.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.PURPLE_MONETS.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.LIGHT_BLUE_MONETS.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.PINK_MONETS.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.YELLOW_MONETS.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        // Add Clover to Wandering Trader trades - 1 Emerald = 4 Clover
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.CLOVER.get(), 4),
+            2,
+            1,
+            0.05f
+        ));
+        
+        // Add Rose Vines to Wandering Trader trades - 1 Emerald = 1 Vine
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.RED_ROSE_VINES.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.BLACK_ROSE_VINES.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.BLUE_ROSE_VINES.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.WHITE_ROSE_VINES.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        // Add Snowy Grass Block to Wandering Trader trades - 1 Emerald = 1 Snowy Grass Block
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.SNOWY_GRASS_BLOCK.get(), 1),
+            2, // Max uses
+            1, // XP reward
+            0.05f
+        ));
+        
+        // Add Spore Blossoms to Wandering Trader trades - 1 Emerald = 1 Spore Blossom
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.RED_SPORE_BLOSSOM.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.CYAN_SPORE_BLOSSOM.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.BLUE_SPORE_BLOSSOM.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.PURPLE_SPORE_BLOSSOM.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.ORANGE_SPORE_BLOSSOM.get(), 1),
+            2,
+            1,
+            0.05f
+        ));
+        
+        // Add Icicle to Wandering Trader trades - 1 Emerald = 2 Icicles
+        event.getGenericTrades().add((trader, rand) -> new net.minecraft.world.item.trading.MerchantOffer(
+            new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.EMERALD, 1),
+            new net.minecraft.world.item.ItemStack(ModItems.ICICLE.get(), 2),
+            2,
+            1,
+            0.05f
+        ));
+    }
+    
+    @SubscribeEvent
+    public void onLeftClickBlock(net.minecraftforge.event.entity.player.PlayerInteractEvent.LeftClickBlock event) {
+        net.minecraft.world.level.block.state.BlockState state = event.getWorld().getBlockState(event.getPos());
+        net.minecraft.world.level.block.Block block = state.getBlock();
+        
+        if (block instanceof com.kingodogo.buildscape.block.PetalBlock || 
+            block instanceof com.kingodogo.buildscape.block.CloverBlock ||
+            block instanceof com.kingodogo.buildscape.block.RoseVinesBlock) {
+            
+            if (block.getSoundType(state) instanceof com.kingodogo.buildscape.block.CustomSoundType customSound) {
+                net.minecraft.core.BlockPos pos = event.getPos();
+                net.minecraft.world.level.Level level = event.getWorld();
+                
+                level.playSound(null, pos, block.getSoundType(state).getHitSound(), 
+                    net.minecraft.sounds.SoundSource.BLOCKS, 
+                    customSound.getHitVolume(), customSound.getHitPitch());
+            }
+        }
+    }
+    
+    @SubscribeEvent
     public void onRightClickBlock(net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock event) {
         net.minecraft.world.level.block.state.BlockState state = event.getWorld().getBlockState(event.getPos());
         net.minecraft.world.item.ItemStack heldItem = event.getPlayer().getItemInHand(event.getHand());
@@ -801,7 +1145,7 @@ public class BuildScape {
             
             // Convert to stripped bamboo block
             level.setBlock(pos, ModBlocks.STRIPPED_BAMBOO_BLOCK.get().defaultBlockState()
-                .setValue(net.minecraft.world.level.block.RotatedPillarBlock.AXIS, axis), 3);
+                .setValue(net.minecraft.world.level.block.RotatedPillarBlock.AXIS, axis), 11);
             
             // Play stripping sound
             level.playSound(null, pos, net.minecraft.sounds.SoundEvents.AXE_STRIP, 
@@ -896,9 +1240,12 @@ public class BuildScape {
             LOGGER.info("Buildscape mod client setup complete");
             
             // Register keybinds
+            // COMMENTED OUT: Keybind for pillar pattern cycling disabled, using shift+right-click instead
+            /*
             event.enqueueWork(() -> {
                 com.kingodogo.buildscape.client.ModKeyBinds.register();
             });
+            */
             
             // Initialize config reload callback for instant particle updates
             event.enqueueWork(() -> {
@@ -944,12 +1291,52 @@ public class BuildScape {
                 // Disabled obsidian glass pane for now
                 // net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.OBSIDIAN_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
                 
+                // Register translucent render type for Glazed Glass blocks
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BROWN_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAY_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BLUE_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_GRAY_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIME_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_GLAZED_GLASS.get(), net.minecraft.client.renderer.RenderType.translucent());
+                
+                // Register translucent render type for Glazed Glass panes
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BROWN_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.GRAY_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.GREEN_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BLUE_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_GRAY_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIME_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.MAGENTA_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_GLAZED_GLASS_PANE.get(), net.minecraft.client.renderer.RenderType.translucent());
+                
                 // Climbable chains - cutout for full transparency (fully transparent, not semi-transparent)
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.DIAMOND_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.GOLD_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.EMERALD_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANCIENT_STEEL_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.NETHERITE_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.COPPER_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.EXPOSED_COPPER_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.WEATHERED_COPPER_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.OXIDIZED_COPPER_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
                 
                 // Large chains - cutout for full transparency
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LARGE_IRON_CHAIN.get(), net.minecraft.client.renderer.RenderType.cutout());
@@ -975,6 +1362,19 @@ public class BuildScape {
                     com.kingodogo.buildscape.client.renderer.DecoratedPotBlockEntityRenderer::new
                 );
                 
+                // Register Entity renderers
+                net.minecraft.client.renderer.entity.EntityRenderers.register(
+                    com.kingodogo.buildscape.entity.ModEntities.FALLING_ICICLE.get(),
+                    com.kingodogo.buildscape.client.renderer.FallingIcicleRenderer::new
+                );
+                
+                // Register cutout render type for pointed icicles (fixes black block rendering issue)
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ICICLE.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register translucent render type for icicle blocks
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ICICLE_BLOCK.get(), net.minecraft.client.renderer.RenderType.translucent());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PACKED_ICICLE_BLOCK.get(), net.minecraft.client.renderer.RenderType.translucent());
+                
                 // Register cutout render type for decorated pots
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_POT.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_DECORATED_POT.get(), net.minecraft.client.renderer.RenderType.cutout());
@@ -993,15 +1393,295 @@ public class BuildScape {
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_DECORATED_POT.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_DECORATED_POT.get(), net.minecraft.client.renderer.RenderType.cutout());
                 net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_DECORATED_POT.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for mushroom shelves
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BROWN_MUSHROOM_SHELVES.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_MUSHROOM_SHELVES.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for rose vines
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_ROSE_VINES.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_ROSE_VINES.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_ROSE_VINES.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.WHITE_ROSE_VINES.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for bamboo door and trapdoor
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BAMBOO_DOOR.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BAMBOO_TRAPDOOR.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for Monet flowers
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_MONETS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_MONETS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_MONETS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.LIGHT_BLUE_MONETS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_MONETS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.YELLOW_MONETS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for Clover
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLOVER.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for Petals
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_PETAL.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_PETAL.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_PETAL.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_PETAL.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_PETAL.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for Colored Spore Blossoms
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.RED_SPORE_BLOSSOM.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.CYAN_SPORE_BLOSSOM.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUE_SPORE_BLOSSOM.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_SPORE_BLOSSOM.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ORANGE_SPORE_BLOSSOM.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.PURPLE_PETAL.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutout render type for Leaf layers
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.AZALEA_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.FLOWERING_AZALEA_LEAF_LAYERS.get(), net.minecraft.client.renderer.RenderType.cutout());
+                
+                // Register cutoutMipped render type for Leaf hedges
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.AZALEA_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE.get(), net.minecraft.client.renderer.RenderType.cutoutMipped());
+                
+                // Register biome color provider for Clover stem (tintindex 1)
+                net.minecraft.client.color.block.BlockColors blockColors = net.minecraft.client.Minecraft.getInstance().getBlockColors();
+                blockColors.register((state, reader, pos, tintIndex) -> {
+                    if (reader == null || pos == null) {
+                        return 0x7FA832; // Default grass color
+                    }
+                    // tintindex 1 is for the stem - use biome grass color
+                    if (tintIndex == 1) {
+                        // Check if reader is a LevelReader to access biome
+                        if (reader instanceof net.minecraft.world.level.LevelReader) {
+                            net.minecraft.world.level.LevelReader levelReader = (net.minecraft.world.level.LevelReader) reader;
+                            return levelReader.getBiome(pos).value().getGrassColor(pos.getX(), pos.getZ());
+                        }
+                        return 0x7FA832; // Fallback to default grass color
+                    }
+                    return -1; // No tint for other parts
+                }, ModBlocks.CLOVER.get());
+                
+                // Register biome color provider for Petal stems (tintindex 1)
+                blockColors.register((state, reader, pos, tintIndex) -> {
+                    if (reader == null || pos == null) {
+                        return 0x7FA832; // Default grass color
+                    }
+                    // tintindex 1 is for the stem - use biome grass color
+                    if (tintIndex == 1) {
+                        // Check if reader is a LevelReader to access biome
+                        if (reader instanceof net.minecraft.world.level.LevelReader) {
+                            net.minecraft.world.level.LevelReader levelReader = (net.minecraft.world.level.LevelReader) reader;
+                            return levelReader.getBiome(pos).value().getGrassColor(pos.getX(), pos.getZ());
+                        }
+                        return 0x7FA832; // Fallback to default grass color
+                    }
+                    return -1; // No tint for other parts
+                }, ModBlocks.RED_PETAL.get(), ModBlocks.BLUE_PETAL.get(), ModBlocks.ORANGE_PETAL.get(), 
+                   ModBlocks.PINK_PETAL.get(), ModBlocks.PURPLE_PETAL.get());
+                
+                // Register biome color provider for Leaf layers and hedges
+                // Oak, jungle, acacia, and dark oak: biome-tinted (use biome's getFoliageColor directly)
+                blockColors.register((state, reader, pos, tintIndex) -> {
+                    // Only apply color to tintIndex 0 (set by TintedLeafHedgeModel)
+                    if (tintIndex != 0) {
+                        return -1; // No tint for other tint indices
+                    }
+                    
+                    // Use biome foliage color directly (like vanilla leaves)
+                    if (reader != null && pos != null && reader instanceof net.minecraft.world.level.LevelReader) {
+                        net.minecraft.world.level.LevelReader levelReader = (net.minecraft.world.level.LevelReader) reader;
+                        return levelReader.getBiome(pos).value().getFoliageColor();
+                    }
+                    
+                    // Default foliage color if no world/position (for items/inventory)
+                    return 0x48B518; // Default green foliage color (#48b518 for oak/jungle/acacia/dark oak)
+                }, ModBlocks.OAK_LEAF_LAYERS.get(), ModBlocks.JUNGLE_LEAF_LAYERS.get(),
+                   ModBlocks.ACACIA_LEAF_LAYERS.get(), ModBlocks.DARK_OAK_LEAF_LAYERS.get(),
+                   ModBlocks.OAK_LEAF_HEDGE.get(), ModBlocks.JUNGLE_LEAF_HEDGE.get(),
+                   ModBlocks.ACACIA_LEAF_HEDGE.get(), ModBlocks.DARK_OAK_LEAF_HEDGE.get());
+                
+                // Spruce: fixed color #619961, NOT biome-tinted
+                blockColors.register((state, reader, pos, tintIndex) -> {
+                    if (tintIndex != 0) {
+                        return -1;
+                    }
+                    return 0x619961; // Fixed spruce color, not affected by biome
+                }, ModBlocks.SPRUCE_LEAF_LAYERS.get(), ModBlocks.SPRUCE_LEAF_HEDGE.get());
+                
+                // Birch: fixed color #80a755, NOT biome-tinted
+                blockColors.register((state, reader, pos, tintIndex) -> {
+                    if (tintIndex != 0) {
+                        return -1;
+                    }
+                    return 0x80a755; // Fixed birch color, not affected by biome
+                }, ModBlocks.BIRCH_LEAF_LAYERS.get(), ModBlocks.BIRCH_LEAF_HEDGE.get());
+                
+                // Azalea and flowering azalea: NOT colored (no tint)
+                blockColors.register((state, reader, pos, tintIndex) -> {
+                    return -1; // No color tint for azalea leaves
+                }, ModBlocks.AZALEA_LEAF_LAYERS.get(), ModBlocks.FLOWERING_AZALEA_LEAF_LAYERS.get(),
+                   ModBlocks.AZALEA_LEAF_HEDGE.get(), ModBlocks.FLOWERING_AZALEA_LEAF_HEDGE.get());
+                
+                // Register item color provider for Leaf layers and hedges
+                // Use vanilla leaf item colors for items (items don't have biome context)
+                net.minecraft.client.color.item.ItemColors itemColors = net.minecraft.client.Minecraft.getInstance().getItemColors();
+                net.minecraft.client.color.item.ItemColors vanillaItemColors = net.minecraft.client.Minecraft.getInstance().getItemColors();
+                
+                itemColors.register((stack, tintIndex) -> {
+                    // Only apply color to tintIndex 0
+                    if (tintIndex != 0) {
+                        return -1;
+                    }
+                    
+                    net.minecraft.world.item.Item item = stack.getItem();
+                    if (item instanceof net.minecraft.world.item.BlockItem) {
+                        net.minecraft.world.level.block.Block block = ((net.minecraft.world.item.BlockItem) item).getBlock();
+                        
+                        int color = -1;
+                        // Oak, jungle, acacia, dark oak: use vanilla leaf item colors (#48b518)
+                        if (block == ModBlocks.OAK_LEAF_HEDGE.get() || block == ModBlocks.OAK_LEAF_LAYERS.get()) {
+                            color = vanillaItemColors.getColor(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.OAK_LEAVES), 0);
+                        } else if (block == ModBlocks.JUNGLE_LEAF_HEDGE.get() || block == ModBlocks.JUNGLE_LEAF_LAYERS.get()) {
+                            color = vanillaItemColors.getColor(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.JUNGLE_LEAVES), 0);
+                        } else if (block == ModBlocks.ACACIA_LEAF_HEDGE.get() || block == ModBlocks.ACACIA_LEAF_LAYERS.get()) {
+                            color = vanillaItemColors.getColor(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.ACACIA_LEAVES), 0);
+                        } else if (block == ModBlocks.DARK_OAK_LEAF_HEDGE.get() || block == ModBlocks.DARK_OAK_LEAF_LAYERS.get()) {
+                            color = vanillaItemColors.getColor(new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DARK_OAK_LEAVES), 0);
+                        }
+                        // Spruce: fixed color #619961 (not biome-tinted)
+                        else if (block == ModBlocks.SPRUCE_LEAF_HEDGE.get() || block == ModBlocks.SPRUCE_LEAF_LAYERS.get()) {
+                            color = 0x619961;
+                        }
+                        // Birch: fixed color #80a755 (not biome-tinted)
+                        else if (block == ModBlocks.BIRCH_LEAF_HEDGE.get() || block == ModBlocks.BIRCH_LEAF_LAYERS.get()) {
+                            color = 0x80a755;
+                        }
+                        // Azalea and flowering azalea: no color (return -1)
+                        // (no else-if needed, color stays -1)
+                        
+                        return color;
+                    }
+                    return -1; // No tint
+                }, ModItems.OAK_LEAF_LAYERS.get(), ModItems.SPRUCE_LEAF_LAYERS.get(),
+                   ModItems.BIRCH_LEAF_LAYERS.get(), ModItems.JUNGLE_LEAF_LAYERS.get(),
+                   ModItems.ACACIA_LEAF_LAYERS.get(), ModItems.DARK_OAK_LEAF_LAYERS.get(),
+                   ModItems.AZALEA_LEAF_LAYERS.get(), ModItems.FLOWERING_AZALEA_LEAF_LAYERS.get(),
+                   ModItems.OAK_LEAF_HEDGE.get(), ModItems.SPRUCE_LEAF_HEDGE.get(),
+                   ModItems.BIRCH_LEAF_HEDGE.get(), ModItems.JUNGLE_LEAF_HEDGE.get(),
+                   ModItems.ACACIA_LEAF_HEDGE.get(), ModItems.DARK_OAK_LEAF_HEDGE.get(),
+                   ModItems.AZALEA_LEAF_HEDGE.get(), ModItems.FLOWERING_AZALEA_LEAF_HEDGE.get());
             });
         }
 
+    }
+    
+    // ModelBakeEvent to add tintindex programmatically to leaf hedge models
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+    public static class ClientForgeEvents {
+        @SubscribeEvent
+        public static void onModelBake(net.minecraftforge.client.event.ModelBakeEvent event) {
+            LOGGER.info("ModelBakeEvent fired - wrapping leaf hedge models");
+            // Add tintindex programmatically to leaf hedge block models (including inventory)
+            java.util.Set<net.minecraft.resources.ResourceLocation> leafHedgeModels = new java.util.HashSet<>();
+            // Post, side, side_tall models
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/oak_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/oak_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/oak_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/oak_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/spruce_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/spruce_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/spruce_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/spruce_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/birch_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/birch_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/birch_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/birch_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/jungle_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/jungle_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/jungle_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/jungle_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/acacia_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/acacia_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/acacia_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/acacia_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/dark_oak_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/dark_oak_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/dark_oak_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/dark_oak_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/azalea_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/azalea_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/azalea_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/azalea_leaf_hedge_inventory"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/flowering_azalea_leaf_hedge_post"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/flowering_azalea_leaf_hedge_side"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/flowering_azalea_leaf_hedge_side_tall"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "block/flowering_azalea_leaf_hedge_inventory"));
+            
+            // Also wrap item models
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/oak_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/spruce_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/birch_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/jungle_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/acacia_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/dark_oak_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/azalea_leaf_hedge"));
+            leafHedgeModels.add(new net.minecraft.resources.ResourceLocation(BuildScape.MODID, "item/flowering_azalea_leaf_hedge"));
+            
+            // Wrap leaf hedge models to add tintindex: 0 programmatically
+            int wrappedCount = 0;
+            int notFoundCount = 0;
+            for (net.minecraft.resources.ResourceLocation modelLocation : leafHedgeModels) {
+                net.minecraft.client.resources.model.BakedModel originalModel = event.getModelRegistry().get(modelLocation);
+                if (originalModel != null) {
+                    event.getModelRegistry().put(modelLocation, new com.kingodogo.buildscape.client.model.TintedLeafHedgeModel(originalModel));
+                    wrappedCount++;
+                    LOGGER.debug("Wrapped model: {}", modelLocation);
+                } else {
+                    notFoundCount++;
+                    LOGGER.warn("Model not found: {}", modelLocation);
+                }
+            }
+            LOGGER.info("ModelBakeEvent: Wrapped {} leaf hedge models, {} not found", wrappedCount, notFoundCount);
+        }
+    }
+    
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEventsParticles {
         @SubscribeEvent
         public static void registerFactories(net.minecraftforge.client.event.ParticleFactoryRegisterEvent event) {
             net.minecraft.client.Minecraft.getInstance().particleEngine.register(
                 com.kingodogo.buildscape.particle.ModParticles.GLOW_LIME_SPARKLE.get(),
                 sprites -> new com.kingodogo.buildscape.particle.PillarSparkleParticle.Provider(sprites)
             );
+            
+            // Register tinted drip fall particle - uses vanilla drip_fall sprites
+            // The particle engine will load the texture from particles/tinted_drip_fall.json
+            // which references "minecraft:drip_fall" texture
+            net.minecraft.client.Minecraft.getInstance().particleEngine.register(
+                com.kingodogo.buildscape.particle.ModParticles.TINTED_DRIP_FALL.get(),
+                sprites -> new com.kingodogo.buildscape.particle.TintedDripParticle.Provider(sprites)
+            );
+            
+            // Register tinted spore particle
+            // Note: In 1.18.2, there's no ParticleTypes.SPORE, so we'll use the provided sprites
+            // The particle engine will provide appropriate sprites for our custom particle type
+            net.minecraft.client.Minecraft.getInstance().particleEngine.register(
+                com.kingodogo.buildscape.particle.ModParticles.TINTED_SPORE.get(),
+                sprites -> new com.kingodogo.buildscape.particle.TintedSporeParticle.Provider(sprites)
+            );
+            
         }
     }
 }

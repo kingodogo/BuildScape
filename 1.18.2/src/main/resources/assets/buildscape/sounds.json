@@ -180,5 +180,50 @@
       "buildscape:block/decorated_pot/shatter4",
       "buildscape:block/decorated_pot/shatter5"
     ]
+  },
+  "block.flower_bed.break": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/break1", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break2", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break3", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break4", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break5", "volume": 0.8, "pitch": 0.96}
+    ]
+  },
+  "block.flower_bed.step": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.4, "pitch": 1.2}
+    ]
+  },
+  "block.flower_bed.place": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.8, "pitch": 0.96}
+    ]
+  },
+  "block.flower_bed.hit": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.2, "pitch": 0.6}
+    ]
+  },
+  "block.flower_bed.fall": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.4, "pitch": 0.9}
+    ]
   }
 }
