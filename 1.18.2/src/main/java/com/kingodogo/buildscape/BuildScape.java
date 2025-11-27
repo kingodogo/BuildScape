@@ -23,7 +23,7 @@ public class BuildScape {
     public static final String MODID = "buildscape";
     private static final Logger LOGGER = LogManager.getLogger();
     
-    // Buildscape creative mode tab item group
+    // Creative Tab
     public static final CreativeModeTab BUILDSCAPE_TAB = new CreativeModeTab("buildscape") {
         @Override
         public ItemStack makeIcon() {
@@ -85,7 +85,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BIT_OXIDIZED_COPPER_BULB.get()));
             items.add(new ItemStack(ModItems.BIT_OXIDIZED_COPPER_GRATE.get()));
             
-            // Iron chain (vanilla) -> copper chains -> large iron chain -> ancient steel chain -> large ancient steel chain -> gold chain -> large gold chain -> diamond chain -> large diamond chain -> emerald chain -> large emerald chain -> netherite chain -> large netherite chain
+            // Chains
             items.add(new ItemStack(Items.CHAIN));
             items.add(new ItemStack(ModItems.COPPER_CHAIN.get()));
             items.add(new ItemStack(ModItems.EXPOSED_COPPER_CHAIN.get()));
@@ -115,8 +115,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BIT_TUFF_BRICKS_SLAB.get()));
             items.add(new ItemStack(ModItems.BIT_TUFF_BRICKS_WALL.get()));
             
-            // Colored tiles - grouped by color (tile -> stairs -> slabs -> walls)
-            // Order: white, light grey, gray, black, brown, red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink
+            // Colored Tiles
             
             // White tiles
             items.add(new ItemStack(ModItems.WHITE_TILES.get()));
@@ -394,8 +393,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_ASHPEN_FENCE.get()));
             items.add(new ItemStack(ModItems.PINK_ASHPEN_FENCE_GATE.get()));
             
-            // Concrete variants - grouped by color (slab -> stairs -> walls)
-            // Order: white, light grey, gray, black, brown, red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink
+            // Concrete Variants
             
             // White concrete
             items.add(new ItemStack(ModItems.WHITE_CONCRETE_SLAB.get()));
@@ -477,8 +475,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_CONCRETE_STAIRS.get()));
             items.add(new ItemStack(ModItems.PINK_CONCRETE_WALL.get()));
             
-            // Colored sand variants - grouped by color (sand -> sandstone -> stairs -> slabs -> walls -> smooth sandstone -> smooth sandstone stairs -> smooth sandstone slabs)
-            // Order: white, black, red, orange, yellow, green, blue, pink
+            // Colored Sand Variants
             
             // White sand
             items.add(new ItemStack(ModItems.WHITE_SAND.get()));
@@ -560,8 +557,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.PINK_SMOOTH_SANDSTONE_SLAB.get()));
             
-            // Colored mosaic glass - grouped by color (mosaic glass -> pane)
-            // Order: white, light grey, gray, black, brown, red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink
+            // Colored Mosaic Glass
             
             // White mosaic glass
             items.add(new ItemStack(ModItems.WHITE_MOSAIC_GLASS.get()));
@@ -627,8 +623,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_MOSAIC_GLASS.get()));
             items.add(new ItemStack(ModItems.PINK_MOSAIC_GLASS_PANE.get()));
             
-            // Colored glazed glass - grouped by color (glazed glass -> pane)
-            // Order: white, light grey, gray, black, brown, red, orange, yellow, lime, green, cyan, light blue, blue, purple, magenta, pink
+            // Colored Glazed Glass
             
             // White glazed glass
             items.add(new ItemStack(ModItems.WHITE_GLAZED_GLASS.get()));
@@ -1685,4 +1680,4 @@ public class BuildScape {
         }
     }
 }
-// Kingodogo finished the project at 2025-11-02 12:13:45
+// Kingodogo finished the project – 2025-11-27 | 17:12:00

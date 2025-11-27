@@ -17,39 +17,36 @@ import java.util.function.Supplier;
 public class ModSounds {
     private static final Logger LOGGER = LogManager.getLogger();
     
-    // Register sound events for copper sounds under our mod namespace
+    // Sound Events
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS =
         DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, BuildScape.MODID);
 
-    // --- Copper Grate Sound Events ---
+    // Copper Grate Sounds
     public static final RegistryObject<SoundEvent> COPPER_GRATE_BREAK = registerSoundEvent("block.copper_grate.break");
     public static final RegistryObject<SoundEvent> COPPER_GRATE_STEP = registerSoundEvent("block.copper_grate.step");
     
-    // For place, hit, and fall, reuse step sound since copper_grate only has break and step sounds
     public static final RegistryObject<SoundEvent> COPPER_GRATE_PLACE = COPPER_GRATE_STEP;
     public static final RegistryObject<SoundEvent> COPPER_GRATE_HIT = COPPER_GRATE_STEP;
     public static final RegistryObject<SoundEvent> COPPER_GRATE_FALL = COPPER_GRATE_STEP;
 
-    // --- Copper Bulb Sound Events ---
+    // Copper Bulb Sounds
     public static final RegistryObject<SoundEvent> COPPER_BULB_BREAK = registerSoundEvent("block.copper_bulb.break");
     public static final RegistryObject<SoundEvent> COPPER_BULB_PLACE = registerSoundEvent("block.copper_bulb.place");
     public static final RegistryObject<SoundEvent> COPPER_BULB_STEP = registerSoundEvent("block.copper_bulb.step");
     public static final RegistryObject<SoundEvent> COPPER_BULB_TOGGLE = registerSoundEvent("block.copper_bulb.toggle");
     
-    // For hit and fall, reuse step sound
     public static final RegistryObject<SoundEvent> COPPER_BULB_HIT = COPPER_BULB_STEP;
     public static final RegistryObject<SoundEvent> COPPER_BULB_FALL = COPPER_BULB_STEP;
 
-    // --- Mud Sound Events ---
+    // Mud Sounds
     public static final RegistryObject<SoundEvent> MUD_BREAK = registerSoundEvent("block.mud.break");
     public static final RegistryObject<SoundEvent> MUD_STEP = registerSoundEvent("block.mud.step");
     
-    // For place, hit, and fall, reuse step sound
     public static final RegistryObject<SoundEvent> MUD_PLACE = MUD_STEP;
     public static final RegistryObject<SoundEvent> MUD_HIT = MUD_STEP;
     public static final RegistryObject<SoundEvent> MUD_FALL = MUD_STEP;
     
-    // --- Decorated Pot Sound Events ---
+    // Decorated Pot Sounds
     public static final RegistryObject<SoundEvent> DECORATED_POT_PLACE = registerSoundEvent("block.decorated_pot.place");
     public static final RegistryObject<SoundEvent> DECORATED_POT_BREAK = registerSoundEvent("block.decorated_pot.break");
     public static final RegistryObject<SoundEvent> DECORATED_POT_HIT = registerSoundEvent("block.decorated_pot.hit");
@@ -59,15 +56,14 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> DECORATED_POT_INSERT_FAIL = registerSoundEvent("block.decorated_pot.insert_fail");
     public static final RegistryObject<SoundEvent> DECORATED_POT_SHATTER = registerSoundEvent("block.decorated_pot.shatter");
     
-    // --- Flower Bed Sound Events (for petals and clovers) ---
+    // Flower Bed Sounds
     public static final RegistryObject<SoundEvent> FLOWER_BED_BREAK = registerSoundEvent("block.flower_bed.break");
     public static final RegistryObject<SoundEvent> FLOWER_BED_STEP = registerSoundEvent("block.flower_bed.step");
     public static final RegistryObject<SoundEvent> FLOWER_BED_PLACE = registerSoundEvent("block.flower_bed.place");
     public static final RegistryObject<SoundEvent> FLOWER_BED_HIT = registerSoundEvent("block.flower_bed.hit");
     public static final RegistryObject<SoundEvent> FLOWER_BED_FALL = registerSoundEvent("block.flower_bed.fall");
 
-    // --- Sound Types using ForgeSoundType ---
-    // Lazy initialization with safe Supplier wrappers that check if RegistryObjects are ready
+    // Sound Types
     private static ForgeSoundType copperGrateSounds = null;
     private static ForgeSoundType copperBulbSounds = null;
     // Mud sounds: don't cache to allow volume/pitch changes from sounds.json to take effect
@@ -301,3 +297,4 @@ public class ModSounds {
         LOGGER.info("Registered ModSounds DeferredRegister");
     }
 }
+// Kingodogo finished the project – 2025-11-27 | 17:12:00

@@ -15,7 +15,7 @@ public class ModBlocks {
     
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, BuildScape.MODID);
     
-    // Colored sand variants - strength matches vanilla SAND for balanced mining time
+    // Colored Sand
     public static final RegistryObject<Block> BLACK_SAND = BLOCKS.register("black_sand", 
         () -> new FallingSandBlock(BlockBehaviour.Properties.of(Material.SAND, MaterialColor.COLOR_BLACK)
             .strength(0.5f)
@@ -56,7 +56,7 @@ public class ModBlocks {
             .strength(0.5f)
             .sound(net.minecraft.world.level.block.SoundType.SAND)));
     
-    // Sandstone blocks - strength matches vanilla SANDSTONE for consistent mining time
+    // Sandstone Blocks
     public static final RegistryObject<Block> BLACK_SANDSTONE = BLOCKS.register("black_sandstone", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -113,7 +113,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Tile blocks - strength matches vanilla CALCITE for consistent feel
+    // Tiles
     public static final RegistryObject<Block> BLACK_TILES = BLOCKS.register("black_tiles", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.75f)
@@ -225,7 +225,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
 ));
     
-    // Mosaic glass blocks - strength matches vanilla GLASS for consistent feel
+    // Mosaic Glass
     public static final RegistryObject<Block> BLACK_MOSAIC_GLASS = BLOCKS.register("black_mosaic_glass", 
         () -> new SilkTouchOnlyGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
             .strength(0.3f)
@@ -322,7 +322,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
             .noOcclusion()));
     
-    // Copper variant blocks - strength matches vanilla COPPER_BLOCK for balanced mining
+    // Copper Variants
     public static final RegistryObject<Block> BIT_CHISELED_COPPER = BLOCKS.register("bit_chiseled_copper", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE)
             .strength(3.0f, 6.0f)
@@ -361,7 +361,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.COPPER)
 ));
     
-    // Exposed copper variants - using Material.METAL like sand uses Material.SAND
+    // Exposed Copper
     public static final RegistryObject<Block> BIT_EXPOSED_CHISELED_COPPER = BLOCKS.register("bit_exposed_chiseled_copper", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.TERRACOTTA_LIGHT_GRAY)
             .strength(3.0f, 6.0f)
@@ -400,7 +400,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.COPPER)
 ));
     
-    // Weathered copper variants - using Material.METAL like sand uses Material.SAND
+    // Weathered Copper
     public static final RegistryObject<Block> BIT_WEATHERED_CHISELED_COPPER = BLOCKS.register("bit_weathered_chiseled_copper", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_NYLIUM)
             .strength(3.0f, 6.0f)
@@ -439,7 +439,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.COPPER)
 ));
     
-    // Oxidized copper variants - using Material.METAL like sand uses Material.SAND
+    // Oxidized Copper
     public static final RegistryObject<Block> BIT_OXIDIZED_CHISELED_COPPER = BLOCKS.register("bit_oxidized_chiseled_copper", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.WARPED_STEM)
             .strength(3.0f, 6.0f)
@@ -478,7 +478,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.COPPER)
 ));
     
-    // Tuff variant blocks - strength matches vanilla TUFF for consistency
+    // Tuff Variants
     public static final RegistryObject<Block> BIT_CHISELED_TUFF = BLOCKS.register("bit_chiseled_tuff", 
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_GRAY)
             .strength(1.5f)
@@ -549,7 +549,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.TUFF)
 ));
     
-    // Podzol, dirt, and mycelium slabs - strength matches vanilla DIRT for balanced mining
+    // Dirt Slabs
     public static final RegistryObject<Block> PODZOL_SLAB = BLOCKS.register("podzol_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.PODZOL)
             .strength(0.5f)
@@ -568,21 +568,20 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.GRASS)));
     
-    // Mud block - using Material.DIRT similar to vanilla mud
+    // Mud
     public static final RegistryObject<Block> MUD = BLOCKS.register("mud",
         () -> new MudBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BROWN)
             .strength(0.5f)
             .requiresCorrectToolForDrops()
             .sound(ModSounds.MUD_SOUNDS())));
     
-    // Mud slab
     public static final RegistryObject<Block> MUD_SLAB = BLOCKS.register("mud_slab",
         () -> new MudSlabBlock(BlockBehaviour.Properties.of(Material.DIRT, MaterialColor.COLOR_BROWN)
             .strength(0.5f)
             .requiresCorrectToolForDrops()
             .sound(ModSounds.MUD_SOUNDS())));
     
-    // Smooth sandstone blocks - strength matches vanilla SANDSTONE for consistency
+    // Smooth Sandstone
     public static final RegistryObject<Block> BLACK_SMOOTH_SANDSTONE = BLOCKS.register("black_smooth_sandstone",
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -632,7 +631,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Mosaic glass panes - using Material.GLASS like sand uses Material.SAND
+    // Mosaic Glass Panes
     public static final RegistryObject<Block> BLACK_MOSAIC_GLASS_PANE = BLOCKS.register("black_mosaic_glass_pane",
         () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
             .strength(0.3f)
@@ -714,7 +713,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
             .noOcclusion()));
     
-    // Glazed glass blocks
+    // Glazed Glass
     public static final RegistryObject<Block> BLACK_GLAZED_GLASS = BLOCKS.register("black_glazed_glass", 
         () -> new GlazedGlassBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
             .strength(0.3f)
@@ -811,7 +810,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
             .noOcclusion()));
     
-    // Glazed glass panes
+    // Glazed Glass Panes
     public static final RegistryObject<Block> BLACK_GLAZED_GLASS_PANE = BLOCKS.register("black_glazed_glass_pane",
         () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
             .strength(0.3f)
@@ -893,14 +892,8 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
             .noOcclusion()));
     
-    // Disabled obsidian glass pane for now
-    // public static final RegistryObject<Block> OBSIDIAN_GLASS_PANE = BLOCKS.register("obsidian_glass_pane",
-    //     () -> new SilkTouchOnlyPaneBlock(BlockBehaviour.Properties.of(Material.GLASS, MaterialColor.COLOR_BLACK)
-    //         .strength(0.4f)
-    //         .sound(net.minecraft.world.level.block.SoundType.STONE)
-    //         .noOcclusion()));
     
-    // Sandstone stairs - strength matches vanilla SANDSTONE for consistency
+    // Sandstone Stairs
     public static final RegistryObject<Block> BLACK_SANDSTONE_STAIRS = BLOCKS.register("black_sandstone_stairs",
         () -> new ModStairBlock(BLACK_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -949,7 +942,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Sandstone slabs - using Material.STONE like sand uses Material.SAND
+    // Sandstone Slabs
     public static final RegistryObject<Block> BLACK_SANDSTONE_SLAB = BLOCKS.register("black_sandstone_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -999,7 +992,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Sandstone walls - using Material.STONE like sand uses Material.SAND
+    // Sandstone Walls
     public static final RegistryObject<Block> BLACK_SANDSTONE_WALL = BLOCKS.register("black_sandstone_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -1049,7 +1042,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Smooth sandstone slabs - strength matches vanilla SANDSTONE for consistency
+    // Smooth Sandstone Slabs
     public static final RegistryObject<Block> BLACK_SMOOTH_SANDSTONE_SLAB = BLOCKS.register("black_smooth_sandstone_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -1099,7 +1092,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Smooth sandstone stairs - strength matches vanilla SANDSTONE for consistency
+    // Smooth Sandstone Stairs
     public static final RegistryObject<Block> BLACK_SMOOTH_SANDSTONE_STAIRS = BLOCKS.register("black_smooth_sandstone_stairs",
         () -> new ModStairBlock(BLACK_SMOOTH_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -1149,7 +1142,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Smooth sandstone walls
+    // Smooth Sandstone Walls
     public static final RegistryObject<Block> WHITE_SMOOTH_SANDSTONE_WALL = BLOCKS.register("white_smooth_sandstone_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SNOW)
             .strength(0.8f)
@@ -1205,7 +1198,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Tiles stairs - using Material.STONE like sand uses Material.SAND, but with CALCITE sounds
+    // Tile Stairs
     public static final RegistryObject<Block> BLACK_TILES_STAIRS = BLOCKS.register("black_tiles_stairs",
         () -> new ModStairBlock(BLACK_TILES.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.75f)
@@ -1303,7 +1296,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
 ));
     
-    // Tiles slabs - strength matches vanilla CALCITE for consistency
+    // Tile Slabs
     public static final RegistryObject<Block> BLACK_TILES_SLAB = BLOCKS.register("black_tiles_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.75f)
@@ -1401,7 +1394,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
 ));
     
-    // Tiles walls - using Material.STONE like sand uses Material.SAND, but with CALCITE sounds
+    // Tile Walls
     public static final RegistryObject<Block> BLACK_TILES_WALL = BLOCKS.register("black_tiles_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(0.75f)
@@ -1499,7 +1492,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
 ));
     
-    // Vanilla block variants - strength matches their vanilla equivalents for consistency
+    // Vanilla Block Variants
     public static final RegistryObject<Block> POLISHED_BASALT_STAIRS = BLOCKS.register("polished_basalt_stairs",
         () -> new ModStairBlock(Blocks.POLISHED_BASALT.defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(1.5f, 6.0f)
@@ -1555,7 +1548,6 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
     
-    // Stone wall
     public static final RegistryObject<Block> STONE_WALL = BLOCKS.register("stone_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
             .strength(1.5f, 6.0f)
@@ -1599,7 +1591,7 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
 ));
-    // Bedrock variants - strength matches vanilla BEDROCK (unbreakable)
+    // Bedrock Variants
     public static final RegistryObject<Block> BEDROCK_STAIRS = BLOCKS.register("bedrock_stairs",
         () -> new ModStairBlock(Blocks.BEDROCK.defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(-1.0f, 3600000.0f)
@@ -1627,7 +1619,7 @@ public class ModBlocks {
             .noOcclusion()
 ));
     
-    // Obsidian variants - strength matches vanilla OBSIDIAN for extreme durability
+    // Obsidian Variants
     public static final RegistryObject<Block> OBSIDIAN_STAIRS = BLOCKS.register("obsidian_stairs",
         () -> new ModStairBlock(Blocks.OBSIDIAN.defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(50.0f, 1200.0f)
@@ -1640,13 +1632,6 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.STONE)
 ));
-    // Disabled obsidian wall for now
-    // public static final RegistryObject<Block> OBSIDIAN_WALL = BLOCKS.register("obsidian_wall",
-    //     () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
-    //         .strength(50.0f, 1200.0f)
-    //         .requiresCorrectToolForDrops()
-    //         .sound(net.minecraft.world.level.block.SoundType.STONE)
-    //         ));
     
     public static final RegistryObject<Block> PRISMARINE_BRICKS_WALL = BLOCKS.register("prismarine_bricks_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_CYAN)
@@ -1696,7 +1681,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.AMETHYST)
 ));
     
-    // Mossy calcite - using Material.STONE like sand uses Material.SAND
+    // Mossy Calcite
     public static final RegistryObject<Block> MOSSY_CALCITE = BLOCKS.register("mossy_calcite",
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE)
             .strength(0.75f)
@@ -1722,7 +1707,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.CALCITE)
 ));
     
-    // Bit copper variants - using Material.METAL like sand uses Material.SAND
+    // Bit Copper Variants
     public static final RegistryObject<Block> BIT_COPPER_BLOCK_STAIRS = BLOCKS.register("bit_copper_block_stairs",
         () -> new ModStairBlock(BIT_COPPER_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE)
             .strength(3.0f, 6.0f)
@@ -1895,7 +1880,7 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false)));
     
-    // Concrete stairs - strength matches vanilla CONCRETE (1.8f) for consistency
+    // Concrete Stairs
     public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = BLOCKS.register("black_concrete_stairs",
         () -> new ModStairBlock(Blocks.BLACK_CONCRETE.defaultBlockState(), BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(1.8f)
@@ -1977,7 +1962,7 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.STONE)));
     
-    // Concrete walls
+    // Concrete Walls
     public static final RegistryObject<Block> WHITE_CONCRETE_WALL = BLOCKS.register("white_concrete_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SNOW)
             .strength(1.8f)
@@ -2059,7 +2044,7 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.STONE)));
     
-    // Concrete slabs - strength matches vanilla CONCRETE (1.8f) for consistency
+    // Concrete Slabs
     public static final RegistryObject<Block> BLACK_CONCRETE_SLAB = BLOCKS.register("black_concrete_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(1.8f)
@@ -2141,7 +2126,7 @@ public class ModBlocks {
             .requiresCorrectToolForDrops()
             .sound(net.minecraft.world.level.block.SoundType.STONE)));
     
-    // Mushroom shelves - decorative blocks with wood-like properties, custom hitbox, and directional placement
+    // Mushroom Shelves
     public static final RegistryObject<Block> BROWN_MUSHROOM_SHELVES = BLOCKS.register("brown_mushroom_shelves",
         () -> new MushroomShelvesBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN)
             .strength(0.3f)
@@ -2154,39 +2139,35 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.WOOD)
             .noOcclusion()));
     
-    // Quartz pillar (renamed original pillar) - matches quartz block: 0.8f
+    // Pillars
     public static final RegistryObject<Block> QUARTZ_PILLAR = BLOCKS.register("quartz_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.QUARTZ)
             .strength(0.8f)
             .sound(net.minecraft.world.level.block.SoundType.STONE)
             .noOcclusion()));
 
-    // Stone pillar - matches stone: 1.5f hardness, 6.0f resistance
     public static final RegistryObject<Block> STONE_PILLAR = BLOCKS.register("stone_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
             .strength(1.5f, 6.0f)
             .sound(net.minecraft.world.level.block.SoundType.STONE)
             .noOcclusion()));
 
-    // Deepslate pillar variant - matches deepslate: 3.0f hardness, 6.0f resistance
     public static final RegistryObject<Block> DEEPSLATE_PILLAR = BLOCKS.register("deepslate_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_BLACK)
             .strength(3.0f, 6.0f)
             .sound(net.minecraft.world.level.block.SoundType.DEEPSLATE)
             .noOcclusion()));
 
-    // Mossy pillar variant - matches mossy cobblestone: 2.0f hardness, 6.0f resistance
     public static final RegistryObject<Block> MOSSY_PILLAR = BLOCKS.register("mossy_pillar",
         () -> new PillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GREEN)
             .strength(2.0f, 6.0f)
             .sound(net.minecraft.world.level.block.SoundType.STONE)
             .noOcclusion()));
     
-    // Decorated Pot - Base
+    // Decorated Pots
     public static final RegistryObject<Block> DECORATED_POT = BLOCKS.register("decorated_pot",
         () -> new DecoratedPotBlock());
     
-    // Decorated Pot - Color Variants
     public static final RegistryObject<Block> BLACK_DECORATED_POT = BLOCKS.register("black_decorated_pot",
         () -> new DecoratedPotBlock());
     public static final RegistryObject<Block> BLUE_DECORATED_POT = BLOCKS.register("blue_decorated_pot",
@@ -2220,7 +2201,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_DECORATED_POT = BLOCKS.register("yellow_decorated_pot",
         () -> new DecoratedPotBlock());
     
-    // Wool layers - stackable wool layers for all 16 colors
+    // Carpet Layers
     public static final RegistryObject<Block> BLACK_CARPET_LAYERS = BLOCKS.register("black_carpet_layers",
         () -> new WoolLayersBlock(BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BLACK)
             .strength(0.8f)
@@ -2350,7 +2331,7 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "yellow"));
     
-    // Leaf layers - stackable leaf layers for all leaf types with full transparency
+    // Leaf Layers
     public static final RegistryObject<Block> OAK_LEAF_LAYERS = BLOCKS.register("oak_leaf_layers",
         () -> new LeafLayersBlock(BlockBehaviour.Properties.of(Material.LEAVES, MaterialColor.PLANT)
             .strength(0.2f)
@@ -2423,7 +2404,7 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false), "flowering_azalea"));
     
-    // Leaf hedges (walls) - for all leaf types
+    // Leaf Hedges
     public static final RegistryObject<Block> OAK_LEAF_HEDGE = BLOCKS.register("oak_leaf_hedge",
         () -> new LeafHedgeBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
             .strength(0.2F)
@@ -2496,13 +2477,13 @@ public class ModBlocks {
             .isViewBlocking((state, reader, pos) -> false),
             ModItems.FLOWERING_AZALEA_LEAF_HEDGE));
     
-    // Hay bale slab
+    // Hay Bale Slab
     public static final RegistryObject<Block> HAY_BALE_SLAB = BLOCKS.register("hay_bale_slab",
         () -> new HayBaleSlabBlock(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_YELLOW)
             .strength(0.5f)
             .sound(net.minecraft.world.level.block.SoundType.GRASS)));
     
-    // Bamboo blocks
+    // Bamboo Blocks
     public static final RegistryObject<Block> BAMBOO_BLOCK = BLOCKS.register("bamboo_block",
         () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_YELLOW)
             .strength(2.0f)
@@ -2512,7 +2493,6 @@ public class ModBlocks {
             .strength(2.0f)
             .sound(net.minecraft.world.level.block.SoundType.BAMBOO)));
     
-    // Bamboo block variants - slabs, stairs, fences, fence gates, pressure plates, buttons
     public static final RegistryObject<Block> BAMBOO_BLOCK_SLAB = BLOCKS.register("bamboo_block_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_YELLOW)
             .strength(2.0f)
@@ -2540,7 +2520,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.BAMBOO)
             .noCollission()));
     
-    // Stripped bamboo block variants - slabs, stairs, fences, fence gates, pressure plates, buttons
+    // Stripped Bamboo Blocks
     public static final RegistryObject<Block> STRIPPED_BAMBOO_BLOCK_SLAB = BLOCKS.register("stripped_bamboo_block_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_YELLOW)
             .strength(2.0f)
@@ -2568,7 +2548,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.BAMBOO)
             .noCollission()));
     
-    // Bamboo door and trapdoor
+    // Bamboo Doors
     public static final RegistryObject<Block> BAMBOO_DOOR = BLOCKS.register("bamboo_door",
         () -> new ModDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_YELLOW)
             .strength(3.0f)
@@ -2581,7 +2561,7 @@ public class ModBlocks {
             .noOcclusion()
             .isValidSpawn((state, reader, pos, entityType) -> false)));
     
-    // Wood walls - oak, spruce, dark_oak, jungle, acacia, bamboo_block
+    // Wood Walls
     public static final RegistryObject<Block> OAK_WOOD_WALL = BLOCKS.register("oak_wood_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
             .strength(2.0f)
@@ -2611,7 +2591,7 @@ public class ModBlocks {
             .strength(2.0f)
             .sound(net.minecraft.world.level.block.SoundType.BAMBOO)));
     
-    // Stripped wood walls - stripped_oak, stripped_spruce, stripped_dark_oak, stripped_jungle, stripped_acacia, stripped_bamboo_block
+    // Stripped Wood Walls
     public static final RegistryObject<Block> STRIPPED_OAK_WOOD_WALL = BLOCKS.register("stripped_oak_wood_wall",
         () -> new WallBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
             .strength(2.0f)
@@ -2641,7 +2621,7 @@ public class ModBlocks {
             .strength(2.0f)
             .sound(net.minecraft.world.level.block.SoundType.BAMBOO)));
     
-    // Ashpen Plank Family - White (Default)
+    // Ashpen Planks
     public static final RegistryObject<Block> ASHPEN_WHITE_PLANKS = BLOCKS.register("ashpen_white_planks",
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.SNOW)
             .strength(2.0f, 3.0f)
@@ -2675,7 +2655,6 @@ public class ModBlocks {
             .sound(SoundType.WOOD)
             .noCollission()));
     
-    // Ashpen Plank Family - Colored Variants
     public static final RegistryObject<Block> BLACK_ASHPEN_PLANKS = BLOCKS.register("ashpen_black_planks",
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BLACK)
             .strength(2.0f, 3.0f)
@@ -3170,8 +3149,7 @@ public class ModBlocks {
             .strength(0.5f)
             .sound(SoundType.WOOD)
             .noCollission()));
-    // Climbable chains - minimal collision (center line only) for climbing
-    // Full transparency: no occlusion, not suffocating, not view blocking
+    // Chains
     public static final RegistryObject<Block> DIAMOND_CHAIN = BLOCKS.register("diamond_chain",
         () -> new ClimbableChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.DIAMOND)
             .strength(5.0f, 6.0f)
@@ -3213,8 +3191,7 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false)));
     
-    // Large chains - bigger version with different parent model
-    // Full transparency: no occlusion, not suffocating, not view blocking
+    // Large Chains
     public static final RegistryObject<Block> LARGE_IRON_CHAIN = BLOCKS.register("large_iron_chain",
         () -> new LargeChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
             .strength(5.0f, 6.0f)
@@ -3264,7 +3241,7 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false)));
     
-    // Copper chains - climbable chains with copper oxidation variants
+    // Copper Chains
     public static final RegistryObject<Block> COPPER_CHAIN = BLOCKS.register("copper_chain",
         () -> new ClimbableChainBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_ORANGE)
             .strength(3.0f, 6.0f)
@@ -3298,7 +3275,7 @@ public class ModBlocks {
             .isSuffocating((state, reader, pos) -> false)
             .isViewBlocking((state, reader, pos) -> false)));
     
-    // Rose Vines - can attach to walls, floors, and ceilings
+    // Rose Vines
     public static final RegistryObject<Block> RED_ROSE_VINES = BLOCKS.register("red_rose_vines",
         () -> new RoseVinesBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.COLOR_RED)
             .strength(0.2f)
@@ -3327,8 +3304,7 @@ public class ModBlocks {
             .noCollission()
             .noOcclusion()));
     
-    // Monet Flowers - can be placed on dirt blocks, bonemealed to drop copies
-    // Initially obtained from Wandering Trader
+    // Monet Flowers
     public static final RegistryObject<Block> RED_MONETS = BLOCKS.register("red_monets",
         () -> new MonetFlowerBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
             .noCollission()
@@ -3365,14 +3341,14 @@ public class ModBlocks {
             .instabreak()
             .sound(net.minecraft.world.level.block.SoundType.GRASS)));
     
-    // Clover - 4 stages, can be placed on any full block, bonemeal drops 1
+    // Clover
     public static final RegistryObject<Block> CLOVER = BLOCKS.register("clover",
         () -> new CloverBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
             .noCollission()
             .instabreak()
             .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
     
-    // Petals - 4 stages, can be placed on any full block, bonemeal drops 1
+    // Petals
     public static final RegistryObject<Block> RED_PETAL = BLOCKS.register("red_petal",
         () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
             .noCollission()
@@ -3403,9 +3379,7 @@ public class ModBlocks {
             .instabreak()
             .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
     
-    // Colored Spore Blossoms - decorative blocks with falling particles
-    // Uses vanilla spore blossom base texture with custom center textures
-    // Particle colors: Red #fe4a4e, Cyan #1fdee2, Blue #4a7df4, Purple #a146f2, Orange #f76e32
+    // Colored Spore Blossoms
     public static final RegistryObject<Block> RED_SPORE_BLOSSOM = BLOCKS.register("red_spore_blossom",
         () -> new ColoredSporeBlossomBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
             .noCollission()
@@ -3446,11 +3420,7 @@ public class ModBlocks {
             ColoredSporeBlossomBlock.hexToVector3f("#f76e32"),
             ColoredSporeBlossomBlock.hexToRGB("#f76e32")));
     
-    // Big Candles - decorative candles with lit/unlit states
-    // Stage 1: Light level 12 (currently implemented)
-    // Stage 2: Light level 13 (commented out for future)
-    // Stage 3: Light level 14 (commented out for future)
-    // Stage 4: Light level 15 (commented out for future)
+    // Big Candles
     public static final RegistryObject<Block> BIG_CANDLE = BLOCKS.register("big_candle",
         () -> new BigCandleBlock(BlockBehaviour.Properties.of(Material.DECORATION)
             .instabreak()
@@ -3565,7 +3535,7 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.CANDLE)
             .lightLevel((state) -> state.getValue(BigCandleBlock.LIT) ? 12 : 0)));
     
-    // Snow blocks
+    // Snow Blocks
     public static final RegistryObject<Block> SNOW_BRICKS = BLOCKS.register("snow_bricks",
         () -> new ModBlock(BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
             .strength(0.2f)
@@ -3586,7 +3556,6 @@ public class ModBlocks {
             .strength(0.2f)
             .sound(net.minecraft.world.level.block.SoundType.SNOW)));
     
-    // Snow block stairs and slab (using vanilla snow block)
     public static final RegistryObject<Block> SNOW_STAIRS = BLOCKS.register("snow_stairs",
         () -> new ModStairBlock(Blocks.SNOW_BLOCK.defaultBlockState(), BlockBehaviour.Properties.of(Material.SNOW, MaterialColor.SNOW)
             .strength(0.1f)
@@ -3613,7 +3582,7 @@ public class ModBlocks {
             .strength(0.6f)
             .sound(net.minecraft.world.level.block.SoundType.GRASS)));
     
-    // Icicle blocks
+    // Icicles
     public static final RegistryObject<Block> ICICLE = BLOCKS.register("icicle",
         () -> new PointedIcicleBlock(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE)
             .strength(0.5f)
@@ -3636,4 +3605,4 @@ public class ModBlocks {
             .sound(net.minecraft.world.level.block.SoundType.GLASS)
             .noOcclusion()));
 }
-// Kingodogo finished the project at 2025-11-02 12:13:45
+// Kingodogo finished the project – 2025-11-27 | 17:12:00
