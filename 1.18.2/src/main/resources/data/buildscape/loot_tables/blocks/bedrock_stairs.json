@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bedrock_stairs_item"
+          "name": "buildscape:bedrock_stairs"
         }
       ],
       "conditions": [

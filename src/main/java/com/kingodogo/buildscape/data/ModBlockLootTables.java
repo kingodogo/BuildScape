@@ -287,6 +287,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BEDROCK_STAIRS.get());
         this.dropSelf(ModBlocks.BEDROCK_SLAB.get());
         this.dropSelf(ModBlocks.BEDROCK_WALL.get());
+        // Obsidian stairs and slab drop their item variants - use dropSelf like all other stairs/slabs
         this.dropSelf(ModBlocks.OBSIDIAN_STAIRS.get());
         this.dropSelf(ModBlocks.OBSIDIAN_SLAB.get());
         this.dropSelf(ModBlocks.PRISMARINE_BRICKS_WALL.get());

@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:dripstone_block_stairs_item"
+          "name": "buildscape:dripstone_block_stairs"
         }
       ],
       "conditions": [

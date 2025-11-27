@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
@@ -9,5 +9,5 @@
   "pattern": [
     "BBB"
   ],
-  "result":{"count":6,"item":"buildscape:grass_block_slab_item"}
+  "result":{"count":6,"item":"buildscape:grass_block_slab"}
 }

@@ -9,12 +9,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.registries.RegistryObject;
 
-// Base block class for custom blocks
-// Blocks drop items via loot tables - Minecraft automatically uses loot tables
-// when getDrops() is not overridden. Loot tables are provided via JSON files.
 public class ModBlock extends Block {
     @SuppressWarnings("unused")
-    private final RegistryObject<?> dropItem; // Kept for constructor compatibility
+    private final RegistryObject<?> dropItem;
     
     public ModBlock(BlockBehaviour.Properties properties) {
         super(properties);
@@ -26,9 +23,6 @@ public class ModBlock extends Block {
         this.dropItem = dropItem;
     }
     
-    // Don't override getDrops() - let Minecraft use loot tables automatically
-    
-    // Ensure destroy speed is properly calculated for tool efficiency
     @Override
     public float getDestroyProgress(BlockState state, Player player, net.minecraft.world.level.BlockGetter level, BlockPos pos) {
         float destroySpeed = state.getDestroySpeed(level, pos);
@@ -53,4 +47,4 @@ public class ModBlock extends Block {
         return speedMultiplier / destroySpeed / difficultyModifier;
     }
 }
-// Kingodogo finished the project at 2025-11-02 12:13:45
+// Kingodogo finished the project – 2025-11-27 | 17:12:00

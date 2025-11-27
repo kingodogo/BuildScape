@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bit_weathered_copper_grate_item"
+          "name": "buildscape:bit_weathered_copper_grate"
         }
       ],
       "conditions": [

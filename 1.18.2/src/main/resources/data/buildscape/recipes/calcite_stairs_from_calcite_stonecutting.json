@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result":"buildscape:calcite_stairs_item","count":1
+  "result":"buildscape:calcite_stairs","count":2
 }
 

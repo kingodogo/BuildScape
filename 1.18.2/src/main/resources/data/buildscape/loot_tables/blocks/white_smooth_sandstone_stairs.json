@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:white_smooth_sandstone_stairs_item"
+          "name": "buildscape:white_smooth_sandstone_stairs"
         }
       ],
       "conditions": [

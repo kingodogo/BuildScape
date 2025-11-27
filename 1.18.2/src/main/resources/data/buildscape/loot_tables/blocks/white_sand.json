@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:white_sand_item"
+          "name": "buildscape:white_sand"
         }
       ],
       "conditions": [

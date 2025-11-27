@@ -125,3 +125,3272 @@ keystore.properties
 # Hash files (optional - remove if you want to commit them)
 *.sha256
 *.md5
+
+# Development guides and documentation (not meant for git)
+*_GUIDE.md
+*_GUIDE*.md
+*_SUMMARY*.md
+*_COMPLETE.md
+*_PROPERTIES.md
+*CHANGELOG*.md
+**/tools/README*.md
+**/README_*.md
+
+# Python scripts and folders containing them
+*.py
+**/tools/
+**/unused/
+/1.18.2/scrap/icicle.json
+/1.18.2/scrap/icicle.png
+/1.18.2/scrap/icicle_block.json
+/1.18.2/scrap/icicle_block.png
+/1.18.2/scrap/icicle_down_base.png
+/1.18.2/scrap/icicle_down_frustum.png
+/1.18.2/scrap/icicle_down_middle.png
+/1.18.2/scrap/icicle_down_tip.png
+/1.18.2/scrap/icicle_down_tip_merge.png
+/1.18.2/scrap/icicle_up_base.png
+/1.18.2/scrap/icicle_up_frustum.png
+/1.18.2/scrap/icicle_up_middle.png
+/1.18.2/scrap/icicle_up_tip.png
+/1.18.2/scrap/icicle_up_tip_merge.png
+/1.18.2/scrap/IcicleBlock.java
+/1.18.2/scrap/packed_icicle_block.json
+/1.18.2/scrap/packed_icicle_block.png
+/1.18.2/scrap/PackedIcicleBlock.java
+/1.18.2/scrap/pointed_icicle.json
+/1.18.2/scrap/pointed_icicle_down_base.json
+/1.18.2/scrap/pointed_icicle_down_frustum.json
+/1.18.2/scrap/pointed_icicle_down_middle.json
+/1.18.2/scrap/pointed_icicle_down_tip.json
+/1.18.2/scrap/pointed_icicle_down_tip_merge.json
+/1.18.2/scrap/pointed_icicle_up_base.json
+/1.18.2/scrap/pointed_icicle_up_frustum.json
+/1.18.2/scrap/pointed_icicle_up_middle.json
+/1.18.2/scrap/pointed_icicle_up_tip.json
+/1.18.2/scrap/pointed_icicle_up_tip_merge.json
+/1.18.2/scrap/PointedIcicleBlock.java
+/1.18.2/run-data/config/fml.toml
+/1.18.2/run-data/logs/2025-11-01-1.log.gz
+/1.18.2/run-data/logs/2025-11-01-2.log.gz
+/1.18.2/run-data/logs/2025-11-01-3.log.gz
+/1.18.2/run-data/logs/2025-11-01-4.log.gz
+/1.18.2/run-data/logs/debug-1.log.gz
+/1.18.2/run-data/logs/debug-2.log.gz
+/1.18.2/run-data/logs/debug-3.log.gz
+/1.18.2/run-data/logs/debug-4.log.gz
+/1.18.2/imports/block/_list.json
+/1.18.2/imports/block/acacia_door_bottom.png
+/1.18.2/imports/block/acacia_door_top.png
+/1.18.2/imports/block/acacia_leaves.png
+/1.18.2/imports/block/acacia_log.png
+/1.18.2/imports/block/acacia_log_top.png
+/1.18.2/imports/block/acacia_planks.png
+/1.18.2/imports/block/acacia_sapling.png
+/1.18.2/imports/block/acacia_shelf.png
+/1.18.2/imports/block/acacia_trapdoor.png
+/1.18.2/imports/block/activator_rail.png
+/1.18.2/imports/block/activator_rail_on.png
+/1.18.2/imports/block/allium.png
+/1.18.2/imports/block/amethyst_block.png
+/1.18.2/imports/block/amethyst_cluster.png
+/1.18.2/imports/block/ancient_debris_side.png
+/1.18.2/imports/block/ancient_debris_top.png
+/1.18.2/imports/block/andesite.png
+/1.18.2/imports/block/anvil.png
+/1.18.2/imports/block/anvil_top.png
+/1.18.2/imports/block/attached_melon_stem.png
+/1.18.2/imports/block/attached_pumpkin_stem.png
+/1.18.2/imports/block/azalea_leaves.png
+/1.18.2/imports/block/azalea_plant.png
+/1.18.2/imports/block/azalea_side.png
+/1.18.2/imports/block/azalea_top.png
+/1.18.2/imports/block/azure_bluet.png
+/1.18.2/imports/block/bamboo_block.png
+/1.18.2/imports/block/bamboo_block_top.png
+/1.18.2/imports/block/bamboo_door_bottom.png
+/1.18.2/imports/block/bamboo_door_top.png
+/1.18.2/imports/block/bamboo_fence.png
+/1.18.2/imports/block/bamboo_fence_gate.png
+/1.18.2/imports/block/bamboo_fence_gate_particle.png
+/1.18.2/imports/block/bamboo_fence_particle.png
+/1.18.2/imports/block/bamboo_large_leaves.png
+/1.18.2/imports/block/bamboo_mosaic.png
+/1.18.2/imports/block/bamboo_planks.png
+/1.18.2/imports/block/bamboo_shelf.png
+/1.18.2/imports/block/bamboo_singleleaf.png
+/1.18.2/imports/block/bamboo_small_leaves.png
+/1.18.2/imports/block/bamboo_stage0.png
+/1.18.2/imports/block/bamboo_stalk.png
+/1.18.2/imports/block/bamboo_trapdoor.png
+/1.18.2/imports/block/barrel_bottom.png
+/1.18.2/imports/block/barrel_side.png
+/1.18.2/imports/block/barrel_top.png
+/1.18.2/imports/block/barrel_top_open.png
+/1.18.2/imports/block/basalt_side.png
+/1.18.2/imports/block/basalt_top.png
+/1.18.2/imports/block/beacon.png
+/1.18.2/imports/block/bedrock.png
+/1.18.2/imports/block/bee_nest_bottom.png
+/1.18.2/imports/block/bee_nest_front.png
+/1.18.2/imports/block/bee_nest_front_honey.png
+/1.18.2/imports/block/bee_nest_side.png
+/1.18.2/imports/block/bee_nest_top.png
+/1.18.2/imports/block/beehive_end.png
+/1.18.2/imports/block/beehive_front.png
+/1.18.2/imports/block/beehive_front_honey.png
+/1.18.2/imports/block/beehive_side.png
+/1.18.2/imports/block/beetroots_stage0.png
+/1.18.2/imports/block/beetroots_stage1.png
+/1.18.2/imports/block/beetroots_stage2.png
+/1.18.2/imports/block/beetroots_stage3.png
+/1.18.2/imports/block/bell_bottom.png
+/1.18.2/imports/block/bell_side.png
+/1.18.2/imports/block/bell_top.png
+/1.18.2/imports/block/big_dripleaf_side.png
+/1.18.2/imports/block/big_dripleaf_stem.png
+/1.18.2/imports/block/big_dripleaf_tip.png
+/1.18.2/imports/block/big_dripleaf_top.png
+/1.18.2/imports/block/birch_door_bottom.png
+/1.18.2/imports/block/birch_door_top.png
+/1.18.2/imports/block/birch_leaves.png
+/1.18.2/imports/block/birch_log.png
+/1.18.2/imports/block/birch_log_top.png
+/1.18.2/imports/block/birch_planks.png
+/1.18.2/imports/block/birch_sapling.png
+/1.18.2/imports/block/birch_shelf.png
+/1.18.2/imports/block/birch_trapdoor.png
+/1.18.2/imports/block/black_candle.png
+/1.18.2/imports/block/black_candle_lit.png
+/1.18.2/imports/block/black_concrete.png
+/1.18.2/imports/block/black_concrete_powder.png
+/1.18.2/imports/block/black_glazed_terracotta.png
+/1.18.2/imports/block/black_shulker_box.png
+/1.18.2/imports/block/black_stained_glass.png
+/1.18.2/imports/block/black_stained_glass_pane_top.png
+/1.18.2/imports/block/black_terracotta.png
+/1.18.2/imports/block/black_wool.png
+/1.18.2/imports/block/blackstone.png
+/1.18.2/imports/block/blackstone_top.png
+/1.18.2/imports/block/blast_furnace_front.png
+/1.18.2/imports/block/blast_furnace_front_on.png
+/1.18.2/imports/block/blast_furnace_front_on.png.mcmeta
+/1.18.2/imports/block/blast_furnace_side.png
+/1.18.2/imports/block/blast_furnace_top.png
+/1.18.2/imports/block/blue_candle.png
+/1.18.2/imports/block/blue_candle_lit.png
+/1.18.2/imports/block/blue_concrete.png
+/1.18.2/imports/block/blue_concrete_powder.png
+/1.18.2/imports/block/blue_glazed_terracotta.png
+/1.18.2/imports/block/blue_ice.png
+/1.18.2/imports/block/blue_orchid.png
+/1.18.2/imports/block/blue_shulker_box.png
+/1.18.2/imports/block/blue_stained_glass.png
+/1.18.2/imports/block/blue_stained_glass_pane_top.png
+/1.18.2/imports/block/blue_terracotta.png
+/1.18.2/imports/block/blue_wool.png
+/1.18.2/imports/block/bone_block_side.png
+/1.18.2/imports/block/bone_block_top.png
+/1.18.2/imports/block/bookshelf.png
+/1.18.2/imports/block/brain_coral.png
+/1.18.2/imports/block/brain_coral_block.png
+/1.18.2/imports/block/brain_coral_fan.png
+/1.18.2/imports/block/brewing_stand.png
+/1.18.2/imports/block/brewing_stand_base.png
+/1.18.2/imports/block/bricks.png
+/1.18.2/imports/block/brown_candle.png
+/1.18.2/imports/block/brown_candle_lit.png
+/1.18.2/imports/block/brown_concrete.png
+/1.18.2/imports/block/brown_concrete_powder.png
+/1.18.2/imports/block/brown_glazed_terracotta.png
+/1.18.2/imports/block/brown_mushroom.png
+/1.18.2/imports/block/brown_mushroom_block.png
+/1.18.2/imports/block/brown_shulker_box.png
+/1.18.2/imports/block/brown_stained_glass.png
+/1.18.2/imports/block/brown_stained_glass_pane_top.png
+/1.18.2/imports/block/brown_terracotta.png
+/1.18.2/imports/block/brown_wool.png
+/1.18.2/imports/block/bubble_coral.png
+/1.18.2/imports/block/bubble_coral_block.png
+/1.18.2/imports/block/bubble_coral_fan.png
+/1.18.2/imports/block/budding_amethyst.png
+/1.18.2/imports/block/bush.png
+/1.18.2/imports/block/cactus_bottom.png
+/1.18.2/imports/block/cactus_flower.png
+/1.18.2/imports/block/cactus_side.png
+/1.18.2/imports/block/cactus_top.png
+/1.18.2/imports/block/cake_bottom.png
+/1.18.2/imports/block/cake_inner.png
+/1.18.2/imports/block/cake_side.png
+/1.18.2/imports/block/cake_top.png
+/1.18.2/imports/block/calcite.png
+/1.18.2/imports/block/calibrated_sculk_sensor_amethyst.png
+/1.18.2/imports/block/calibrated_sculk_sensor_input_side.png
+/1.18.2/imports/block/calibrated_sculk_sensor_top.png
+/1.18.2/imports/block/campfire_fire.png
+/1.18.2/imports/block/campfire_fire.png.mcmeta
+/1.18.2/imports/block/campfire_log.png
+/1.18.2/imports/block/campfire_log_lit.png
+/1.18.2/imports/block/campfire_log_lit.png.mcmeta
+/1.18.2/imports/block/candle.png
+/1.18.2/imports/block/candle_lit.png
+/1.18.2/imports/block/carrots_stage0.png
+/1.18.2/imports/block/carrots_stage1.png
+/1.18.2/imports/block/carrots_stage2.png
+/1.18.2/imports/block/carrots_stage3.png
+/1.18.2/imports/block/cartography_table_side1.png
+/1.18.2/imports/block/cartography_table_side2.png
+/1.18.2/imports/block/cartography_table_side3.png
+/1.18.2/imports/block/cartography_table_top.png
+/1.18.2/imports/block/carved_pumpkin.png
+/1.18.2/imports/block/cauldron_bottom.png
+/1.18.2/imports/block/cauldron_inner.png
+/1.18.2/imports/block/cauldron_side.png
+/1.18.2/imports/block/cauldron_top.png
+/1.18.2/imports/block/cave_vines.png
+/1.18.2/imports/block/cave_vines_lit.png
+/1.18.2/imports/block/cave_vines_plant.png
+/1.18.2/imports/block/cave_vines_plant_lit.png
+/1.18.2/imports/block/chain_command_block_back.png
+/1.18.2/imports/block/chain_command_block_back.png.mcmeta
+/1.18.2/imports/block/chain_command_block_conditional.png
+/1.18.2/imports/block/chain_command_block_conditional.png.mcmeta
+/1.18.2/imports/block/chain_command_block_front.png
+/1.18.2/imports/block/chain_command_block_front.png.mcmeta
+/1.18.2/imports/block/chain_command_block_side.png
+/1.18.2/imports/block/chain_command_block_side.png.mcmeta
+/1.18.2/imports/block/cherry_door_bottom.png
+/1.18.2/imports/block/cherry_door_top.png
+/1.18.2/imports/block/cherry_leaves.png
+/1.18.2/imports/block/cherry_log.png
+/1.18.2/imports/block/cherry_log_top.png
+/1.18.2/imports/block/cherry_planks.png
+/1.18.2/imports/block/cherry_sapling.png
+/1.18.2/imports/block/cherry_shelf.png
+/1.18.2/imports/block/cherry_trapdoor.png
+/1.18.2/imports/block/chipped_anvil_top.png
+/1.18.2/imports/block/chiseled_bookshelf_empty.png
+/1.18.2/imports/block/chiseled_bookshelf_occupied.png
+/1.18.2/imports/block/chiseled_bookshelf_side.png
+/1.18.2/imports/block/chiseled_bookshelf_top.png
+/1.18.2/imports/block/chiseled_copper.png
+/1.18.2/imports/block/chiseled_deepslate.png
+/1.18.2/imports/block/chiseled_nether_bricks.png
+/1.18.2/imports/block/chiseled_polished_blackstone.png
+/1.18.2/imports/block/chiseled_quartz_block.png
+/1.18.2/imports/block/chiseled_quartz_block_top.png
+/1.18.2/imports/block/chiseled_red_sandstone.png
+/1.18.2/imports/block/chiseled_resin_bricks.png
+/1.18.2/imports/block/chiseled_sandstone.png
+/1.18.2/imports/block/chiseled_stone_bricks.png
+/1.18.2/imports/block/chiseled_tuff.png
+/1.18.2/imports/block/chiseled_tuff_bricks.png
+/1.18.2/imports/block/chiseled_tuff_bricks_top.png
+/1.18.2/imports/block/chiseled_tuff_top.png
+/1.18.2/imports/block/chorus_flower.png
+/1.18.2/imports/block/chorus_flower_dead.png
+/1.18.2/imports/block/chorus_plant.png
+/1.18.2/imports/block/clay.png
+/1.18.2/imports/block/closed_eyeblossom.png
+/1.18.2/imports/block/coal_block.png
+/1.18.2/imports/block/coal_ore.png
+/1.18.2/imports/block/coarse_dirt.png
+/1.18.2/imports/block/cobbled_deepslate.png
+/1.18.2/imports/block/cobblestone.png
+/1.18.2/imports/block/cobweb.png
+/1.18.2/imports/block/cocoa_stage0.png
+/1.18.2/imports/block/cocoa_stage1.png
+/1.18.2/imports/block/cocoa_stage2.png
+/1.18.2/imports/block/command_block_back.png
+/1.18.2/imports/block/command_block_back.png.mcmeta
+/1.18.2/imports/block/command_block_conditional.png
+/1.18.2/imports/block/command_block_conditional.png.mcmeta
+/1.18.2/imports/block/command_block_front.png
+/1.18.2/imports/block/command_block_front.png.mcmeta
+/1.18.2/imports/block/command_block_side.png
+/1.18.2/imports/block/command_block_side.png.mcmeta
+/1.18.2/imports/block/comparator.png
+/1.18.2/imports/block/comparator_on.png
+/1.18.2/imports/block/composter_bottom.png
+/1.18.2/imports/block/composter_compost.png
+/1.18.2/imports/block/composter_ready.png
+/1.18.2/imports/block/composter_side.png
+/1.18.2/imports/block/composter_top.png
+/1.18.2/imports/block/conduit.png
+/1.18.2/imports/block/copper_bars.png
+/1.18.2/imports/block/copper_block.png
+/1.18.2/imports/block/copper_bulb.png
+/1.18.2/imports/block/copper_bulb_lit.png
+/1.18.2/imports/block/copper_bulb_lit_powered.png
+/1.18.2/imports/block/copper_bulb_powered.png
+/1.18.2/imports/block/copper_chain.png
+/1.18.2/imports/block/copper_door_bottom.png
+/1.18.2/imports/block/copper_door_top.png
+/1.18.2/imports/block/copper_grate.png
+/1.18.2/imports/block/copper_lantern.png
+/1.18.2/imports/block/copper_lantern.png.mcmeta
+/1.18.2/imports/block/copper_ore.png
+/1.18.2/imports/block/copper_torch.png
+/1.18.2/imports/block/copper_trapdoor.png
+/1.18.2/imports/block/cornflower.png
+/1.18.2/imports/block/cracked_deepslate_bricks.png
+/1.18.2/imports/block/cracked_deepslate_tiles.png
+/1.18.2/imports/block/cracked_nether_bricks.png
+/1.18.2/imports/block/cracked_polished_blackstone_bricks.png
+/1.18.2/imports/block/cracked_stone_bricks.png
+/1.18.2/imports/block/crafter_bottom.png
+/1.18.2/imports/block/crafter_east.png
+/1.18.2/imports/block/crafter_east_crafting.png
+/1.18.2/imports/block/crafter_east_triggered.png
+/1.18.2/imports/block/crafter_north.png
+/1.18.2/imports/block/crafter_north_crafting.png
+/1.18.2/imports/block/crafter_south.png
+/1.18.2/imports/block/crafter_south_triggered.png
+/1.18.2/imports/block/crafter_top.png
+/1.18.2/imports/block/crafter_top_crafting.png
+/1.18.2/imports/block/crafter_top_triggered.png
+/1.18.2/imports/block/crafter_west.png
+/1.18.2/imports/block/crafter_west_crafting.png
+/1.18.2/imports/block/crafter_west_triggered.png
+/1.18.2/imports/block/crafting_table_front.png
+/1.18.2/imports/block/crafting_table_side.png
+/1.18.2/imports/block/crafting_table_top.png
+/1.18.2/imports/block/creaking_heart.png
+/1.18.2/imports/block/creaking_heart_awake.png
+/1.18.2/imports/block/creaking_heart_dormant.png
+/1.18.2/imports/block/creaking_heart_top.png
+/1.18.2/imports/block/creaking_heart_top_awake.png
+/1.18.2/imports/block/creaking_heart_top_dormant.png
+/1.18.2/imports/block/crimson_door_bottom.png
+/1.18.2/imports/block/crimson_door_top.png
+/1.18.2/imports/block/crimson_fungus.png
+/1.18.2/imports/block/crimson_nylium.png
+/1.18.2/imports/block/crimson_nylium_side.png
+/1.18.2/imports/block/crimson_planks.png
+/1.18.2/imports/block/crimson_roots.png
+/1.18.2/imports/block/crimson_roots_pot.png
+/1.18.2/imports/block/crimson_shelf.png
+/1.18.2/imports/block/crimson_stem.png
+/1.18.2/imports/block/crimson_stem.png.mcmeta
+/1.18.2/imports/block/crimson_stem_top.png
+/1.18.2/imports/block/crimson_trapdoor.png
+/1.18.2/imports/block/crying_obsidian.png
+/1.18.2/imports/block/cut_copper.png
+/1.18.2/imports/block/cut_red_sandstone.png
+/1.18.2/imports/block/cut_sandstone.png
+/1.18.2/imports/block/cyan_candle.png
+/1.18.2/imports/block/cyan_candle_lit.png
+/1.18.2/imports/block/cyan_concrete.png
+/1.18.2/imports/block/cyan_concrete_powder.png
+/1.18.2/imports/block/cyan_glazed_terracotta.png
+/1.18.2/imports/block/cyan_shulker_box.png
+/1.18.2/imports/block/cyan_stained_glass.png
+/1.18.2/imports/block/cyan_stained_glass_pane_top.png
+/1.18.2/imports/block/cyan_terracotta.png
+/1.18.2/imports/block/cyan_wool.png
+/1.18.2/imports/block/damaged_anvil_top.png
+/1.18.2/imports/block/dandelion.png
+/1.18.2/imports/block/dark_oak_door_bottom.png
+/1.18.2/imports/block/dark_oak_door_top.png
+/1.18.2/imports/block/dark_oak_leaves.png
+/1.18.2/imports/block/dark_oak_log.png
+/1.18.2/imports/block/dark_oak_log_top.png
+/1.18.2/imports/block/dark_oak_planks.png
+/1.18.2/imports/block/dark_oak_sapling.png
+/1.18.2/imports/block/dark_oak_shelf.png
+/1.18.2/imports/block/dark_oak_trapdoor.png
+/1.18.2/imports/block/dark_prismarine.png
+/1.18.2/imports/block/daylight_detector_inverted_top.png
+/1.18.2/imports/block/daylight_detector_side.png
+/1.18.2/imports/block/daylight_detector_top.png
+/1.18.2/imports/block/dead_brain_coral.png
+/1.18.2/imports/block/dead_brain_coral_block.png
+/1.18.2/imports/block/dead_brain_coral_fan.png
+/1.18.2/imports/block/dead_bubble_coral.png
+/1.18.2/imports/block/dead_bubble_coral_block.png
+/1.18.2/imports/block/dead_bubble_coral_fan.png
+/1.18.2/imports/block/dead_bush.png
+/1.18.2/imports/block/dead_fire_coral.png
+/1.18.2/imports/block/dead_fire_coral_block.png
+/1.18.2/imports/block/dead_fire_coral_fan.png
+/1.18.2/imports/block/dead_horn_coral.png
+/1.18.2/imports/block/dead_horn_coral_block.png
+/1.18.2/imports/block/dead_horn_coral_fan.png
+/1.18.2/imports/block/dead_tube_coral.png
+/1.18.2/imports/block/dead_tube_coral_block.png
+/1.18.2/imports/block/dead_tube_coral_fan.png
+/1.18.2/imports/block/debug.png
+/1.18.2/imports/block/debug2.png
+/1.18.2/imports/block/deepslate.png
+/1.18.2/imports/block/deepslate_bricks.png
+/1.18.2/imports/block/deepslate_coal_ore.png
+/1.18.2/imports/block/deepslate_copper_ore.png
+/1.18.2/imports/block/deepslate_diamond_ore.png
+/1.18.2/imports/block/deepslate_emerald_ore.png
+/1.18.2/imports/block/deepslate_gold_ore.png
+/1.18.2/imports/block/deepslate_iron_ore.png
+/1.18.2/imports/block/deepslate_lapis_ore.png
+/1.18.2/imports/block/deepslate_redstone_ore.png
+/1.18.2/imports/block/deepslate_tiles.png
+/1.18.2/imports/block/deepslate_top.png
+/1.18.2/imports/block/destroy_stage_0.png
+/1.18.2/imports/block/destroy_stage_1.png
+/1.18.2/imports/block/destroy_stage_2.png
+/1.18.2/imports/block/destroy_stage_3.png
+/1.18.2/imports/block/destroy_stage_4.png
+/1.18.2/imports/block/destroy_stage_5.png
+/1.18.2/imports/block/destroy_stage_6.png
+/1.18.2/imports/block/destroy_stage_7.png
+/1.18.2/imports/block/destroy_stage_8.png
+/1.18.2/imports/block/destroy_stage_9.png
+/1.18.2/imports/block/detector_rail.png
+/1.18.2/imports/block/detector_rail_on.png
+/1.18.2/imports/block/diamond_block.png
+/1.18.2/imports/block/diamond_ore.png
+/1.18.2/imports/block/diorite.png
+/1.18.2/imports/block/dirt.png
+/1.18.2/imports/block/dirt_path_side.png
+/1.18.2/imports/block/dirt_path_top.png
+/1.18.2/imports/block/dispenser_front.png
+/1.18.2/imports/block/dispenser_front_vertical.png
+/1.18.2/imports/block/dragon_egg.png
+/1.18.2/imports/block/dried_ghast_hydration_0_bottom.png
+/1.18.2/imports/block/dried_ghast_hydration_0_east.png
+/1.18.2/imports/block/dried_ghast_hydration_0_north.png
+/1.18.2/imports/block/dried_ghast_hydration_0_south.png
+/1.18.2/imports/block/dried_ghast_hydration_0_tentacles.png
+/1.18.2/imports/block/dried_ghast_hydration_0_top.png
+/1.18.2/imports/block/dried_ghast_hydration_0_west.png
+/1.18.2/imports/block/dried_ghast_hydration_1_bottom.png
+/1.18.2/imports/block/dried_ghast_hydration_1_east.png
+/1.18.2/imports/block/dried_ghast_hydration_1_north.png
+/1.18.2/imports/block/dried_ghast_hydration_1_south.png
+/1.18.2/imports/block/dried_ghast_hydration_1_tentacles.png
+/1.18.2/imports/block/dried_ghast_hydration_1_top.png
+/1.18.2/imports/block/dried_ghast_hydration_1_west.png
+/1.18.2/imports/block/dried_ghast_hydration_2_bottom.png
+/1.18.2/imports/block/dried_ghast_hydration_2_east.png
+/1.18.2/imports/block/dried_ghast_hydration_2_north.png
+/1.18.2/imports/block/dried_ghast_hydration_2_south.png
+/1.18.2/imports/block/dried_ghast_hydration_2_tentacles.png
+/1.18.2/imports/block/dried_ghast_hydration_2_top.png
+/1.18.2/imports/block/dried_ghast_hydration_2_west.png
+/1.18.2/imports/block/dried_ghast_hydration_3_bottom.png
+/1.18.2/imports/block/dried_ghast_hydration_3_east.png
+/1.18.2/imports/block/dried_ghast_hydration_3_north.png
+/1.18.2/imports/block/dried_ghast_hydration_3_south.png
+/1.18.2/imports/block/dried_ghast_hydration_3_tentacles.png
+/1.18.2/imports/block/dried_ghast_hydration_3_top.png
+/1.18.2/imports/block/dried_ghast_hydration_3_west.png
+/1.18.2/imports/block/dried_kelp_bottom.png
+/1.18.2/imports/block/dried_kelp_side.png
+/1.18.2/imports/block/dried_kelp_top.png
+/1.18.2/imports/block/dripstone_block.png
+/1.18.2/imports/block/dropper_front.png
+/1.18.2/imports/block/dropper_front_vertical.png
+/1.18.2/imports/block/emerald_block.png
+/1.18.2/imports/block/emerald_ore.png
+/1.18.2/imports/block/enchanting_table_bottom.png
+/1.18.2/imports/block/enchanting_table_side.png
+/1.18.2/imports/block/enchanting_table_top.png
+/1.18.2/imports/block/end_portal_frame_eye.png
+/1.18.2/imports/block/end_portal_frame_side.png
+/1.18.2/imports/block/end_portal_frame_top.png
+/1.18.2/imports/block/end_rod.png
+/1.18.2/imports/block/end_stone.png
+/1.18.2/imports/block/end_stone_bricks.png
+/1.18.2/imports/block/exposed_chiseled_copper.png
+/1.18.2/imports/block/exposed_copper.png
+/1.18.2/imports/block/exposed_copper_bars.png
+/1.18.2/imports/block/exposed_copper_bulb.png
+/1.18.2/imports/block/exposed_copper_bulb_lit.png
+/1.18.2/imports/block/exposed_copper_bulb_lit_powered.png
+/1.18.2/imports/block/exposed_copper_bulb_powered.png
+/1.18.2/imports/block/exposed_copper_chain.png
+/1.18.2/imports/block/exposed_copper_door_bottom.png
+/1.18.2/imports/block/exposed_copper_door_top.png
+/1.18.2/imports/block/exposed_copper_grate.png
+/1.18.2/imports/block/exposed_copper_lantern.png
+/1.18.2/imports/block/exposed_copper_lantern.png.mcmeta
+/1.18.2/imports/block/exposed_copper_trapdoor.png
+/1.18.2/imports/block/exposed_cut_copper.png
+/1.18.2/imports/block/exposed_lightning_rod.png
+/1.18.2/imports/block/farmland.png
+/1.18.2/imports/block/farmland_moist.png
+/1.18.2/imports/block/fern.png
+/1.18.2/imports/block/fire_0.png
+/1.18.2/imports/block/fire_0.png.mcmeta
+/1.18.2/imports/block/fire_1.png
+/1.18.2/imports/block/fire_1.png.mcmeta
+/1.18.2/imports/block/fire_coral.png
+/1.18.2/imports/block/fire_coral_block.png
+/1.18.2/imports/block/fire_coral_fan.png
+/1.18.2/imports/block/firefly_bush.png
+/1.18.2/imports/block/firefly_bush_emissive.png
+/1.18.2/imports/block/firefly_bush_emissive.png.mcmeta
+/1.18.2/imports/block/fletching_table_front.png
+/1.18.2/imports/block/fletching_table_side.png
+/1.18.2/imports/block/fletching_table_top.png
+/1.18.2/imports/block/flower_pot.png
+/1.18.2/imports/block/flowering_azalea_leaves.png
+/1.18.2/imports/block/flowering_azalea_side.png
+/1.18.2/imports/block/flowering_azalea_top.png
+/1.18.2/imports/block/frogspawn.png
+/1.18.2/imports/block/frosted_ice_0.png
+/1.18.2/imports/block/frosted_ice_1.png
+/1.18.2/imports/block/frosted_ice_2.png
+/1.18.2/imports/block/frosted_ice_3.png
+/1.18.2/imports/block/furnace_front.png
+/1.18.2/imports/block/furnace_front_on.png
+/1.18.2/imports/block/furnace_side.png
+/1.18.2/imports/block/furnace_top.png
+/1.18.2/imports/block/gilded_blackstone.png
+/1.18.2/imports/block/glass.png
+/1.18.2/imports/block/glass_pane_top.png
+/1.18.2/imports/block/glow_item_frame.png
+/1.18.2/imports/block/glow_lichen.png
+/1.18.2/imports/block/glowstone.png
+/1.18.2/imports/block/gold_block.png
+/1.18.2/imports/block/gold_ore.png
+/1.18.2/imports/block/granite.png
+/1.18.2/imports/block/grass_block_side.png
+/1.18.2/imports/block/grass_block_side_overlay.png
+/1.18.2/imports/block/grass_block_snow.png
+/1.18.2/imports/block/grass_block_top.png
+/1.18.2/imports/block/gravel.png
+/1.18.2/imports/block/gray_candle.png
+/1.18.2/imports/block/gray_candle_lit.png
+/1.18.2/imports/block/gray_concrete.png
+/1.18.2/imports/block/gray_concrete_powder.png
+/1.18.2/imports/block/gray_glazed_terracotta.png
+/1.18.2/imports/block/gray_shulker_box.png
+/1.18.2/imports/block/gray_stained_glass.png
+/1.18.2/imports/block/gray_stained_glass_pane_top.png
+/1.18.2/imports/block/gray_terracotta.png
+/1.18.2/imports/block/gray_wool.png
+/1.18.2/imports/block/green_candle.png
+/1.18.2/imports/block/green_candle_lit.png
+/1.18.2/imports/block/green_concrete.png
+/1.18.2/imports/block/green_concrete_powder.png
+/1.18.2/imports/block/green_glazed_terracotta.png
+/1.18.2/imports/block/green_shulker_box.png
+/1.18.2/imports/block/green_stained_glass.png
+/1.18.2/imports/block/green_stained_glass_pane_top.png
+/1.18.2/imports/block/green_terracotta.png
+/1.18.2/imports/block/green_wool.png
+/1.18.2/imports/block/grindstone_pivot.png
+/1.18.2/imports/block/grindstone_round.png
+/1.18.2/imports/block/grindstone_side.png
+/1.18.2/imports/block/hanging_roots.png
+/1.18.2/imports/block/hay_block_side.png
+/1.18.2/imports/block/hay_block_top.png
+/1.18.2/imports/block/heavy_core.png
+/1.18.2/imports/block/honey_block_bottom.png
+/1.18.2/imports/block/honey_block_side.png
+/1.18.2/imports/block/honey_block_top.png
+/1.18.2/imports/block/honeycomb_block.png
+/1.18.2/imports/block/hopper_inside.png
+/1.18.2/imports/block/hopper_outside.png
+/1.18.2/imports/block/hopper_top.png
+/1.18.2/imports/block/horn_coral.png
+/1.18.2/imports/block/horn_coral_block.png
+/1.18.2/imports/block/horn_coral_fan.png
+/1.18.2/imports/block/ice.png
+/1.18.2/imports/block/iron_bars.png
+/1.18.2/imports/block/iron_block.png
+/1.18.2/imports/block/iron_chain.png
+/1.18.2/imports/block/iron_door_bottom.png
+/1.18.2/imports/block/iron_door_top.png
+/1.18.2/imports/block/iron_ore.png
+/1.18.2/imports/block/iron_trapdoor.png
+/1.18.2/imports/block/item_frame.png
+/1.18.2/imports/block/jack_o_lantern.png
+/1.18.2/imports/block/jigsaw_bottom.png
+/1.18.2/imports/block/jigsaw_lock.png
+/1.18.2/imports/block/jigsaw_side.png
+/1.18.2/imports/block/jigsaw_top.png
+/1.18.2/imports/block/jukebox_side.png
+/1.18.2/imports/block/jukebox_top.png
+/1.18.2/imports/block/jungle_door_bottom.png
+/1.18.2/imports/block/jungle_door_top.png
+/1.18.2/imports/block/jungle_leaves.png
+/1.18.2/imports/block/jungle_log.png
+/1.18.2/imports/block/jungle_log_top.png
+/1.18.2/imports/block/jungle_planks.png
+/1.18.2/imports/block/jungle_sapling.png
+/1.18.2/imports/block/jungle_shelf.png
+/1.18.2/imports/block/jungle_trapdoor.png
+/1.18.2/imports/block/kelp.png
+/1.18.2/imports/block/kelp.png.mcmeta
+/1.18.2/imports/block/kelp_plant.png
+/1.18.2/imports/block/kelp_plant.png.mcmeta
+/1.18.2/imports/block/ladder.png
+/1.18.2/imports/block/lantern.png
+/1.18.2/imports/block/lantern.png.mcmeta
+/1.18.2/imports/block/lapis_block.png
+/1.18.2/imports/block/lapis_ore.png
+/1.18.2/imports/block/large_amethyst_bud.png
+/1.18.2/imports/block/large_fern_bottom.png
+/1.18.2/imports/block/large_fern_top.png
+/1.18.2/imports/block/lava_flow.png
+/1.18.2/imports/block/lava_flow.png.mcmeta
+/1.18.2/imports/block/lava_still.png
+/1.18.2/imports/block/lava_still.png.mcmeta
+/1.18.2/imports/block/leaf_litter.png
+/1.18.2/imports/block/lectern_base.png
+/1.18.2/imports/block/lectern_front.png
+/1.18.2/imports/block/lectern_sides.png
+/1.18.2/imports/block/lectern_top.png
+/1.18.2/imports/block/lever.png
+/1.18.2/imports/block/light_blue_candle.png
+/1.18.2/imports/block/light_blue_candle_lit.png
+/1.18.2/imports/block/light_blue_concrete.png
+/1.18.2/imports/block/light_blue_concrete_powder.png
+/1.18.2/imports/block/light_blue_glazed_terracotta.png
+/1.18.2/imports/block/light_blue_shulker_box.png
+/1.18.2/imports/block/light_blue_stained_glass.png
+/1.18.2/imports/block/light_blue_stained_glass_pane_top.png
+/1.18.2/imports/block/light_blue_terracotta.png
+/1.18.2/imports/block/light_blue_wool.png
+/1.18.2/imports/block/light_gray_candle.png
+/1.18.2/imports/block/light_gray_candle_lit.png
+/1.18.2/imports/block/light_gray_concrete.png
+/1.18.2/imports/block/light_gray_concrete_powder.png
+/1.18.2/imports/block/light_gray_glazed_terracotta.png
+/1.18.2/imports/block/light_gray_shulker_box.png
+/1.18.2/imports/block/light_gray_stained_glass.png
+/1.18.2/imports/block/light_gray_stained_glass_pane_top.png
+/1.18.2/imports/block/light_gray_terracotta.png
+/1.18.2/imports/block/light_gray_wool.png
+/1.18.2/imports/block/lightning_rod.png
+/1.18.2/imports/block/lightning_rod_on.png
+/1.18.2/imports/block/lilac_bottom.png
+/1.18.2/imports/block/lilac_top.png
+/1.18.2/imports/block/lily_of_the_valley.png
+/1.18.2/imports/block/lily_pad.png
+/1.18.2/imports/block/lime_candle.png
+/1.18.2/imports/block/lime_candle_lit.png
+/1.18.2/imports/block/lime_concrete.png
+/1.18.2/imports/block/lime_concrete_powder.png
+/1.18.2/imports/block/lime_glazed_terracotta.png
+/1.18.2/imports/block/lime_shulker_box.png
+/1.18.2/imports/block/lime_stained_glass.png
+/1.18.2/imports/block/lime_stained_glass_pane_top.png
+/1.18.2/imports/block/lime_terracotta.png
+/1.18.2/imports/block/lime_wool.png
+/1.18.2/imports/block/lodestone_side.png
+/1.18.2/imports/block/lodestone_top.png
+/1.18.2/imports/block/loom_bottom.png
+/1.18.2/imports/block/loom_front.png
+/1.18.2/imports/block/loom_side.png
+/1.18.2/imports/block/loom_top.png
+/1.18.2/imports/block/magenta_candle.png
+/1.18.2/imports/block/magenta_candle_lit.png
+/1.18.2/imports/block/magenta_concrete.png
+/1.18.2/imports/block/magenta_concrete_powder.png
+/1.18.2/imports/block/magenta_glazed_terracotta.png
+/1.18.2/imports/block/magenta_shulker_box.png
+/1.18.2/imports/block/magenta_stained_glass.png
+/1.18.2/imports/block/magenta_stained_glass_pane_top.png
+/1.18.2/imports/block/magenta_terracotta.png
+/1.18.2/imports/block/magenta_wool.png
+/1.18.2/imports/block/magma.png
+/1.18.2/imports/block/magma.png.mcmeta
+/1.18.2/imports/block/mangrove_door_bottom.png
+/1.18.2/imports/block/mangrove_door_top.png
+/1.18.2/imports/block/mangrove_leaves.png
+/1.18.2/imports/block/mangrove_log.png
+/1.18.2/imports/block/mangrove_log_top.png
+/1.18.2/imports/block/mangrove_planks.png
+/1.18.2/imports/block/mangrove_propagule.png
+/1.18.2/imports/block/mangrove_propagule_hanging.png
+/1.18.2/imports/block/mangrove_roots_side.png
+/1.18.2/imports/block/mangrove_roots_top.png
+/1.18.2/imports/block/mangrove_shelf.png
+/1.18.2/imports/block/mangrove_trapdoor.png
+/1.18.2/imports/block/medium_amethyst_bud.png
+/1.18.2/imports/block/melon_side.png
+/1.18.2/imports/block/melon_stem.png
+/1.18.2/imports/block/melon_top.png
+/1.18.2/imports/block/moss_block.png
+/1.18.2/imports/block/mossy_cobblestone.png
+/1.18.2/imports/block/mossy_stone_bricks.png
+/1.18.2/imports/block/mud.png
+/1.18.2/imports/block/mud_bricks.png
+/1.18.2/imports/block/muddy_mangrove_roots_side.png
+/1.18.2/imports/block/muddy_mangrove_roots_top.png
+/1.18.2/imports/block/mushroom_block_inside.png
+/1.18.2/imports/block/mushroom_stem.png
+/1.18.2/imports/block/mycelium_side.png
+/1.18.2/imports/block/mycelium_top.png
+/1.18.2/imports/block/nether_bricks.png
+/1.18.2/imports/block/nether_gold_ore.png
+/1.18.2/imports/block/nether_portal.png
+/1.18.2/imports/block/nether_portal.png.mcmeta
+/1.18.2/imports/block/nether_quartz_ore.png
+/1.18.2/imports/block/nether_sprouts.png
+/1.18.2/imports/block/nether_wart_block.png
+/1.18.2/imports/block/nether_wart_stage0.png
+/1.18.2/imports/block/nether_wart_stage1.png
+/1.18.2/imports/block/nether_wart_stage2.png
+/1.18.2/imports/block/netherite_block.png
+/1.18.2/imports/block/netherrack.png
+/1.18.2/imports/block/note_block.png
+/1.18.2/imports/block/oak_door_bottom.png
+/1.18.2/imports/block/oak_door_top.png
+/1.18.2/imports/block/oak_leaves.png
+/1.18.2/imports/block/oak_log.png
+/1.18.2/imports/block/oak_log_top.png
+/1.18.2/imports/block/oak_planks.png
+/1.18.2/imports/block/oak_sapling.png
+/1.18.2/imports/block/oak_shelf.png
+/1.18.2/imports/block/oak_trapdoor.png
+/1.18.2/imports/block/observer_back.png
+/1.18.2/imports/block/observer_back_on.png
+/1.18.2/imports/block/observer_front.png
+/1.18.2/imports/block/observer_side.png
+/1.18.2/imports/block/observer_top.png
+/1.18.2/imports/block/obsidian.png
+/1.18.2/imports/block/ochre_froglight_side.png
+/1.18.2/imports/block/ochre_froglight_top.png
+/1.18.2/imports/block/open_eyeblossom.png
+/1.18.2/imports/block/open_eyeblossom_emissive.png
+/1.18.2/imports/block/orange_candle.png
+/1.18.2/imports/block/orange_candle_lit.png
+/1.18.2/imports/block/orange_concrete.png
+/1.18.2/imports/block/orange_concrete_powder.png
+/1.18.2/imports/block/orange_glazed_terracotta.png
+/1.18.2/imports/block/orange_shulker_box.png
+/1.18.2/imports/block/orange_stained_glass.png
+/1.18.2/imports/block/orange_stained_glass_pane_top.png
+/1.18.2/imports/block/orange_terracotta.png
+/1.18.2/imports/block/orange_tulip.png
+/1.18.2/imports/block/orange_wool.png
+/1.18.2/imports/block/oxeye_daisy.png
+/1.18.2/imports/block/oxidized_chiseled_copper.png
+/1.18.2/imports/block/oxidized_copper.png
+/1.18.2/imports/block/oxidized_copper_bars.png
+/1.18.2/imports/block/oxidized_copper_bulb.png
+/1.18.2/imports/block/oxidized_copper_bulb_lit.png
+/1.18.2/imports/block/oxidized_copper_bulb_lit_powered.png
+/1.18.2/imports/block/oxidized_copper_bulb_powered.png
+/1.18.2/imports/block/oxidized_copper_chain.png
+/1.18.2/imports/block/oxidized_copper_door_bottom.png
+/1.18.2/imports/block/oxidized_copper_door_top.png
+/1.18.2/imports/block/oxidized_copper_grate.png
+/1.18.2/imports/block/oxidized_copper_lantern.png
+/1.18.2/imports/block/oxidized_copper_lantern.png.mcmeta
+/1.18.2/imports/block/oxidized_copper_trapdoor.png
+/1.18.2/imports/block/oxidized_cut_copper.png
+/1.18.2/imports/block/oxidized_lightning_rod.png
+/1.18.2/imports/block/packed_ice.png
+/1.18.2/imports/block/packed_mud.png
+/1.18.2/imports/block/pale_hanging_moss.png
+/1.18.2/imports/block/pale_hanging_moss_tip.png
+/1.18.2/imports/block/pale_moss_block.png
+/1.18.2/imports/block/pale_moss_carpet.png
+/1.18.2/imports/block/pale_moss_carpet_side_small.png
+/1.18.2/imports/block/pale_moss_carpet_side_tall.png
+/1.18.2/imports/block/pale_oak_door_bottom.png
+/1.18.2/imports/block/pale_oak_door_top.png
+/1.18.2/imports/block/pale_oak_leaves.png
+/1.18.2/imports/block/pale_oak_log.png
+/1.18.2/imports/block/pale_oak_log_top.png
+/1.18.2/imports/block/pale_oak_planks.png
+/1.18.2/imports/block/pale_oak_sapling.png
+/1.18.2/imports/block/pale_oak_shelf.png
+/1.18.2/imports/block/pale_oak_trapdoor.png
+/1.18.2/imports/block/pearlescent_froglight_side.png
+/1.18.2/imports/block/pearlescent_froglight_top.png
+/1.18.2/imports/block/peony_bottom.png
+/1.18.2/imports/block/peony_top.png
+/1.18.2/imports/block/pink_candle.png
+/1.18.2/imports/block/pink_candle_lit.png
+/1.18.2/imports/block/pink_concrete.png
+/1.18.2/imports/block/pink_concrete_powder.png
+/1.18.2/imports/block/pink_glazed_terracotta.png
+/1.18.2/imports/block/pink_petals.png
+/1.18.2/imports/block/pink_petals_stem.png
+/1.18.2/imports/block/pink_shulker_box.png
+/1.18.2/imports/block/pink_stained_glass.png
+/1.18.2/imports/block/pink_stained_glass_pane_top.png
+/1.18.2/imports/block/pink_terracotta.png
+/1.18.2/imports/block/pink_tulip.png
+/1.18.2/imports/block/pink_wool.png
+/1.18.2/imports/block/piston_bottom.png
+/1.18.2/imports/block/piston_inner.png
+/1.18.2/imports/block/piston_side.png
+/1.18.2/imports/block/piston_top.png
+/1.18.2/imports/block/piston_top_sticky.png
+/1.18.2/imports/block/pitcher_crop_bottom.png
+/1.18.2/imports/block/pitcher_crop_bottom_stage_1.png
+/1.18.2/imports/block/pitcher_crop_bottom_stage_2.png
+/1.18.2/imports/block/pitcher_crop_bottom_stage_3.png
+/1.18.2/imports/block/pitcher_crop_bottom_stage_4.png
+/1.18.2/imports/block/pitcher_crop_side.png
+/1.18.2/imports/block/pitcher_crop_top.png
+/1.18.2/imports/block/pitcher_crop_top_stage_3.png
+/1.18.2/imports/block/pitcher_crop_top_stage_4.png
+/1.18.2/imports/block/podzol_side.png
+/1.18.2/imports/block/podzol_top.png
+/1.18.2/imports/block/pointed_dripstone_down_base.png
+/1.18.2/imports/block/pointed_dripstone_down_frustum.png
+/1.18.2/imports/block/pointed_dripstone_down_middle.png
+/1.18.2/imports/block/pointed_dripstone_down_tip.png
+/1.18.2/imports/block/pointed_dripstone_down_tip_merge.png
+/1.18.2/imports/block/pointed_dripstone_up_base.png
+/1.18.2/imports/block/pointed_dripstone_up_frustum.png
+/1.18.2/imports/block/pointed_dripstone_up_middle.png
+/1.18.2/imports/block/pointed_dripstone_up_tip.png
+/1.18.2/imports/block/pointed_dripstone_up_tip_merge.png
+/1.18.2/imports/block/polished_andesite.png
+/1.18.2/imports/block/polished_basalt_side.png
+/1.18.2/imports/block/polished_basalt_top.png
+/1.18.2/imports/block/polished_blackstone.png
+/1.18.2/imports/block/polished_blackstone_bricks.png
+/1.18.2/imports/block/polished_deepslate.png
+/1.18.2/imports/block/polished_diorite.png
+/1.18.2/imports/block/polished_granite.png
+/1.18.2/imports/block/polished_tuff.png
+/1.18.2/imports/block/poppy.png
+/1.18.2/imports/block/potatoes_stage0.png
+/1.18.2/imports/block/potatoes_stage1.png
+/1.18.2/imports/block/potatoes_stage2.png
+/1.18.2/imports/block/potatoes_stage3.png
+/1.18.2/imports/block/potted_azalea_bush_plant.png
+/1.18.2/imports/block/potted_azalea_bush_side.png
+/1.18.2/imports/block/potted_azalea_bush_top.png
+/1.18.2/imports/block/potted_flowering_azalea_bush_plant.png
+/1.18.2/imports/block/potted_flowering_azalea_bush_side.png
+/1.18.2/imports/block/potted_flowering_azalea_bush_top.png
+/1.18.2/imports/block/powder_snow.png
+/1.18.2/imports/block/powered_rail.png
+/1.18.2/imports/block/powered_rail_on.png
+/1.18.2/imports/block/prismarine.png
+/1.18.2/imports/block/prismarine.png.mcmeta
+/1.18.2/imports/block/prismarine_bricks.png
+/1.18.2/imports/block/pumpkin_side.png
+/1.18.2/imports/block/pumpkin_stem.png
+/1.18.2/imports/block/pumpkin_top.png
+/1.18.2/imports/block/purple_candle.png
+/1.18.2/imports/block/purple_candle_lit.png
+/1.18.2/imports/block/purple_concrete.png
+/1.18.2/imports/block/purple_concrete_powder.png
+/1.18.2/imports/block/purple_glazed_terracotta.png
+/1.18.2/imports/block/purple_shulker_box.png
+/1.18.2/imports/block/purple_stained_glass.png
+/1.18.2/imports/block/purple_stained_glass_pane_top.png
+/1.18.2/imports/block/purple_terracotta.png
+/1.18.2/imports/block/purple_wool.png
+/1.18.2/imports/block/purpur_block.png
+/1.18.2/imports/block/purpur_pillar.png
+/1.18.2/imports/block/purpur_pillar_top.png
+/1.18.2/imports/block/quartz_block_bottom.png
+/1.18.2/imports/block/quartz_block_side.png
+/1.18.2/imports/block/quartz_block_top.png
+/1.18.2/imports/block/quartz_bricks.png
+/1.18.2/imports/block/quartz_pillar.png
+/1.18.2/imports/block/quartz_pillar_top.png
+/1.18.2/imports/block/rail.png
+/1.18.2/imports/block/rail_corner.png
+/1.18.2/imports/block/raw_copper_block.png
+/1.18.2/imports/block/raw_gold_block.png
+/1.18.2/imports/block/raw_iron_block.png
+/1.18.2/imports/block/red_candle.png
+/1.18.2/imports/block/red_candle_lit.png
+/1.18.2/imports/block/red_concrete.png
+/1.18.2/imports/block/red_concrete_powder.png
+/1.18.2/imports/block/red_glazed_terracotta.png
+/1.18.2/imports/block/red_mushroom.png
+/1.18.2/imports/block/red_mushroom_block.png
+/1.18.2/imports/block/red_nether_bricks.png
+/1.18.2/imports/block/red_sand.png
+/1.18.2/imports/block/red_sandstone.png
+/1.18.2/imports/block/red_sandstone_bottom.png
+/1.18.2/imports/block/red_sandstone_top.png
+/1.18.2/imports/block/red_shulker_box.png
+/1.18.2/imports/block/red_stained_glass.png
+/1.18.2/imports/block/red_stained_glass_pane_top.png
+/1.18.2/imports/block/red_terracotta.png
+/1.18.2/imports/block/red_tulip.png
+/1.18.2/imports/block/red_wool.png
+/1.18.2/imports/block/redstone_block.png
+/1.18.2/imports/block/redstone_dust_dot.png
+/1.18.2/imports/block/redstone_dust_line0.png
+/1.18.2/imports/block/redstone_dust_line1.png
+/1.18.2/imports/block/redstone_dust_overlay.png
+/1.18.2/imports/block/redstone_lamp.png
+/1.18.2/imports/block/redstone_lamp_on.png
+/1.18.2/imports/block/redstone_ore.png
+/1.18.2/imports/block/redstone_torch.png
+/1.18.2/imports/block/redstone_torch_off.png
+/1.18.2/imports/block/reinforced_deepslate_bottom.png
+/1.18.2/imports/block/reinforced_deepslate_side.png
+/1.18.2/imports/block/reinforced_deepslate_top.png
+/1.18.2/imports/block/repeater.png
+/1.18.2/imports/block/repeater_on.png
+/1.18.2/imports/block/repeating_command_block_back.png
+/1.18.2/imports/block/repeating_command_block_back.png.mcmeta
+/1.18.2/imports/block/repeating_command_block_conditional.png
+/1.18.2/imports/block/repeating_command_block_conditional.png.mcmeta
+/1.18.2/imports/block/repeating_command_block_front.png
+/1.18.2/imports/block/repeating_command_block_front.png.mcmeta
+/1.18.2/imports/block/repeating_command_block_side.png
+/1.18.2/imports/block/repeating_command_block_side.png.mcmeta
+/1.18.2/imports/block/resin_block.png
+/1.18.2/imports/block/resin_bricks.png
+/1.18.2/imports/block/resin_clump.png
+/1.18.2/imports/block/respawn_anchor_bottom.png
+/1.18.2/imports/block/respawn_anchor_side0.png
+/1.18.2/imports/block/respawn_anchor_side1.png
+/1.18.2/imports/block/respawn_anchor_side2.png
+/1.18.2/imports/block/respawn_anchor_side3.png
+/1.18.2/imports/block/respawn_anchor_side4.png
+/1.18.2/imports/block/respawn_anchor_top.png
+/1.18.2/imports/block/respawn_anchor_top.png.mcmeta
+/1.18.2/imports/block/respawn_anchor_top_off.png
+/1.18.2/imports/block/rooted_dirt.png
+/1.18.2/imports/block/rose_bush_bottom.png
+/1.18.2/imports/block/rose_bush_top.png
+/1.18.2/imports/block/sand.png
+/1.18.2/imports/block/sandstone.png
+/1.18.2/imports/block/sandstone_bottom.png
+/1.18.2/imports/block/sandstone_top.png
+/1.18.2/imports/block/scaffolding_bottom.png
+/1.18.2/imports/block/scaffolding_side.png
+/1.18.2/imports/block/scaffolding_top.png
+/1.18.2/imports/block/sculk.png
+/1.18.2/imports/block/sculk.png.mcmeta
+/1.18.2/imports/block/sculk_catalyst_bottom.png
+/1.18.2/imports/block/sculk_catalyst_side.png
+/1.18.2/imports/block/sculk_catalyst_side_bloom.png
+/1.18.2/imports/block/sculk_catalyst_side_bloom.png.mcmeta
+/1.18.2/imports/block/sculk_catalyst_top.png
+/1.18.2/imports/block/sculk_catalyst_top_bloom.png
+/1.18.2/imports/block/sculk_catalyst_top_bloom.png.mcmeta
+/1.18.2/imports/block/sculk_sensor_bottom.png
+/1.18.2/imports/block/sculk_sensor_side.png
+/1.18.2/imports/block/sculk_sensor_tendril_active.png
+/1.18.2/imports/block/sculk_sensor_tendril_active.png.mcmeta
+/1.18.2/imports/block/sculk_sensor_tendril_inactive.png
+/1.18.2/imports/block/sculk_sensor_tendril_inactive.png.mcmeta
+/1.18.2/imports/block/sculk_sensor_top.png
+/1.18.2/imports/block/sculk_shrieker_bottom.png
+/1.18.2/imports/block/sculk_shrieker_can_summon_inner_top.png
+/1.18.2/imports/block/sculk_shrieker_can_summon_inner_top.png.mcmeta
+/1.18.2/imports/block/sculk_shrieker_inner_top.png
+/1.18.2/imports/block/sculk_shrieker_inner_top.png.mcmeta
+/1.18.2/imports/block/sculk_shrieker_side.png
+/1.18.2/imports/block/sculk_shrieker_top.png
+/1.18.2/imports/block/sculk_vein.png
+/1.18.2/imports/block/sculk_vein.png.mcmeta
+/1.18.2/imports/block/sea_lantern.png
+/1.18.2/imports/block/sea_lantern.png.mcmeta
+/1.18.2/imports/block/sea_pickle.png
+/1.18.2/imports/block/seagrass.png
+/1.18.2/imports/block/seagrass.png.mcmeta
+/1.18.2/imports/block/short_dry_grass.png
+/1.18.2/imports/block/short_grass.png
+/1.18.2/imports/block/shroomlight.png
+/1.18.2/imports/block/shulker_box.png
+/1.18.2/imports/block/slime_block.png
+/1.18.2/imports/block/small_amethyst_bud.png
+/1.18.2/imports/block/small_dripleaf_side.png
+/1.18.2/imports/block/small_dripleaf_stem_bottom.png
+/1.18.2/imports/block/small_dripleaf_stem_top.png
+/1.18.2/imports/block/small_dripleaf_top.png
+/1.18.2/imports/block/smithing_table_bottom.png
+/1.18.2/imports/block/smithing_table_front.png
+/1.18.2/imports/block/smithing_table_side.png
+/1.18.2/imports/block/smithing_table_top.png
+/1.18.2/imports/block/smoker_bottom.png
+/1.18.2/imports/block/smoker_front.png
+/1.18.2/imports/block/smoker_front_on.png
+/1.18.2/imports/block/smoker_front_on.png.mcmeta
+/1.18.2/imports/block/smoker_side.png
+/1.18.2/imports/block/smoker_top.png
+/1.18.2/imports/block/smooth_basalt.png
+/1.18.2/imports/block/smooth_stone.png
+/1.18.2/imports/block/smooth_stone_slab_side.png
+/1.18.2/imports/block/sniffer_egg_not_cracked_bottom.png
+/1.18.2/imports/block/sniffer_egg_not_cracked_east.png
+/1.18.2/imports/block/sniffer_egg_not_cracked_north.png
+/1.18.2/imports/block/sniffer_egg_not_cracked_south.png
+/1.18.2/imports/block/sniffer_egg_not_cracked_top.png
+/1.18.2/imports/block/sniffer_egg_not_cracked_west.png
+/1.18.2/imports/block/sniffer_egg_slightly_cracked_bottom.png
+/1.18.2/imports/block/sniffer_egg_slightly_cracked_east.png
+/1.18.2/imports/block/sniffer_egg_slightly_cracked_north.png
+/1.18.2/imports/block/sniffer_egg_slightly_cracked_south.png
+/1.18.2/imports/block/sniffer_egg_slightly_cracked_top.png
+/1.18.2/imports/block/sniffer_egg_slightly_cracked_west.png
+/1.18.2/imports/block/sniffer_egg_very_cracked_bottom.png
+/1.18.2/imports/block/sniffer_egg_very_cracked_east.png
+/1.18.2/imports/block/sniffer_egg_very_cracked_north.png
+/1.18.2/imports/block/sniffer_egg_very_cracked_south.png
+/1.18.2/imports/block/sniffer_egg_very_cracked_top.png
+/1.18.2/imports/block/sniffer_egg_very_cracked_west.png
+/1.18.2/imports/block/snow.png
+/1.18.2/imports/block/soul_campfire_fire.png
+/1.18.2/imports/block/soul_campfire_fire.png.mcmeta
+/1.18.2/imports/block/soul_campfire_log_lit.png
+/1.18.2/imports/block/soul_campfire_log_lit.png.mcmeta
+/1.18.2/imports/block/soul_fire_0.png
+/1.18.2/imports/block/soul_fire_0.png.mcmeta
+/1.18.2/imports/block/soul_fire_1.png
+/1.18.2/imports/block/soul_fire_1.png.mcmeta
+/1.18.2/imports/block/soul_lantern.png
+/1.18.2/imports/block/soul_lantern.png.mcmeta
+/1.18.2/imports/block/soul_sand.png
+/1.18.2/imports/block/soul_soil.png
+/1.18.2/imports/block/soul_torch.png
+/1.18.2/imports/block/spawner.png
+/1.18.2/imports/block/sponge.png
+/1.18.2/imports/block/spore_blossom.png
+/1.18.2/imports/block/spore_blossom_base.png
+/1.18.2/imports/block/spruce_door_bottom.png
+/1.18.2/imports/block/spruce_door_top.png
+/1.18.2/imports/block/spruce_leaves.png
+/1.18.2/imports/block/spruce_log.png
+/1.18.2/imports/block/spruce_log_top.png
+/1.18.2/imports/block/spruce_planks.png
+/1.18.2/imports/block/spruce_sapling.png
+/1.18.2/imports/block/spruce_shelf.png
+/1.18.2/imports/block/spruce_trapdoor.png
+/1.18.2/imports/block/stone.png
+/1.18.2/imports/block/stone_bricks.png
+/1.18.2/imports/block/stonecutter_bottom.png
+/1.18.2/imports/block/stonecutter_saw.png
+/1.18.2/imports/block/stonecutter_saw.png.mcmeta
+/1.18.2/imports/block/stonecutter_side.png
+/1.18.2/imports/block/stonecutter_top.png
+/1.18.2/imports/block/stripped_acacia_log.png
+/1.18.2/imports/block/stripped_acacia_log_top.png
+/1.18.2/imports/block/stripped_bamboo_block.png
+/1.18.2/imports/block/stripped_bamboo_block_top.png
+/1.18.2/imports/block/stripped_birch_log.png
+/1.18.2/imports/block/stripped_birch_log_top.png
+/1.18.2/imports/block/stripped_cherry_log.png
+/1.18.2/imports/block/stripped_cherry_log_top.png
+/1.18.2/imports/block/stripped_crimson_stem.png
+/1.18.2/imports/block/stripped_crimson_stem_top.png
+/1.18.2/imports/block/stripped_dark_oak_log.png
+/1.18.2/imports/block/stripped_dark_oak_log_top.png
+/1.18.2/imports/block/stripped_jungle_log.png
+/1.18.2/imports/block/stripped_jungle_log_top.png
+/1.18.2/imports/block/stripped_mangrove_log.png
+/1.18.2/imports/block/stripped_mangrove_log_top.png
+/1.18.2/imports/block/stripped_oak_log.png
+/1.18.2/imports/block/stripped_oak_log_top.png
+/1.18.2/imports/block/stripped_pale_oak_log.png
+/1.18.2/imports/block/stripped_pale_oak_log_top.png
+/1.18.2/imports/block/stripped_spruce_log.png
+/1.18.2/imports/block/stripped_spruce_log_top.png
+/1.18.2/imports/block/stripped_warped_stem.png
+/1.18.2/imports/block/stripped_warped_stem_top.png
+/1.18.2/imports/block/structure_block.png
+/1.18.2/imports/block/structure_block_corner.png
+/1.18.2/imports/block/structure_block_data.png
+/1.18.2/imports/block/structure_block_load.png
+/1.18.2/imports/block/structure_block_save.png
+/1.18.2/imports/block/sugar_cane.png
+/1.18.2/imports/block/sunflower_back.png
+/1.18.2/imports/block/sunflower_bottom.png
+/1.18.2/imports/block/sunflower_front.png
+/1.18.2/imports/block/sunflower_top.png
+/1.18.2/imports/block/suspicious_gravel_0.png
+/1.18.2/imports/block/suspicious_gravel_1.png
+/1.18.2/imports/block/suspicious_gravel_2.png
+/1.18.2/imports/block/suspicious_gravel_3.png
+/1.18.2/imports/block/suspicious_sand_0.png
+/1.18.2/imports/block/suspicious_sand_1.png
+/1.18.2/imports/block/suspicious_sand_2.png
+/1.18.2/imports/block/suspicious_sand_3.png
+/1.18.2/imports/block/sweet_berry_bush_stage0.png
+/1.18.2/imports/block/sweet_berry_bush_stage1.png
+/1.18.2/imports/block/sweet_berry_bush_stage2.png
+/1.18.2/imports/block/sweet_berry_bush_stage3.png
+/1.18.2/imports/block/tall_dry_grass.png
+/1.18.2/imports/block/tall_grass_bottom.png
+/1.18.2/imports/block/tall_grass_top.png
+/1.18.2/imports/block/tall_seagrass_bottom.png
+/1.18.2/imports/block/tall_seagrass_bottom.png.mcmeta
+/1.18.2/imports/block/tall_seagrass_top.png
+/1.18.2/imports/block/tall_seagrass_top.png.mcmeta
+/1.18.2/imports/block/target_side.png
+/1.18.2/imports/block/target_top.png
+/1.18.2/imports/block/terracotta.png
+/1.18.2/imports/block/test_block_accept.png
+/1.18.2/imports/block/test_block_fail.png
+/1.18.2/imports/block/test_block_log.png
+/1.18.2/imports/block/test_block_start.png
+/1.18.2/imports/block/test_instance_block.png
+/1.18.2/imports/block/tinted_glass.png
+/1.18.2/imports/block/tnt_bottom.png
+/1.18.2/imports/block/tnt_side.png
+/1.18.2/imports/block/tnt_top.png
+/1.18.2/imports/block/torch.png
+/1.18.2/imports/block/torchflower.png
+/1.18.2/imports/block/torchflower_crop_stage0.png
+/1.18.2/imports/block/torchflower_crop_stage1.png
+/1.18.2/imports/block/trial_spawner_bottom.png
+/1.18.2/imports/block/trial_spawner_side_active.png
+/1.18.2/imports/block/trial_spawner_side_active_ominous.png
+/1.18.2/imports/block/trial_spawner_side_inactive.png
+/1.18.2/imports/block/trial_spawner_side_inactive_ominous.png
+/1.18.2/imports/block/trial_spawner_top_active.png
+/1.18.2/imports/block/trial_spawner_top_active_ominous.png
+/1.18.2/imports/block/trial_spawner_top_ejecting_reward.png
+/1.18.2/imports/block/trial_spawner_top_ejecting_reward_ominous.png
+/1.18.2/imports/block/trial_spawner_top_inactive.png
+/1.18.2/imports/block/trial_spawner_top_inactive_ominous.png
+/1.18.2/imports/block/tripwire.png
+/1.18.2/imports/block/tripwire_hook.png
+/1.18.2/imports/block/tube_coral.png
+/1.18.2/imports/block/tube_coral_block.png
+/1.18.2/imports/block/tube_coral_fan.png
+/1.18.2/imports/block/tuff.png
+/1.18.2/imports/block/tuff_bricks.png
+/1.18.2/imports/block/turtle_egg.png
+/1.18.2/imports/block/turtle_egg_slightly_cracked.png
+/1.18.2/imports/block/turtle_egg_very_cracked.png
+/1.18.2/imports/block/twisting_vines.png
+/1.18.2/imports/block/twisting_vines_plant.png
+/1.18.2/imports/block/vault_bottom.png
+/1.18.2/imports/block/vault_bottom_ominous.png
+/1.18.2/imports/block/vault_front_ejecting.png
+/1.18.2/imports/block/vault_front_ejecting_ominous.png
+/1.18.2/imports/block/vault_front_off.png
+/1.18.2/imports/block/vault_front_off_ominous.png
+/1.18.2/imports/block/vault_front_on.png
+/1.18.2/imports/block/vault_front_on_ominous.png
+/1.18.2/imports/block/vault_side_off.png
+/1.18.2/imports/block/vault_side_off_ominous.png
+/1.18.2/imports/block/vault_side_on.png
+/1.18.2/imports/block/vault_side_on_ominous.png
+/1.18.2/imports/block/vault_top.png
+/1.18.2/imports/block/vault_top_ejecting.png
+/1.18.2/imports/block/vault_top_ejecting_ominous.png
+/1.18.2/imports/block/vault_top_ominous.png
+/1.18.2/imports/block/verdant_froglight_side.png
+/1.18.2/imports/block/verdant_froglight_top.png
+/1.18.2/imports/block/vine.png
+/1.18.2/imports/block/warped_door_bottom.png
+/1.18.2/imports/block/warped_door_top.png
+/1.18.2/imports/block/warped_fungus.png
+/1.18.2/imports/block/warped_nylium.png
+/1.18.2/imports/block/warped_nylium_side.png
+/1.18.2/imports/block/warped_planks.png
+/1.18.2/imports/block/warped_roots.png
+/1.18.2/imports/block/warped_roots_pot.png
+/1.18.2/imports/block/warped_shelf.png
+/1.18.2/imports/block/warped_stem.png
+/1.18.2/imports/block/warped_stem.png.mcmeta
+/1.18.2/imports/block/warped_stem_top.png
+/1.18.2/imports/block/warped_trapdoor.png
+/1.18.2/imports/block/warped_wart_block.png
+/1.18.2/imports/block/water_flow.png
+/1.18.2/imports/block/water_flow.png.mcmeta
+/1.18.2/imports/block/water_overlay.png
+/1.18.2/imports/block/water_still.png
+/1.18.2/imports/block/water_still.png.mcmeta
+/1.18.2/imports/block/weathered_chiseled_copper.png
+/1.18.2/imports/block/weathered_copper.png
+/1.18.2/imports/block/weathered_copper_bars.png
+/1.18.2/imports/block/weathered_copper_bulb.png
+/1.18.2/imports/block/weathered_copper_bulb_lit.png
+/1.18.2/imports/block/weathered_copper_bulb_lit_powered.png
+/1.18.2/imports/block/weathered_copper_bulb_powered.png
+/1.18.2/imports/block/weathered_copper_chain.png
+/1.18.2/imports/block/weathered_copper_door_bottom.png
+/1.18.2/imports/block/weathered_copper_door_top.png
+/1.18.2/imports/block/weathered_copper_grate.png
+/1.18.2/imports/block/weathered_copper_lantern.png
+/1.18.2/imports/block/weathered_copper_lantern.png.mcmeta
+/1.18.2/imports/block/weathered_copper_trapdoor.png
+/1.18.2/imports/block/weathered_cut_copper.png
+/1.18.2/imports/block/weathered_lightning_rod.png
+/1.18.2/imports/block/weeping_vines.png
+/1.18.2/imports/block/weeping_vines_plant.png
+/1.18.2/imports/block/wet_sponge.png
+/1.18.2/imports/block/wheat_stage0.png
+/1.18.2/imports/block/wheat_stage1.png
+/1.18.2/imports/block/wheat_stage2.png
+/1.18.2/imports/block/wheat_stage3.png
+/1.18.2/imports/block/wheat_stage4.png
+/1.18.2/imports/block/wheat_stage5.png
+/1.18.2/imports/block/wheat_stage6.png
+/1.18.2/imports/block/wheat_stage7.png
+/1.18.2/imports/block/white_candle.png
+/1.18.2/imports/block/white_candle_lit.png
+/1.18.2/imports/block/white_concrete.png
+/1.18.2/imports/block/white_concrete_powder.png
+/1.18.2/imports/block/white_glazed_terracotta.png
+/1.18.2/imports/block/white_shulker_box.png
+/1.18.2/imports/block/white_stained_glass.png
+/1.18.2/imports/block/white_stained_glass_pane_top.png
+/1.18.2/imports/block/white_terracotta.png
+/1.18.2/imports/block/white_tulip.png
+/1.18.2/imports/block/white_wool.png
+/1.18.2/imports/block/wildflowers.png
+/1.18.2/imports/block/wildflowers_stem.png
+/1.18.2/imports/block/wither_rose.png
+/1.18.2/imports/block/yellow_candle.png
+/1.18.2/imports/block/yellow_candle_lit.png
+/1.18.2/imports/block/yellow_concrete.png
+/1.18.2/imports/block/yellow_concrete_powder.png
+/1.18.2/imports/block/yellow_glazed_terracotta.png
+/1.18.2/imports/block/yellow_shulker_box.png
+/1.18.2/imports/block/yellow_stained_glass.png
+/1.18.2/imports/block/yellow_stained_glass_pane_top.png
+/1.18.2/imports/block/yellow_terracotta.png
+/1.18.2/imports/block/yellow_wool.png
+/1.18.2/imports/item/_list.json
+/1.18.2/imports/item/acacia_boat.png
+/1.18.2/imports/item/acacia_chest_boat.png
+/1.18.2/imports/item/acacia_door.png
+/1.18.2/imports/item/acacia_hanging_sign.png
+/1.18.2/imports/item/acacia_sign.png
+/1.18.2/imports/item/allay_spawn_egg.png
+/1.18.2/imports/item/amethyst_shard.png
+/1.18.2/imports/item/angler_pottery_sherd.png
+/1.18.2/imports/item/apple.png
+/1.18.2/imports/item/archer_pottery_sherd.png
+/1.18.2/imports/item/armadillo_scute.png
+/1.18.2/imports/item/armadillo_spawn_egg.png
+/1.18.2/imports/item/armor_stand.png
+/1.18.2/imports/item/arms_up_pottery_sherd.png
+/1.18.2/imports/item/arrow.png
+/1.18.2/imports/item/axolotl_bucket.png
+/1.18.2/imports/item/axolotl_spawn_egg.png
+/1.18.2/imports/item/baked_potato.png
+/1.18.2/imports/item/bamboo.png
+/1.18.2/imports/item/bamboo_chest_raft.png
+/1.18.2/imports/item/bamboo_door.png
+/1.18.2/imports/item/bamboo_hanging_sign.png
+/1.18.2/imports/item/bamboo_raft.png
+/1.18.2/imports/item/bamboo_sign.png
+/1.18.2/imports/item/barrier.png
+/1.18.2/imports/item/bat_spawn_egg.png
+/1.18.2/imports/item/bee_spawn_egg.png
+/1.18.2/imports/item/beef.png
+/1.18.2/imports/item/beetroot.png
+/1.18.2/imports/item/beetroot_seeds.png
+/1.18.2/imports/item/beetroot_soup.png
+/1.18.2/imports/item/bell.png
+/1.18.2/imports/item/birch_boat.png
+/1.18.2/imports/item/birch_chest_boat.png
+/1.18.2/imports/item/birch_door.png
+/1.18.2/imports/item/birch_hanging_sign.png
+/1.18.2/imports/item/birch_sign.png
+/1.18.2/imports/item/black_bundle.png
+/1.18.2/imports/item/black_bundle_open_back.png
+/1.18.2/imports/item/black_bundle_open_front.png
+/1.18.2/imports/item/black_candle.png
+/1.18.2/imports/item/black_dye.png
+/1.18.2/imports/item/black_harness.png
+/1.18.2/imports/item/blade_pottery_sherd.png
+/1.18.2/imports/item/blaze_powder.png
+/1.18.2/imports/item/blaze_rod.png
+/1.18.2/imports/item/blaze_spawn_egg.png
+/1.18.2/imports/item/blue_bundle.png
+/1.18.2/imports/item/blue_bundle_open_back.png
+/1.18.2/imports/item/blue_bundle_open_front.png
+/1.18.2/imports/item/blue_candle.png
+/1.18.2/imports/item/blue_dye.png
+/1.18.2/imports/item/blue_egg.png
+/1.18.2/imports/item/blue_harness.png
+/1.18.2/imports/item/bogged_spawn_egg.png
+/1.18.2/imports/item/bolt_armor_trim_smithing_template.png
+/1.18.2/imports/item/bone.png
+/1.18.2/imports/item/bone_meal.png
+/1.18.2/imports/item/book.png
+/1.18.2/imports/item/bordure_indented_banner_pattern.png
+/1.18.2/imports/item/bow.png
+/1.18.2/imports/item/bow_pulling_0.png
+/1.18.2/imports/item/bow_pulling_1.png
+/1.18.2/imports/item/bow_pulling_2.png
+/1.18.2/imports/item/bowl.png
+/1.18.2/imports/item/bread.png
+/1.18.2/imports/item/breeze_rod.png
+/1.18.2/imports/item/breeze_spawn_egg.png
+/1.18.2/imports/item/brewer_pottery_sherd.png
+/1.18.2/imports/item/brewing_stand.png
+/1.18.2/imports/item/brick.png
+/1.18.2/imports/item/brown_bundle.png
+/1.18.2/imports/item/brown_bundle_open_back.png
+/1.18.2/imports/item/brown_bundle_open_front.png
+/1.18.2/imports/item/brown_candle.png
+/1.18.2/imports/item/brown_dye.png
+/1.18.2/imports/item/brown_egg.png
+/1.18.2/imports/item/brown_harness.png
+/1.18.2/imports/item/brush.png
+/1.18.2/imports/item/bucket.png
+/1.18.2/imports/item/bundle.png
+/1.18.2/imports/item/bundle_open_back.png
+/1.18.2/imports/item/bundle_open_front.png
+/1.18.2/imports/item/burn_pottery_sherd.png
+/1.18.2/imports/item/cake.png
+/1.18.2/imports/item/camel_spawn_egg.png
+/1.18.2/imports/item/campfire.png
+/1.18.2/imports/item/candle.png
+/1.18.2/imports/item/carrot.png
+/1.18.2/imports/item/carrot_on_a_stick.png
+/1.18.2/imports/item/cat_spawn_egg.png
+/1.18.2/imports/item/cauldron.png
+/1.18.2/imports/item/cave_spider_spawn_egg.png
+/1.18.2/imports/item/chainmail_boots.png
+/1.18.2/imports/item/chainmail_chestplate.png
+/1.18.2/imports/item/chainmail_helmet.png
+/1.18.2/imports/item/chainmail_leggings.png
+/1.18.2/imports/item/charcoal.png
+/1.18.2/imports/item/cherry_boat.png
+/1.18.2/imports/item/cherry_chest_boat.png
+/1.18.2/imports/item/cherry_door.png
+/1.18.2/imports/item/cherry_hanging_sign.png
+/1.18.2/imports/item/cherry_sign.png
+/1.18.2/imports/item/chest_minecart.png
+/1.18.2/imports/item/chicken.png
+/1.18.2/imports/item/chicken_spawn_egg.png
+/1.18.2/imports/item/chorus_fruit.png
+/1.18.2/imports/item/clay_ball.png
+/1.18.2/imports/item/clock_00.png
+/1.18.2/imports/item/clock_01.png
+/1.18.2/imports/item/clock_02.png
+/1.18.2/imports/item/clock_03.png
+/1.18.2/imports/item/clock_04.png
+/1.18.2/imports/item/clock_05.png
+/1.18.2/imports/item/clock_06.png
+/1.18.2/imports/item/clock_07.png
+/1.18.2/imports/item/clock_08.png
+/1.18.2/imports/item/clock_09.png
+/1.18.2/imports/item/clock_10.png
+/1.18.2/imports/item/clock_11.png
+/1.18.2/imports/item/clock_12.png
+/1.18.2/imports/item/clock_13.png
+/1.18.2/imports/item/clock_14.png
+/1.18.2/imports/item/clock_15.png
+/1.18.2/imports/item/clock_16.png
+/1.18.2/imports/item/clock_17.png
+/1.18.2/imports/item/clock_18.png
+/1.18.2/imports/item/clock_19.png
+/1.18.2/imports/item/clock_20.png
+/1.18.2/imports/item/clock_21.png
+/1.18.2/imports/item/clock_22.png
+/1.18.2/imports/item/clock_23.png
+/1.18.2/imports/item/clock_24.png
+/1.18.2/imports/item/clock_25.png
+/1.18.2/imports/item/clock_26.png
+/1.18.2/imports/item/clock_27.png
+/1.18.2/imports/item/clock_28.png
+/1.18.2/imports/item/clock_29.png
+/1.18.2/imports/item/clock_30.png
+/1.18.2/imports/item/clock_31.png
+/1.18.2/imports/item/clock_32.png
+/1.18.2/imports/item/clock_33.png
+/1.18.2/imports/item/clock_34.png
+/1.18.2/imports/item/clock_35.png
+/1.18.2/imports/item/clock_36.png
+/1.18.2/imports/item/clock_37.png
+/1.18.2/imports/item/clock_38.png
+/1.18.2/imports/item/clock_39.png
+/1.18.2/imports/item/clock_40.png
+/1.18.2/imports/item/clock_41.png
+/1.18.2/imports/item/clock_42.png
+/1.18.2/imports/item/clock_43.png
+/1.18.2/imports/item/clock_44.png
+/1.18.2/imports/item/clock_45.png
+/1.18.2/imports/item/clock_46.png
+/1.18.2/imports/item/clock_47.png
+/1.18.2/imports/item/clock_48.png
+/1.18.2/imports/item/clock_49.png
+/1.18.2/imports/item/clock_50.png
+/1.18.2/imports/item/clock_51.png
+/1.18.2/imports/item/clock_52.png
+/1.18.2/imports/item/clock_53.png
+/1.18.2/imports/item/clock_54.png
+/1.18.2/imports/item/clock_55.png
+/1.18.2/imports/item/clock_56.png
+/1.18.2/imports/item/clock_57.png
+/1.18.2/imports/item/clock_58.png
+/1.18.2/imports/item/clock_59.png
+/1.18.2/imports/item/clock_60.png
+/1.18.2/imports/item/clock_61.png
+/1.18.2/imports/item/clock_62.png
+/1.18.2/imports/item/clock_63.png
+/1.18.2/imports/item/coal.png
+/1.18.2/imports/item/coast_armor_trim_smithing_template.png
+/1.18.2/imports/item/cocoa_beans.png
+/1.18.2/imports/item/cod.png
+/1.18.2/imports/item/cod_bucket.png
+/1.18.2/imports/item/cod_spawn_egg.png
+/1.18.2/imports/item/command_block_minecart.png
+/1.18.2/imports/item/comparator.png
+/1.18.2/imports/item/compass_00.png
+/1.18.2/imports/item/compass_01.png
+/1.18.2/imports/item/compass_02.png
+/1.18.2/imports/item/compass_03.png
+/1.18.2/imports/item/compass_04.png
+/1.18.2/imports/item/compass_05.png
+/1.18.2/imports/item/compass_06.png
+/1.18.2/imports/item/compass_07.png
+/1.18.2/imports/item/compass_08.png
+/1.18.2/imports/item/compass_09.png
+/1.18.2/imports/item/compass_10.png
+/1.18.2/imports/item/compass_11.png
+/1.18.2/imports/item/compass_12.png
+/1.18.2/imports/item/compass_13.png
+/1.18.2/imports/item/compass_14.png
+/1.18.2/imports/item/compass_15.png
+/1.18.2/imports/item/compass_16.png
+/1.18.2/imports/item/compass_17.png
+/1.18.2/imports/item/compass_18.png
+/1.18.2/imports/item/compass_19.png
+/1.18.2/imports/item/compass_20.png
+/1.18.2/imports/item/compass_21.png
+/1.18.2/imports/item/compass_22.png
+/1.18.2/imports/item/compass_23.png
+/1.18.2/imports/item/compass_24.png
+/1.18.2/imports/item/compass_25.png
+/1.18.2/imports/item/compass_26.png
+/1.18.2/imports/item/compass_27.png
+/1.18.2/imports/item/compass_28.png
+/1.18.2/imports/item/compass_29.png
+/1.18.2/imports/item/compass_30.png
+/1.18.2/imports/item/compass_31.png
+/1.18.2/imports/item/cooked_beef.png
+/1.18.2/imports/item/cooked_chicken.png
+/1.18.2/imports/item/cooked_cod.png
+/1.18.2/imports/item/cooked_mutton.png
+/1.18.2/imports/item/cooked_porkchop.png
+/1.18.2/imports/item/cooked_rabbit.png
+/1.18.2/imports/item/cooked_salmon.png
+/1.18.2/imports/item/cookie.png
+/1.18.2/imports/item/copper_axe.png
+/1.18.2/imports/item/copper_boots.png
+/1.18.2/imports/item/copper_chain.png
+/1.18.2/imports/item/copper_chestplate.png
+/1.18.2/imports/item/copper_door.png
+/1.18.2/imports/item/copper_golem_spawn_egg.png
+/1.18.2/imports/item/copper_helmet.png
+/1.18.2/imports/item/copper_hoe.png
+/1.18.2/imports/item/copper_horse_armor.png
+/1.18.2/imports/item/copper_ingot.png
+/1.18.2/imports/item/copper_lantern.png
+/1.18.2/imports/item/copper_leggings.png
+/1.18.2/imports/item/copper_nugget.png
+/1.18.2/imports/item/copper_pickaxe.png
+/1.18.2/imports/item/copper_shovel.png
+/1.18.2/imports/item/copper_sword.png
+/1.18.2/imports/item/cow_spawn_egg.png
+/1.18.2/imports/item/creaking_spawn_egg.png
+/1.18.2/imports/item/creeper_banner_pattern.png
+/1.18.2/imports/item/creeper_spawn_egg.png
+/1.18.2/imports/item/crimson_door.png
+/1.18.2/imports/item/crimson_hanging_sign.png
+/1.18.2/imports/item/crimson_sign.png
+/1.18.2/imports/item/crossbow_arrow.png
+/1.18.2/imports/item/crossbow_firework.png
+/1.18.2/imports/item/crossbow_pulling_0.png
+/1.18.2/imports/item/crossbow_pulling_1.png
+/1.18.2/imports/item/crossbow_pulling_2.png
+/1.18.2/imports/item/crossbow_standby.png
+/1.18.2/imports/item/cyan_bundle.png
+/1.18.2/imports/item/cyan_bundle_open_back.png
+/1.18.2/imports/item/cyan_bundle_open_front.png
+/1.18.2/imports/item/cyan_candle.png
+/1.18.2/imports/item/cyan_dye.png
+/1.18.2/imports/item/cyan_harness.png
+/1.18.2/imports/item/danger_pottery_sherd.png
+/1.18.2/imports/item/dark_oak_boat.png
+/1.18.2/imports/item/dark_oak_chest_boat.png
+/1.18.2/imports/item/dark_oak_door.png
+/1.18.2/imports/item/dark_oak_hanging_sign.png
+/1.18.2/imports/item/dark_oak_sign.png
+/1.18.2/imports/item/diamond.png
+/1.18.2/imports/item/diamond_axe.png
+/1.18.2/imports/item/diamond_boots.png
+/1.18.2/imports/item/diamond_chestplate.png
+/1.18.2/imports/item/diamond_helmet.png
+/1.18.2/imports/item/diamond_hoe.png
+/1.18.2/imports/item/diamond_horse_armor.png
+/1.18.2/imports/item/diamond_leggings.png
+/1.18.2/imports/item/diamond_pickaxe.png
+/1.18.2/imports/item/diamond_shovel.png
+/1.18.2/imports/item/diamond_sword.png
+/1.18.2/imports/item/disc_fragment_5.png
+/1.18.2/imports/item/dolphin_spawn_egg.png
+/1.18.2/imports/item/donkey_spawn_egg.png
+/1.18.2/imports/item/dragon_breath.png
+/1.18.2/imports/item/dried_kelp.png
+/1.18.2/imports/item/drowned_spawn_egg.png
+/1.18.2/imports/item/dune_armor_trim_smithing_template.png
+/1.18.2/imports/item/echo_shard.png
+/1.18.2/imports/item/egg.png
+/1.18.2/imports/item/elder_guardian_spawn_egg.png
+/1.18.2/imports/item/elytra.png
+/1.18.2/imports/item/elytra_broken.png
+/1.18.2/imports/item/emerald.png
+/1.18.2/imports/item/enchanted_book.png
+/1.18.2/imports/item/end_crystal.png
+/1.18.2/imports/item/ender_dragon_spawn_egg.png
+/1.18.2/imports/item/ender_eye.png
+/1.18.2/imports/item/ender_pearl.png
+/1.18.2/imports/item/enderman_spawn_egg.png
+/1.18.2/imports/item/endermite_spawn_egg.png
+/1.18.2/imports/item/evoker_spawn_egg.png
+/1.18.2/imports/item/experience_bottle.png
+/1.18.2/imports/item/explorer_pottery_sherd.png
+/1.18.2/imports/item/exposed_copper_chain.png
+/1.18.2/imports/item/exposed_copper_door.png
+/1.18.2/imports/item/exposed_copper_lantern.png
+/1.18.2/imports/item/eye_armor_trim_smithing_template.png
+/1.18.2/imports/item/feather.png
+/1.18.2/imports/item/fermented_spider_eye.png
+/1.18.2/imports/item/field_masoned_banner_pattern.png
+/1.18.2/imports/item/filled_map.png
+/1.18.2/imports/item/filled_map_markings.png
+/1.18.2/imports/item/fire_charge.png
+/1.18.2/imports/item/firefly_bush.png
+/1.18.2/imports/item/firework_rocket.png
+/1.18.2/imports/item/firework_star.png
+/1.18.2/imports/item/firework_star_overlay.png
+/1.18.2/imports/item/fishing_rod.png
+/1.18.2/imports/item/fishing_rod_cast.png
+/1.18.2/imports/item/flint.png
+/1.18.2/imports/item/flint_and_steel.png
+/1.18.2/imports/item/flow_armor_trim_smithing_template.png
+/1.18.2/imports/item/flow_banner_pattern.png
+/1.18.2/imports/item/flow_pottery_sherd.png
+/1.18.2/imports/item/flower_banner_pattern.png
+/1.18.2/imports/item/flower_pot.png
+/1.18.2/imports/item/fox_spawn_egg.png
+/1.18.2/imports/item/friend_pottery_sherd.png
+/1.18.2/imports/item/frog_spawn_egg.png
+/1.18.2/imports/item/furnace_minecart.png
+/1.18.2/imports/item/ghast_spawn_egg.png
+/1.18.2/imports/item/ghast_tear.png
+/1.18.2/imports/item/glass_bottle.png
+/1.18.2/imports/item/glistering_melon_slice.png
+/1.18.2/imports/item/globe_banner_pattern.png
+/1.18.2/imports/item/glow_berries.png
+/1.18.2/imports/item/glow_ink_sac.png
+/1.18.2/imports/item/glow_item_frame.png
+/1.18.2/imports/item/glow_squid_spawn_egg.png
+/1.18.2/imports/item/glowstone_dust.png
+/1.18.2/imports/item/goat_horn.png
+/1.18.2/imports/item/goat_spawn_egg.png
+/1.18.2/imports/item/gold_ingot.png
+/1.18.2/imports/item/gold_nugget.png
+/1.18.2/imports/item/golden_apple.png
+/1.18.2/imports/item/golden_axe.png
+/1.18.2/imports/item/golden_boots.png
+/1.18.2/imports/item/golden_carrot.png
+/1.18.2/imports/item/golden_chestplate.png
+/1.18.2/imports/item/golden_helmet.png
+/1.18.2/imports/item/golden_hoe.png
+/1.18.2/imports/item/golden_horse_armor.png
+/1.18.2/imports/item/golden_leggings.png
+/1.18.2/imports/item/golden_pickaxe.png
+/1.18.2/imports/item/golden_shovel.png
+/1.18.2/imports/item/golden_sword.png
+/1.18.2/imports/item/gray_bundle.png
+/1.18.2/imports/item/gray_bundle_open_back.png
+/1.18.2/imports/item/gray_bundle_open_front.png
+/1.18.2/imports/item/gray_candle.png
+/1.18.2/imports/item/gray_dye.png
+/1.18.2/imports/item/gray_harness.png
+/1.18.2/imports/item/green_bundle.png
+/1.18.2/imports/item/green_bundle_open_back.png
+/1.18.2/imports/item/green_bundle_open_front.png
+/1.18.2/imports/item/green_candle.png
+/1.18.2/imports/item/green_dye.png
+/1.18.2/imports/item/green_harness.png
+/1.18.2/imports/item/guardian_spawn_egg.png
+/1.18.2/imports/item/gunpowder.png
+/1.18.2/imports/item/guster_banner_pattern.png
+/1.18.2/imports/item/guster_pottery_sherd.png
+/1.18.2/imports/item/happy_ghast_spawn_egg.png
+/1.18.2/imports/item/heart_of_the_sea.png
+/1.18.2/imports/item/heart_pottery_sherd.png
+/1.18.2/imports/item/heartbreak_pottery_sherd.png
+/1.18.2/imports/item/hoglin_spawn_egg.png
+/1.18.2/imports/item/honey_bottle.png
+/1.18.2/imports/item/honeycomb.png
+/1.18.2/imports/item/hopper.png
+/1.18.2/imports/item/hopper_minecart.png
+/1.18.2/imports/item/horse_spawn_egg.png
+/1.18.2/imports/item/host_armor_trim_smithing_template.png
+/1.18.2/imports/item/howl_pottery_sherd.png
+/1.18.2/imports/item/husk_spawn_egg.png
+/1.18.2/imports/item/ink_sac.png
+/1.18.2/imports/item/iron_axe.png
+/1.18.2/imports/item/iron_boots.png
+/1.18.2/imports/item/iron_chain.png
+/1.18.2/imports/item/iron_chestplate.png
+/1.18.2/imports/item/iron_door.png
+/1.18.2/imports/item/iron_golem_spawn_egg.png
+/1.18.2/imports/item/iron_helmet.png
+/1.18.2/imports/item/iron_hoe.png
+/1.18.2/imports/item/iron_horse_armor.png
+/1.18.2/imports/item/iron_ingot.png
+/1.18.2/imports/item/iron_leggings.png
+/1.18.2/imports/item/iron_nugget.png
+/1.18.2/imports/item/iron_pickaxe.png
+/1.18.2/imports/item/iron_shovel.png
+/1.18.2/imports/item/iron_sword.png
+/1.18.2/imports/item/item_frame.png
+/1.18.2/imports/item/jungle_boat.png
+/1.18.2/imports/item/jungle_chest_boat.png
+/1.18.2/imports/item/jungle_door.png
+/1.18.2/imports/item/jungle_hanging_sign.png
+/1.18.2/imports/item/jungle_sign.png
+/1.18.2/imports/item/kelp.png
+/1.18.2/imports/item/knowledge_book.png
+/1.18.2/imports/item/lantern.png
+/1.18.2/imports/item/lapis_lazuli.png
+/1.18.2/imports/item/lava_bucket.png
+/1.18.2/imports/item/lead.png
+/1.18.2/imports/item/leaf_litter.png
+/1.18.2/imports/item/leather.png
+/1.18.2/imports/item/leather_boots.png
+/1.18.2/imports/item/leather_boots_overlay.png
+/1.18.2/imports/item/leather_chestplate.png
+/1.18.2/imports/item/leather_chestplate_overlay.png
+/1.18.2/imports/item/leather_helmet.png
+/1.18.2/imports/item/leather_helmet_overlay.png
+/1.18.2/imports/item/leather_horse_armor.png
+/1.18.2/imports/item/leather_leggings.png
+/1.18.2/imports/item/leather_leggings_overlay.png
+/1.18.2/imports/item/light.png
+/1.18.2/imports/item/light_00.png
+/1.18.2/imports/item/light_01.png
+/1.18.2/imports/item/light_02.png
+/1.18.2/imports/item/light_03.png
+/1.18.2/imports/item/light_04.png
+/1.18.2/imports/item/light_05.png
+/1.18.2/imports/item/light_06.png
+/1.18.2/imports/item/light_07.png
+/1.18.2/imports/item/light_08.png
+/1.18.2/imports/item/light_09.png
+/1.18.2/imports/item/light_10.png
+/1.18.2/imports/item/light_11.png
+/1.18.2/imports/item/light_12.png
+/1.18.2/imports/item/light_13.png
+/1.18.2/imports/item/light_14.png
+/1.18.2/imports/item/light_15.png
+/1.18.2/imports/item/light_blue_bundle.png
+/1.18.2/imports/item/light_blue_bundle_open_back.png
+/1.18.2/imports/item/light_blue_bundle_open_front.png
+/1.18.2/imports/item/light_blue_candle.png
+/1.18.2/imports/item/light_blue_dye.png
+/1.18.2/imports/item/light_blue_harness.png
+/1.18.2/imports/item/light_gray_bundle.png
+/1.18.2/imports/item/light_gray_bundle_open_back.png
+/1.18.2/imports/item/light_gray_bundle_open_front.png
+/1.18.2/imports/item/light_gray_candle.png
+/1.18.2/imports/item/light_gray_dye.png
+/1.18.2/imports/item/light_gray_harness.png
+/1.18.2/imports/item/lime_bundle.png
+/1.18.2/imports/item/lime_bundle_open_back.png
+/1.18.2/imports/item/lime_bundle_open_front.png
+/1.18.2/imports/item/lime_candle.png
+/1.18.2/imports/item/lime_dye.png
+/1.18.2/imports/item/lime_harness.png
+/1.18.2/imports/item/lingering_potion.png
+/1.18.2/imports/item/llama_spawn_egg.png
+/1.18.2/imports/item/mace.png
+/1.18.2/imports/item/magenta_bundle.png
+/1.18.2/imports/item/magenta_bundle_open_back.png
+/1.18.2/imports/item/magenta_bundle_open_front.png
+/1.18.2/imports/item/magenta_candle.png
+/1.18.2/imports/item/magenta_dye.png
+/1.18.2/imports/item/magenta_harness.png
+/1.18.2/imports/item/magma_cream.png
+/1.18.2/imports/item/magma_cube_spawn_egg.png
+/1.18.2/imports/item/mangrove_boat.png
+/1.18.2/imports/item/mangrove_chest_boat.png
+/1.18.2/imports/item/mangrove_door.png
+/1.18.2/imports/item/mangrove_hanging_sign.png
+/1.18.2/imports/item/mangrove_propagule.png
+/1.18.2/imports/item/mangrove_sign.png
+/1.18.2/imports/item/map.png
+/1.18.2/imports/item/melon_seeds.png
+/1.18.2/imports/item/melon_slice.png
+/1.18.2/imports/item/milk_bucket.png
+/1.18.2/imports/item/minecart.png
+/1.18.2/imports/item/miner_pottery_sherd.png
+/1.18.2/imports/item/mojang_banner_pattern.png
+/1.18.2/imports/item/mooshroom_spawn_egg.png
+/1.18.2/imports/item/mourner_pottery_sherd.png
+/1.18.2/imports/item/mule_spawn_egg.png
+/1.18.2/imports/item/mushroom_stew.png
+/1.18.2/imports/item/music_disc_5.png
+/1.18.2/imports/item/music_disc_11.png
+/1.18.2/imports/item/music_disc_13.png
+/1.18.2/imports/item/music_disc_blocks.png
+/1.18.2/imports/item/music_disc_cat.png
+/1.18.2/imports/item/music_disc_chirp.png
+/1.18.2/imports/item/music_disc_creator.png
+/1.18.2/imports/item/music_disc_creator_music_box.png
+/1.18.2/imports/item/music_disc_far.png
+/1.18.2/imports/item/music_disc_lava_chicken.png
+/1.18.2/imports/item/music_disc_mall.png
+/1.18.2/imports/item/music_disc_mellohi.png
+/1.18.2/imports/item/music_disc_otherside.png
+/1.18.2/imports/item/music_disc_pigstep.png
+/1.18.2/imports/item/music_disc_precipice.png
+/1.18.2/imports/item/music_disc_relic.png
+/1.18.2/imports/item/music_disc_stal.png
+/1.18.2/imports/item/music_disc_strad.png
+/1.18.2/imports/item/music_disc_tears.png
+/1.18.2/imports/item/music_disc_wait.png
+/1.18.2/imports/item/music_disc_ward.png
+/1.18.2/imports/item/mutton.png
+/1.18.2/imports/item/name_tag.png
+/1.18.2/imports/item/nautilus_shell.png
+/1.18.2/imports/item/nether_brick.png
+/1.18.2/imports/item/nether_sprouts.png
+/1.18.2/imports/item/nether_star.png
+/1.18.2/imports/item/nether_wart.png
+/1.18.2/imports/item/netherite_axe.png
+/1.18.2/imports/item/netherite_boots.png
+/1.18.2/imports/item/netherite_chestplate.png
+/1.18.2/imports/item/netherite_helmet.png
+/1.18.2/imports/item/netherite_hoe.png
+/1.18.2/imports/item/netherite_ingot.png
+/1.18.2/imports/item/netherite_leggings.png
+/1.18.2/imports/item/netherite_pickaxe.png
+/1.18.2/imports/item/netherite_scrap.png
+/1.18.2/imports/item/netherite_shovel.png
+/1.18.2/imports/item/netherite_sword.png
+/1.18.2/imports/item/netherite_upgrade_smithing_template.png
+/1.18.2/imports/item/oak_boat.png
+/1.18.2/imports/item/oak_chest_boat.png
+/1.18.2/imports/item/oak_door.png
+/1.18.2/imports/item/oak_hanging_sign.png
+/1.18.2/imports/item/oak_sign.png
+/1.18.2/imports/item/ocelot_spawn_egg.png
+/1.18.2/imports/item/ominous_bottle.png
+/1.18.2/imports/item/ominous_trial_key.png
+/1.18.2/imports/item/orange_bundle.png
+/1.18.2/imports/item/orange_bundle_open_back.png
+/1.18.2/imports/item/orange_bundle_open_front.png
+/1.18.2/imports/item/orange_candle.png
+/1.18.2/imports/item/orange_dye.png
+/1.18.2/imports/item/orange_harness.png
+/1.18.2/imports/item/oxidized_copper_chain.png
+/1.18.2/imports/item/oxidized_copper_door.png
+/1.18.2/imports/item/oxidized_copper_lantern.png
+/1.18.2/imports/item/painting.png
+/1.18.2/imports/item/pale_oak_boat.png
+/1.18.2/imports/item/pale_oak_chest_boat.png
+/1.18.2/imports/item/pale_oak_door.png
+/1.18.2/imports/item/pale_oak_hanging_sign.png
+/1.18.2/imports/item/pale_oak_sign.png
+/1.18.2/imports/item/panda_spawn_egg.png
+/1.18.2/imports/item/paper.png
+/1.18.2/imports/item/parrot_spawn_egg.png
+/1.18.2/imports/item/phantom_membrane.png
+/1.18.2/imports/item/phantom_spawn_egg.png
+/1.18.2/imports/item/pig_spawn_egg.png
+/1.18.2/imports/item/piglin_banner_pattern.png
+/1.18.2/imports/item/piglin_brute_spawn_egg.png
+/1.18.2/imports/item/piglin_spawn_egg.png
+/1.18.2/imports/item/pillager_spawn_egg.png
+/1.18.2/imports/item/pink_bundle.png
+/1.18.2/imports/item/pink_bundle_open_back.png
+/1.18.2/imports/item/pink_bundle_open_front.png
+/1.18.2/imports/item/pink_candle.png
+/1.18.2/imports/item/pink_dye.png
+/1.18.2/imports/item/pink_harness.png
+/1.18.2/imports/item/pink_petals.png
+/1.18.2/imports/item/pitcher_plant.png
+/1.18.2/imports/item/pitcher_pod.png
+/1.18.2/imports/item/plenty_pottery_sherd.png
+/1.18.2/imports/item/pointed_dripstone.png
+/1.18.2/imports/item/poisonous_potato.png
+/1.18.2/imports/item/polar_bear_spawn_egg.png
+/1.18.2/imports/item/popped_chorus_fruit.png
+/1.18.2/imports/item/porkchop.png
+/1.18.2/imports/item/potato.png
+/1.18.2/imports/item/potion.png
+/1.18.2/imports/item/potion_overlay.png
+/1.18.2/imports/item/powder_snow_bucket.png
+/1.18.2/imports/item/prismarine_crystals.png
+/1.18.2/imports/item/prismarine_shard.png
+/1.18.2/imports/item/prize_pottery_sherd.png
+/1.18.2/imports/item/pufferfish.png
+/1.18.2/imports/item/pufferfish_bucket.png
+/1.18.2/imports/item/pufferfish_spawn_egg.png
+/1.18.2/imports/item/pumpkin_pie.png
+/1.18.2/imports/item/pumpkin_seeds.png
+/1.18.2/imports/item/purple_bundle.png
+/1.18.2/imports/item/purple_bundle_open_back.png
+/1.18.2/imports/item/purple_bundle_open_front.png
+/1.18.2/imports/item/purple_candle.png
+/1.18.2/imports/item/purple_dye.png
+/1.18.2/imports/item/purple_harness.png
+/1.18.2/imports/item/quartz.png
+/1.18.2/imports/item/rabbit.png
+/1.18.2/imports/item/rabbit_foot.png
+/1.18.2/imports/item/rabbit_hide.png
+/1.18.2/imports/item/rabbit_spawn_egg.png
+/1.18.2/imports/item/rabbit_stew.png
+/1.18.2/imports/item/raiser_armor_trim_smithing_template.png
+/1.18.2/imports/item/ravager_spawn_egg.png
+/1.18.2/imports/item/raw_copper.png
+/1.18.2/imports/item/raw_gold.png
+/1.18.2/imports/item/raw_iron.png
+/1.18.2/imports/item/recovery_compass_00.png
+/1.18.2/imports/item/recovery_compass_01.png
+/1.18.2/imports/item/recovery_compass_02.png
+/1.18.2/imports/item/recovery_compass_03.png
+/1.18.2/imports/item/recovery_compass_04.png
+/1.18.2/imports/item/recovery_compass_05.png
+/1.18.2/imports/item/recovery_compass_06.png
+/1.18.2/imports/item/recovery_compass_07.png
+/1.18.2/imports/item/recovery_compass_08.png
+/1.18.2/imports/item/recovery_compass_09.png
+/1.18.2/imports/item/recovery_compass_10.png
+/1.18.2/imports/item/recovery_compass_11.png
+/1.18.2/imports/item/recovery_compass_12.png
+/1.18.2/imports/item/recovery_compass_13.png
+/1.18.2/imports/item/recovery_compass_14.png
+/1.18.2/imports/item/recovery_compass_15.png
+/1.18.2/imports/item/recovery_compass_16.png
+/1.18.2/imports/item/recovery_compass_17.png
+/1.18.2/imports/item/recovery_compass_18.png
+/1.18.2/imports/item/recovery_compass_19.png
+/1.18.2/imports/item/recovery_compass_20.png
+/1.18.2/imports/item/recovery_compass_21.png
+/1.18.2/imports/item/recovery_compass_22.png
+/1.18.2/imports/item/recovery_compass_23.png
+/1.18.2/imports/item/recovery_compass_24.png
+/1.18.2/imports/item/recovery_compass_25.png
+/1.18.2/imports/item/recovery_compass_26.png
+/1.18.2/imports/item/recovery_compass_27.png
+/1.18.2/imports/item/recovery_compass_28.png
+/1.18.2/imports/item/recovery_compass_29.png
+/1.18.2/imports/item/recovery_compass_30.png
+/1.18.2/imports/item/recovery_compass_31.png
+/1.18.2/imports/item/red_bundle.png
+/1.18.2/imports/item/red_bundle_open_back.png
+/1.18.2/imports/item/red_bundle_open_front.png
+/1.18.2/imports/item/red_candle.png
+/1.18.2/imports/item/red_dye.png
+/1.18.2/imports/item/red_harness.png
+/1.18.2/imports/item/redstone.png
+/1.18.2/imports/item/repeater.png
+/1.18.2/imports/item/resin_brick.png
+/1.18.2/imports/item/resin_clump.png
+/1.18.2/imports/item/rib_armor_trim_smithing_template.png
+/1.18.2/imports/item/rotten_flesh.png
+/1.18.2/imports/item/saddle.png
+/1.18.2/imports/item/salmon.png
+/1.18.2/imports/item/salmon_bucket.png
+/1.18.2/imports/item/salmon_spawn_egg.png
+/1.18.2/imports/item/scrape_pottery_sherd.png
+/1.18.2/imports/item/sea_pickle.png
+/1.18.2/imports/item/seagrass.png
+/1.18.2/imports/item/sentry_armor_trim_smithing_template.png
+/1.18.2/imports/item/shaper_armor_trim_smithing_template.png
+/1.18.2/imports/item/sheaf_pottery_sherd.png
+/1.18.2/imports/item/shears.png
+/1.18.2/imports/item/sheep_spawn_egg.png
+/1.18.2/imports/item/shelter_pottery_sherd.png
+/1.18.2/imports/item/shulker_shell.png
+/1.18.2/imports/item/shulker_spawn_egg.png
+/1.18.2/imports/item/silence_armor_trim_smithing_template.png
+/1.18.2/imports/item/silverfish_spawn_egg.png
+/1.18.2/imports/item/skeleton_horse_spawn_egg.png
+/1.18.2/imports/item/skeleton_spawn_egg.png
+/1.18.2/imports/item/skull_banner_pattern.png
+/1.18.2/imports/item/skull_pottery_sherd.png
+/1.18.2/imports/item/slime_ball.png
+/1.18.2/imports/item/slime_spawn_egg.png
+/1.18.2/imports/item/sniffer_egg.png
+/1.18.2/imports/item/sniffer_spawn_egg.png
+/1.18.2/imports/item/snort_pottery_sherd.png
+/1.18.2/imports/item/snout_armor_trim_smithing_template.png
+/1.18.2/imports/item/snow_golem_spawn_egg.png
+/1.18.2/imports/item/snowball.png
+/1.18.2/imports/item/soul_campfire.png
+/1.18.2/imports/item/soul_lantern.png
+/1.18.2/imports/item/spectral_arrow.png
+/1.18.2/imports/item/spider_eye.png
+/1.18.2/imports/item/spider_spawn_egg.png
+/1.18.2/imports/item/spire_armor_trim_smithing_template.png
+/1.18.2/imports/item/splash_potion.png
+/1.18.2/imports/item/spruce_boat.png
+/1.18.2/imports/item/spruce_chest_boat.png
+/1.18.2/imports/item/spruce_door.png
+/1.18.2/imports/item/spruce_hanging_sign.png
+/1.18.2/imports/item/spruce_sign.png
+/1.18.2/imports/item/spyglass.png
+/1.18.2/imports/item/spyglass_model.png
+/1.18.2/imports/item/squid_spawn_egg.png
+/1.18.2/imports/item/stick.png
+/1.18.2/imports/item/stone_axe.png
+/1.18.2/imports/item/stone_hoe.png
+/1.18.2/imports/item/stone_pickaxe.png
+/1.18.2/imports/item/stone_shovel.png
+/1.18.2/imports/item/stone_sword.png
+/1.18.2/imports/item/stray_spawn_egg.png
+/1.18.2/imports/item/strider_spawn_egg.png
+/1.18.2/imports/item/string.png
+/1.18.2/imports/item/structure_void.png
+/1.18.2/imports/item/sugar.png
+/1.18.2/imports/item/sugar_cane.png
+/1.18.2/imports/item/suspicious_stew.png
+/1.18.2/imports/item/sweet_berries.png
+/1.18.2/imports/item/tadpole_bucket.png
+/1.18.2/imports/item/tadpole_spawn_egg.png
+/1.18.2/imports/item/tide_armor_trim_smithing_template.png
+/1.18.2/imports/item/tipped_arrow_base.png
+/1.18.2/imports/item/tipped_arrow_head.png
+/1.18.2/imports/item/tnt_minecart.png
+/1.18.2/imports/item/torchflower_seeds.png
+/1.18.2/imports/item/totem_of_undying.png
+/1.18.2/imports/item/trader_llama_spawn_egg.png
+/1.18.2/imports/item/trial_key.png
+/1.18.2/imports/item/trident.png
+/1.18.2/imports/item/tropical_fish.png
+/1.18.2/imports/item/tropical_fish_bucket.png
+/1.18.2/imports/item/tropical_fish_spawn_egg.png
+/1.18.2/imports/item/turtle_egg.png
+/1.18.2/imports/item/turtle_helmet.png
+/1.18.2/imports/item/turtle_scute.png
+/1.18.2/imports/item/turtle_spawn_egg.png
+/1.18.2/imports/item/vex_armor_trim_smithing_template.png
+/1.18.2/imports/item/vex_spawn_egg.png
+/1.18.2/imports/item/villager_spawn_egg.png
+/1.18.2/imports/item/vindicator_spawn_egg.png
+/1.18.2/imports/item/wandering_trader_spawn_egg.png
+/1.18.2/imports/item/ward_armor_trim_smithing_template.png
+/1.18.2/imports/item/warden_spawn_egg.png
+/1.18.2/imports/item/warped_door.png
+/1.18.2/imports/item/warped_fungus_on_a_stick.png
+/1.18.2/imports/item/warped_hanging_sign.png
+/1.18.2/imports/item/warped_sign.png
+/1.18.2/imports/item/water_bucket.png
+/1.18.2/imports/item/wayfinder_armor_trim_smithing_template.png
+/1.18.2/imports/item/weathered_copper_chain.png
+/1.18.2/imports/item/weathered_copper_door.png
+/1.18.2/imports/item/weathered_copper_lantern.png
+/1.18.2/imports/item/wheat.png
+/1.18.2/imports/item/wheat_seeds.png
+/1.18.2/imports/item/white_bundle.png
+/1.18.2/imports/item/white_bundle_open_back.png
+/1.18.2/imports/item/white_bundle_open_front.png
+/1.18.2/imports/item/white_candle.png
+/1.18.2/imports/item/white_dye.png
+/1.18.2/imports/item/white_harness.png
+/1.18.2/imports/item/wild_armor_trim_smithing_template.png
+/1.18.2/imports/item/wildflowers.png
+/1.18.2/imports/item/wind_charge.png
+/1.18.2/imports/item/witch_spawn_egg.png
+/1.18.2/imports/item/wither_skeleton_spawn_egg.png
+/1.18.2/imports/item/wither_spawn_egg.png
+/1.18.2/imports/item/wolf_armor.png
+/1.18.2/imports/item/wolf_armor_overlay.png
+/1.18.2/imports/item/wolf_spawn_egg.png
+/1.18.2/imports/item/wooden_axe.png
+/1.18.2/imports/item/wooden_hoe.png
+/1.18.2/imports/item/wooden_pickaxe.png
+/1.18.2/imports/item/wooden_shovel.png
+/1.18.2/imports/item/wooden_sword.png
+/1.18.2/imports/item/writable_book.png
+/1.18.2/imports/item/written_book.png
+/1.18.2/imports/item/yellow_bundle.png
+/1.18.2/imports/item/yellow_bundle_open_back.png
+/1.18.2/imports/item/yellow_bundle_open_front.png
+/1.18.2/imports/item/yellow_candle.png
+/1.18.2/imports/item/yellow_dye.png
+/1.18.2/imports/item/yellow_harness.png
+/1.18.2/imports/item/zoglin_spawn_egg.png
+/1.18.2/imports/item/zombie_horse_spawn_egg.png
+/1.18.2/imports/item/zombie_spawn_egg.png
+/1.18.2/imports/item/zombie_villager_spawn_egg.png
+/1.18.2/imports/item/zombified_piglin_spawn_egg.png
+/1.18.2/imports/Old mess/bamboo/bamboo_door_bottom.png
+/1.18.2/imports/Old mess/bamboo/bamboo_door_top.png
+/1.18.2/imports/Old mess/bamboo/bamboo_fence.png
+/1.18.2/imports/Old mess/bamboo/bamboo_fence_gate.png
+/1.18.2/imports/Old mess/bamboo/bamboo_fence_gate_particle.png
+/1.18.2/imports/Old mess/bamboo/bamboo_fence_particle.png
+/1.18.2/imports/Old mess/bamboo/bamboo_trapdoor.png
+/1.18.2/imports/Old mess/block/_list.json
+/1.18.2/imports/Old mess/block/acacia_door_bottom.png
+/1.18.2/imports/Old mess/block/acacia_door_top.png
+/1.18.2/imports/Old mess/block/acacia_leaves.png
+/1.18.2/imports/Old mess/block/acacia_log.png
+/1.18.2/imports/Old mess/block/acacia_log_top.png
+/1.18.2/imports/Old mess/block/acacia_planks.png
+/1.18.2/imports/Old mess/block/acacia_sapling.png
+/1.18.2/imports/Old mess/block/acacia_shelf.png
+/1.18.2/imports/Old mess/block/acacia_trapdoor.png
+/1.18.2/imports/Old mess/block/activator_rail.png
+/1.18.2/imports/Old mess/block/activator_rail_on.png
+/1.18.2/imports/Old mess/block/allium.png
+/1.18.2/imports/Old mess/block/amethyst_block.png
+/1.18.2/imports/Old mess/block/amethyst_cluster.png
+/1.18.2/imports/Old mess/block/ancient_debris_side.png
+/1.18.2/imports/Old mess/block/ancient_debris_top.png
+/1.18.2/imports/Old mess/block/andesite.png
+/1.18.2/imports/Old mess/block/anvil.png
+/1.18.2/imports/Old mess/block/anvil_top.png
+/1.18.2/imports/Old mess/block/attached_melon_stem.png
+/1.18.2/imports/Old mess/block/attached_pumpkin_stem.png
+/1.18.2/imports/Old mess/block/azalea_leaves.png
+/1.18.2/imports/Old mess/block/azalea_plant.png
+/1.18.2/imports/Old mess/block/azalea_side.png
+/1.18.2/imports/Old mess/block/azalea_top.png
+/1.18.2/imports/Old mess/block/azure_bluet.png
+/1.18.2/imports/Old mess/block/bamboo_block.png
+/1.18.2/imports/Old mess/block/bamboo_block_top.png
+/1.18.2/imports/Old mess/block/bamboo_door_bottom.png
+/1.18.2/imports/Old mess/block/bamboo_door_top.png
+/1.18.2/imports/Old mess/block/bamboo_fence.png
+/1.18.2/imports/Old mess/block/bamboo_fence_gate.png
+/1.18.2/imports/Old mess/block/bamboo_fence_gate_particle.png
+/1.18.2/imports/Old mess/block/bamboo_fence_particle.png
+/1.18.2/imports/Old mess/block/bamboo_large_leaves.png
+/1.18.2/imports/Old mess/block/bamboo_mosaic.png
+/1.18.2/imports/Old mess/block/bamboo_planks.png
+/1.18.2/imports/Old mess/block/bamboo_shelf.png
+/1.18.2/imports/Old mess/block/bamboo_singleleaf.png
+/1.18.2/imports/Old mess/block/bamboo_small_leaves.png
+/1.18.2/imports/Old mess/block/bamboo_stage0.png
+/1.18.2/imports/Old mess/block/bamboo_stalk.png
+/1.18.2/imports/Old mess/block/bamboo_trapdoor.png
+/1.18.2/imports/Old mess/block/barrel_bottom.png
+/1.18.2/imports/Old mess/block/barrel_side.png
+/1.18.2/imports/Old mess/block/barrel_top.png
+/1.18.2/imports/Old mess/block/barrel_top_open.png
+/1.18.2/imports/Old mess/block/basalt_side.png
+/1.18.2/imports/Old mess/block/basalt_top.png
+/1.18.2/imports/Old mess/block/beacon.png
+/1.18.2/imports/Old mess/block/bedrock.png
+/1.18.2/imports/Old mess/block/bee_nest_bottom.png
+/1.18.2/imports/Old mess/block/bee_nest_front.png
+/1.18.2/imports/Old mess/block/bee_nest_front_honey.png
+/1.18.2/imports/Old mess/block/bee_nest_side.png
+/1.18.2/imports/Old mess/block/bee_nest_top.png
+/1.18.2/imports/Old mess/block/beehive_end.png
+/1.18.2/imports/Old mess/block/beehive_front.png
+/1.18.2/imports/Old mess/block/beehive_front_honey.png
+/1.18.2/imports/Old mess/block/beehive_side.png
+/1.18.2/imports/Old mess/block/beetroots_stage0.png
+/1.18.2/imports/Old mess/block/beetroots_stage1.png
+/1.18.2/imports/Old mess/block/beetroots_stage2.png
+/1.18.2/imports/Old mess/block/beetroots_stage3.png
+/1.18.2/imports/Old mess/block/bell_bottom.png
+/1.18.2/imports/Old mess/block/bell_side.png
+/1.18.2/imports/Old mess/block/bell_top.png
+/1.18.2/imports/Old mess/block/big_dripleaf_side.png
+/1.18.2/imports/Old mess/block/big_dripleaf_stem.png
+/1.18.2/imports/Old mess/block/big_dripleaf_tip.png
+/1.18.2/imports/Old mess/block/big_dripleaf_top.png
+/1.18.2/imports/Old mess/block/birch_door_bottom.png
+/1.18.2/imports/Old mess/block/birch_door_top.png
+/1.18.2/imports/Old mess/block/birch_leaves.png
+/1.18.2/imports/Old mess/block/birch_log.png
+/1.18.2/imports/Old mess/block/birch_log_top.png
+/1.18.2/imports/Old mess/block/birch_planks.png
+/1.18.2/imports/Old mess/block/birch_sapling.png
+/1.18.2/imports/Old mess/block/birch_shelf.png
+/1.18.2/imports/Old mess/block/birch_trapdoor.png
+/1.18.2/imports/Old mess/block/black_candle.png
+/1.18.2/imports/Old mess/block/black_candle_lit.png
+/1.18.2/imports/Old mess/block/black_concrete.png
+/1.18.2/imports/Old mess/block/black_concrete_powder.png
+/1.18.2/imports/Old mess/block/black_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/black_shulker_box.png
+/1.18.2/imports/Old mess/block/black_stained_glass.png
+/1.18.2/imports/Old mess/block/black_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/black_terracotta.png
+/1.18.2/imports/Old mess/block/black_wool.png
+/1.18.2/imports/Old mess/block/blackstone.png
+/1.18.2/imports/Old mess/block/blackstone_top.png
+/1.18.2/imports/Old mess/block/blast_furnace_front.png
+/1.18.2/imports/Old mess/block/blast_furnace_front_on.png
+/1.18.2/imports/Old mess/block/blast_furnace_front_on.png.mcmeta
+/1.18.2/imports/Old mess/block/blast_furnace_side.png
+/1.18.2/imports/Old mess/block/blast_furnace_top.png
+/1.18.2/imports/Old mess/block/blue_candle.png
+/1.18.2/imports/Old mess/block/blue_candle_lit.png
+/1.18.2/imports/Old mess/block/blue_concrete.png
+/1.18.2/imports/Old mess/block/blue_concrete_powder.png
+/1.18.2/imports/Old mess/block/blue_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/blue_ice.png
+/1.18.2/imports/Old mess/block/blue_orchid.png
+/1.18.2/imports/Old mess/block/blue_shulker_box.png
+/1.18.2/imports/Old mess/block/blue_stained_glass.png
+/1.18.2/imports/Old mess/block/blue_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/blue_terracotta.png
+/1.18.2/imports/Old mess/block/blue_wool.png
+/1.18.2/imports/Old mess/block/bone_block_side.png
+/1.18.2/imports/Old mess/block/bone_block_top.png
+/1.18.2/imports/Old mess/block/bookshelf.png
+/1.18.2/imports/Old mess/block/brain_coral.png
+/1.18.2/imports/Old mess/block/brain_coral_block.png
+/1.18.2/imports/Old mess/block/brain_coral_fan.png
+/1.18.2/imports/Old mess/block/brewing_stand.png
+/1.18.2/imports/Old mess/block/brewing_stand_base.png
+/1.18.2/imports/Old mess/block/bricks.png
+/1.18.2/imports/Old mess/block/brown_candle.png
+/1.18.2/imports/Old mess/block/brown_candle_lit.png
+/1.18.2/imports/Old mess/block/brown_concrete.png
+/1.18.2/imports/Old mess/block/brown_concrete_powder.png
+/1.18.2/imports/Old mess/block/brown_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/brown_mushroom.png
+/1.18.2/imports/Old mess/block/brown_mushroom_block.png
+/1.18.2/imports/Old mess/block/brown_shulker_box.png
+/1.18.2/imports/Old mess/block/brown_stained_glass.png
+/1.18.2/imports/Old mess/block/brown_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/brown_terracotta.png
+/1.18.2/imports/Old mess/block/brown_wool.png
+/1.18.2/imports/Old mess/block/bubble_coral.png
+/1.18.2/imports/Old mess/block/bubble_coral_block.png
+/1.18.2/imports/Old mess/block/bubble_coral_fan.png
+/1.18.2/imports/Old mess/block/budding_amethyst.png
+/1.18.2/imports/Old mess/block/bush.png
+/1.18.2/imports/Old mess/block/cactus_bottom.png
+/1.18.2/imports/Old mess/block/cactus_flower.png
+/1.18.2/imports/Old mess/block/cactus_side.png
+/1.18.2/imports/Old mess/block/cactus_top.png
+/1.18.2/imports/Old mess/block/cake_bottom.png
+/1.18.2/imports/Old mess/block/cake_inner.png
+/1.18.2/imports/Old mess/block/cake_side.png
+/1.18.2/imports/Old mess/block/cake_top.png
+/1.18.2/imports/Old mess/block/calcite.png
+/1.18.2/imports/Old mess/block/calibrated_sculk_sensor_amethyst.png
+/1.18.2/imports/Old mess/block/calibrated_sculk_sensor_input_side.png
+/1.18.2/imports/Old mess/block/calibrated_sculk_sensor_top.png
+/1.18.2/imports/Old mess/block/campfire_fire.png
+/1.18.2/imports/Old mess/block/campfire_fire.png.mcmeta
+/1.18.2/imports/Old mess/block/campfire_log.png
+/1.18.2/imports/Old mess/block/campfire_log_lit.png
+/1.18.2/imports/Old mess/block/campfire_log_lit.png.mcmeta
+/1.18.2/imports/Old mess/block/candle.png
+/1.18.2/imports/Old mess/block/candle_lit.png
+/1.18.2/imports/Old mess/block/carrots_stage0.png
+/1.18.2/imports/Old mess/block/carrots_stage1.png
+/1.18.2/imports/Old mess/block/carrots_stage2.png
+/1.18.2/imports/Old mess/block/carrots_stage3.png
+/1.18.2/imports/Old mess/block/cartography_table_side1.png
+/1.18.2/imports/Old mess/block/cartography_table_side2.png
+/1.18.2/imports/Old mess/block/cartography_table_side3.png
+/1.18.2/imports/Old mess/block/cartography_table_top.png
+/1.18.2/imports/Old mess/block/carved_pumpkin.png
+/1.18.2/imports/Old mess/block/cauldron_bottom.png
+/1.18.2/imports/Old mess/block/cauldron_inner.png
+/1.18.2/imports/Old mess/block/cauldron_side.png
+/1.18.2/imports/Old mess/block/cauldron_top.png
+/1.18.2/imports/Old mess/block/cave_vines.png
+/1.18.2/imports/Old mess/block/cave_vines_lit.png
+/1.18.2/imports/Old mess/block/cave_vines_plant.png
+/1.18.2/imports/Old mess/block/cave_vines_plant_lit.png
+/1.18.2/imports/Old mess/block/chain_command_block_back.png
+/1.18.2/imports/Old mess/block/chain_command_block_back.png.mcmeta
+/1.18.2/imports/Old mess/block/chain_command_block_conditional.png
+/1.18.2/imports/Old mess/block/chain_command_block_conditional.png.mcmeta
+/1.18.2/imports/Old mess/block/chain_command_block_front.png
+/1.18.2/imports/Old mess/block/chain_command_block_front.png.mcmeta
+/1.18.2/imports/Old mess/block/chain_command_block_side.png
+/1.18.2/imports/Old mess/block/chain_command_block_side.png.mcmeta
+/1.18.2/imports/Old mess/block/cherry_door_bottom.png
+/1.18.2/imports/Old mess/block/cherry_door_top.png
+/1.18.2/imports/Old mess/block/cherry_leaves.png
+/1.18.2/imports/Old mess/block/cherry_log.png
+/1.18.2/imports/Old mess/block/cherry_log_top.png
+/1.18.2/imports/Old mess/block/cherry_planks.png
+/1.18.2/imports/Old mess/block/cherry_sapling.png
+/1.18.2/imports/Old mess/block/cherry_shelf.png
+/1.18.2/imports/Old mess/block/cherry_trapdoor.png
+/1.18.2/imports/Old mess/block/chipped_anvil_top.png
+/1.18.2/imports/Old mess/block/chiseled_bookshelf_empty.png
+/1.18.2/imports/Old mess/block/chiseled_bookshelf_occupied.png
+/1.18.2/imports/Old mess/block/chiseled_bookshelf_side.png
+/1.18.2/imports/Old mess/block/chiseled_bookshelf_top.png
+/1.18.2/imports/Old mess/block/chiseled_copper.png
+/1.18.2/imports/Old mess/block/chiseled_deepslate.png
+/1.18.2/imports/Old mess/block/chiseled_nether_bricks.png
+/1.18.2/imports/Old mess/block/chiseled_polished_blackstone.png
+/1.18.2/imports/Old mess/block/chiseled_quartz_block.png
+/1.18.2/imports/Old mess/block/chiseled_quartz_block_top.png
+/1.18.2/imports/Old mess/block/chiseled_red_sandstone.png
+/1.18.2/imports/Old mess/block/chiseled_resin_bricks.png
+/1.18.2/imports/Old mess/block/chiseled_sandstone.png
+/1.18.2/imports/Old mess/block/chiseled_stone_bricks.png
+/1.18.2/imports/Old mess/block/chiseled_tuff.png
+/1.18.2/imports/Old mess/block/chiseled_tuff_bricks.png
+/1.18.2/imports/Old mess/block/chiseled_tuff_bricks_top.png
+/1.18.2/imports/Old mess/block/chiseled_tuff_top.png
+/1.18.2/imports/Old mess/block/chorus_flower.png
+/1.18.2/imports/Old mess/block/chorus_flower_dead.png
+/1.18.2/imports/Old mess/block/chorus_plant.png
+/1.18.2/imports/Old mess/block/clay.png
+/1.18.2/imports/Old mess/block/closed_eyeblossom.png
+/1.18.2/imports/Old mess/block/coal_block.png
+/1.18.2/imports/Old mess/block/coal_ore.png
+/1.18.2/imports/Old mess/block/coarse_dirt.png
+/1.18.2/imports/Old mess/block/cobbled_deepslate.png
+/1.18.2/imports/Old mess/block/cobblestone.png
+/1.18.2/imports/Old mess/block/cobweb.png
+/1.18.2/imports/Old mess/block/cocoa_stage0.png
+/1.18.2/imports/Old mess/block/cocoa_stage1.png
+/1.18.2/imports/Old mess/block/cocoa_stage2.png
+/1.18.2/imports/Old mess/block/command_block_back.png
+/1.18.2/imports/Old mess/block/command_block_back.png.mcmeta
+/1.18.2/imports/Old mess/block/command_block_conditional.png
+/1.18.2/imports/Old mess/block/command_block_conditional.png.mcmeta
+/1.18.2/imports/Old mess/block/command_block_front.png
+/1.18.2/imports/Old mess/block/command_block_front.png.mcmeta
+/1.18.2/imports/Old mess/block/command_block_side.png
+/1.18.2/imports/Old mess/block/command_block_side.png.mcmeta
+/1.18.2/imports/Old mess/block/comparator.png
+/1.18.2/imports/Old mess/block/comparator_on.png
+/1.18.2/imports/Old mess/block/composter_bottom.png
+/1.18.2/imports/Old mess/block/composter_compost.png
+/1.18.2/imports/Old mess/block/composter_ready.png
+/1.18.2/imports/Old mess/block/composter_side.png
+/1.18.2/imports/Old mess/block/composter_top.png
+/1.18.2/imports/Old mess/block/conduit.png
+/1.18.2/imports/Old mess/block/copper_bars.png
+/1.18.2/imports/Old mess/block/copper_block.png
+/1.18.2/imports/Old mess/block/copper_bulb.png
+/1.18.2/imports/Old mess/block/copper_bulb_lit.png
+/1.18.2/imports/Old mess/block/copper_bulb_lit_powered.png
+/1.18.2/imports/Old mess/block/copper_bulb_powered.png
+/1.18.2/imports/Old mess/block/copper_chain.png
+/1.18.2/imports/Old mess/block/copper_door_bottom.png
+/1.18.2/imports/Old mess/block/copper_door_top.png
+/1.18.2/imports/Old mess/block/copper_grate.png
+/1.18.2/imports/Old mess/block/copper_lantern.png
+/1.18.2/imports/Old mess/block/copper_lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/copper_ore.png
+/1.18.2/imports/Old mess/block/copper_torch.png
+/1.18.2/imports/Old mess/block/copper_trapdoor.png
+/1.18.2/imports/Old mess/block/cornflower.png
+/1.18.2/imports/Old mess/block/cracked_deepslate_bricks.png
+/1.18.2/imports/Old mess/block/cracked_deepslate_tiles.png
+/1.18.2/imports/Old mess/block/cracked_nether_bricks.png
+/1.18.2/imports/Old mess/block/cracked_polished_blackstone_bricks.png
+/1.18.2/imports/Old mess/block/cracked_stone_bricks.png
+/1.18.2/imports/Old mess/block/crafter_bottom.png
+/1.18.2/imports/Old mess/block/crafter_east.png
+/1.18.2/imports/Old mess/block/crafter_east_crafting.png
+/1.18.2/imports/Old mess/block/crafter_east_triggered.png
+/1.18.2/imports/Old mess/block/crafter_north.png
+/1.18.2/imports/Old mess/block/crafter_north_crafting.png
+/1.18.2/imports/Old mess/block/crafter_south.png
+/1.18.2/imports/Old mess/block/crafter_south_triggered.png
+/1.18.2/imports/Old mess/block/crafter_top.png
+/1.18.2/imports/Old mess/block/crafter_top_crafting.png
+/1.18.2/imports/Old mess/block/crafter_top_triggered.png
+/1.18.2/imports/Old mess/block/crafter_west.png
+/1.18.2/imports/Old mess/block/crafter_west_crafting.png
+/1.18.2/imports/Old mess/block/crafter_west_triggered.png
+/1.18.2/imports/Old mess/block/crafting_table_front.png
+/1.18.2/imports/Old mess/block/crafting_table_side.png
+/1.18.2/imports/Old mess/block/crafting_table_top.png
+/1.18.2/imports/Old mess/block/creaking_heart.png
+/1.18.2/imports/Old mess/block/creaking_heart_awake.png
+/1.18.2/imports/Old mess/block/creaking_heart_dormant.png
+/1.18.2/imports/Old mess/block/creaking_heart_top.png
+/1.18.2/imports/Old mess/block/creaking_heart_top_awake.png
+/1.18.2/imports/Old mess/block/creaking_heart_top_dormant.png
+/1.18.2/imports/Old mess/block/crimson_door_bottom.png
+/1.18.2/imports/Old mess/block/crimson_door_top.png
+/1.18.2/imports/Old mess/block/crimson_fungus.png
+/1.18.2/imports/Old mess/block/crimson_nylium.png
+/1.18.2/imports/Old mess/block/crimson_nylium_side.png
+/1.18.2/imports/Old mess/block/crimson_planks.png
+/1.18.2/imports/Old mess/block/crimson_roots.png
+/1.18.2/imports/Old mess/block/crimson_roots_pot.png
+/1.18.2/imports/Old mess/block/crimson_shelf.png
+/1.18.2/imports/Old mess/block/crimson_stem.png
+/1.18.2/imports/Old mess/block/crimson_stem.png.mcmeta
+/1.18.2/imports/Old mess/block/crimson_stem_top.png
+/1.18.2/imports/Old mess/block/crimson_trapdoor.png
+/1.18.2/imports/Old mess/block/crying_obsidian.png
+/1.18.2/imports/Old mess/block/cut_copper.png
+/1.18.2/imports/Old mess/block/cut_red_sandstone.png
+/1.18.2/imports/Old mess/block/cut_sandstone.png
+/1.18.2/imports/Old mess/block/cyan_candle.png
+/1.18.2/imports/Old mess/block/cyan_candle_lit.png
+/1.18.2/imports/Old mess/block/cyan_concrete.png
+/1.18.2/imports/Old mess/block/cyan_concrete_powder.png
+/1.18.2/imports/Old mess/block/cyan_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/cyan_shulker_box.png
+/1.18.2/imports/Old mess/block/cyan_stained_glass.png
+/1.18.2/imports/Old mess/block/cyan_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/cyan_terracotta.png
+/1.18.2/imports/Old mess/block/cyan_wool.png
+/1.18.2/imports/Old mess/block/damaged_anvil_top.png
+/1.18.2/imports/Old mess/block/dandelion.png
+/1.18.2/imports/Old mess/block/dark_oak_door_bottom.png
+/1.18.2/imports/Old mess/block/dark_oak_door_top.png
+/1.18.2/imports/Old mess/block/dark_oak_leaves.png
+/1.18.2/imports/Old mess/block/dark_oak_log.png
+/1.18.2/imports/Old mess/block/dark_oak_log_top.png
+/1.18.2/imports/Old mess/block/dark_oak_planks.png
+/1.18.2/imports/Old mess/block/dark_oak_sapling.png
+/1.18.2/imports/Old mess/block/dark_oak_shelf.png
+/1.18.2/imports/Old mess/block/dark_oak_trapdoor.png
+/1.18.2/imports/Old mess/block/dark_prismarine.png
+/1.18.2/imports/Old mess/block/daylight_detector_inverted_top.png
+/1.18.2/imports/Old mess/block/daylight_detector_side.png
+/1.18.2/imports/Old mess/block/daylight_detector_top.png
+/1.18.2/imports/Old mess/block/dead_brain_coral.png
+/1.18.2/imports/Old mess/block/dead_brain_coral_block.png
+/1.18.2/imports/Old mess/block/dead_brain_coral_fan.png
+/1.18.2/imports/Old mess/block/dead_bubble_coral.png
+/1.18.2/imports/Old mess/block/dead_bubble_coral_block.png
+/1.18.2/imports/Old mess/block/dead_bubble_coral_fan.png
+/1.18.2/imports/Old mess/block/dead_bush.png
+/1.18.2/imports/Old mess/block/dead_fire_coral.png
+/1.18.2/imports/Old mess/block/dead_fire_coral_block.png
+/1.18.2/imports/Old mess/block/dead_fire_coral_fan.png
+/1.18.2/imports/Old mess/block/dead_horn_coral.png
+/1.18.2/imports/Old mess/block/dead_horn_coral_block.png
+/1.18.2/imports/Old mess/block/dead_horn_coral_fan.png
+/1.18.2/imports/Old mess/block/dead_tube_coral.png
+/1.18.2/imports/Old mess/block/dead_tube_coral_block.png
+/1.18.2/imports/Old mess/block/dead_tube_coral_fan.png
+/1.18.2/imports/Old mess/block/debug.png
+/1.18.2/imports/Old mess/block/debug2.png
+/1.18.2/imports/Old mess/block/deepslate.png
+/1.18.2/imports/Old mess/block/deepslate_bricks.png
+/1.18.2/imports/Old mess/block/deepslate_coal_ore.png
+/1.18.2/imports/Old mess/block/deepslate_copper_ore.png
+/1.18.2/imports/Old mess/block/deepslate_diamond_ore.png
+/1.18.2/imports/Old mess/block/deepslate_emerald_ore.png
+/1.18.2/imports/Old mess/block/deepslate_gold_ore.png
+/1.18.2/imports/Old mess/block/deepslate_iron_ore.png
+/1.18.2/imports/Old mess/block/deepslate_lapis_ore.png
+/1.18.2/imports/Old mess/block/deepslate_redstone_ore.png
+/1.18.2/imports/Old mess/block/deepslate_tiles.png
+/1.18.2/imports/Old mess/block/deepslate_top.png
+/1.18.2/imports/Old mess/block/destroy_stage_0.png
+/1.18.2/imports/Old mess/block/destroy_stage_1.png
+/1.18.2/imports/Old mess/block/destroy_stage_2.png
+/1.18.2/imports/Old mess/block/destroy_stage_3.png
+/1.18.2/imports/Old mess/block/destroy_stage_4.png
+/1.18.2/imports/Old mess/block/destroy_stage_5.png
+/1.18.2/imports/Old mess/block/destroy_stage_6.png
+/1.18.2/imports/Old mess/block/destroy_stage_7.png
+/1.18.2/imports/Old mess/block/destroy_stage_8.png
+/1.18.2/imports/Old mess/block/destroy_stage_9.png
+/1.18.2/imports/Old mess/block/detector_rail.png
+/1.18.2/imports/Old mess/block/detector_rail_on.png
+/1.18.2/imports/Old mess/block/diamond_block.png
+/1.18.2/imports/Old mess/block/diamond_ore.png
+/1.18.2/imports/Old mess/block/diorite.png
+/1.18.2/imports/Old mess/block/dirt.png
+/1.18.2/imports/Old mess/block/dirt_path_side.png
+/1.18.2/imports/Old mess/block/dirt_path_top.png
+/1.18.2/imports/Old mess/block/dispenser_front.png
+/1.18.2/imports/Old mess/block/dispenser_front_vertical.png
+/1.18.2/imports/Old mess/block/dragon_egg.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_bottom.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_east.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_north.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_south.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_tentacles.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_top.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_0_west.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_bottom.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_east.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_north.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_south.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_tentacles.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_top.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_1_west.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_bottom.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_east.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_north.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_south.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_tentacles.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_top.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_2_west.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_bottom.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_east.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_north.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_south.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_tentacles.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_top.png
+/1.18.2/imports/Old mess/block/dried_ghast_hydration_3_west.png
+/1.18.2/imports/Old mess/block/dried_kelp_bottom.png
+/1.18.2/imports/Old mess/block/dried_kelp_side.png
+/1.18.2/imports/Old mess/block/dried_kelp_top.png
+/1.18.2/imports/Old mess/block/dripstone_block.png
+/1.18.2/imports/Old mess/block/dropper_front.png
+/1.18.2/imports/Old mess/block/dropper_front_vertical.png
+/1.18.2/imports/Old mess/block/emerald_block.png
+/1.18.2/imports/Old mess/block/emerald_ore.png
+/1.18.2/imports/Old mess/block/enchanting_table_bottom.png
+/1.18.2/imports/Old mess/block/enchanting_table_side.png
+/1.18.2/imports/Old mess/block/enchanting_table_top.png
+/1.18.2/imports/Old mess/block/end_portal_frame_eye.png
+/1.18.2/imports/Old mess/block/end_portal_frame_side.png
+/1.18.2/imports/Old mess/block/end_portal_frame_top.png
+/1.18.2/imports/Old mess/block/end_rod.png
+/1.18.2/imports/Old mess/block/end_stone.png
+/1.18.2/imports/Old mess/block/end_stone_bricks.png
+/1.18.2/imports/Old mess/block/exposed_chiseled_copper.png
+/1.18.2/imports/Old mess/block/exposed_copper.png
+/1.18.2/imports/Old mess/block/exposed_copper_bars.png
+/1.18.2/imports/Old mess/block/exposed_copper_bulb.png
+/1.18.2/imports/Old mess/block/exposed_copper_bulb_lit.png
+/1.18.2/imports/Old mess/block/exposed_copper_bulb_lit_powered.png
+/1.18.2/imports/Old mess/block/exposed_copper_bulb_powered.png
+/1.18.2/imports/Old mess/block/exposed_copper_chain.png
+/1.18.2/imports/Old mess/block/exposed_copper_door_bottom.png
+/1.18.2/imports/Old mess/block/exposed_copper_door_top.png
+/1.18.2/imports/Old mess/block/exposed_copper_grate.png
+/1.18.2/imports/Old mess/block/exposed_copper_lantern.png
+/1.18.2/imports/Old mess/block/exposed_copper_lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/exposed_copper_trapdoor.png
+/1.18.2/imports/Old mess/block/exposed_cut_copper.png
+/1.18.2/imports/Old mess/block/exposed_lightning_rod.png
+/1.18.2/imports/Old mess/block/farmland.png
+/1.18.2/imports/Old mess/block/farmland_moist.png
+/1.18.2/imports/Old mess/block/fern.png
+/1.18.2/imports/Old mess/block/fire_0.png
+/1.18.2/imports/Old mess/block/fire_0.png.mcmeta
+/1.18.2/imports/Old mess/block/fire_1.png
+/1.18.2/imports/Old mess/block/fire_1.png.mcmeta
+/1.18.2/imports/Old mess/block/fire_coral.png
+/1.18.2/imports/Old mess/block/fire_coral_block.png
+/1.18.2/imports/Old mess/block/fire_coral_fan.png
+/1.18.2/imports/Old mess/block/firefly_bush.png
+/1.18.2/imports/Old mess/block/firefly_bush_emissive.png
+/1.18.2/imports/Old mess/block/firefly_bush_emissive.png.mcmeta
+/1.18.2/imports/Old mess/block/fletching_table_front.png
+/1.18.2/imports/Old mess/block/fletching_table_side.png
+/1.18.2/imports/Old mess/block/fletching_table_top.png
+/1.18.2/imports/Old mess/block/flower_pot.png
+/1.18.2/imports/Old mess/block/flowering_azalea_leaves.png
+/1.18.2/imports/Old mess/block/flowering_azalea_side.png
+/1.18.2/imports/Old mess/block/flowering_azalea_top.png
+/1.18.2/imports/Old mess/block/frogspawn.png
+/1.18.2/imports/Old mess/block/frosted_ice_0.png
+/1.18.2/imports/Old mess/block/frosted_ice_1.png
+/1.18.2/imports/Old mess/block/frosted_ice_2.png
+/1.18.2/imports/Old mess/block/frosted_ice_3.png
+/1.18.2/imports/Old mess/block/furnace_front.png
+/1.18.2/imports/Old mess/block/furnace_front_on.png
+/1.18.2/imports/Old mess/block/furnace_side.png
+/1.18.2/imports/Old mess/block/furnace_top.png
+/1.18.2/imports/Old mess/block/gilded_blackstone.png
+/1.18.2/imports/Old mess/block/glass.png
+/1.18.2/imports/Old mess/block/glass_pane_top.png
+/1.18.2/imports/Old mess/block/glow_item_frame.png
+/1.18.2/imports/Old mess/block/glow_lichen.png
+/1.18.2/imports/Old mess/block/glowstone.png
+/1.18.2/imports/Old mess/block/gold_block.png
+/1.18.2/imports/Old mess/block/gold_ore.png
+/1.18.2/imports/Old mess/block/granite.png
+/1.18.2/imports/Old mess/block/grass_block_side.png
+/1.18.2/imports/Old mess/block/grass_block_side_overlay.png
+/1.18.2/imports/Old mess/block/grass_block_snow.png
+/1.18.2/imports/Old mess/block/grass_block_top.png
+/1.18.2/imports/Old mess/block/gravel.png
+/1.18.2/imports/Old mess/block/gray_candle.png
+/1.18.2/imports/Old mess/block/gray_candle_lit.png
+/1.18.2/imports/Old mess/block/gray_concrete.png
+/1.18.2/imports/Old mess/block/gray_concrete_powder.png
+/1.18.2/imports/Old mess/block/gray_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/gray_shulker_box.png
+/1.18.2/imports/Old mess/block/gray_stained_glass.png
+/1.18.2/imports/Old mess/block/gray_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/gray_terracotta.png
+/1.18.2/imports/Old mess/block/gray_wool.png
+/1.18.2/imports/Old mess/block/green_candle.png
+/1.18.2/imports/Old mess/block/green_candle_lit.png
+/1.18.2/imports/Old mess/block/green_concrete.png
+/1.18.2/imports/Old mess/block/green_concrete_powder.png
+/1.18.2/imports/Old mess/block/green_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/green_shulker_box.png
+/1.18.2/imports/Old mess/block/green_stained_glass.png
+/1.18.2/imports/Old mess/block/green_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/green_terracotta.png
+/1.18.2/imports/Old mess/block/green_wool.png
+/1.18.2/imports/Old mess/block/grindstone_pivot.png
+/1.18.2/imports/Old mess/block/grindstone_round.png
+/1.18.2/imports/Old mess/block/grindstone_side.png
+/1.18.2/imports/Old mess/block/hanging_roots.png
+/1.18.2/imports/Old mess/block/hay_block_side.png
+/1.18.2/imports/Old mess/block/hay_block_top.png
+/1.18.2/imports/Old mess/block/heavy_core.png
+/1.18.2/imports/Old mess/block/honey_block_bottom.png
+/1.18.2/imports/Old mess/block/honey_block_side.png
+/1.18.2/imports/Old mess/block/honey_block_top.png
+/1.18.2/imports/Old mess/block/honeycomb_block.png
+/1.18.2/imports/Old mess/block/hopper_inside.png
+/1.18.2/imports/Old mess/block/hopper_outside.png
+/1.18.2/imports/Old mess/block/hopper_top.png
+/1.18.2/imports/Old mess/block/horn_coral.png
+/1.18.2/imports/Old mess/block/horn_coral_block.png
+/1.18.2/imports/Old mess/block/horn_coral_fan.png
+/1.18.2/imports/Old mess/block/ice.png
+/1.18.2/imports/Old mess/block/iron_bars.png
+/1.18.2/imports/Old mess/block/iron_block.png
+/1.18.2/imports/Old mess/block/iron_chain.png
+/1.18.2/imports/Old mess/block/iron_door_bottom.png
+/1.18.2/imports/Old mess/block/iron_door_top.png
+/1.18.2/imports/Old mess/block/iron_ore.png
+/1.18.2/imports/Old mess/block/iron_trapdoor.png
+/1.18.2/imports/Old mess/block/item_frame.png
+/1.18.2/imports/Old mess/block/jack_o_lantern.png
+/1.18.2/imports/Old mess/block/jigsaw_bottom.png
+/1.18.2/imports/Old mess/block/jigsaw_lock.png
+/1.18.2/imports/Old mess/block/jigsaw_side.png
+/1.18.2/imports/Old mess/block/jigsaw_top.png
+/1.18.2/imports/Old mess/block/jukebox_side.png
+/1.18.2/imports/Old mess/block/jukebox_top.png
+/1.18.2/imports/Old mess/block/jungle_door_bottom.png
+/1.18.2/imports/Old mess/block/jungle_door_top.png
+/1.18.2/imports/Old mess/block/jungle_leaves.png
+/1.18.2/imports/Old mess/block/jungle_log.png
+/1.18.2/imports/Old mess/block/jungle_log_top.png
+/1.18.2/imports/Old mess/block/jungle_planks.png
+/1.18.2/imports/Old mess/block/jungle_sapling.png
+/1.18.2/imports/Old mess/block/jungle_shelf.png
+/1.18.2/imports/Old mess/block/jungle_trapdoor.png
+/1.18.2/imports/Old mess/block/kelp.png
+/1.18.2/imports/Old mess/block/kelp.png.mcmeta
+/1.18.2/imports/Old mess/block/kelp_plant.png
+/1.18.2/imports/Old mess/block/kelp_plant.png.mcmeta
+/1.18.2/imports/Old mess/block/ladder.png
+/1.18.2/imports/Old mess/block/lantern.png
+/1.18.2/imports/Old mess/block/lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/lapis_block.png
+/1.18.2/imports/Old mess/block/lapis_ore.png
+/1.18.2/imports/Old mess/block/large_amethyst_bud.png
+/1.18.2/imports/Old mess/block/large_fern_bottom.png
+/1.18.2/imports/Old mess/block/large_fern_top.png
+/1.18.2/imports/Old mess/block/lava_flow.png
+/1.18.2/imports/Old mess/block/lava_flow.png.mcmeta
+/1.18.2/imports/Old mess/block/lava_still.png
+/1.18.2/imports/Old mess/block/lava_still.png.mcmeta
+/1.18.2/imports/Old mess/block/leaf_litter.png
+/1.18.2/imports/Old mess/block/lectern_base.png
+/1.18.2/imports/Old mess/block/lectern_front.png
+/1.18.2/imports/Old mess/block/lectern_sides.png
+/1.18.2/imports/Old mess/block/lectern_top.png
+/1.18.2/imports/Old mess/block/lever.png
+/1.18.2/imports/Old mess/block/light_blue_candle.png
+/1.18.2/imports/Old mess/block/light_blue_candle_lit.png
+/1.18.2/imports/Old mess/block/light_blue_concrete.png
+/1.18.2/imports/Old mess/block/light_blue_concrete_powder.png
+/1.18.2/imports/Old mess/block/light_blue_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/light_blue_shulker_box.png
+/1.18.2/imports/Old mess/block/light_blue_stained_glass.png
+/1.18.2/imports/Old mess/block/light_blue_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/light_blue_terracotta.png
+/1.18.2/imports/Old mess/block/light_blue_wool.png
+/1.18.2/imports/Old mess/block/light_gray_candle.png
+/1.18.2/imports/Old mess/block/light_gray_candle_lit.png
+/1.18.2/imports/Old mess/block/light_gray_concrete.png
+/1.18.2/imports/Old mess/block/light_gray_concrete_powder.png
+/1.18.2/imports/Old mess/block/light_gray_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/light_gray_shulker_box.png
+/1.18.2/imports/Old mess/block/light_gray_stained_glass.png
+/1.18.2/imports/Old mess/block/light_gray_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/light_gray_terracotta.png
+/1.18.2/imports/Old mess/block/light_gray_wool.png
+/1.18.2/imports/Old mess/block/lightning_rod.png
+/1.18.2/imports/Old mess/block/lightning_rod_on.png
+/1.18.2/imports/Old mess/block/lilac_bottom.png
+/1.18.2/imports/Old mess/block/lilac_top.png
+/1.18.2/imports/Old mess/block/lily_of_the_valley.png
+/1.18.2/imports/Old mess/block/lily_pad.png
+/1.18.2/imports/Old mess/block/lime_candle.png
+/1.18.2/imports/Old mess/block/lime_candle_lit.png
+/1.18.2/imports/Old mess/block/lime_concrete.png
+/1.18.2/imports/Old mess/block/lime_concrete_powder.png
+/1.18.2/imports/Old mess/block/lime_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/lime_shulker_box.png
+/1.18.2/imports/Old mess/block/lime_stained_glass.png
+/1.18.2/imports/Old mess/block/lime_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/lime_terracotta.png
+/1.18.2/imports/Old mess/block/lime_wool.png
+/1.18.2/imports/Old mess/block/lodestone_side.png
+/1.18.2/imports/Old mess/block/lodestone_top.png
+/1.18.2/imports/Old mess/block/loom_bottom.png
+/1.18.2/imports/Old mess/block/loom_front.png
+/1.18.2/imports/Old mess/block/loom_side.png
+/1.18.2/imports/Old mess/block/loom_top.png
+/1.18.2/imports/Old mess/block/magenta_candle.png
+/1.18.2/imports/Old mess/block/magenta_candle_lit.png
+/1.18.2/imports/Old mess/block/magenta_concrete.png
+/1.18.2/imports/Old mess/block/magenta_concrete_powder.png
+/1.18.2/imports/Old mess/block/magenta_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/magenta_shulker_box.png
+/1.18.2/imports/Old mess/block/magenta_stained_glass.png
+/1.18.2/imports/Old mess/block/magenta_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/magenta_terracotta.png
+/1.18.2/imports/Old mess/block/magenta_wool.png
+/1.18.2/imports/Old mess/block/magma.png
+/1.18.2/imports/Old mess/block/magma.png.mcmeta
+/1.18.2/imports/Old mess/block/mangrove_door_bottom.png
+/1.18.2/imports/Old mess/block/mangrove_door_top.png
+/1.18.2/imports/Old mess/block/mangrove_leaves.png
+/1.18.2/imports/Old mess/block/mangrove_log.png
+/1.18.2/imports/Old mess/block/mangrove_log_top.png
+/1.18.2/imports/Old mess/block/mangrove_planks.png
+/1.18.2/imports/Old mess/block/mangrove_propagule.png
+/1.18.2/imports/Old mess/block/mangrove_propagule_hanging.png
+/1.18.2/imports/Old mess/block/mangrove_roots_side.png
+/1.18.2/imports/Old mess/block/mangrove_roots_top.png
+/1.18.2/imports/Old mess/block/mangrove_shelf.png
+/1.18.2/imports/Old mess/block/mangrove_trapdoor.png
+/1.18.2/imports/Old mess/block/medium_amethyst_bud.png
+/1.18.2/imports/Old mess/block/melon_side.png
+/1.18.2/imports/Old mess/block/melon_stem.png
+/1.18.2/imports/Old mess/block/melon_top.png
+/1.18.2/imports/Old mess/block/moss_block.png
+/1.18.2/imports/Old mess/block/mossy_cobblestone.png
+/1.18.2/imports/Old mess/block/mossy_stone_bricks.png
+/1.18.2/imports/Old mess/block/mud.png
+/1.18.2/imports/Old mess/block/mud_bricks.png
+/1.18.2/imports/Old mess/block/muddy_mangrove_roots_side.png
+/1.18.2/imports/Old mess/block/muddy_mangrove_roots_top.png
+/1.18.2/imports/Old mess/block/mushroom_block_inside.png
+/1.18.2/imports/Old mess/block/mushroom_stem.png
+/1.18.2/imports/Old mess/block/mycelium_side.png
+/1.18.2/imports/Old mess/block/mycelium_top.png
+/1.18.2/imports/Old mess/block/nether_bricks.png
+/1.18.2/imports/Old mess/block/nether_gold_ore.png
+/1.18.2/imports/Old mess/block/nether_portal.png
+/1.18.2/imports/Old mess/block/nether_portal.png.mcmeta
+/1.18.2/imports/Old mess/block/nether_quartz_ore.png
+/1.18.2/imports/Old mess/block/nether_sprouts.png
+/1.18.2/imports/Old mess/block/nether_wart_block.png
+/1.18.2/imports/Old mess/block/nether_wart_stage0.png
+/1.18.2/imports/Old mess/block/nether_wart_stage1.png
+/1.18.2/imports/Old mess/block/nether_wart_stage2.png
+/1.18.2/imports/Old mess/block/netherite_block.png
+/1.18.2/imports/Old mess/block/netherrack.png
+/1.18.2/imports/Old mess/block/note_block.png
+/1.18.2/imports/Old mess/block/oak_door_bottom.png
+/1.18.2/imports/Old mess/block/oak_door_top.png
+/1.18.2/imports/Old mess/block/oak_leaves.png
+/1.18.2/imports/Old mess/block/oak_log.png
+/1.18.2/imports/Old mess/block/oak_log_top.png
+/1.18.2/imports/Old mess/block/oak_planks.png
+/1.18.2/imports/Old mess/block/oak_sapling.png
+/1.18.2/imports/Old mess/block/oak_shelf.png
+/1.18.2/imports/Old mess/block/oak_trapdoor.png
+/1.18.2/imports/Old mess/block/observer_back.png
+/1.18.2/imports/Old mess/block/observer_back_on.png
+/1.18.2/imports/Old mess/block/observer_front.png
+/1.18.2/imports/Old mess/block/observer_side.png
+/1.18.2/imports/Old mess/block/observer_top.png
+/1.18.2/imports/Old mess/block/obsidian.png
+/1.18.2/imports/Old mess/block/ochre_froglight_side.png
+/1.18.2/imports/Old mess/block/ochre_froglight_top.png
+/1.18.2/imports/Old mess/block/open_eyeblossom.png
+/1.18.2/imports/Old mess/block/open_eyeblossom_emissive.png
+/1.18.2/imports/Old mess/block/orange_candle.png
+/1.18.2/imports/Old mess/block/orange_candle_lit.png
+/1.18.2/imports/Old mess/block/orange_concrete.png
+/1.18.2/imports/Old mess/block/orange_concrete_powder.png
+/1.18.2/imports/Old mess/block/orange_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/orange_shulker_box.png
+/1.18.2/imports/Old mess/block/orange_stained_glass.png
+/1.18.2/imports/Old mess/block/orange_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/orange_terracotta.png
+/1.18.2/imports/Old mess/block/orange_tulip.png
+/1.18.2/imports/Old mess/block/orange_wool.png
+/1.18.2/imports/Old mess/block/oxeye_daisy.png
+/1.18.2/imports/Old mess/block/oxidized_chiseled_copper.png
+/1.18.2/imports/Old mess/block/oxidized_copper.png
+/1.18.2/imports/Old mess/block/oxidized_copper_bars.png
+/1.18.2/imports/Old mess/block/oxidized_copper_bulb.png
+/1.18.2/imports/Old mess/block/oxidized_copper_bulb_lit.png
+/1.18.2/imports/Old mess/block/oxidized_copper_bulb_lit_powered.png
+/1.18.2/imports/Old mess/block/oxidized_copper_bulb_powered.png
+/1.18.2/imports/Old mess/block/oxidized_copper_chain.png
+/1.18.2/imports/Old mess/block/oxidized_copper_door_bottom.png
+/1.18.2/imports/Old mess/block/oxidized_copper_door_top.png
+/1.18.2/imports/Old mess/block/oxidized_copper_grate.png
+/1.18.2/imports/Old mess/block/oxidized_copper_lantern.png
+/1.18.2/imports/Old mess/block/oxidized_copper_lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/oxidized_copper_trapdoor.png
+/1.18.2/imports/Old mess/block/oxidized_cut_copper.png
+/1.18.2/imports/Old mess/block/oxidized_lightning_rod.png
+/1.18.2/imports/Old mess/block/packed_ice.png
+/1.18.2/imports/Old mess/block/packed_mud.png
+/1.18.2/imports/Old mess/block/pale_hanging_moss.png
+/1.18.2/imports/Old mess/block/pale_hanging_moss_tip.png
+/1.18.2/imports/Old mess/block/pale_moss_block.png
+/1.18.2/imports/Old mess/block/pale_moss_carpet.png
+/1.18.2/imports/Old mess/block/pale_moss_carpet_side_small.png
+/1.18.2/imports/Old mess/block/pale_moss_carpet_side_tall.png
+/1.18.2/imports/Old mess/block/pale_oak_door_bottom.png
+/1.18.2/imports/Old mess/block/pale_oak_door_top.png
+/1.18.2/imports/Old mess/block/pale_oak_leaves.png
+/1.18.2/imports/Old mess/block/pale_oak_log.png
+/1.18.2/imports/Old mess/block/pale_oak_log_top.png
+/1.18.2/imports/Old mess/block/pale_oak_planks.png
+/1.18.2/imports/Old mess/block/pale_oak_sapling.png
+/1.18.2/imports/Old mess/block/pale_oak_shelf.png
+/1.18.2/imports/Old mess/block/pale_oak_trapdoor.png
+/1.18.2/imports/Old mess/block/pearlescent_froglight_side.png
+/1.18.2/imports/Old mess/block/pearlescent_froglight_top.png
+/1.18.2/imports/Old mess/block/peony_bottom.png
+/1.18.2/imports/Old mess/block/peony_top.png
+/1.18.2/imports/Old mess/block/pink_candle.png
+/1.18.2/imports/Old mess/block/pink_candle_lit.png
+/1.18.2/imports/Old mess/block/pink_concrete.png
+/1.18.2/imports/Old mess/block/pink_concrete_powder.png
+/1.18.2/imports/Old mess/block/pink_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/pink_petals.png
+/1.18.2/imports/Old mess/block/pink_petals_stem.png
+/1.18.2/imports/Old mess/block/pink_shulker_box.png
+/1.18.2/imports/Old mess/block/pink_stained_glass.png
+/1.18.2/imports/Old mess/block/pink_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/pink_terracotta.png
+/1.18.2/imports/Old mess/block/pink_tulip.png
+/1.18.2/imports/Old mess/block/pink_wool.png
+/1.18.2/imports/Old mess/block/piston_bottom.png
+/1.18.2/imports/Old mess/block/piston_inner.png
+/1.18.2/imports/Old mess/block/piston_side.png
+/1.18.2/imports/Old mess/block/piston_top.png
+/1.18.2/imports/Old mess/block/piston_top_sticky.png
+/1.18.2/imports/Old mess/block/pitcher_crop_bottom.png
+/1.18.2/imports/Old mess/block/pitcher_crop_bottom_stage_1.png
+/1.18.2/imports/Old mess/block/pitcher_crop_bottom_stage_2.png
+/1.18.2/imports/Old mess/block/pitcher_crop_bottom_stage_3.png
+/1.18.2/imports/Old mess/block/pitcher_crop_bottom_stage_4.png
+/1.18.2/imports/Old mess/block/pitcher_crop_side.png
+/1.18.2/imports/Old mess/block/pitcher_crop_top.png
+/1.18.2/imports/Old mess/block/pitcher_crop_top_stage_3.png
+/1.18.2/imports/Old mess/block/pitcher_crop_top_stage_4.png
+/1.18.2/imports/Old mess/block/podzol_side.png
+/1.18.2/imports/Old mess/block/podzol_top.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_down_base.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_down_frustum.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_down_middle.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_down_tip.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_down_tip_merge.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_up_base.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_up_frustum.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_up_middle.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_up_tip.png
+/1.18.2/imports/Old mess/block/pointed_dripstone_up_tip_merge.png
+/1.18.2/imports/Old mess/block/polished_andesite.png
+/1.18.2/imports/Old mess/block/polished_basalt_side.png
+/1.18.2/imports/Old mess/block/polished_basalt_top.png
+/1.18.2/imports/Old mess/block/polished_blackstone.png
+/1.18.2/imports/Old mess/block/polished_blackstone_bricks.png
+/1.18.2/imports/Old mess/block/polished_deepslate.png
+/1.18.2/imports/Old mess/block/polished_diorite.png
+/1.18.2/imports/Old mess/block/polished_granite.png
+/1.18.2/imports/Old mess/block/polished_tuff.png
+/1.18.2/imports/Old mess/block/poppy.png
+/1.18.2/imports/Old mess/block/potatoes_stage0.png
+/1.18.2/imports/Old mess/block/potatoes_stage1.png
+/1.18.2/imports/Old mess/block/potatoes_stage2.png
+/1.18.2/imports/Old mess/block/potatoes_stage3.png
+/1.18.2/imports/Old mess/block/potted_azalea_bush_plant.png
+/1.18.2/imports/Old mess/block/potted_azalea_bush_side.png
+/1.18.2/imports/Old mess/block/potted_azalea_bush_top.png
+/1.18.2/imports/Old mess/block/potted_flowering_azalea_bush_plant.png
+/1.18.2/imports/Old mess/block/potted_flowering_azalea_bush_side.png
+/1.18.2/imports/Old mess/block/potted_flowering_azalea_bush_top.png
+/1.18.2/imports/Old mess/block/powder_snow.png
+/1.18.2/imports/Old mess/block/powered_rail.png
+/1.18.2/imports/Old mess/block/powered_rail_on.png
+/1.18.2/imports/Old mess/block/prismarine.png
+/1.18.2/imports/Old mess/block/prismarine.png.mcmeta
+/1.18.2/imports/Old mess/block/prismarine_bricks.png
+/1.18.2/imports/Old mess/block/pumpkin_side.png
+/1.18.2/imports/Old mess/block/pumpkin_stem.png
+/1.18.2/imports/Old mess/block/pumpkin_top.png
+/1.18.2/imports/Old mess/block/purple_candle.png
+/1.18.2/imports/Old mess/block/purple_candle_lit.png
+/1.18.2/imports/Old mess/block/purple_concrete.png
+/1.18.2/imports/Old mess/block/purple_concrete_powder.png
+/1.18.2/imports/Old mess/block/purple_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/purple_shulker_box.png
+/1.18.2/imports/Old mess/block/purple_stained_glass.png
+/1.18.2/imports/Old mess/block/purple_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/purple_terracotta.png
+/1.18.2/imports/Old mess/block/purple_wool.png
+/1.18.2/imports/Old mess/block/purpur_block.png
+/1.18.2/imports/Old mess/block/purpur_pillar.png
+/1.18.2/imports/Old mess/block/purpur_pillar_top.png
+/1.18.2/imports/Old mess/block/quartz_block_bottom.png
+/1.18.2/imports/Old mess/block/quartz_block_side.png
+/1.18.2/imports/Old mess/block/quartz_block_top.png
+/1.18.2/imports/Old mess/block/quartz_bricks.png
+/1.18.2/imports/Old mess/block/quartz_pillar.png
+/1.18.2/imports/Old mess/block/quartz_pillar_top.png
+/1.18.2/imports/Old mess/block/rail.png
+/1.18.2/imports/Old mess/block/rail_corner.png
+/1.18.2/imports/Old mess/block/raw_copper_block.png
+/1.18.2/imports/Old mess/block/raw_gold_block.png
+/1.18.2/imports/Old mess/block/raw_iron_block.png
+/1.18.2/imports/Old mess/block/red_candle.png
+/1.18.2/imports/Old mess/block/red_candle_lit.png
+/1.18.2/imports/Old mess/block/red_concrete.png
+/1.18.2/imports/Old mess/block/red_concrete_powder.png
+/1.18.2/imports/Old mess/block/red_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/red_mushroom.png
+/1.18.2/imports/Old mess/block/red_mushroom_block.png
+/1.18.2/imports/Old mess/block/red_nether_bricks.png
+/1.18.2/imports/Old mess/block/red_sand.png
+/1.18.2/imports/Old mess/block/red_sandstone.png
+/1.18.2/imports/Old mess/block/red_sandstone_bottom.png
+/1.18.2/imports/Old mess/block/red_sandstone_top.png
+/1.18.2/imports/Old mess/block/red_shulker_box.png
+/1.18.2/imports/Old mess/block/red_stained_glass.png
+/1.18.2/imports/Old mess/block/red_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/red_terracotta.png
+/1.18.2/imports/Old mess/block/red_tulip.png
+/1.18.2/imports/Old mess/block/red_wool.png
+/1.18.2/imports/Old mess/block/redstone_block.png
+/1.18.2/imports/Old mess/block/redstone_dust_dot.png
+/1.18.2/imports/Old mess/block/redstone_dust_line0.png
+/1.18.2/imports/Old mess/block/redstone_dust_line1.png
+/1.18.2/imports/Old mess/block/redstone_dust_overlay.png
+/1.18.2/imports/Old mess/block/redstone_lamp.png
+/1.18.2/imports/Old mess/block/redstone_lamp_on.png
+/1.18.2/imports/Old mess/block/redstone_ore.png
+/1.18.2/imports/Old mess/block/redstone_torch.png
+/1.18.2/imports/Old mess/block/redstone_torch_off.png
+/1.18.2/imports/Old mess/block/reinforced_deepslate_bottom.png
+/1.18.2/imports/Old mess/block/reinforced_deepslate_side.png
+/1.18.2/imports/Old mess/block/reinforced_deepslate_top.png
+/1.18.2/imports/Old mess/block/repeater.png
+/1.18.2/imports/Old mess/block/repeater_on.png
+/1.18.2/imports/Old mess/block/repeating_command_block_back.png
+/1.18.2/imports/Old mess/block/repeating_command_block_back.png.mcmeta
+/1.18.2/imports/Old mess/block/repeating_command_block_conditional.png
+/1.18.2/imports/Old mess/block/repeating_command_block_conditional.png.mcmeta
+/1.18.2/imports/Old mess/block/repeating_command_block_front.png
+/1.18.2/imports/Old mess/block/repeating_command_block_front.png.mcmeta
+/1.18.2/imports/Old mess/block/repeating_command_block_side.png
+/1.18.2/imports/Old mess/block/repeating_command_block_side.png.mcmeta
+/1.18.2/imports/Old mess/block/resin_block.png
+/1.18.2/imports/Old mess/block/resin_bricks.png
+/1.18.2/imports/Old mess/block/resin_clump.png
+/1.18.2/imports/Old mess/block/respawn_anchor_bottom.png
+/1.18.2/imports/Old mess/block/respawn_anchor_side0.png
+/1.18.2/imports/Old mess/block/respawn_anchor_side1.png
+/1.18.2/imports/Old mess/block/respawn_anchor_side2.png
+/1.18.2/imports/Old mess/block/respawn_anchor_side3.png
+/1.18.2/imports/Old mess/block/respawn_anchor_side4.png
+/1.18.2/imports/Old mess/block/respawn_anchor_top.png
+/1.18.2/imports/Old mess/block/respawn_anchor_top.png.mcmeta
+/1.18.2/imports/Old mess/block/respawn_anchor_top_off.png
+/1.18.2/imports/Old mess/block/rooted_dirt.png
+/1.18.2/imports/Old mess/block/rose_bush_bottom.png
+/1.18.2/imports/Old mess/block/rose_bush_top.png
+/1.18.2/imports/Old mess/block/sand.png
+/1.18.2/imports/Old mess/block/sandstone.png
+/1.18.2/imports/Old mess/block/sandstone_bottom.png
+/1.18.2/imports/Old mess/block/sandstone_top.png
+/1.18.2/imports/Old mess/block/scaffolding_bottom.png
+/1.18.2/imports/Old mess/block/scaffolding_side.png
+/1.18.2/imports/Old mess/block/scaffolding_top.png
+/1.18.2/imports/Old mess/block/sculk.png
+/1.18.2/imports/Old mess/block/sculk.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_catalyst_bottom.png
+/1.18.2/imports/Old mess/block/sculk_catalyst_side.png
+/1.18.2/imports/Old mess/block/sculk_catalyst_side_bloom.png
+/1.18.2/imports/Old mess/block/sculk_catalyst_side_bloom.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_catalyst_top.png
+/1.18.2/imports/Old mess/block/sculk_catalyst_top_bloom.png
+/1.18.2/imports/Old mess/block/sculk_catalyst_top_bloom.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_sensor_bottom.png
+/1.18.2/imports/Old mess/block/sculk_sensor_side.png
+/1.18.2/imports/Old mess/block/sculk_sensor_tendril_active.png
+/1.18.2/imports/Old mess/block/sculk_sensor_tendril_active.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_sensor_tendril_inactive.png
+/1.18.2/imports/Old mess/block/sculk_sensor_tendril_inactive.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_sensor_top.png
+/1.18.2/imports/Old mess/block/sculk_shrieker_bottom.png
+/1.18.2/imports/Old mess/block/sculk_shrieker_can_summon_inner_top.png
+/1.18.2/imports/Old mess/block/sculk_shrieker_can_summon_inner_top.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_shrieker_inner_top.png
+/1.18.2/imports/Old mess/block/sculk_shrieker_inner_top.png.mcmeta
+/1.18.2/imports/Old mess/block/sculk_shrieker_side.png
+/1.18.2/imports/Old mess/block/sculk_shrieker_top.png
+/1.18.2/imports/Old mess/block/sculk_vein.png
+/1.18.2/imports/Old mess/block/sculk_vein.png.mcmeta
+/1.18.2/imports/Old mess/block/sea_lantern.png
+/1.18.2/imports/Old mess/block/sea_lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/sea_pickle.png
+/1.18.2/imports/Old mess/block/seagrass.png
+/1.18.2/imports/Old mess/block/seagrass.png.mcmeta
+/1.18.2/imports/Old mess/block/short_dry_grass.png
+/1.18.2/imports/Old mess/block/short_grass.png
+/1.18.2/imports/Old mess/block/shroomlight.png
+/1.18.2/imports/Old mess/block/shulker_box.png
+/1.18.2/imports/Old mess/block/slime_block.png
+/1.18.2/imports/Old mess/block/small_amethyst_bud.png
+/1.18.2/imports/Old mess/block/small_dripleaf_side.png
+/1.18.2/imports/Old mess/block/small_dripleaf_stem_bottom.png
+/1.18.2/imports/Old mess/block/small_dripleaf_stem_top.png
+/1.18.2/imports/Old mess/block/small_dripleaf_top.png
+/1.18.2/imports/Old mess/block/smithing_table_bottom.png
+/1.18.2/imports/Old mess/block/smithing_table_front.png
+/1.18.2/imports/Old mess/block/smithing_table_side.png
+/1.18.2/imports/Old mess/block/smithing_table_top.png
+/1.18.2/imports/Old mess/block/smoker_bottom.png
+/1.18.2/imports/Old mess/block/smoker_front.png
+/1.18.2/imports/Old mess/block/smoker_front_on.png
+/1.18.2/imports/Old mess/block/smoker_front_on.png.mcmeta
+/1.18.2/imports/Old mess/block/smoker_side.png
+/1.18.2/imports/Old mess/block/smoker_top.png
+/1.18.2/imports/Old mess/block/smooth_basalt.png
+/1.18.2/imports/Old mess/block/smooth_stone.png
+/1.18.2/imports/Old mess/block/smooth_stone_slab_side.png
+/1.18.2/imports/Old mess/block/sniffer_egg_not_cracked_bottom.png
+/1.18.2/imports/Old mess/block/sniffer_egg_not_cracked_east.png
+/1.18.2/imports/Old mess/block/sniffer_egg_not_cracked_north.png
+/1.18.2/imports/Old mess/block/sniffer_egg_not_cracked_south.png
+/1.18.2/imports/Old mess/block/sniffer_egg_not_cracked_top.png
+/1.18.2/imports/Old mess/block/sniffer_egg_not_cracked_west.png
+/1.18.2/imports/Old mess/block/sniffer_egg_slightly_cracked_bottom.png
+/1.18.2/imports/Old mess/block/sniffer_egg_slightly_cracked_east.png
+/1.18.2/imports/Old mess/block/sniffer_egg_slightly_cracked_north.png
+/1.18.2/imports/Old mess/block/sniffer_egg_slightly_cracked_south.png
+/1.18.2/imports/Old mess/block/sniffer_egg_slightly_cracked_top.png
+/1.18.2/imports/Old mess/block/sniffer_egg_slightly_cracked_west.png
+/1.18.2/imports/Old mess/block/sniffer_egg_very_cracked_bottom.png
+/1.18.2/imports/Old mess/block/sniffer_egg_very_cracked_east.png
+/1.18.2/imports/Old mess/block/sniffer_egg_very_cracked_north.png
+/1.18.2/imports/Old mess/block/sniffer_egg_very_cracked_south.png
+/1.18.2/imports/Old mess/block/sniffer_egg_very_cracked_top.png
+/1.18.2/imports/Old mess/block/sniffer_egg_very_cracked_west.png
+/1.18.2/imports/Old mess/block/snow.png
+/1.18.2/imports/Old mess/block/soul_campfire_fire.png
+/1.18.2/imports/Old mess/block/soul_campfire_fire.png.mcmeta
+/1.18.2/imports/Old mess/block/soul_campfire_log_lit.png
+/1.18.2/imports/Old mess/block/soul_campfire_log_lit.png.mcmeta
+/1.18.2/imports/Old mess/block/soul_fire_0.png
+/1.18.2/imports/Old mess/block/soul_fire_0.png.mcmeta
+/1.18.2/imports/Old mess/block/soul_fire_1.png
+/1.18.2/imports/Old mess/block/soul_fire_1.png.mcmeta
+/1.18.2/imports/Old mess/block/soul_lantern.png
+/1.18.2/imports/Old mess/block/soul_lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/soul_sand.png
+/1.18.2/imports/Old mess/block/soul_soil.png
+/1.18.2/imports/Old mess/block/soul_torch.png
+/1.18.2/imports/Old mess/block/spawner.png
+/1.18.2/imports/Old mess/block/sponge.png
+/1.18.2/imports/Old mess/block/spore_blossom.png
+/1.18.2/imports/Old mess/block/spore_blossom_base.png
+/1.18.2/imports/Old mess/block/spruce_door_bottom.png
+/1.18.2/imports/Old mess/block/spruce_door_top.png
+/1.18.2/imports/Old mess/block/spruce_leaves.png
+/1.18.2/imports/Old mess/block/spruce_log.png
+/1.18.2/imports/Old mess/block/spruce_log_top.png
+/1.18.2/imports/Old mess/block/spruce_planks.png
+/1.18.2/imports/Old mess/block/spruce_sapling.png
+/1.18.2/imports/Old mess/block/spruce_shelf.png
+/1.18.2/imports/Old mess/block/spruce_trapdoor.png
+/1.18.2/imports/Old mess/block/stone.png
+/1.18.2/imports/Old mess/block/stone_bricks.png
+/1.18.2/imports/Old mess/block/stonecutter_bottom.png
+/1.18.2/imports/Old mess/block/stonecutter_saw.png
+/1.18.2/imports/Old mess/block/stonecutter_saw.png.mcmeta
+/1.18.2/imports/Old mess/block/stonecutter_side.png
+/1.18.2/imports/Old mess/block/stonecutter_top.png
+/1.18.2/imports/Old mess/block/stripped_acacia_log.png
+/1.18.2/imports/Old mess/block/stripped_acacia_log_top.png
+/1.18.2/imports/Old mess/block/stripped_bamboo_block.png
+/1.18.2/imports/Old mess/block/stripped_bamboo_block_top.png
+/1.18.2/imports/Old mess/block/stripped_birch_log.png
+/1.18.2/imports/Old mess/block/stripped_birch_log_top.png
+/1.18.2/imports/Old mess/block/stripped_cherry_log.png
+/1.18.2/imports/Old mess/block/stripped_cherry_log_top.png
+/1.18.2/imports/Old mess/block/stripped_crimson_stem.png
+/1.18.2/imports/Old mess/block/stripped_crimson_stem_top.png
+/1.18.2/imports/Old mess/block/stripped_dark_oak_log.png
+/1.18.2/imports/Old mess/block/stripped_dark_oak_log_top.png
+/1.18.2/imports/Old mess/block/stripped_jungle_log.png
+/1.18.2/imports/Old mess/block/stripped_jungle_log_top.png
+/1.18.2/imports/Old mess/block/stripped_mangrove_log.png
+/1.18.2/imports/Old mess/block/stripped_mangrove_log_top.png
+/1.18.2/imports/Old mess/block/stripped_oak_log.png
+/1.18.2/imports/Old mess/block/stripped_oak_log_top.png
+/1.18.2/imports/Old mess/block/stripped_pale_oak_log.png
+/1.18.2/imports/Old mess/block/stripped_pale_oak_log_top.png
+/1.18.2/imports/Old mess/block/stripped_spruce_log.png
+/1.18.2/imports/Old mess/block/stripped_spruce_log_top.png
+/1.18.2/imports/Old mess/block/stripped_warped_stem.png
+/1.18.2/imports/Old mess/block/stripped_warped_stem_top.png
+/1.18.2/imports/Old mess/block/structure_block.png
+/1.18.2/imports/Old mess/block/structure_block_corner.png
+/1.18.2/imports/Old mess/block/structure_block_data.png
+/1.18.2/imports/Old mess/block/structure_block_load.png
+/1.18.2/imports/Old mess/block/structure_block_save.png
+/1.18.2/imports/Old mess/block/sugar_cane.png
+/1.18.2/imports/Old mess/block/sunflower_back.png
+/1.18.2/imports/Old mess/block/sunflower_bottom.png
+/1.18.2/imports/Old mess/block/sunflower_front.png
+/1.18.2/imports/Old mess/block/sunflower_top.png
+/1.18.2/imports/Old mess/block/suspicious_gravel_0.png
+/1.18.2/imports/Old mess/block/suspicious_gravel_1.png
+/1.18.2/imports/Old mess/block/suspicious_gravel_2.png
+/1.18.2/imports/Old mess/block/suspicious_gravel_3.png
+/1.18.2/imports/Old mess/block/suspicious_sand_0.png
+/1.18.2/imports/Old mess/block/suspicious_sand_1.png
+/1.18.2/imports/Old mess/block/suspicious_sand_2.png
+/1.18.2/imports/Old mess/block/suspicious_sand_3.png
+/1.18.2/imports/Old mess/block/sweet_berry_bush_stage0.png
+/1.18.2/imports/Old mess/block/sweet_berry_bush_stage1.png
+/1.18.2/imports/Old mess/block/sweet_berry_bush_stage2.png
+/1.18.2/imports/Old mess/block/sweet_berry_bush_stage3.png
+/1.18.2/imports/Old mess/block/tall_dry_grass.png
+/1.18.2/imports/Old mess/block/tall_grass_bottom.png
+/1.18.2/imports/Old mess/block/tall_grass_top.png
+/1.18.2/imports/Old mess/block/tall_seagrass_bottom.png
+/1.18.2/imports/Old mess/block/tall_seagrass_bottom.png.mcmeta
+/1.18.2/imports/Old mess/block/tall_seagrass_top.png
+/1.18.2/imports/Old mess/block/tall_seagrass_top.png.mcmeta
+/1.18.2/imports/Old mess/block/target_side.png
+/1.18.2/imports/Old mess/block/target_top.png
+/1.18.2/imports/Old mess/block/terracotta.png
+/1.18.2/imports/Old mess/block/test_block_accept.png
+/1.18.2/imports/Old mess/block/test_block_fail.png
+/1.18.2/imports/Old mess/block/test_block_log.png
+/1.18.2/imports/Old mess/block/test_block_start.png
+/1.18.2/imports/Old mess/block/test_instance_block.png
+/1.18.2/imports/Old mess/block/tinted_glass.png
+/1.18.2/imports/Old mess/block/tnt_bottom.png
+/1.18.2/imports/Old mess/block/tnt_side.png
+/1.18.2/imports/Old mess/block/tnt_top.png
+/1.18.2/imports/Old mess/block/torch.png
+/1.18.2/imports/Old mess/block/torchflower.png
+/1.18.2/imports/Old mess/block/torchflower_crop_stage0.png
+/1.18.2/imports/Old mess/block/torchflower_crop_stage1.png
+/1.18.2/imports/Old mess/block/trial_spawner_bottom.png
+/1.18.2/imports/Old mess/block/trial_spawner_side_active.png
+/1.18.2/imports/Old mess/block/trial_spawner_side_active_ominous.png
+/1.18.2/imports/Old mess/block/trial_spawner_side_inactive.png
+/1.18.2/imports/Old mess/block/trial_spawner_side_inactive_ominous.png
+/1.18.2/imports/Old mess/block/trial_spawner_top_active.png
+/1.18.2/imports/Old mess/block/trial_spawner_top_active_ominous.png
+/1.18.2/imports/Old mess/block/trial_spawner_top_ejecting_reward.png
+/1.18.2/imports/Old mess/block/trial_spawner_top_ejecting_reward_ominous.png
+/1.18.2/imports/Old mess/block/trial_spawner_top_inactive.png
+/1.18.2/imports/Old mess/block/trial_spawner_top_inactive_ominous.png
+/1.18.2/imports/Old mess/block/tripwire.png
+/1.18.2/imports/Old mess/block/tripwire_hook.png
+/1.18.2/imports/Old mess/block/tube_coral.png
+/1.18.2/imports/Old mess/block/tube_coral_block.png
+/1.18.2/imports/Old mess/block/tube_coral_fan.png
+/1.18.2/imports/Old mess/block/tuff.png
+/1.18.2/imports/Old mess/block/tuff_bricks.png
+/1.18.2/imports/Old mess/block/turtle_egg.png
+/1.18.2/imports/Old mess/block/turtle_egg_slightly_cracked.png
+/1.18.2/imports/Old mess/block/turtle_egg_very_cracked.png
+/1.18.2/imports/Old mess/block/twisting_vines.png
+/1.18.2/imports/Old mess/block/twisting_vines_plant.png
+/1.18.2/imports/Old mess/block/vault_bottom.png
+/1.18.2/imports/Old mess/block/vault_bottom_ominous.png
+/1.18.2/imports/Old mess/block/vault_front_ejecting.png
+/1.18.2/imports/Old mess/block/vault_front_ejecting_ominous.png
+/1.18.2/imports/Old mess/block/vault_front_off.png
+/1.18.2/imports/Old mess/block/vault_front_off_ominous.png
+/1.18.2/imports/Old mess/block/vault_front_on.png
+/1.18.2/imports/Old mess/block/vault_front_on_ominous.png
+/1.18.2/imports/Old mess/block/vault_side_off.png
+/1.18.2/imports/Old mess/block/vault_side_off_ominous.png
+/1.18.2/imports/Old mess/block/vault_side_on.png
+/1.18.2/imports/Old mess/block/vault_side_on_ominous.png
+/1.18.2/imports/Old mess/block/vault_top.png
+/1.18.2/imports/Old mess/block/vault_top_ejecting.png
+/1.18.2/imports/Old mess/block/vault_top_ejecting_ominous.png
+/1.18.2/imports/Old mess/block/vault_top_ominous.png
+/1.18.2/imports/Old mess/block/verdant_froglight_side.png
+/1.18.2/imports/Old mess/block/verdant_froglight_top.png
+/1.18.2/imports/Old mess/block/vine.png
+/1.18.2/imports/Old mess/block/warped_door_bottom.png
+/1.18.2/imports/Old mess/block/warped_door_top.png
+/1.18.2/imports/Old mess/block/warped_fungus.png
+/1.18.2/imports/Old mess/block/warped_nylium.png
+/1.18.2/imports/Old mess/block/warped_nylium_side.png
+/1.18.2/imports/Old mess/block/warped_planks.png
+/1.18.2/imports/Old mess/block/warped_roots.png
+/1.18.2/imports/Old mess/block/warped_roots_pot.png
+/1.18.2/imports/Old mess/block/warped_shelf.png
+/1.18.2/imports/Old mess/block/warped_stem.png
+/1.18.2/imports/Old mess/block/warped_stem.png.mcmeta
+/1.18.2/imports/Old mess/block/warped_stem_top.png
+/1.18.2/imports/Old mess/block/warped_trapdoor.png
+/1.18.2/imports/Old mess/block/warped_wart_block.png
+/1.18.2/imports/Old mess/block/water_flow.png
+/1.18.2/imports/Old mess/block/water_flow.png.mcmeta
+/1.18.2/imports/Old mess/block/water_overlay.png
+/1.18.2/imports/Old mess/block/water_still.png
+/1.18.2/imports/Old mess/block/water_still.png.mcmeta
+/1.18.2/imports/Old mess/block/weathered_chiseled_copper.png
+/1.18.2/imports/Old mess/block/weathered_copper.png
+/1.18.2/imports/Old mess/block/weathered_copper_bars.png
+/1.18.2/imports/Old mess/block/weathered_copper_bulb.png
+/1.18.2/imports/Old mess/block/weathered_copper_bulb_lit.png
+/1.18.2/imports/Old mess/block/weathered_copper_bulb_lit_powered.png
+/1.18.2/imports/Old mess/block/weathered_copper_bulb_powered.png
+/1.18.2/imports/Old mess/block/weathered_copper_chain.png
+/1.18.2/imports/Old mess/block/weathered_copper_door_bottom.png
+/1.18.2/imports/Old mess/block/weathered_copper_door_top.png
+/1.18.2/imports/Old mess/block/weathered_copper_grate.png
+/1.18.2/imports/Old mess/block/weathered_copper_lantern.png
+/1.18.2/imports/Old mess/block/weathered_copper_lantern.png.mcmeta
+/1.18.2/imports/Old mess/block/weathered_copper_trapdoor.png
+/1.18.2/imports/Old mess/block/weathered_cut_copper.png
+/1.18.2/imports/Old mess/block/weathered_lightning_rod.png
+/1.18.2/imports/Old mess/block/weeping_vines.png
+/1.18.2/imports/Old mess/block/weeping_vines_plant.png
+/1.18.2/imports/Old mess/block/wet_sponge.png
+/1.18.2/imports/Old mess/block/wheat_stage0.png
+/1.18.2/imports/Old mess/block/wheat_stage1.png
+/1.18.2/imports/Old mess/block/wheat_stage2.png
+/1.18.2/imports/Old mess/block/wheat_stage3.png
+/1.18.2/imports/Old mess/block/wheat_stage4.png
+/1.18.2/imports/Old mess/block/wheat_stage5.png
+/1.18.2/imports/Old mess/block/wheat_stage6.png
+/1.18.2/imports/Old mess/block/wheat_stage7.png
+/1.18.2/imports/Old mess/block/white_candle.png
+/1.18.2/imports/Old mess/block/white_candle_lit.png
+/1.18.2/imports/Old mess/block/white_concrete.png
+/1.18.2/imports/Old mess/block/white_concrete_powder.png
+/1.18.2/imports/Old mess/block/white_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/white_shulker_box.png
+/1.18.2/imports/Old mess/block/white_stained_glass.png
+/1.18.2/imports/Old mess/block/white_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/white_terracotta.png
+/1.18.2/imports/Old mess/block/white_tulip.png
+/1.18.2/imports/Old mess/block/white_wool.png
+/1.18.2/imports/Old mess/block/wildflowers.png
+/1.18.2/imports/Old mess/block/wildflowers_stem.png
+/1.18.2/imports/Old mess/block/wither_rose.png
+/1.18.2/imports/Old mess/block/yellow_candle.png
+/1.18.2/imports/Old mess/block/yellow_candle_lit.png
+/1.18.2/imports/Old mess/block/yellow_concrete.png
+/1.18.2/imports/Old mess/block/yellow_concrete_powder.png
+/1.18.2/imports/Old mess/block/yellow_glazed_terracotta.png
+/1.18.2/imports/Old mess/block/yellow_shulker_box.png
+/1.18.2/imports/Old mess/block/yellow_stained_glass.png
+/1.18.2/imports/Old mess/block/yellow_stained_glass_pane_top.png
+/1.18.2/imports/Old mess/block/yellow_terracotta.png
+/1.18.2/imports/Old mess/block/yellow_wool.png
+/1.18.2/imports/Old mess/Chain Items/ancient_chain.png
+/1.18.2/imports/Old mess/Chain Items/big_ancient_chain.png
+/1.18.2/imports/Old mess/Chain Items/big_diamond_chain.png
+/1.18.2/imports/Old mess/Chain Items/big_emerald_chain.png
+/1.18.2/imports/Old mess/Chain Items/big_gold_chain.png
+/1.18.2/imports/Old mess/Chain Items/big_iron_chain.png
+/1.18.2/imports/Old mess/Chain Items/big_netherite_chain.png
+/1.18.2/imports/Old mess/Chain Items/diamond_chain.png
+/1.18.2/imports/Old mess/Chain Items/emerald_chain.png
+/1.18.2/imports/Old mess/Chain Items/gold_chain.png
+/1.18.2/imports/Old mess/Chain Items/netherite_chain.png
+/1.18.2/imports/Old mess/Chains/ancient_steel.png
+/1.18.2/imports/Old mess/Chains/chain_block.json
+/1.18.2/imports/Old mess/Chains/diamond_chain.png
+/1.18.2/imports/Old mess/Chains/emerald_chain.png
+/1.18.2/imports/Old mess/Chains/gold_chain.png
+/1.18.2/imports/Old mess/Chains/netherite_chain.png
+/1.18.2/imports/Old mess/Clovers/clover_1.json
+/1.18.2/imports/Old mess/Clovers/clover_2.json
+/1.18.2/imports/Old mess/Clovers/clover_3.json
+/1.18.2/imports/Old mess/Clovers/clover_4.json
+/1.18.2/imports/Old mess/Clovers/clover_item.png
+/1.18.2/imports/Old mess/Clovers/clover_stem.png
+/1.18.2/imports/Old mess/Clovers/clovers.png
+/1.18.2/imports/Old mess/copperchain/copper_chain.png
+/1.18.2/imports/Old mess/copperchain/exposed_copper_chain.png
+/1.18.2/imports/Old mess/copperchain/oxidized_copper_chain.png
+/1.18.2/imports/Old mess/copperchain/weathered_copper_chain.png
+/1.18.2/imports/Old mess/flower_bed/_list.json
+/1.18.2/imports/Old mess/flower_bed/break1.ogg
+/1.18.2/imports/Old mess/flower_bed/break2.ogg
+/1.18.2/imports/Old mess/flower_bed/break3.ogg
+/1.18.2/imports/Old mess/flower_bed/break4.ogg
+/1.18.2/imports/Old mess/flower_bed/break5.ogg
+/1.18.2/imports/Old mess/flower_bed/step1.ogg
+/1.18.2/imports/Old mess/flower_bed/step2.ogg
+/1.18.2/imports/Old mess/flower_bed/step3.ogg
+/1.18.2/imports/Old mess/flower_bed/step4.ogg
+/1.18.2/imports/Old mess/flower_bed/step5.ogg
+/1.18.2/imports/Old mess/GlazedGlass/black_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/blue_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/brown_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/cyan_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/gray_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/green_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/light_blue_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/light_gray_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/lime_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/magenta_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/orange_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/pink_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/purple_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/red_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/white_glazed_glass.png
+/1.18.2/imports/Old mess/GlazedGlass/yellow_glazed_glass.png
+/1.18.2/imports/Old mess/Icicles/icicle_block.png
+/1.18.2/imports/Old mess/Icicles/icicle_down_base.png
+/1.18.2/imports/Old mess/Icicles/icicle_down_frustum.png
+/1.18.2/imports/Old mess/Icicles/icicle_down_middle.png
+/1.18.2/imports/Old mess/Icicles/icicle_down_tip.png
+/1.18.2/imports/Old mess/Icicles/icicle_down_tip_merge.png
+/1.18.2/imports/Old mess/Icicles/icicle_up_base.png
+/1.18.2/imports/Old mess/Icicles/icicle_up_frustum.png
+/1.18.2/imports/Old mess/Icicles/icicle_up_middle.png
+/1.18.2/imports/Old mess/Icicles/icicle_up_tip.png
+/1.18.2/imports/Old mess/Icicles/icicle_up_tip_merge.png
+/1.18.2/imports/Old mess/Icicles/packed_icicle_block.png
+/1.18.2/imports/Old mess/Large Chains/large_ancient_steel_chain.png
+/1.18.2/imports/Old mess/Large Chains/large_chain.json
+/1.18.2/imports/Old mess/Large Chains/large_diamond_chain.png
+/1.18.2/imports/Old mess/Large Chains/large_emerald_chain.png
+/1.18.2/imports/Old mess/Large Chains/large_gold_chain.png
+/1.18.2/imports/Old mess/Large Chains/large_iron_chain.png
+/1.18.2/imports/Old mess/Large Chains/large_netherite_chain.png
+/1.18.2/imports/Old mess/particles/glow_lime_sparkle.png
+/1.18.2/imports/Old mess/particles/glow_sparkle.png
+/1.18.2/imports/Old mess/Petals/items/blue_petals.png
+/1.18.2/imports/Old mess/Petals/items/orange_petals.png
+/1.18.2/imports/Old mess/Petals/items/pink_petals.png
+/1.18.2/imports/Old mess/Petals/items/purple_petals.png
+/1.18.2/imports/Old mess/Petals/items/red_petals.png
+/1.18.2/imports/Old mess/Petals/blue_petals.png
+/1.18.2/imports/Old mess/Petals/flowerbed_1.json
+/1.18.2/imports/Old mess/Petals/flowerbed_2.json
+/1.18.2/imports/Old mess/Petals/flowerbed_3.json
+/1.18.2/imports/Old mess/Petals/flowerbed_4.json
+/1.18.2/imports/Old mess/Petals/orange_petals.png
+/1.18.2/imports/Old mess/Petals/petals_stem.png
+/1.18.2/imports/Old mess/Petals/pink_petals.png
+/1.18.2/imports/Old mess/Petals/purple_petals.png
+/1.18.2/imports/Old mess/Petals/red_petals.png
+/1.18.2/imports/snow/grass_block.json
+/1.18.2/imports/snow/snow_bricks.png
+/1.18.2/imports/snow/snowy_grass_block_side_overlay.png
+/1.18.2/imports/snow/snowy_grass_block_snow.png
+/1.18.2/imports/snow/snowy_grass_block_top.png
+/1.18.2/imports/snow overlays/snow_overlay.json
+/1.18.2/imports/snow overlays/snow_overlay.png
+/1.18.2/imports/SporeBlossom/spore_blossom_blue.png
+/1.18.2/imports/SporeBlossom/spore_blossom_cyan.png
+/1.18.2/imports/SporeBlossom/spore_blossom_orange.png
+/1.18.2/imports/SporeBlossom/spore_blossom_purple.png
+/1.18.2/imports/SporeBlossom/spore_blossom_red.png
+/1.18.2/creative format.txt
+/1.18.2/RECIPES.txt
+/imports/brown_mushroom_shelves.png
+/imports/red_mushroom_shelves.png
+/1.18.2/src/generated/resources/.cache/cache

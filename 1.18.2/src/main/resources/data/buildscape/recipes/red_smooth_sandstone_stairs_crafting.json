@@ -1,9 +1,9 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "C": {
-      "item": "buildscape:red_smooth_sandstone_item"
+      "item": "buildscape:red_smooth_sandstone"
     }
   },
   "pattern": [
@@ -11,5 +11,5 @@
     "CC ",
     "CCC"
   ],
-  "result":{"count":4,"item":"buildscape:red_smooth_sandstone_stairs_item"}
+  "result":{"count":4,"item":"buildscape:red_smooth_sandstone_stairs"}
 }

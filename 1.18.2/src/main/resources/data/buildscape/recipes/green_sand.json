@@ -1,4 +1,4 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
@@ -14,5 +14,5 @@
     "BDB",
     "BBB"
   ],
-  "result":{"count":8,"item":"buildscape:green_sand_item"}
+  "result":{"count":8,"item":"buildscape:green_sand"}
 }

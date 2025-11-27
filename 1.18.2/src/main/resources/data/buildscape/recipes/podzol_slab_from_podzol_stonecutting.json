@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:podzol"
   },
-  "result":"buildscape:podzol_slab_item","count":2
+  "result":"buildscape:podzol_slab","count":2
 }
 

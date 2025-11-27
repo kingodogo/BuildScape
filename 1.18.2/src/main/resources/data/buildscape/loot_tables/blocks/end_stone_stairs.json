@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:end_stone_stairs_item"
+          "name": "buildscape:end_stone_stairs"
         }
       ],
       "conditions": [

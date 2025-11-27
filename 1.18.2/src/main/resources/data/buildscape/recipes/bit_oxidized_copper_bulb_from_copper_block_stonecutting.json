@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:copper_block"
   },
-  "result":"buildscape:bit_oxidized_copper_bulb_item","count":1
+  "result":"buildscape:bit_oxidized_copper_bulb","count":1
 }
 

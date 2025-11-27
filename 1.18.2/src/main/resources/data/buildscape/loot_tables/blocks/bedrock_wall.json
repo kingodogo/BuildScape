@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:bedrock_wall_item"
+          "name": "buildscape:bedrock_wall"
         }
       ],
       "conditions": [

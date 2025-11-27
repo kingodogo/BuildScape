@@ -1,14 +1,14 @@
-﻿{
+{
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
     "G": {
-      "item": "buildscape:light_blue_mosaic_glass_item"
+      "item": "buildscape:light_blue_mosaic_glass"
     }
   },
   "pattern": [
     "GGG",
     "GGG"
   ],
-  "result":{"count":16,"item":"buildscape:light_blue_mosaic_glass_pane_item"}
+  "result":{"count":16,"item":"buildscape:light_blue_mosaic_glass_pane"}
 }

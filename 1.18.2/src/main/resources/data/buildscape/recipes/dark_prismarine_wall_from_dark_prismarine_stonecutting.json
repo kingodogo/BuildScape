@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
     "item": "minecraft:dark_prismarine"
   },
-  "result":"buildscape:dark_prismarine_wall_item","count":1
+  "result":"buildscape:dark_prismarine_wall","count":1
 }
 

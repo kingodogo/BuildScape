@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:moss_layers_item"
+          "name": "buildscape:moss_layers"
         }
       ],
       "conditions": [

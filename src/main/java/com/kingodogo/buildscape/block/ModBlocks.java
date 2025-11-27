@@ -686,9 +686,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BEDROCK_PANE = BLOCKS.register("bedrock_pane",
         () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).strength(-1.0f, 3600000.0f).sound(net.minecraft.world.level.block.SoundType.STONE)));
     public static final RegistryObject<Block> OBSIDIAN_STAIRS = BLOCKS.register("obsidian_stairs",
-        () -> new StairBlock(Blocks.OBSIDIAN.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).strength(50.0f, 1200.0f).requiresCorrectToolForDrops()));
+        () -> new StairBlock(Blocks.OBSIDIAN.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> OBSIDIAN_SLAB = BLOCKS.register("obsidian_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(50.0f, 1200.0f).requiresCorrectToolForDrops()));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PRISMARINE_BRICKS_WALL = BLOCKS.register("prismarine_bricks_wall",
         () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).strength(1.5f, 6.0f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DARK_PRISMARINE_WALL = BLOCKS.register("dark_prismarine_wall",
@@ -702,7 +702,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SMOOTH_BASALT_SLAB = BLOCKS.register("smooth_basalt_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(1.25f, 4.2f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.BASALT)));
     public static final RegistryObject<Block> MOSS_BLOCK_SLAB = BLOCKS.register("moss_block_slab",
-        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSS_BLOCK).sound(net.minecraft.world.level.block.SoundType.MOSS)));
+        () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSS_BLOCK).strength(0.1f).sound(net.minecraft.world.level.block.SoundType.MOSS)));
     public static final RegistryObject<Block> AMETHYST_BLOCK_SLAB = BLOCKS.register("amethyst_block_slab",
         () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).strength(1.5f).requiresCorrectToolForDrops().sound(net.minecraft.world.level.block.SoundType.AMETHYST)));
     

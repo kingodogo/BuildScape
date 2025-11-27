@@ -1,8 +1,8 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "buildscape:white_sandstone_item"
+    "item": "buildscape:white_sandstone"
   },
-  "result":"buildscape:white_sandstone_wall_item","count":1
+  "result":"buildscape:white_sandstone_wall","count":1
 }
 

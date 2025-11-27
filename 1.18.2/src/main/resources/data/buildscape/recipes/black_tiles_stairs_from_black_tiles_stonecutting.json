@@ -1,5 +1,5 @@
-﻿{
+{
   "type": "minecraft:stonecutting",
-  "ingredient": { "item": "buildscape:black_tiles_item" },
-  "result":"buildscape:black_tiles_stairs_item","count":1
+  "ingredient": { "item": "buildscape:black_tiles" },
+  "result":"buildscape:black_tiles_stairs","count":2
 }

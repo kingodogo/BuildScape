@@ -16,7 +16,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-// Moss overlay item - decorative overlay block
+// Moss overlay item - decorative overlay block that can be placed on any block
 public class MossOverlayBlock extends Block {
     
     protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
@@ -42,10 +42,12 @@ public class MossOverlayBlock extends Block {
     
     @Override
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        BlockState blockState = level.getBlockState(pos.below());
-        return Block.isFaceFull(blockState.getCollisionShape(level, pos.below()), Direction.UP) || 
-               blockState.is(Blocks.HONEY_BLOCK) || 
-               blockState.is(Blocks.SOUL_SAND);
+        BlockState blockBelow = level.getBlockState(pos.below());
+        // Allow placement on any block that is not air or barrier
+        if (blockBelow.isAir() || blockBelow.is(Blocks.BARRIER)) {
+            return false;
+        }
+        return true;
     }
     
     @Override
@@ -54,10 +56,27 @@ public class MossOverlayBlock extends Block {
     }
     
     @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        BlockState state = super.getStateForPlacement(context);
+        if (state != null) {
+            BlockPos placePos = context.getClickedPos();
+            BlockState clickedState = context.getLevel().getBlockState(placePos);
+            if (!clickedState.canBeReplaced(context)) {
+                placePos = placePos.relative(context.getClickedFace());
+            }
+            if (this.canSurvive(state, context.getLevel(), placePos)) {
+                return state;
+            }
+        }
+        return null;
+    }
+    
+    @Override
     public boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
         return true;
     }
     
+    @Override
     public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
         return type == PathComputationType.LAND;
     }

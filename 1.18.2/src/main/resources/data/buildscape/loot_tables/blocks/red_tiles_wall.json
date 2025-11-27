@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:red_tiles_wall_item"
+          "name": "buildscape:red_tiles_wall"
         }
       ],
       "conditions": [

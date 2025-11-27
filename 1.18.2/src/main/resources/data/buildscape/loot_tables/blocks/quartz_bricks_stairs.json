@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:quartz_bricks_stairs_item"
+          "name": "buildscape:quartz_bricks_stairs"
         }
       ],
       "conditions": [

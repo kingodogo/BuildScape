@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:moss_overlay_item"
+          "name": "buildscape:moss_overlay"
         }
       ],
       "conditions": [

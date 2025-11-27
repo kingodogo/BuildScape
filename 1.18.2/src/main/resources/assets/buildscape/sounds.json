@@ -48,22 +48,182 @@
   },
   "block.mud.break": {
     "sounds": [
-      "buildscape:block/mud/break1",
-      "buildscape:block/mud/break2",
-      "buildscape:block/mud/break3",
-      "buildscape:block/mud/break4",
-      "buildscape:block/mud/break5",
-      "buildscape:block/mud/break6"
+      {
+        "name": "buildscape:block/mud/break1",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/break2",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/break3",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/break4",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/break5",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/break6",
+        "volume": 0.4,
+        "pitch": 0.9
+      }
     ]
   },
   "block.mud.step": {
     "sounds": [
-      "buildscape:block/mud/step1",
-      "buildscape:block/mud/step2",
-      "buildscape:block/mud/step3",
-      "buildscape:block/mud/step4",
-      "buildscape:block/mud/step5",
-      "buildscape:block/mud/step6"
+      {
+        "name": "buildscape:block/mud/step1",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/step2",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/step3",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/step4",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/step5",
+        "volume": 0.4,
+        "pitch": 0.9
+      },
+      {
+        "name": "buildscape:block/mud/step6",
+        "volume": 0.4,
+        "pitch": 0.9
+      }
+    ]
+  },
+  "block.decorated_pot.place": {
+    "sounds": [
+      "buildscape:block/decorated_pot/break1",
+      "buildscape:block/decorated_pot/break2",
+      "buildscape:block/decorated_pot/break3",
+      "buildscape:block/decorated_pot/break4"
+    ]
+  },
+  "block.decorated_pot.break": {
+    "sounds": [
+      "buildscape:block/decorated_pot/break1",
+      "buildscape:block/decorated_pot/break2",
+      "buildscape:block/decorated_pot/break3",
+      "buildscape:block/decorated_pot/break4"
+    ]
+  },
+  "block.decorated_pot.hit": {
+    "sounds": [
+      "buildscape:block/decorated_pot/break1",
+      "buildscape:block/decorated_pot/break2",
+      "buildscape:block/decorated_pot/break3",
+      "buildscape:block/decorated_pot/break4"
+    ]
+  },
+  "block.decorated_pot.step": {
+    "sounds": [
+      "buildscape:block/decorated_pot/step1",
+      "buildscape:block/decorated_pot/step2",
+      "buildscape:block/decorated_pot/step3",
+      "buildscape:block/decorated_pot/step4",
+      "buildscape:block/decorated_pot/step5"
+    ]
+  },
+  "block.decorated_pot.fall": {
+    "sounds": [
+      "buildscape:block/decorated_pot/break1",
+      "buildscape:block/decorated_pot/break2",
+      "buildscape:block/decorated_pot/break3",
+      "buildscape:block/decorated_pot/break4"
+    ]
+  },
+  "block.decorated_pot.insert_item": {
+    "sounds": [
+      "buildscape:block/decorated_pot/insert1",
+      "buildscape:block/decorated_pot/insert2",
+      "buildscape:block/decorated_pot/insert3",
+      "buildscape:block/decorated_pot/insert4"
+    ]
+  },
+  "block.decorated_pot.insert_fail": {
+    "sounds": [
+      "buildscape:block/decorated_pot/insert_fail1",
+      "buildscape:block/decorated_pot/insert_fail2",
+      "buildscape:block/decorated_pot/insert_fail3",
+      "buildscape:block/decorated_pot/insert_fail4",
+      "buildscape:block/decorated_pot/insert_fail5"
+    ]
+  },
+  "block.decorated_pot.shatter": {
+    "sounds": [
+      "buildscape:block/decorated_pot/shatter1",
+      "buildscape:block/decorated_pot/shatter2",
+      "buildscape:block/decorated_pot/shatter3",
+      "buildscape:block/decorated_pot/shatter4",
+      "buildscape:block/decorated_pot/shatter5"
+    ]
+  },
+  "block.flower_bed.break": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/break1", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break2", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break3", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break4", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/break5", "volume": 0.8, "pitch": 0.96}
+    ]
+  },
+  "block.flower_bed.step": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.4, "pitch": 1.2},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.4, "pitch": 1.2}
+    ]
+  },
+  "block.flower_bed.place": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.8, "pitch": 0.96},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.8, "pitch": 0.96}
+    ]
+  },
+  "block.flower_bed.hit": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.2, "pitch": 0.6},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.2, "pitch": 0.6}
+    ]
+  },
+  "block.flower_bed.fall": {
+    "sounds": [
+      {"name": "buildscape:block/flower_bed/step1", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 0.4, "pitch": 0.9},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 0.4, "pitch": 0.9}
     ]
   }
 }

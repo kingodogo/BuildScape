@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "buildscape:smooth_basalt_stairs_item"
+          "name": "buildscape:smooth_basalt_stairs"
         }
       ],
       "conditions": [
