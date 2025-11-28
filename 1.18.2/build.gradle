@@ -95,6 +95,9 @@ minecraft {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
             
+            // Fix for "Name and ID cannot both be blank" error
+            args '--username', 'Dev'
+            
             // JVM arguments for better performance
             jvmArgs '-Xmx4G', '-Xms2G'
         }

@@ -192,11 +192,11 @@
   },
   "block.flower_bed.step": {
     "sounds": [
-      {"name": "buildscape:block/flower_bed/step1", "volume": 0.4, "pitch": 1.2},
-      {"name": "buildscape:block/flower_bed/step2", "volume": 0.4, "pitch": 1.2},
-      {"name": "buildscape:block/flower_bed/step3", "volume": 0.4, "pitch": 1.2},
-      {"name": "buildscape:block/flower_bed/step4", "volume": 0.4, "pitch": 1.2},
-      {"name": "buildscape:block/flower_bed/step5", "volume": 0.4, "pitch": 1.2}
+      {"name": "buildscape:block/flower_bed/step1", "volume": 1.0, "pitch": 1.0},
+      {"name": "buildscape:block/flower_bed/step2", "volume": 1.0, "pitch": 1.0},
+      {"name": "buildscape:block/flower_bed/step3", "volume": 1.0, "pitch": 1.0},
+      {"name": "buildscape:block/flower_bed/step4", "volume": 1.0, "pitch": 1.0},
+      {"name": "buildscape:block/flower_bed/step5", "volume": 1.0, "pitch": 1.0}
     ]
   },
   "block.flower_bed.place": {

@@ -33,6 +33,8 @@ public class BuildScape {
         @Override
         public void fillItemList(net.minecraft.core.NonNullList<ItemStack> items) {
             
+            // === COPPER VARIANTS ===
+            
             // Bit copper variants - Fresh
             items.add(new ItemStack(ModItems.BIT_COPPER_BLOCK.get()));
             items.add(new ItemStack(ModItems.BIT_COPPER_BLOCK_STAIRS.get()));
@@ -85,12 +87,15 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BIT_OXIDIZED_COPPER_BULB.get()));
             items.add(new ItemStack(ModItems.BIT_OXIDIZED_COPPER_GRATE.get()));
             
-            // Chains
-            items.add(new ItemStack(Items.CHAIN));
+            // Copper nugget and copper chains
+            items.add(new ItemStack(ModItems.COPPER_NUGGET.get()));
             items.add(new ItemStack(ModItems.COPPER_CHAIN.get()));
             items.add(new ItemStack(ModItems.EXPOSED_COPPER_CHAIN.get()));
             items.add(new ItemStack(ModItems.WEATHERED_COPPER_CHAIN.get()));
             items.add(new ItemStack(ModItems.OXIDIZED_COPPER_CHAIN.get()));
+            
+            // === CHAINS ===
+            items.add(new ItemStack(Items.CHAIN));
             items.add(new ItemStack(ModItems.LARGE_IRON_CHAIN.get()));
             items.add(new ItemStack(ModItems.ANCIENT_STEEL_CHAIN.get()));
             items.add(new ItemStack(ModItems.LARGE_ANCIENT_STEEL_CHAIN.get()));
@@ -103,7 +108,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.NETHERITE_CHAIN.get()));
             items.add(new ItemStack(ModItems.LARGE_NETHERITE_CHAIN.get()));
             
-            // Tuff variants
+            // === TUFF VARIANTS ===
             items.add(new ItemStack(ModItems.BIT_CHISELED_TUFF.get()));
             items.add(new ItemStack(ModItems.BIT_CHISELED_TUFF_BRICKS.get()));
             items.add(new ItemStack(ModItems.BIT_POLISHED_TUFF.get()));
@@ -115,7 +120,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BIT_TUFF_BRICKS_SLAB.get()));
             items.add(new ItemStack(ModItems.BIT_TUFF_BRICKS_WALL.get()));
             
-            // Colored Tiles
+            // === COLORED TILES ===
             
             // White tiles
             items.add(new ItemStack(ModItems.WHITE_TILES.get()));
@@ -213,7 +218,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_TILES_SLAB.get()));
             items.add(new ItemStack(ModItems.PINK_TILES_WALL.get()));
             
-            // Bamboo blocks
+            // === BAMBOO BLOCKS ===
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_STAIRS.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_SLAB.get()));
@@ -225,7 +230,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BAMBOO_TRAPDOOR.get()));
             items.add(new ItemStack(ModItems.BAMBOO_BLOCK_BUTTON.get()));
             
-            // Stripped bamboo blocks
+            // Stripped bamboo
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_STAIRS.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_SLAB.get()));
@@ -235,7 +240,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_PRESSURE_PLATE.get()));
             items.add(new ItemStack(ModItems.STRIPPED_BAMBOO_BLOCK_BUTTON.get()));
             
-            // Wood walls
+            // === WOOD WALLS ===
             items.add(new ItemStack(ModItems.OAK_WOOD_WALL.get()));
             items.add(new ItemStack(ModItems.STRIPPED_OAK_WOOD_WALL.get()));
             items.add(new ItemStack(ModItems.SPRUCE_WOOD_WALL.get()));
@@ -249,7 +254,9 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.ACACIA_WOOD_WALL.get()));
             items.add(new ItemStack(ModItems.STRIPPED_ACACIA_WOOD_WALL.get()));
             
-            // Ashpen Plank Family - White
+            // === ASHPEN PLANKS ===
+            
+            // White
             items.add(new ItemStack(ModItems.ASHPEN_WHITE_PLANKS.get()));
             items.add(new ItemStack(ModItems.ASHPEN_WHITE_STAIRS.get()));
             items.add(new ItemStack(ModItems.ASHPEN_WHITE_SLAB.get()));
@@ -393,7 +400,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_ASHPEN_FENCE.get()));
             items.add(new ItemStack(ModItems.PINK_ASHPEN_FENCE_GATE.get()));
             
-            // Concrete Variants
+            // === CONCRETE VARIANTS ===
             
             // White concrete
             items.add(new ItemStack(ModItems.WHITE_CONCRETE_SLAB.get()));
@@ -475,7 +482,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_CONCRETE_STAIRS.get()));
             items.add(new ItemStack(ModItems.PINK_CONCRETE_WALL.get()));
             
-            // Colored Sand Variants
+            // === COLORED SAND VARIANTS ===
             
             // White sand
             items.add(new ItemStack(ModItems.WHITE_SAND.get()));
@@ -486,6 +493,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.WHITE_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.WHITE_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.WHITE_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.WHITE_SMOOTH_SANDSTONE_WALL.get()));
             
             // Black sand
             items.add(new ItemStack(ModItems.BLACK_SAND.get()));
@@ -496,6 +504,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BLACK_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.BLACK_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.BLACK_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.BLACK_SMOOTH_SANDSTONE_WALL.get()));
             
             // Red sand
             items.add(new ItemStack(ModItems.RED_SAND.get()));
@@ -506,6 +515,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.RED_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.RED_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.RED_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.RED_SMOOTH_SANDSTONE_WALL.get()));
             
             // Orange sand
             items.add(new ItemStack(ModItems.ORANGE_SAND.get()));
@@ -516,6 +526,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.ORANGE_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.ORANGE_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.ORANGE_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.ORANGE_SMOOTH_SANDSTONE_WALL.get()));
             
             // Yellow sand
             items.add(new ItemStack(ModItems.YELLOW_SAND.get()));
@@ -526,6 +537,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.YELLOW_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.YELLOW_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.YELLOW_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.YELLOW_SMOOTH_SANDSTONE_WALL.get()));
             
             // Green sand
             items.add(new ItemStack(ModItems.GREEN_SAND.get()));
@@ -536,6 +548,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.GREEN_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.GREEN_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.GREEN_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.GREEN_SMOOTH_SANDSTONE_WALL.get()));
             
             // Blue sand
             items.add(new ItemStack(ModItems.BLUE_SAND.get()));
@@ -546,6 +559,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BLUE_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.BLUE_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.BLUE_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.BLUE_SMOOTH_SANDSTONE_WALL.get()));
             
             // Pink sand
             items.add(new ItemStack(ModItems.PINK_SAND.get()));
@@ -556,8 +570,9 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_SMOOTH_SANDSTONE.get()));
             items.add(new ItemStack(ModItems.PINK_SMOOTH_SANDSTONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.PINK_SMOOTH_SANDSTONE_SLAB.get()));
+            items.add(new ItemStack(ModItems.PINK_SMOOTH_SANDSTONE_WALL.get()));
             
-            // Colored Mosaic Glass
+            // === MOSAIC GLASS ===
             
             // White mosaic glass
             items.add(new ItemStack(ModItems.WHITE_MOSAIC_GLASS.get()));
@@ -623,7 +638,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_MOSAIC_GLASS.get()));
             items.add(new ItemStack(ModItems.PINK_MOSAIC_GLASS_PANE.get()));
             
-            // Colored Glazed Glass
+            // === GLAZED GLASS ===
             
             // White glazed glass
             items.add(new ItemStack(ModItems.WHITE_GLAZED_GLASS.get()));
@@ -689,9 +704,10 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.PINK_GLAZED_GLASS.get()));
             items.add(new ItemStack(ModItems.PINK_GLAZED_GLASS_PANE.get()));
             
-            // Decorated Pots
+            // === DECORATED POTS ===
             items.add(new ItemStack(ModItems.DECORATED_POT.get()));
             items.add(new ItemStack(ModItems.WHITE_DECORATED_POT.get()));
+            items.add(new ItemStack(ModItems.LIGHT_GRAY_DECORATED_POT.get()));
             items.add(new ItemStack(ModItems.GRAY_DECORATED_POT.get()));
             items.add(new ItemStack(ModItems.BLACK_DECORATED_POT.get()));
             items.add(new ItemStack(ModItems.BROWN_DECORATED_POT.get()));
@@ -707,8 +723,15 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.MAGENTA_DECORATED_POT.get()));
             items.add(new ItemStack(ModItems.PINK_DECORATED_POT.get()));
             
-            // Wool layers - all 16 colors
+            // === PILLARS ===
+            items.add(new ItemStack(ModItems.STONE_PILLAR.get()));
+            items.add(new ItemStack(ModItems.MOSSY_PILLAR.get()));
+            items.add(new ItemStack(ModItems.DEEPSLATE_PILLAR.get()));
+            items.add(new ItemStack(ModItems.QUARTZ_PILLAR.get()));
+            
+            // === CARPET LAYERS ===
             items.add(new ItemStack(ModItems.WHITE_CARPET_LAYERS.get()));
+            items.add(new ItemStack(ModItems.LIGHT_GRAY_CARPET_LAYERS.get()));
             items.add(new ItemStack(ModItems.GRAY_CARPET_LAYERS.get()));
             items.add(new ItemStack(ModItems.BLACK_CARPET_LAYERS.get()));
             items.add(new ItemStack(ModItems.BROWN_CARPET_LAYERS.get()));
@@ -724,7 +747,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.MAGENTA_CARPET_LAYERS.get()));
             items.add(new ItemStack(ModItems.PINK_CARPET_LAYERS.get()));
             
-            // Leaf layers - all leaf types
+            // === LEAF LAYERS ===
             items.add(new ItemStack(ModItems.OAK_LEAF_LAYERS.get()));
             items.add(new ItemStack(ModItems.SPRUCE_LEAF_LAYERS.get()));
             items.add(new ItemStack(ModItems.BIRCH_LEAF_LAYERS.get()));
@@ -734,7 +757,7 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.AZALEA_LEAF_LAYERS.get()));
             items.add(new ItemStack(ModItems.FLOWERING_AZALEA_LEAF_LAYERS.get()));
             
-            // Leaf hedges - all leaf types
+            // === LEAF HEDGES ===
             items.add(new ItemStack(ModItems.OAK_LEAF_HEDGE.get()));
             items.add(new ItemStack(ModItems.SPRUCE_LEAF_HEDGE.get()));
             items.add(new ItemStack(ModItems.BIRCH_LEAF_HEDGE.get()));
@@ -744,30 +767,71 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.AZALEA_LEAF_HEDGE.get()));
             items.add(new ItemStack(ModItems.FLOWERING_AZALEA_LEAF_HEDGE.get()));
             
-            // Pillars
-            items.add(new ItemStack(ModItems.STONE_PILLAR.get()));
-            items.add(new ItemStack(ModItems.MOSSY_PILLAR.get()));
-            items.add(new ItemStack(ModItems.DEEPSLATE_PILLAR.get()));
-            items.add(new ItemStack(ModItems.QUARTZ_PILLAR.get()));
+            // === ROSE VINES ===
+            items.add(new ItemStack(ModItems.RED_ROSE_VINES.get()));
+            items.add(new ItemStack(ModItems.BLACK_ROSE_VINES.get()));
+            items.add(new ItemStack(ModItems.BLUE_ROSE_VINES.get()));
+            items.add(new ItemStack(ModItems.WHITE_ROSE_VINES.get()));
             
-            // Calcite variants
+            // === MONET FLOWERS ===
+            items.add(new ItemStack(ModItems.RED_MONETS.get()));
+            items.add(new ItemStack(ModItems.BLUE_MONETS.get()));
+            items.add(new ItemStack(ModItems.PURPLE_MONETS.get()));
+            items.add(new ItemStack(ModItems.LIGHT_BLUE_MONETS.get()));
+            items.add(new ItemStack(ModItems.PINK_MONETS.get()));
+            items.add(new ItemStack(ModItems.YELLOW_MONETS.get()));
+            
+            // === PETALS ===
+            items.add(new ItemStack(ModItems.RED_PETAL.get()));
+            items.add(new ItemStack(ModItems.BLUE_PETAL.get()));
+            items.add(new ItemStack(ModItems.ORANGE_PETAL.get()));
+            items.add(new ItemStack(ModItems.PINK_PETAL.get()));
+            items.add(new ItemStack(ModItems.PURPLE_PETAL.get()));
+            
+            // === CLOVER ===
+            items.add(new ItemStack(ModItems.CLOVER.get()));
+            
+            // === COLORED SPORE BLOSSOMS ===
+            items.add(new ItemStack(ModItems.RED_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.CYAN_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.BLUE_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.PURPLE_SPORE_BLOSSOM.get()));
+            items.add(new ItemStack(ModItems.ORANGE_SPORE_BLOSSOM.get()));
+            
+            // === MUSHROOM SHELVES ===
+            items.add(new ItemStack(ModItems.BROWN_MUSHROOM_SHELVES.get()));
+            items.add(new ItemStack(ModItems.RED_MUSHROOM_SHELVES.get()));
+            
+            // === CALCITE VARIANTS ===
             items.add(new ItemStack(ModItems.CALCITE_STAIRS.get()));
             items.add(new ItemStack(ModItems.CALCITE_SLAB.get()));
             items.add(new ItemStack(ModItems.CALCITE_WALL.get()));
-            
-            // Mossy calcite variants
             items.add(new ItemStack(ModItems.MOSSY_CALCITE.get()));
             items.add(new ItemStack(ModItems.MOSSY_CALCITE_STAIRS.get()));
             items.add(new ItemStack(ModItems.MOSSY_CALCITE_SLAB.get()));
             items.add(new ItemStack(ModItems.MOSSY_CALCITE_WALL.get()));
             
-            // Moss variants
+            // === MOSS & OVERLAY ===
             items.add(new ItemStack(ModItems.MOSS_BLOCK_SLAB.get()));
             items.add(new ItemStack(ModItems.MOSS_LAYERS.get()));
             items.add(new ItemStack(ModItems.MOSS_OVERLAY.get()));
+            items.add(new ItemStack(ModItems.SNOW_STAIRS.get()));
+            items.add(new ItemStack(ModItems.SNOW_SLAB.get()));
             items.add(new ItemStack(ModItems.SNOW_OVERLAY.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS_STAIRS.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS_SLAB.get()));
+            items.add(new ItemStack(ModItems.SNOW_BRICKS_WALL.get()));
+            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK.get()));
+            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK_STAIRS.get()));
+            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK_SLAB.get()));
             
-            // Various slabs
+            // === ICICLES ===
+            items.add(new ItemStack(ModItems.ICICLE.get()));
+            items.add(new ItemStack(ModItems.ICICLE_BLOCK.get()));
+            items.add(new ItemStack(ModItems.PACKED_ICICLE_BLOCK.get()));
+            
+            // === DIRT & MUD SLABS ===
             items.add(new ItemStack(ModItems.PODZOL_SLAB.get()));
             items.add(new ItemStack(ModItems.MYCELIUM_SLAB.get()));
             items.add(new ItemStack(ModItems.DIRT_SLAB.get()));
@@ -776,96 +840,39 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.AMETHYST_BLOCK_SLAB.get()));
             items.add(new ItemStack(ModItems.HAY_BALE_SLAB.get()));
             
-            // Dripstone variants
+            // === STONE VARIANTS ===
             items.add(new ItemStack(ModItems.DRIPSTONE_BLOCK_STAIRS.get()));
             items.add(new ItemStack(ModItems.DRIPSTONE_BLOCK_SLAB.get()));
             items.add(new ItemStack(ModItems.DRIPSTONE_BLOCK_WALL.get()));
-            
-            // Polished basalt variants
             items.add(new ItemStack(ModItems.POLISHED_BASALT_STAIRS.get()));
             items.add(new ItemStack(ModItems.POLISHED_BASALT_SLAB.get()));
             items.add(new ItemStack(ModItems.POLISHED_BASALT_WALL.get()));
-            
-            // Smooth basalt variants
             items.add(new ItemStack(ModItems.SMOOTH_BASALT_STAIRS.get()));
             items.add(new ItemStack(ModItems.SMOOTH_BASALT_SLAB.get()));
-            
-            // Endstone variants
             items.add(new ItemStack(ModItems.END_STONE_STAIRS.get()));
             items.add(new ItemStack(ModItems.END_STONE_SLAB.get()));
             items.add(new ItemStack(ModItems.END_STONE_WALL.get()));
-            
-            // Quartz variants
             items.add(new ItemStack(ModItems.QUARTZ_BLOCK_WALL.get()));
             items.add(new ItemStack(ModItems.SMOOTH_QUARTZ_WALL.get()));
+            items.add(new ItemStack(ModItems.SMOOTH_SANDSTONE_WALL.get()));
             items.add(new ItemStack(ModItems.QUARTZ_BRICKS_STAIRS.get()));
             items.add(new ItemStack(ModItems.QUARTZ_BRICKS_SLAB.get()));
             items.add(new ItemStack(ModItems.QUARTZ_BRICKS_WALL.get()));
-            
-            // Prismarine variants
             items.add(new ItemStack(ModItems.PRISMARINE_BRICKS_WALL.get()));
             items.add(new ItemStack(ModItems.DARK_PRISMARINE_WALL.get()));
+            items.add(new ItemStack(ModItems.STONE_WALL.get()));
             
-            // Bedrock variants
+            // === BEDROCK VARIANTS ===
             items.add(new ItemStack(ModItems.BEDROCK_STAIRS.get()));
             items.add(new ItemStack(ModItems.BEDROCK_SLAB.get()));
             items.add(new ItemStack(ModItems.BEDROCK_WALL.get()));
             items.add(new ItemStack(ModItems.BEDROCK_PANE.get()));
             
-            // Obsidian variants
+            // === OBSIDIAN VARIANTS ===
             items.add(new ItemStack(ModItems.OBSIDIAN_STAIRS.get()));
             items.add(new ItemStack(ModItems.OBSIDIAN_SLAB.get()));
             
-            // Mushroom shelves
-            items.add(new ItemStack(ModItems.BROWN_MUSHROOM_SHELVES.get()));
-            items.add(new ItemStack(ModItems.RED_MUSHROOM_SHELVES.get()));
-            
-            // Rose Vines
-            items.add(new ItemStack(ModItems.RED_ROSE_VINES.get()));
-            items.add(new ItemStack(ModItems.BLACK_ROSE_VINES.get()));
-            items.add(new ItemStack(ModItems.BLUE_ROSE_VINES.get()));
-            items.add(new ItemStack(ModItems.WHITE_ROSE_VINES.get()));
-            
-            // Monet Flowers
-            items.add(new ItemStack(ModItems.RED_MONETS.get()));
-            items.add(new ItemStack(ModItems.BLUE_MONETS.get()));
-            items.add(new ItemStack(ModItems.PURPLE_MONETS.get()));
-            items.add(new ItemStack(ModItems.LIGHT_BLUE_MONETS.get()));
-            items.add(new ItemStack(ModItems.PINK_MONETS.get()));
-            items.add(new ItemStack(ModItems.YELLOW_MONETS.get()));
-            
-            // Clover
-            items.add(new ItemStack(ModItems.CLOVER.get()));
-            
-            // Petals
-            items.add(new ItemStack(ModItems.RED_PETAL.get()));
-            items.add(new ItemStack(ModItems.BLUE_PETAL.get()));
-            items.add(new ItemStack(ModItems.ORANGE_PETAL.get()));
-            items.add(new ItemStack(ModItems.PINK_PETAL.get()));
-            items.add(new ItemStack(ModItems.PURPLE_PETAL.get()));
-            
-            // Colored Spore Blossoms
-            items.add(new ItemStack(ModItems.RED_SPORE_BLOSSOM.get()));
-            items.add(new ItemStack(ModItems.CYAN_SPORE_BLOSSOM.get()));
-            items.add(new ItemStack(ModItems.BLUE_SPORE_BLOSSOM.get()));
-            items.add(new ItemStack(ModItems.PURPLE_SPORE_BLOSSOM.get()));
-            items.add(new ItemStack(ModItems.ORANGE_SPORE_BLOSSOM.get()));
-            
-            // Snow blocks
-            items.add(new ItemStack(ModItems.SNOW_BRICKS.get()));
-            items.add(new ItemStack(ModItems.SNOW_BRICKS_STAIRS.get()));
-            items.add(new ItemStack(ModItems.SNOW_BRICKS_SLAB.get()));
-            items.add(new ItemStack(ModItems.SNOW_BRICKS_WALL.get()));
-            items.add(new ItemStack(ModItems.SNOW_STAIRS.get()));
-            items.add(new ItemStack(ModItems.SNOW_SLAB.get()));
-            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK.get()));
-            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK_STAIRS.get()));
-            items.add(new ItemStack(ModItems.SNOWY_GRASS_BLOCK_SLAB.get()));
-            
-            // Copper nugget
-            items.add(new ItemStack(ModItems.COPPER_NUGGET.get()));
-            
-            // Big Candles
+            // === BIG CANDLES ===
             items.add(new ItemStack(ModItems.BIG_CANDLE.get()));
             items.add(new ItemStack(ModItems.BIG_WHITE_CANDLE.get()));
             items.add(new ItemStack(ModItems.BIG_ORANGE_CANDLE.get()));
@@ -885,11 +892,6 @@ public class BuildScape {
             items.add(new ItemStack(ModItems.BIG_BLACK_CANDLE.get()));
             items.add(new ItemStack(ModItems.BIG_AMETHYST_CANDLE.get()));
             items.add(new ItemStack(ModItems.BIG_SCULK_CANDLE.get()));
-            
-            // Icicles
-            items.add(new ItemStack(ModItems.ICICLE.get()));
-            items.add(new ItemStack(ModItems.ICICLE_BLOCK.get()));
-            items.add(new ItemStack(ModItems.PACKED_ICICLE_BLOCK.get()));
         }
     };
 
@@ -945,6 +947,110 @@ public class BuildScape {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Buildscape mod loaded on server");
+        
+        // Reset pillar ID manager cache for new world
+        com.kingodogo.buildscape.config.PillarIdManager.resetWorldCache();
+    }
+    
+    @SubscribeEvent
+    public void onServerStarted(net.minecraftforge.event.server.ServerStartedEvent event) {
+        LOGGER.info("BuildScape: Server fully started, loading pillar data...");
+        
+        // Load pillar data for this world (now that world path is available)
+        com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+        manager.load();
+        
+        LOGGER.info("BuildScape: Pillar ID manager loaded " + manager.getPillarCount() + " pillars");
+        
+        // Force immediate sync of all loaded pillars
+        manager.syncAllLoadedPillars(event.getServer());
+        
+        // Reset the tick counter so periodic sync starts soon
+        pillarSyncTickCounter = PILLAR_SYNC_INTERVAL - 20; // Next sync in 1 second
+    }
+    
+    @SubscribeEvent
+    public void onPlayerJoin(net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent event) {
+        if (event.getPlayer() instanceof net.minecraft.server.level.ServerPlayer) {
+            net.minecraft.server.level.ServerPlayer serverPlayer = (net.minecraft.server.level.ServerPlayer) event.getPlayer();
+            // Sync all pillars when player joins - delayed to ensure chunks are loaded
+            serverPlayer.getServer().execute(() -> {
+                LOGGER.info("Syncing pillars for player: " + serverPlayer.getName().getString());
+                com.kingodogo.buildscape.config.PillarIdManager.get().syncAllLoadedPillars(serverPlayer.getServer());
+            });
+        }
+    }
+    
+    @SubscribeEvent
+    public void onChunkLoad(net.minecraftforge.event.world.ChunkEvent.Load event) {
+        if (event.getWorld() instanceof net.minecraft.server.level.ServerLevel) {
+            net.minecraft.server.level.ServerLevel serverLevel = (net.minecraft.server.level.ServerLevel) event.getWorld();
+            
+            // Check if it's a LevelChunk (not ChunkAccess)
+            if (event.getChunk() instanceof net.minecraft.world.level.chunk.LevelChunk) {
+                net.minecraft.world.level.chunk.LevelChunk chunk = (net.minecraft.world.level.chunk.LevelChunk) event.getChunk();
+                
+                // Sync all pillar block entities in this chunk
+                serverLevel.getServer().execute(() -> {
+                    for (net.minecraft.world.level.block.entity.BlockEntity be : chunk.getBlockEntities().values()) {
+                        if (be instanceof com.kingodogo.buildscape.block.PillarBlockEntity) {
+                            com.kingodogo.buildscape.block.PillarBlockEntity pillarBE = (com.kingodogo.buildscape.block.PillarBlockEntity) be;
+                            pillarBE.syncColorsFromManager();
+                        }
+                    }
+                });
+            }
+        }
+    }
+    
+    // Counter for periodic pillar sync
+    private static int pillarSyncTickCounter = 0;
+    private static final int PILLAR_SYNC_INTERVAL = 100; // Every 5 seconds (100 ticks)
+    
+    @SubscribeEvent
+    public void onServerTick(net.minecraftforge.event.TickEvent.ServerTickEvent event) {
+        if (event.phase != net.minecraftforge.event.TickEvent.Phase.END) return;
+        
+        pillarSyncTickCounter++;
+        if (pillarSyncTickCounter >= PILLAR_SYNC_INTERVAL) {
+            pillarSyncTickCounter = 0;
+            
+            // Sync all loaded pillars periodically
+            net.minecraft.server.MinecraftServer server = net.minecraftforge.server.ServerLifecycleHooks.getCurrentServer();
+            if (server != null) {
+                com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+                
+                for (net.minecraft.server.level.ServerLevel level : server.getAllLevels()) {
+                    String dimensionKey = com.kingodogo.buildscape.config.PillarIdManager.getDimensionKey(level);
+                    
+                    // Iterate through all pillar data and sync
+                    for (String pillarId : manager.getAllPillarIds()) {
+                        com.kingodogo.buildscape.config.PillarIdManager.PillarData data = manager.getPillarData(pillarId);
+                        if (data == null || !data.dimension.equals(dimensionKey)) continue;
+                        if (!data.hasColors()) continue;
+                        
+                        net.minecraft.core.BlockPos pos = data.getBlockPos();
+                        if (!level.hasChunkAt(pos)) continue;
+                        
+                        net.minecraft.world.level.block.entity.BlockEntity be = level.getBlockEntity(pos);
+                        if (be instanceof com.kingodogo.buildscape.block.PillarBlockEntity) {
+                            com.kingodogo.buildscape.block.PillarBlockEntity pillarBE = (com.kingodogo.buildscape.block.PillarBlockEntity) be;
+                            
+                            // Force sync colors from manager
+                            java.util.List<String> managerColors = data.getColors();
+                            java.util.List<String> beColors = pillarBE.getParticleColors();
+                            
+                            // Check if colors are different or missing
+                            if (beColors == null || beColors.isEmpty() || !beColors.equals(managerColors)) {
+                                // Force set colors directly
+                                pillarBE.forceSetColors(managerColors, data.id);
+                                LOGGER.debug("Force synced pillar {} with {} colors", data.id, managerColors.size());
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @SubscribeEvent
