@@ -216,7 +216,7 @@ public class ModSounds {
     public static com.kingodogo.buildscape.block.CustomSoundType FLOWER_BED_SOUNDS() {
         return new com.kingodogo.buildscape.block.CustomSoundType(
             0.8f, 0.96f,  // break volume, pitch
-            0.4f, 1.2f,   // step volume, pitch (increased from 0.12)
+            0.25f, 1.2f,  // step volume, pitch (slightly louder than vanilla)
             0.8f, 0.96f,  // place volume, pitch
             0.2f, 0.6f,   // hit volume, pitch
             0.4f, 0.9f,   // fall volume, pitch

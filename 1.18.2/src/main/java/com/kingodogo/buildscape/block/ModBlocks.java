@@ -3346,38 +3346,38 @@ public class ModBlocks {
         () -> new CloverBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.PLANT)
             .noCollission()
             .instabreak()
-            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+            .sound(SoundType.GRASS)));
     
     // Petals
     public static final RegistryObject<Block> RED_PETAL = BLOCKS.register("red_petal",
         () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_RED)
             .noCollission()
             .instabreak()
-            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+            .sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> BLUE_PETAL = BLOCKS.register("blue_petal",
         () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BLUE)
             .noCollission()
             .instabreak()
-            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+            .sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> ORANGE_PETAL = BLOCKS.register("orange_petal",
         () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_ORANGE)
             .noCollission()
             .instabreak()
-            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+            .sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> PINK_PETAL = BLOCKS.register("pink_petal",
         () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PINK)
             .noCollission()
             .instabreak()
-            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+            .sound(SoundType.GRASS)));
 
     public static final RegistryObject<Block> PURPLE_PETAL = BLOCKS.register("purple_petal",
         () -> new PetalBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_PURPLE)
             .noCollission()
             .instabreak()
-            .sound(com.kingodogo.buildscape.sound.ModSounds.FLOWER_BED_SOUNDS())));
+            .sound(SoundType.GRASS)));
     
     // Colored Spore Blossoms
     public static final RegistryObject<Block> RED_SPORE_BLOSSOM = BLOCKS.register("red_spore_blossom",
