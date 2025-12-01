@@ -5,3 +5,5 @@ public class WeatheredCopperBulbBlock extends CopperBulbBlock {
         super(properties, 8); // Weathered copper emits 8 light
     }
 }
+
+// Kingooo Finished this File on 2025-01-12

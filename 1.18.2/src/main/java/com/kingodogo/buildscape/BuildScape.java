@@ -23,6 +23,19 @@ public class BuildScape {
     public static final String MODID = "buildscape";
     private static final Logger LOGGER = LogManager.getLogger();
     
+    // Get logger instance
+    public static Logger getLogger() {
+        return LOGGER;
+    }
+    
+    // Async executor pool for offloading heavy computation from main thread
+    private static final java.util.concurrent.ExecutorService ASYNC_POOL = 
+        java.util.concurrent.Executors.newCachedThreadPool(r -> {
+            Thread t = new Thread(r, "BuildScape-Async");
+            t.setDaemon(true);
+            return t;
+        });
+    
     // Creative Tab
     public static final CreativeModeTab BUILDSCAPE_TAB = new CreativeModeTab("buildscape") {
         @Override
@@ -913,12 +926,9 @@ public class BuildScape {
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        net.minecraftforge.fml.ModLoadingContext.get().registerConfig(
-                net.minecraftforge.fml.config.ModConfig.Type.COMMON, Config.SPEC
-        );
-
         LOGGER.info("BuildScape mod initialized!");
     }
+    
 
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -944,40 +954,137 @@ public class BuildScape {
         });
     }
 
+    // Flag to track if server is fully initialized (after data is loaded)
+    private static boolean serverFullyInitialized = false;
+    
+    // Flag to track if we've started the delayed loading process
+    private static boolean pillarDataLoadStarted = false;
+    
+    // Counter to wait for world to be fully loaded before loading pillar data
+    private static int worldLoadWaitTicks = 0;
+    private static final int WORLD_LOAD_WAIT_TICKS = 40; // Wait 2 seconds (40 ticks) after server starts
+    
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Buildscape mod loaded on server");
         
+        // Reset flags - server is starting but not fully initialized yet
+        serverFullyInitialized = false;
+        pillarDataLoadStarted = false;
+        worldLoadWaitTicks = 0;
+        recoveryDelayTicks = 0;
+        recoveryAttempted = false;
+        
         // Reset pillar ID manager cache for new world
+        // This MUST be called to reset hasLoaded flag so file can be loaded again
+        // This also sets the world load start time to prevent recovery during loading
         com.kingodogo.buildscape.config.PillarIdManager.resetWorldCache();
     }
     
     @SubscribeEvent
     public void onServerStarted(net.minecraftforge.event.server.ServerStartedEvent event) {
-        LOGGER.info("BuildScape: Server fully started, loading pillar data...");
+        LOGGER.info("BuildScape: Server started - will load pillar data after world is fully loaded");
         
-        // Load pillar data for this world (now that world path is available)
-        com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
-        manager.load();
+        // DO NOT load pillar data here - wait for server tick event
+        // This ensures the world is completely loaded before we touch any files
+        pillarDataLoadStarted = false;
+        worldLoadWaitTicks = 0;
+    }
+    
+    @SubscribeEvent
+    public void onServerStopped(net.minecraftforge.event.server.ServerStoppedEvent event) {
+        LOGGER.info("BuildScape: Server stopped - resetting pillar data state");
         
-        LOGGER.info("BuildScape: Pillar ID manager loaded " + manager.getPillarCount() + " pillars");
+        // Reset all flags when server stops so they can be reloaded for next world
+        serverFullyInitialized = false;
+        pillarDataLoadStarted = false;
+        worldLoadWaitTicks = 0;
+        recoveryDelayTicks = 0;
+        recoveryAttempted = false;
         
-        // Force immediate sync of all loaded pillars
-        manager.syncAllLoadedPillars(event.getServer());
-        
-        // Reset the tick counter so periodic sync starts soon
-        pillarSyncTickCounter = PILLAR_SYNC_INTERVAL - 20; // Next sync in 1 second
+        // Reset pillar ID manager state so it can load again for next world
+        com.kingodogo.buildscape.config.PillarIdManager.resetWorldCache();
+    }
+    
+    // Check if server is fully initialized
+    public static boolean isServerFullyInitialized() {
+        return serverFullyInitialized;
+    }
+    
+    // Get async executor pool
+    public static java.util.concurrent.ExecutorService getAsyncPool() {
+        return ASYNC_POOL;
     }
     
     @SubscribeEvent
     public void onPlayerJoin(net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getPlayer() instanceof net.minecraft.server.level.ServerPlayer) {
             net.minecraft.server.level.ServerPlayer serverPlayer = (net.minecraft.server.level.ServerPlayer) event.getPlayer();
-            // Sync all pillars when player joins - delayed to ensure chunks are loaded
-            serverPlayer.getServer().execute(() -> {
-                LOGGER.info("Syncing pillars for player: " + serverPlayer.getName().getString());
-                com.kingodogo.buildscape.config.PillarIdManager.get().syncAllLoadedPillars(serverPlayer.getServer());
-            });
+            
+            // Load pillar data file on first player join (not during world loading)
+            // This prevents hangs when file doesn't exist during world opening
+            // File loading is async to prevent blocking player join
+            
+            // Safety check: Reset state if server was not fully initialized
+            // This handles cases where onServerStarting didn't fire properly
+            if (!serverFullyInitialized) {
+                com.kingodogo.buildscape.config.PillarIdManager.resetWorldCache();
+            }
+            
+            com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+            if (!manager.hasLoaded()) {
+                LOGGER.info("BuildScape: First player joined - loading pillar data file asynchronously...");
+                manager.load();
+                
+                // DO NOT set serverFullyInitialized yet - wait for file to actually load
+                // File loading happens in background, and hasLoaded will be true when data is ready
+                // We'll set serverFullyInitialized in onServerTick once hasLoaded is true
+            } else {
+                // File was already loaded - mark server as initialized
+                serverFullyInitialized = true;
+            }
+            
+            // DO NOT sync pillars immediately when player joins
+            // This can cause hangs during world loading, especially with older worlds
+            // Pillars will be synced naturally as chunks load via onChunkLoad event
+            // Additional sync will happen periodically via onServerTick after world is stable
+            LOGGER.info("BuildScape: Player joined - pillars will sync as chunks load");
+        }
+    }
+    
+    // Handle player logout - reset state for world switching
+    @SubscribeEvent
+    public void onPlayerLogout(net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent event) {
+        LOGGER.info("BuildScape: Player logged out - resetting state for world switch");
+        
+        // Reset flags to allow proper reload when new world loads
+        // Don't clear PillarIdManager here - let onServerStarting handle it
+        // But reset the initialization flags
+        serverFullyInitialized = false;
+        pillarDataLoadStarted = false;
+        worldLoadWaitTicks = 0;
+        pillarSyncTickCounter = 0;
+        recoveryDelayTicks = 0;
+        recoveryAttempted = false;
+    }
+    
+    // Handle world unload - clear cached data
+    @SubscribeEvent
+    public void onWorldUnload(net.minecraftforge.event.world.WorldEvent.Unload event) {
+        if (event.getWorld() instanceof net.minecraft.server.level.ServerLevel) {
+            LOGGER.info("BuildScape: World unloading - resetting cached data");
+            
+            // Reset pillar ID manager cache when world unloads
+            // This ensures the next world gets a fresh start
+            com.kingodogo.buildscape.config.PillarIdManager.resetWorldCache();
+            
+            // Reset initialization flags
+            serverFullyInitialized = false;
+            pillarDataLoadStarted = false;
+            worldLoadWaitTicks = 0;
+            pillarSyncTickCounter = 0;
+            recoveryDelayTicks = 0;
+            recoveryAttempted = false;
         }
     }
     
@@ -986,19 +1093,56 @@ public class BuildScape {
         if (event.getWorld() instanceof net.minecraft.server.level.ServerLevel) {
             net.minecraft.server.level.ServerLevel serverLevel = (net.minecraft.server.level.ServerLevel) event.getWorld();
             
-            // Check if it's a LevelChunk (not ChunkAccess)
+            // Don't sync during world loading - only sync after server is fully initialized
+            if (!serverFullyInitialized) {
+                return; // Server not fully initialized yet, skip syncing
+            }
+            
+            net.minecraft.server.MinecraftServer server = serverLevel.getServer();
+            if (server == null || !server.isRunning()) {
+                return; // Server not ready yet, skip syncing
+            }
+            
+            // Additional safety: ensure server has players (world is actually loaded)
+            if (server.getPlayerList().getPlayerCount() == 0) {
+                return; // No players yet, world might still be loading
+            }
+            
+            // Check if it's a LevelChunk (not ChunkAccess) and fully loaded
             if (event.getChunk() instanceof net.minecraft.world.level.chunk.LevelChunk) {
                 net.minecraft.world.level.chunk.LevelChunk chunk = (net.minecraft.world.level.chunk.LevelChunk) event.getChunk();
                 
-                // Sync all pillar block entities in this chunk
-                serverLevel.getServer().execute(() -> {
+                // Additional check: ensure chunk is fully loaded
+                if (!chunk.getStatus().isOrAfter(net.minecraft.world.level.chunk.ChunkStatus.FULL)) {
+                    return; // Chunk not fully loaded yet
+                }
+                
+                // Sync all pillar block entities in this chunk using fully async pattern
+                // syncColorsFromManager() is now COMPLETELY non-blocking - it immediately returns
+                // and defers all world access via server.execute(), so we can call it directly
+                // without any additional deferral needed
+                try {
+                    // Process pillars - syncColorsFromManager() is now fully async and non-blocking
+                    // It immediately returns and schedules all work asynchronously
+                    int processed = 0;
                     for (net.minecraft.world.level.block.entity.BlockEntity be : chunk.getBlockEntities().values()) {
                         if (be instanceof com.kingodogo.buildscape.block.PillarBlockEntity) {
                             com.kingodogo.buildscape.block.PillarBlockEntity pillarBE = (com.kingodogo.buildscape.block.PillarBlockEntity) be;
+                            // This call is COMPLETELY non-blocking - it immediately returns
+                            // and defers all world access and processing to async tasks
                             pillarBE.syncColorsFromManager();
+                            processed++;
                         }
                     }
-                });
+                    
+                    // Log if many pillars were processed (for debugging)
+                    if (processed > 10) {
+                        LOGGER.debug("Scheduled sync for {} pillars in chunk at {}", processed, chunk.getPos());
+                    }
+                } catch (Exception e) {
+                    // Don't let sync errors break chunk loading
+                    LOGGER.debug("Error scheduling pillar sync in chunk: " + e.getMessage());
+                }
             }
         }
     }
@@ -1007,48 +1151,178 @@ public class BuildScape {
     private static int pillarSyncTickCounter = 0;
     private static final int PILLAR_SYNC_INTERVAL = 100; // Every 5 seconds (100 ticks)
     
+    // Counter for delayed recovery - only run recovery after world has been stable
+    private static int recoveryDelayTicks = 0;
+    private static final int RECOVERY_DELAY_TICKS = 600; // 30 seconds (600 ticks) before allowing recovery
+    private static boolean recoveryAttempted = false;
+    
     @SubscribeEvent
     public void onServerTick(net.minecraftforge.event.TickEvent.ServerTickEvent event) {
         if (event.phase != net.minecraftforge.event.TickEvent.Phase.END) return;
+        
+        // File loading is now done in onPlayerJoin event, not here
+        // This prevents hangs during world loading when file doesn't exist
+        
+        // Additional safety check: ensure server has players (world is actually loaded)
+        net.minecraft.server.MinecraftServer server = net.minecraftforge.server.ServerLifecycleHooks.getCurrentServer();
+        if (server == null || !server.isRunning() || server.getPlayerList().getPlayerCount() == 0) {
+            return; // No players yet, world might still be loading
+        }
+        
+        // Check if pillar data has finished loading - set serverFullyInitialized when ready
+        if (!serverFullyInitialized) {
+            com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+            if (manager != null && manager.hasLoaded()) {
+                // File has finished loading - now safe to mark server as initialized
+                serverFullyInitialized = true;
+                LOGGER.info("BuildScape: Pillar data loaded - server fully initialized");
+            } else {
+                // Still loading - wait for next tick
+                return;
+            }
+        }
+        
+        // Only do periodic sync if server is fully initialized (data loaded)
+        if (!serverFullyInitialized) {
+            return; // Wait for data to be loaded first
+        }
+        
+        // Process ID-based sync queue (non-blocking, processes a few IDs per tick)
+        // This syncs all pillars with the same ID together, without requiring chunk access upfront
+        com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+        if (manager != null && manager.hasSyncQueueItems()) {
+            // Process up to 5 IDs per tick to avoid lag spikes
+            int processed = 0;
+            int maxPerTick = 5;
+            while (processed < maxPerTick && manager.hasSyncQueueItems()) {
+                String pillarId = manager.pollSyncQueue();
+                if (pillarId != null && !pillarId.isEmpty()) {
+                    try {
+                        // Sync all pillars with this ID (ID-based, no chunk access required upfront)
+                        manager.syncAllPillarsWithId(pillarId, server);
+                        processed++;
+                    } catch (Exception e) {
+                        LOGGER.warn("Error processing sync queue for pillar ID {}: {}", pillarId, e.getMessage());
+                    }
+                } else {
+                    break;
+                }
+            }
+        }
+        
+        // Handle delayed recovery - only attempt recovery after world has been stable for 30 seconds
+        recoveryDelayTicks++;
+        if (recoveryDelayTicks >= RECOVERY_DELAY_TICKS && !recoveryAttempted && serverFullyInitialized) {
+            recoveryAttempted = true;
+            // Check if recovery is needed (file was deleted/corrupted/empty)
+            if (manager != null) {
+                // Only attempt recovery if file was marked as deleted/corrupted/empty
+                // This is safe to do now because world has been stable for 30 seconds
+                try {
+                    java.nio.file.Path worldPath = server.getWorldPath(net.minecraft.world.level.storage.LevelResource.ROOT);
+                    java.io.File dataFile = worldPath.resolve("buildscape/pillar-ids.dat").toFile();
+                    
+                    // Check if file doesn't exist, is empty (0 bytes), or is just {} (2 bytes)
+                    // Also check if pillarData is empty after loading (file was just {})
+                    boolean needsRecovery = false;
+                    if (!dataFile.exists()) {
+                        needsRecovery = true;
+                    } else if (dataFile.length() == 0) {
+                        needsRecovery = true;
+                    } else if (dataFile.length() <= 2) {
+                        // File is just {} or similar - check if it's actually empty
+                        // Read first few bytes to check if it's just {}
+                        try (java.io.FileReader fr = new java.io.FileReader(dataFile)) {
+                            char[] buffer = new char[10];
+                            int read = fr.read(buffer);
+                            String content = new String(buffer, 0, read).trim();
+                            if (content.equals("{}") || content.isEmpty()) {
+                                needsRecovery = true;
+                            }
+                        } catch (Exception e) {
+                            // If we can't read it, assume it needs recovery
+                            needsRecovery = true;
+                        }
+                    } else {
+                        // File exists and has content - check if pillarData is empty (file was just {} with whitespace)
+                        // Use reflection or a flag to check if fileWasDeleted is true
+                        // For now, check if manager has no data after loading
+                        if (manager.getPillarCount() == 0) {
+                            // Data is empty - might need recovery, but only if file was marked as deleted
+                            // We'll rely on the file size check above
+                        }
+                    }
+                    
+                    if (needsRecovery) {
+                        System.out.println("BuildScape: World stable for 30 seconds - attempting pillar recovery (file empty or missing)");
+                        manager.recoverPillarsFromWorld(server, true);
+                    }
+                } catch (Exception e) {
+                    System.err.println("BuildScape: Error during delayed recovery: " + e.getMessage());
+                }
+            }
+        }
         
         pillarSyncTickCounter++;
         if (pillarSyncTickCounter >= PILLAR_SYNC_INTERVAL) {
             pillarSyncTickCounter = 0;
             
-            // Sync all loaded pillars periodically
-            net.minecraft.server.MinecraftServer server = net.minecraftforge.server.ServerLifecycleHooks.getCurrentServer();
-            if (server != null) {
-                com.kingodogo.buildscape.config.PillarIdManager manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+            // Sync all loaded pillars periodically - but only if world is ready
+            try {
+                // Reuse the manager variable declared earlier
+                if (manager == null) {
+                    manager = com.kingodogo.buildscape.config.PillarIdManager.get();
+                }
                 
                 for (net.minecraft.server.level.ServerLevel level : server.getAllLevels()) {
+                    if (level == null) continue;
+                    
+                    // Check if level is actually ready (has loaded chunks)
+                    // Skip if level is still initializing
+                    if (!level.getServer().isRunning()) continue;
+                    
                     String dimensionKey = com.kingodogo.buildscape.config.PillarIdManager.getDimensionKey(level);
                     
                     // Iterate through all pillar data and sync
                     for (String pillarId : manager.getAllPillarIds()) {
-                        com.kingodogo.buildscape.config.PillarIdManager.PillarData data = manager.getPillarData(pillarId);
-                        if (data == null || !data.dimension.equals(dimensionKey)) continue;
-                        if (!data.hasColors()) continue;
-                        
-                        net.minecraft.core.BlockPos pos = data.getBlockPos();
-                        if (!level.hasChunkAt(pos)) continue;
-                        
-                        net.minecraft.world.level.block.entity.BlockEntity be = level.getBlockEntity(pos);
-                        if (be instanceof com.kingodogo.buildscape.block.PillarBlockEntity) {
-                            com.kingodogo.buildscape.block.PillarBlockEntity pillarBE = (com.kingodogo.buildscape.block.PillarBlockEntity) be;
+                        try {
+                            com.kingodogo.buildscape.config.PillarIdManager.PillarData data = manager.getPillarData(pillarId);
+                            if (data == null || !data.dimension.equals(dimensionKey)) continue;
+                            if (!data.hasColors()) continue;
                             
-                            // Force sync colors from manager
-                            java.util.List<String> managerColors = data.getColors();
-                            java.util.List<String> beColors = pillarBE.getParticleColors();
+                            net.minecraft.core.BlockPos pos = data.getBlockPos();
                             
-                            // Check if colors are different or missing
-                            if (beColors == null || beColors.isEmpty() || !beColors.equals(managerColors)) {
-                                // Force set colors directly
-                                pillarBE.forceSetColors(managerColors, data.id);
-                                LOGGER.debug("Force synced pillar {} with {} colors", data.id, managerColors.size());
+                            // Strict check: chunk must be loaded AND the chunk must be a LevelChunk (fully loaded)
+                            if (!level.hasChunkAt(pos)) continue;
+                            
+                            net.minecraft.world.level.chunk.ChunkAccess chunk = level.getChunk(pos);
+                            if (!(chunk instanceof net.minecraft.world.level.chunk.LevelChunk)) continue;
+                            
+                            // Additional safety: check if chunk is fully loaded
+                            if (!chunk.getStatus().isOrAfter(net.minecraft.world.level.chunk.ChunkStatus.FULL)) continue;
+                            
+                            // Now safe to access block entity
+                            net.minecraft.world.level.block.entity.BlockEntity be = level.getBlockEntity(pos);
+                            if (be instanceof com.kingodogo.buildscape.block.PillarBlockEntity) {
+                                com.kingodogo.buildscape.block.PillarBlockEntity pillarBE = (com.kingodogo.buildscape.block.PillarBlockEntity) be;
+                                
+                                // Sync pillarId and colors - colors are stored locally for server-side access
+                                // Client will also look up from manager for instant updates
+                                if (pillarBE.getPillarId() == null || !pillarBE.getPillarId().equals(data.id)) {
+                                    // Force set ID and colors
+                                    pillarBE.forceSetColors(data.getColors(), data.id);
+                                    LOGGER.debug("Force synced pillar {} with {} colors", data.id, data.getColorCount());
+                                }
                             }
+                        } catch (Exception e) {
+                            // Log but continue - don't let one pillar break the sync
+                            LOGGER.debug("Error syncing pillar " + pillarId + ": " + e.getMessage());
                         }
                     }
                 }
+            } catch (Exception e) {
+                // Don't let sync errors break the server tick
+                LOGGER.debug("Error in periodic pillar sync: " + e.getMessage());
             }
         }
     }
@@ -1351,6 +1625,19 @@ public class BuildScape {
             // Initialize config reload callback for instant particle updates
             event.enqueueWork(() -> {
                 com.kingodogo.buildscape.client.ClientEvents.initializeConfigCallback();
+            });
+            
+            // Register particles early in client setup as backup (in case ParticleFactoryRegisterEvent is filtered)
+            event.enqueueWork(() -> {
+                // Delay particle registration slightly to ensure particle engine is ready
+                java.util.concurrent.CompletableFuture.runAsync(() -> {
+                    try {
+                        Thread.sleep(100); // Small delay to ensure particle engine is initialized
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                    registerParticlesEarly();
+                });
             });
             
             // Register translucent render layer for mosaic glass blocks and panes
@@ -1758,32 +2045,150 @@ public class BuildScape {
         }
     }
     
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEventsParticles {
-        @SubscribeEvent
-        public static void registerFactories(net.minecraftforge.client.event.ParticleFactoryRegisterEvent event) {
-            net.minecraft.client.Minecraft.getInstance().particleEngine.register(
-                com.kingodogo.buildscape.particle.ModParticles.GLOW_LIME_SPARKLE.get(),
-                sprites -> new com.kingodogo.buildscape.particle.PillarSparkleParticle.Provider(sprites)
-            );
+    /**
+     * Register particles early - called from multiple places to ensure registration
+     * This method is idempotent and can be called multiple times safely
+     */
+    private static void registerParticlesEarly() {
+        try {
+            net.minecraft.client.Minecraft mc = net.minecraft.client.Minecraft.getInstance();
+            if (mc == null || mc.particleEngine == null) {
+                LOGGER.warn("Particle engine not ready yet, will retry later");
+                return;
+            }
             
-            // Register tinted drip fall particle - uses vanilla drip_fall sprites
-            // The particle engine will load the texture from particles/tinted_drip_fall.json
-            // which references "minecraft:drip_fall" texture
-            net.minecraft.client.Minecraft.getInstance().particleEngine.register(
-                com.kingodogo.buildscape.particle.ModParticles.TINTED_DRIP_FALL.get(),
-                sprites -> new com.kingodogo.buildscape.particle.TintedDripParticle.Provider(sprites)
-            );
+            // Register GLOW_LIME_SPARKLE particle
+            net.minecraft.core.particles.SimpleParticleType glowSparkle = 
+                com.kingodogo.buildscape.particle.ModParticles.GLOW_LIME_SPARKLE.get();
+            if (glowSparkle != null) {
+                try {
+                    mc.particleEngine.register(
+                        glowSparkle,
+                        sprites -> new com.kingodogo.buildscape.particle.PillarSparkleParticle.Provider(sprites)
+                    );
+                    LOGGER.info("Registered GLOW_LIME_SPARKLE particle factory (early registration)");
+                } catch (IllegalStateException e) {
+                    LOGGER.debug("GLOW_LIME_SPARKLE already registered: {}", e.getMessage());
+                }
+            } else {
+                LOGGER.error("GLOW_LIME_SPARKLE particle type is null! Cannot register factory.");
+            }
+            
+            // Register tinted drip fall particle
+            net.minecraft.core.particles.SimpleParticleType tintedDrip = 
+                com.kingodogo.buildscape.particle.ModParticles.TINTED_DRIP_FALL.get();
+            if (tintedDrip != null) {
+                try {
+                    mc.particleEngine.register(
+                        tintedDrip,
+                        sprites -> new com.kingodogo.buildscape.particle.TintedDripParticle.Provider(sprites)
+                    );
+                    LOGGER.info("Registered TINTED_DRIP_FALL particle factory (early registration)");
+                } catch (IllegalStateException e) {
+                    LOGGER.debug("TINTED_DRIP_FALL already registered: {}", e.getMessage());
+                }
+            } else {
+                LOGGER.error("TINTED_DRIP_FALL particle type is null! Cannot register factory.");
+            }
             
             // Register tinted spore particle
-            // Note: In 1.18.2, there's no ParticleTypes.SPORE, so we'll use the provided sprites
-            // The particle engine will provide appropriate sprites for our custom particle type
-            net.minecraft.client.Minecraft.getInstance().particleEngine.register(
-                com.kingodogo.buildscape.particle.ModParticles.TINTED_SPORE.get(),
-                sprites -> new com.kingodogo.buildscape.particle.TintedSporeParticle.Provider(sprites)
-            );
-            
+            net.minecraft.core.particles.SimpleParticleType tintedSpore = 
+                com.kingodogo.buildscape.particle.ModParticles.TINTED_SPORE.get();
+            if (tintedSpore != null) {
+                try {
+                    mc.particleEngine.register(
+                        tintedSpore,
+                        sprites -> new com.kingodogo.buildscape.particle.TintedSporeParticle.Provider(sprites)
+                    );
+                    LOGGER.info("Registered TINTED_SPORE particle factory (early registration)");
+                } catch (IllegalStateException e) {
+                    LOGGER.debug("TINTED_SPORE already registered: {}", e.getMessage());
+                }
+            } else {
+                LOGGER.error("TINTED_SPORE particle type is null! Cannot register factory.");
+            }
+        } catch (Exception e) {
+            LOGGER.error("Error in early particle registration: {}", e.getMessage(), e);
+        }
+    }
+    
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEventsParticles {
+        // Track if particles are already registered to avoid double registration
+        private static boolean particlesRegistered = false;
+        
+        @SubscribeEvent(priority = net.minecraftforge.eventbus.api.EventPriority.HIGHEST) // Register with HIGHEST priority
+        public static void registerFactories(net.minecraftforge.client.event.ParticleFactoryRegisterEvent event) {
+            // Always try to register, even if already registered (ensures particles work after mod conflicts)
+            try {
+                net.minecraft.client.Minecraft mc = net.minecraft.client.Minecraft.getInstance();
+                if (mc == null || mc.particleEngine == null) {
+                    LOGGER.error("Particle engine is null! Cannot register particles. This may cause particles to not spawn.");
+                    return;
+                }
+                
+                // Register GLOW_LIME_SPARKLE particle with force flag
+                net.minecraft.core.particles.SimpleParticleType glowSparkle = 
+                    com.kingodogo.buildscape.particle.ModParticles.GLOW_LIME_SPARKLE.get();
+                if (glowSparkle != null) {
+                    // Force registration even if already exists (overwrite any filters)
+                    try {
+                        mc.particleEngine.register(
+                            glowSparkle,
+                            sprites -> new com.kingodogo.buildscape.particle.PillarSparkleParticle.Provider(sprites)
+                        );
+                        particlesRegistered = true;
+                        LOGGER.info("Registered GLOW_LIME_SPARKLE particle factory (HIGHEST priority)");
+                    } catch (IllegalStateException e) {
+                        // Already registered - that's fine, but log it
+                        particlesRegistered = true;
+                        LOGGER.debug("GLOW_LIME_SPARKLE already registered: {}", e.getMessage());
+                    }
+                } else {
+                    LOGGER.error("GLOW_LIME_SPARKLE particle type is null! Cannot register factory.");
+                }
+                
+                // Register tinted drip fall particle - uses vanilla drip_fall sprites
+                // The particle engine will load the texture from particles/tinted_drip_fall.json
+                // which references "minecraft:drip_fall" texture
+                net.minecraft.core.particles.SimpleParticleType tintedDrip = 
+                    com.kingodogo.buildscape.particle.ModParticles.TINTED_DRIP_FALL.get();
+                if (tintedDrip != null) {
+                    try {
+                        mc.particleEngine.register(
+                            tintedDrip,
+                            sprites -> new com.kingodogo.buildscape.particle.TintedDripParticle.Provider(sprites)
+                        );
+                        LOGGER.info("Registered TINTED_DRIP_FALL particle factory");
+                    } catch (IllegalStateException e) {
+                        LOGGER.debug("TINTED_DRIP_FALL already registered: {}", e.getMessage());
+                    }
+                } else {
+                    LOGGER.error("TINTED_DRIP_FALL particle type is null! Cannot register factory.");
+                }
+                
+                // Register tinted spore particle
+                // Note: In 1.18.2, there's no ParticleTypes.SPORE, so we'll use the provided sprites
+                // The particle engine will provide appropriate sprites for our custom particle type
+                net.minecraft.core.particles.SimpleParticleType tintedSpore = 
+                    com.kingodogo.buildscape.particle.ModParticles.TINTED_SPORE.get();
+                if (tintedSpore != null) {
+                    try {
+                        mc.particleEngine.register(
+                            tintedSpore,
+                            sprites -> new com.kingodogo.buildscape.particle.TintedSporeParticle.Provider(sprites)
+                        );
+                        LOGGER.info("Registered TINTED_SPORE particle factory");
+                    } catch (IllegalStateException e) {
+                        LOGGER.debug("TINTED_SPORE already registered: {}", e.getMessage());
+                    }
+                } else {
+                    LOGGER.error("TINTED_SPORE particle type is null! Cannot register factory.");
+                }
+            } catch (Exception e) {
+                LOGGER.error("Error registering particle factories: {}", e.getMessage(), e);
+            }
         }
     }
 }
-// Kingodogo finished the project – 2025-11-27 | 17:12:00
+// Kingooo Finished this File on 2025-01-12

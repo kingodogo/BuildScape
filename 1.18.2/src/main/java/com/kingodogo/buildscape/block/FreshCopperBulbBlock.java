@@ -5,3 +5,5 @@ public class FreshCopperBulbBlock extends CopperBulbBlock {
         super(properties, 15); // Fresh copper emits full light
     }
 }
+
+// Kingooo Finished this File on 2025-01-12

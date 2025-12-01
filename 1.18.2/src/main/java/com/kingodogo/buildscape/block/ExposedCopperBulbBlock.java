@@ -5,3 +5,5 @@ public class ExposedCopperBulbBlock extends CopperBulbBlock {
         super(properties, 12); // Exposed copper emits 12 light
     }
 }
+
+// Kingooo Finished this File on 2025-01-12

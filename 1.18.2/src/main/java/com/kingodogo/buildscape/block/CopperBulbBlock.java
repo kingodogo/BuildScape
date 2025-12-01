@@ -121,3 +121,5 @@ public abstract class CopperBulbBlock extends Block {
         return speedMultiplier / destroySpeed / difficultyModifier;
     }
 }
+
+// Kingooo Finished this File on 2025-01-12

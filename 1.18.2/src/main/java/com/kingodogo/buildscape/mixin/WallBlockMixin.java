@@ -16,9 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class WallBlockMixin {
     private static final TagKey<Block> WALLS_TAG = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("minecraft:walls"));
 
-    /**
-     * Make walls connect to other wall blocks - checks WallBlock instances and walls tag
-     */
+    // Make walls connect to other wall blocks
     @Inject(method = "connectsTo", at = @At("HEAD"), cancellable = true)
     private void connectsTo(BlockState state, boolean sideSolidFullSquare, Direction direction, CallbackInfoReturnable<Boolean> cir) {
         Block block = state.getBlock();
@@ -35,3 +33,5 @@ public class WallBlockMixin {
         // If neither, continue with original logic (don't cancel)
     }
 }
+
+// Kingooo Finished this File on 2025-01-12
