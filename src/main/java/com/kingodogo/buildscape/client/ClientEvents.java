@@ -17,6 +17,11 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import com.kingodogo.buildscape.api.SupportersApiCache;
+import com.kingodogo.buildscape.api.SupportersApiClient;
+import com.kingodogo.buildscape.api.model.AuthenticateResponse;
+import com.kingodogo.buildscape.api.model.CosmeticData;
+// import com.kingodogo.buildscape.particle.ParticleShapeReloader;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(
@@ -103,7 +108,7 @@ public class ClientEvents {
             }
 
             int x = screenWidth / 2;
-            int y = screenHeight / 2;
+            int y = screenHeight / 2 + 30; // Move from crosshair to subtitle position
 
             poseStack.pushPose();
             poseStack.translate(0, 0, 500); // Translate Z first to be safe
@@ -144,6 +149,9 @@ public class ClientEvents {
         if (event.phase != TickEvent.Phase.END) {
             return;
         }
+
+        // Check for particle shape reloads
+        // ParticleShapeReloader.tick();
 
         Minecraft mc = Minecraft.getInstance();
         if (mc.level == null || mc.player == null || mc.isPaused()) {
@@ -217,16 +225,73 @@ public class ClientEvents {
         // Reset SupportersTabState on logout
         com.kingodogo.buildscape.client.screen.tabs.supporters.SupportersTabState.getInstance().setPlayerUuid(null);
 
-        // Clear particle trail tracking
+        // Clear particle trail and wing shape cache
         com.kingodogo.buildscape.client.ParticleTrailHandler.clearTracking();
+        // com.kingodogo.buildscape.particle.ParticleShapeLibrary.clearCache();
+
+        // Invalidate API cache for the player
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.getUser() != null) {
+            try {
+                java.util.UUID uuid = mc.getUser().getGameProfile().getId();
+                SupportersApiCache.getInstance().invalidate(uuid);
+            } catch (Exception e) {
+                // Should not happen if uuid is valid
+            }
+        }
+        SupportersApiCache.getInstance().invalidateAll(); // Safer to clear all on logout to be sure
 
         com.kingodogo.buildscape.config.PillarParticleConfig.clearServerConfig();
     }
 
     @SubscribeEvent
     public static void onClientJoin(ClientPlayerNetworkEvent.LoggedInEvent event) {
-        // LoggedInEvent is good for triggering, but we might need mc.player to be ready
-        // We'll also check in onClientTick or use another event to be sure
+        // Preload API data securely
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.getUser() != null) {
+            try {
+                // Use GameProfile ID which is standard UUID
+                java.util.UUID playerUuid = mc.getUser().getGameProfile().getId();
+                String accessToken = mc.getUser().getAccessToken();
+                
+                if (playerUuid != null && accessToken != null && !accessToken.isEmpty()) {
+                    String uuidString = playerUuid.toString();
+
+                    SupportersApiClient.getInstance().authenticate(uuidString, accessToken)
+                        .thenAccept(response -> {
+                            if (response != null && !response.isError()) {
+                                mc.execute(() -> {
+                                    try {
+                                        CosmeticData data = response.toCosmeticData();
+                                        SupportersApiCache.getInstance().cacheCosmetics(playerUuid, data);
+                                        
+                                        // Update tab state if it matches current player
+                                        if (mc.player != null && mc.player.getUUID().equals(playerUuid)) {
+                                            com.kingodogo.buildscape.client.screen.tabs.supporters.SupportersTabState.getInstance()
+                                                .setPlayerUuid(playerUuid);
+                                            
+                                            // Combine API unlocked cosmetics with default cosmetics (particle trails)
+                                            java.util.Set<String> unlocked = new java.util.HashSet<>(data.getUnlocked() != null ? data.getUnlocked() : new java.util.ArrayList<>());
+                                            // Add default cosmetics (free for everyone)
+                                            unlocked.addAll(com.kingodogo.buildscape.cosmetics.CosmeticManager.getInstance().getDefaultCosmetics());
+                                            com.kingodogo.buildscape.client.screen.tabs.supporters.SupportersTabState.getInstance().setUnlockedCosmetics(unlocked);
+                                        }
+                                        
+                                    } catch (Exception e) {
+                                        com.kingodogo.buildscape.BuildScape.getLogger().error("Failed to process preloaded data: " + e.getMessage());
+                                    }
+                                });
+                            }
+                        })
+                        .exceptionally(t -> {
+                            com.kingodogo.buildscape.BuildScape.getLogger().error("Error preloading API data: " + t.getMessage());
+                            return null;
+                        });
+                }
+            } catch (Exception e) {
+                com.kingodogo.buildscape.BuildScape.getLogger().error("Error initiating API preload: " + e.getMessage());
+            }
+        }
     }
 
     @SubscribeEvent
@@ -249,8 +314,9 @@ public class ClientEvents {
         wasZoomKeyPressed = false;
         lastHedgeStep = -1;
 
-        // Clear particle trail tracking
+        // Clear particle trail and wing shape cache
         com.kingodogo.buildscape.client.ParticleTrailHandler.clearTracking();
+        // com.kingodogo.buildscape.particle.ParticleShapeLibrary.clearCache();
 
         try {
             com.kingodogo.buildscape.client.renderer.PillarBlockEntityRenderer.clearEntityCache();

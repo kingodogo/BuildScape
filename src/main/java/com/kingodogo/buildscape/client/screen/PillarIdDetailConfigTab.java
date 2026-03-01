@@ -359,6 +359,14 @@ public class PillarIdDetailConfigTab extends AbstractConfigTab {
     private void saveConfig() {
         if (pillarData == null) return;
         
+        if (Minecraft.getInstance().player != null) {
+            Minecraft.getInstance().player.playSound(
+                net.minecraft.sounds.SoundEvents.NOTE_BLOCK_BELL,
+                1.0f,
+                1.0f
+            );
+        }
+        
         PillarParticleConfig globalConfig = PillarParticleConfig.get();
         
         pillarData.pattern = PATTERNS[currentPatternIndex];
@@ -531,10 +539,7 @@ public class PillarIdDetailConfigTab extends AbstractConfigTab {
                 
                 break; // Found the pillar, done
             }
-        } catch (Exception e) {
-            System.err.println("BuildScape: Error updating block entity NBT: " + e.getMessage());
-            e.printStackTrace();
-        }
+        } catch (Exception e) {}
     }
     
     @Override

@@ -23,6 +23,26 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
 
     private static final String[] PATTERNS = {"default", "beam", "spiral", "fountain", "pulse", "ring", "burst", "snowflake"};
 
+    // Consolidated constants for consistent layout
+    private static final int UI_PADDING = 10;
+    private static final int UI_TITLE_HEIGHT = 20;
+    private static final int UI_BUTTON_HEIGHT = 20;
+    private static final int UI_FIELD_HEIGHT = 20;
+    private static final int UI_SLIDER_HEIGHT = 20;
+    
+    // Spacing for Default Properties
+    private static final int DEFAULT_FIELD_SPACING = 4;
+    private static final int DEFAULT_BTN_TO_FIELD_SPACING = 5;
+    
+    // Spacing for Pattern Properties (Tighter as requested)
+    private static final int PATTERN_FIELD_SPACING = 1;
+    private static final int PATTERN_BTN_TO_FIELD_SPACING = 2;
+    
+    // Spacing for Color Swatches
+    private static final int COLOR_SWATCH_SIZE = 20;
+    private static final int COLOR_ROW_SPACING = 4;
+    private static final int COLOR_HEADER_SPACE = 20;
+
     private Button usePatternToggle;
     private Button patternSelector;
     private EditBox particleSpeedField;
@@ -148,7 +168,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         particleSpeedField.setTextColorUneditable(0xAAAAAA);
         particleSpeedField.setTextColorUneditable(0xAAAAAA);
         particleSpeedField.setMaxLength(64);
-        particleSpeedField.setFilter(s -> s.matches("[0-9.]*"));
+        particleSpeedField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(particleSpeedField);
 
         particleSpreadField = new EditBox(
@@ -163,7 +183,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         particleSpreadField.setTextColorUneditable(0xAAAAAA);
         particleSpreadField.setTextColorUneditable(0xAAAAAA);
         particleSpreadField.setMaxLength(64);
-        particleSpreadField.setFilter(s -> s.matches("[0-9.]*"));
+        particleSpreadField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(particleSpreadField);
 
         particleLifetimeField = new EditBox(
@@ -178,7 +198,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         particleLifetimeField.setTextColorUneditable(0xAAAAAA);
         particleLifetimeField.setTextColorUneditable(0xAAAAAA);
         particleLifetimeField.setMaxLength(64);
-        particleLifetimeField.setFilter(s -> s.matches("[0-9.]*"));
+        particleLifetimeField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(particleLifetimeField);
 
         particleDensityField = new EditBox(
@@ -193,7 +213,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         particleDensityField.setTextColorUneditable(0xAAAAAA);
         particleDensityField.setTextColorUneditable(0xAAAAAA);
         particleDensityField.setMaxLength(64);
-        particleDensityField.setFilter(s -> s.matches("[0-9.]*"));
+        particleDensityField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(particleDensityField);
 
         // Color swatches and single shared color picker
@@ -223,7 +243,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         patternSpeedField.setTextColorUneditable(0xAAAAAA);
         patternSpeedField.setTextColorUneditable(0xAAAAAA);
         patternSpeedField.setMaxLength(64);
-        patternSpeedField.setFilter(s -> s.matches("[0-9.]*"));
+        patternSpeedField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(patternSpeedField);
 
         patternSpreadField = new EditBox(
@@ -238,7 +258,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         patternSpreadField.setTextColorUneditable(0xAAAAAA);
         patternSpreadField.setTextColorUneditable(0xAAAAAA);
         patternSpreadField.setMaxLength(64);
-        patternSpreadField.setFilter(s -> s.matches("[0-9.]*"));
+        patternSpreadField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(patternSpreadField);
 
         patternIntensityField = new EditBox(
@@ -253,7 +273,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         patternIntensityField.setTextColorUneditable(0xAAAAAA);
         patternIntensityField.setTextColorUneditable(0xAAAAAA);
         patternIntensityField.setMaxLength(64);
-        patternIntensityField.setFilter(s -> s.matches("[0-9.]*"));
+        patternIntensityField.setFilter(s -> s.matches("[0-9]*\\.?[0-9]{0,3}"));
         addTabWidget(patternIntensityField);
 
         colorsResetButton = new FlatIconButton(0, 0, 20, 20, new TextComponent("\u27F2"), (btn) -> {
@@ -682,15 +702,13 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         int fieldHeight = 20;
         int fieldSpacing = 4; // Reduced spacing between fields
 
-        defaultBaseButtonY = defaultBoxY + padding + titleHeight;
-        int buttonToFieldSpacing = 5; // Reduced spacing between button and first field
-        defaultBaseFirstFieldY = defaultBaseButtonY + buttonHeight + buttonToFieldSpacing;
+        defaultBaseButtonY = defaultBoxY + UI_PADDING + UI_TITLE_HEIGHT;
+        defaultBaseFirstFieldY = defaultBaseButtonY + UI_BUTTON_HEIGHT + DEFAULT_BTN_TO_FIELD_SPACING;
 
-        // Calculate max scroll - ensure nothing scrolls above the header
-
-        int totalContentHeight = titleHeight + buttonHeight + buttonToFieldSpacing + (4 * fieldHeight)
-                + (3 * fieldSpacing);
-        int availableHeight = defaultBoxHeight - padding * 2;
+        // Calculate total content height and scroll range
+        int totalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + DEFAULT_BTN_TO_FIELD_SPACING + (4 * UI_FIELD_HEIGHT)
+                + (3 * DEFAULT_FIELD_SPACING);
+        int availableHeight = defaultBoxHeight - UI_PADDING * 2;
         double maxScroll = Math.max(0, totalContentHeight - availableHeight);
 
         // Clamp scroll offset to prevent scrolling above header
@@ -710,21 +728,13 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
 
     // Update pattern properties widget positions with scroll offset applied
     private void updatePatternPropertiesPositions() {
-        int padding = 10;
-        int titleHeight = 20;
-        int buttonHeight = 20;
-        int fieldHeight = 20;
-        int fieldSpacing = 4; // Reduced spacing between fields (matching user's changes)
-        int buttonToFieldSpacing = 5; // Reduced spacing between button and first field (matching user's changes)
-
-        patternBaseButtonY = patternBoxY + padding + titleHeight;
-        patternBaseFirstFieldY = patternBaseButtonY + buttonHeight + buttonToFieldSpacing;
+        patternBaseButtonY = patternBoxY + UI_PADDING + UI_TITLE_HEIGHT;
+        patternBaseFirstFieldY = patternBaseButtonY + UI_BUTTON_HEIGHT + PATTERN_BTN_TO_FIELD_SPACING;
 
         // Calculate max scroll for pattern properties
-        int sliderHeight = 20;
-        int totalContentHeight = titleHeight + buttonHeight + buttonToFieldSpacing + (3 * fieldHeight)
-                + (2 * fieldSpacing) + sliderHeight + fieldSpacing;
-        int availableHeight = patternBoxHeight - padding * 2;
+        int totalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + PATTERN_BTN_TO_FIELD_SPACING + (3 * UI_FIELD_HEIGHT)
+                + (2 * PATTERN_FIELD_SPACING) + UI_SLIDER_HEIGHT + PATTERN_FIELD_SPACING;
+        int availableHeight = patternBoxHeight - UI_PADDING * 2;
         double maxScroll = Math.max(0, totalContentHeight - availableHeight);
 
         patternPropertiesScrollOffset = Math.max(0, Math.min(maxScroll, patternPropertiesScrollOffset));
@@ -732,9 +742,9 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
 
         patternSelector.y = patternBaseButtonY - scrollOffsetInt;
         maxParticleColorSlider.y = patternBaseFirstFieldY - scrollOffsetInt;
-        patternSpeedField.y = patternBaseFirstFieldY + fieldHeight + fieldSpacing - scrollOffsetInt;
-        patternSpreadField.y = patternBaseFirstFieldY + (fieldHeight + fieldSpacing) * 2 - scrollOffsetInt;
-        patternIntensityField.y = patternBaseFirstFieldY + (fieldHeight + fieldSpacing) * 3 - scrollOffsetInt;
+        patternSpeedField.y = patternBaseFirstFieldY + UI_FIELD_HEIGHT + PATTERN_FIELD_SPACING - scrollOffsetInt;
+        patternSpreadField.y = patternBaseFirstFieldY + (UI_FIELD_HEIGHT + PATTERN_FIELD_SPACING) * 2 - scrollOffsetInt;
+        patternIntensityField.y = patternBaseFirstFieldY + (UI_FIELD_HEIGHT + PATTERN_FIELD_SPACING) * 3 - scrollOffsetInt;
     }
 
     /**
@@ -1272,10 +1282,10 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         int numFields = 4;
 
         // Calculate total content height and scroll range
-        int buttonToFieldSpacing = 5; // Reduced spacing to match updateDefaultPropertiesPositions
-        int totalContentHeight = titleHeight + buttonHeight + buttonToFieldSpacing + (numFields * fieldHeight)
-                + ((numFields - 1) * fieldSpacing);
-        int availableHeight = defaultBoxHeight - padding * 2;
+        // Calculate total content height and scroll range
+        int totalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + DEFAULT_BTN_TO_FIELD_SPACING + (numFields * UI_FIELD_HEIGHT)
+                + ((numFields - 1) * DEFAULT_FIELD_SPACING);
+        int availableHeight = defaultBoxHeight - UI_PADDING * 2;
         double maxScroll = Math.max(0, totalContentHeight - availableHeight);
         boolean needsScrollbar = maxScroll > 0;
 
@@ -1370,13 +1380,9 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
 
         // Render scrollbar if needed (before disabling scissor so it gets clipped)
         if (needsScrollbar && maxScroll > 0) {
-            int scrollbarX = defaultBoxX + defaultBoxWidth - CustomScrollbarRenderer.getScrollbarWidth() - 5; // 5px
-                                                                                                              // from
-                                                                                                              // edge
-            int scrollbarY = defaultBoxY + padding + titleHeight;
-            // Extend scrollbar to the bottom offset
-            bottomOffset = Math.max(5, (int) (windowHeight * 0.01 / guiScale)); // Re-calculate to ensure consistency
-            int scrollbarHeight = defaultBoxHeight - padding - titleHeight - bottomOffset;
+            int scrollbarX = defaultBoxX + defaultBoxWidth - CustomScrollbarRenderer.getScrollbarWidth() - 5;
+            int scrollbarY = defaultBoxY + UI_PADDING + UI_TITLE_HEIGHT;
+            int scrollbarHeight = defaultBoxHeight - UI_PADDING - UI_TITLE_HEIGHT - 3; // Ends 3px from bottom
 
             double visibleRatio = availableHeight / (double) totalContentHeight;
             defaultScrollbarRenderer.renderScrollbar(poseStack, scrollbarX, scrollbarY, scrollbarHeight,
@@ -1581,9 +1587,9 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         int patternSliderHeight = 20;
 
         // Calculate scroll info
-        int patternTotalContentHeight = patternTitleHeight + patternButtonHeight + patternButtonToFieldSpacing +
-                (3 * patternFieldHeight) + (2 * patternFieldSpacing) + patternSliderHeight;
-        int patternAvailableHeight = patternBoxHeight - padding * 2;
+        int patternTotalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + PATTERN_BTN_TO_FIELD_SPACING +
+                (3 * UI_FIELD_HEIGHT) + (2 * PATTERN_FIELD_SPACING) + UI_SLIDER_HEIGHT + PATTERN_FIELD_SPACING;
+        int patternAvailableHeight = patternBoxHeight - UI_PADDING * 2;
         double patternMaxScroll = Math.max(0, patternTotalContentHeight - patternAvailableHeight);
         boolean patternNeedsScrollbar = patternMaxScroll > 0;
 
@@ -1691,20 +1697,10 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         // Render scrollbar if needed
         if (patternNeedsScrollbar && patternMaxScroll > 0) {
             int scrollbarX = patternBoxX + patternBoxWidth - CustomScrollbarRenderer.getScrollbarWidth() - 5;
-            // Start scrollbar below the title (similar to Default Properties)
-            int scrollbarY = patternBoxY + padding + patternTitleHeight;
-            // Extend scrollbar to the bottom offset
-            bottomOffset = Math.max(5, (int) (windowHeight * 0.01 / guiScale));
-            // Ensure scrollbar stays well within the visible area (above bottom offset)
-            // Use a larger safety margin (15px) to ensure it doesn't touch the bottom border
-            int scrollbarHeight = patternBoxHeight - padding - patternTitleHeight - bottomOffset - 15;
-
-            // Strict cap: Ensure scrollbar doesn't exceed panel bounds
-            int maxScrollbarY = patternBoxY + patternBoxHeight - 15; // Absolute bottom Y constraint with margin
-            if (scrollbarY + scrollbarHeight > maxScrollbarY) {
-                scrollbarHeight = maxScrollbarY - scrollbarY;
-            }
-            if (scrollbarHeight < 10) scrollbarHeight = 10; // Minimum height
+            int scrollbarY = patternBoxY + UI_PADDING + UI_TITLE_HEIGHT;
+            int scrollbarHeight = patternBoxHeight - UI_PADDING - UI_TITLE_HEIGHT - 3; // Ends exactly 3px above panel bottom
+            
+            if (scrollbarHeight < 10) scrollbarHeight = 10;
 
             double visibleRatio = patternAvailableHeight / (double) patternTotalContentHeight;
             patternScrollbarRenderer.renderScrollbar(poseStack, scrollbarX, scrollbarY, scrollbarHeight,
@@ -1780,6 +1776,9 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         }
     }
 
+    /** Minimum allowed value for all numeric double/float config fields to prevent crashes. */
+    private static final double FIELD_MIN_VALUE = 0.001;
+
     private void updateConfigFromFields() {
         PillarParticleConfig config = PillarParticleConfig.get();
         boolean changed = false;
@@ -1787,7 +1786,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         // Update default properties
         if (!config.use_pattern) {
             try {
-                double speed = Double.parseDouble(particleSpeedField.getValue());
+                double speed = Math.max(FIELD_MIN_VALUE, Double.parseDouble(particleSpeedField.getValue()));
                 if (config.particle_speed != speed) {
                     config.particle_speed = speed;
                     changed = true;
@@ -1797,7 +1796,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
             }
 
             try {
-                double spread = Double.parseDouble(particleSpreadField.getValue());
+                double spread = Math.max(FIELD_MIN_VALUE, Double.parseDouble(particleSpreadField.getValue()));
                 if (config.particle_spread != spread) {
                     config.particle_spread = spread;
                     changed = true;
@@ -1807,7 +1806,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
             }
 
             try {
-                int lifetime = Integer.parseInt(particleLifetimeField.getValue());
+                int lifetime = Math.max(1, Integer.parseInt(particleLifetimeField.getValue()));
                 if (config.particle_lifetime != lifetime) {
                     config.particle_lifetime = lifetime;
                     changed = true;
@@ -1817,7 +1816,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
             }
 
             try {
-                int density = Integer.parseInt(particleDensityField.getValue());
+                int density = Math.max(1, Integer.parseInt(particleDensityField.getValue()));
                 if (config.particle_density != density) {
                     config.particle_density = density;
                     changed = true;
@@ -1830,7 +1829,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         // Update pattern properties
         if (config.use_pattern) {
             try {
-                double speed = Double.parseDouble(patternSpeedField.getValue());
+                double speed = Math.max(FIELD_MIN_VALUE, Double.parseDouble(patternSpeedField.getValue()));
                 if (config.pattern_speed != speed) {
                     config.pattern_speed = speed;
                     changed = true;
@@ -1840,7 +1839,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
             }
 
             try {
-                double spread = Double.parseDouble(patternSpreadField.getValue());
+                double spread = Math.max(FIELD_MIN_VALUE, Double.parseDouble(patternSpreadField.getValue()));
                 if (config.pattern_spread != spread) {
                     config.pattern_spread = spread;
                     changed = true;
@@ -1850,7 +1849,7 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
             }
 
             try {
-                double intensity = Double.parseDouble(patternIntensityField.getValue());
+                double intensity = Math.max(FIELD_MIN_VALUE, Double.parseDouble(patternIntensityField.getValue()));
                 if (config.pattern_intensity != intensity) {
                     config.pattern_intensity = intensity;
                     changed = true;
@@ -1905,24 +1904,18 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         }
 
         // Handle scrollbar clicks for Pattern Properties panel
-        int patternPadding = 10;
-        int patternTitleHeight = 20;
-        int patternAvailableHeight = patternBoxHeight - patternPadding * 2;
-        int patternFieldHeight = 20;
-        int patternFieldSpacing = 2;
-        int patternButtonHeight = 20;
-        int patternButtonToFieldSpacing = 5;
-        int patternSliderHeight = 20;
-        int patternTotalContentHeight = patternTitleHeight + patternButtonHeight + patternButtonToFieldSpacing +
-                (3 * patternFieldHeight) + (2 * patternFieldSpacing) + patternSliderHeight + patternFieldSpacing;
+        int patternAvailableHeight = patternBoxHeight - UI_PADDING * 2;
+        int patternTotalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + PATTERN_BTN_TO_FIELD_SPACING +
+                (3 * UI_FIELD_HEIGHT) + (2 * PATTERN_FIELD_SPACING) + UI_SLIDER_HEIGHT + PATTERN_FIELD_SPACING;
         double patternMaxScroll = Math.max(0, patternTotalContentHeight - patternAvailableHeight);
 
         if (patternMaxScroll > 0 && button == 0) {
             int scrollbarWidth = CustomScrollbarRenderer.getScrollbarWidth();
             int scrollbarX = patternBoxX + patternBoxWidth - scrollbarWidth - 5;
-            int scrollbarY = patternBoxY + patternPadding;
-            int scrollbarHeight = patternBoxHeight - patternPadding - bottomOffset;
+            int scrollbarY = patternBoxY + UI_PADDING + UI_TITLE_HEIGHT;
+            int scrollbarHeight = patternBoxHeight - UI_PADDING - UI_TITLE_HEIGHT - 3; 
 
+            if (scrollbarHeight < 10) scrollbarHeight = 10;
             double visibleRatio = patternAvailableHeight / (double) patternTotalContentHeight;
 
             double newOffset = patternScrollbarRenderer.handleMouseClick(mouseX, mouseY, button,
@@ -2185,21 +2178,16 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         }
 
         if (patternScrollbarRenderer.isDragging()) {
-            int patternPadding = 10;
-            int patternTitleHeight = 20;
-            int patternAvailableHeight = patternBoxHeight - patternPadding * 2;
-            int patternFieldHeight = 20;
-            int patternFieldSpacing = 2;
-            int patternButtonHeight = 20;
-            int patternButtonToFieldSpacing = 5;
-            int patternSliderHeight = 20;
-            int patternTotalContentHeight = patternTitleHeight + patternButtonHeight + patternButtonToFieldSpacing +
-                    (3 * patternFieldHeight) + (2 * patternFieldSpacing) + patternSliderHeight + patternFieldSpacing;
+            int patternAvailableHeight = patternBoxHeight - UI_PADDING * 2;
+            int patternTotalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + PATTERN_BTN_TO_FIELD_SPACING +
+                    (3 * UI_FIELD_HEIGHT) + (2 * PATTERN_FIELD_SPACING) + UI_SLIDER_HEIGHT + PATTERN_FIELD_SPACING;
             double patternMaxScroll = Math.max(0, patternTotalContentHeight - patternAvailableHeight);
 
             if (patternMaxScroll > 0) {
-                int scrollbarY = patternBoxY + patternPadding;
-                int scrollbarHeight = patternBoxHeight - patternPadding - bottomOffset;
+                int scrollbarY = patternBoxY + UI_PADDING + UI_TITLE_HEIGHT;
+                int scrollbarHeight = patternBoxHeight - UI_PADDING - UI_TITLE_HEIGHT - 3; 
+                
+                if (scrollbarHeight < 10) scrollbarHeight = 10;
                 double visibleRatio = patternAvailableHeight / (double) patternTotalContentHeight;
 
                 double newOffset = patternScrollbarRenderer.handleMouseDrag(mouseY, scrollbarY, scrollbarHeight,
@@ -2478,21 +2466,14 @@ public class PillarParticlesConfigTab extends AbstractConfigTab {
         // Handle scrolling for Pattern Properties panel
         if (mouseX >= patternBoxX && mouseX <= patternBoxX + patternBoxWidth &&
                 mouseY >= patternBoxY && mouseY <= patternBoxY + patternBoxHeight) {
-            int padding = 10;
-            int titleHeight = 20;
-            int availableHeight = patternBoxHeight - padding * 2;
-            int fieldHeight = 20;
-            int fieldSpacing = 10;
-            int buttonHeight = 20;
-            int buttonToFieldSpacing = 15;
-            int sliderHeight = 20;
-            int totalContentHeight = titleHeight + buttonHeight + buttonToFieldSpacing +
-                    (3 * fieldHeight) + (2 * fieldSpacing) + sliderHeight + fieldSpacing;
-            double maxScroll = Math.max(0, totalContentHeight - availableHeight);
+            int patternAvailableHeight = patternBoxHeight - UI_PADDING * 2;
+            int patternTotalContentHeight = UI_TITLE_HEIGHT + UI_BUTTON_HEIGHT + PATTERN_BTN_TO_FIELD_SPACING +
+                    (3 * UI_FIELD_HEIGHT) + (2 * PATTERN_FIELD_SPACING) + UI_SLIDER_HEIGHT + PATTERN_FIELD_SPACING;
+            double patternMaxScroll = Math.max(0, patternTotalContentHeight - patternAvailableHeight);
 
-            if (maxScroll > 0) {
+            if (patternMaxScroll > 0) {
                 patternPropertiesScrollOffset -= delta * 10; // Scroll speed
-                patternPropertiesScrollOffset = Math.max(0, Math.min(maxScroll, patternPropertiesScrollOffset));
+                patternPropertiesScrollOffset = Math.max(0, Math.min(patternMaxScroll, patternPropertiesScrollOffset));
                 updatePatternPropertiesPositions(); // Update widget positions
                 return true;
             }

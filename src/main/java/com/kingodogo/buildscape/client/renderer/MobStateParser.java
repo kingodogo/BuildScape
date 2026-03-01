@@ -1,5 +1,6 @@
 package com.kingodogo.buildscape.client.renderer;
 
+import com.kingodogo.buildscape.BuildScape;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -41,7 +42,6 @@ public class MobStateParser {
 
             if (rootStatesFile.exists()) {
                 stream = new java.io.FileInputStream(rootStatesFile);
-                System.out.println("[BuildScape] Loading states from root directory: states.txt");
             } else {
                 // Fallback to resource file
                 ResourceLocation statesFile = new ResourceLocation("buildscape:mob_states.txt");
@@ -50,9 +50,8 @@ public class MobStateParser {
                             .getResourceManager()
                             .getResource(statesFile)
                             .getInputStream();
-                    System.out.println("[BuildScape] Loading states from resources: mob_states.txt");
                 } catch (Exception e) {
-                    System.err.println("[BuildScape] Could not find mob_states.txt resource.");
+                    BuildScape.LOGGER.error("Could not find mob_states.txt resource.");
                 }
             }
 
@@ -121,8 +120,8 @@ public class MobStateParser {
 
             statesLoaded = true;
 
-            System.out.println("[BuildScape] Loaded " + validMobStates.size() + " mob state definitions");
-            System.out.println("[BuildScape] Universal states: " + universalStates);
+
+
 
         } catch (Exception e) {
             System.err.println("[BuildScape] Failed to load states: " + e.getMessage());
@@ -344,6 +343,7 @@ public class MobStateParser {
         if (word.equals("scream")) return "screaming";
         if (word.equals("aggro")) return "angry";
         if (word.equals("grumm")) return "grum";
+        if (word.equals("jeb_")) return "jeb";
 
         // Comprehensive aliases for relatability
         if (word.equals("beg")) return "begging";

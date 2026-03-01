@@ -2,7 +2,6 @@ package com.kingodogo.buildscape.client.screen.tabs.supporters;
 
 import com.kingodogo.buildscape.BuildScape;
 import com.kingodogo.buildscape.api.SupportersApiCache;
-import com.kingodogo.buildscape.api.SupportersApiClient;
 import com.kingodogo.buildscape.api.model.CosmeticData;
 import com.kingodogo.buildscape.client.screen.AbstractConfigTab;
 import com.kingodogo.buildscape.client.screen.BuildScapeConfigScreen;
@@ -15,10 +14,7 @@ import java.util.Set;
 import java.util.UUID;
 
 public class SupportersOnlyTab extends AbstractConfigTab {
-    private static final Set<UUID> FULL_ACCESS_UUIDS = Set.of(
-        UUID.fromString("3f97920a-de17-4e52-9770-a4183ddf2267"),
-        UUID.fromString("7145ec43-712f-45ef-83aa-b259b8a8f184")
-    );
+    // Full access is now determined by the API based on admin/owner role in the database
     
     private CosmeticsDisplayPanel panel1;
     private PlayerAvatarPanel panel5;
@@ -82,36 +78,24 @@ public class SupportersOnlyTab extends AbstractConfigTab {
             loadDefaultCosmetics();
             return;
         }
-        
+
         UUID playerUuid = mc.player.getUUID();
         if (state.getPlayerUuid() == null || !state.getPlayerUuid().equals(playerUuid) || state.getEquippedCosmetics().isEmpty()) {
             state.setPlayerUuid(playerUuid);
         }
-        
-        SupportersApiClient apiClient = SupportersApiClient.getInstance();
+
         SupportersApiCache apiCache = SupportersApiCache.getInstance();
 
+        // Only use cached data from game launch - do NOT make new API calls in the tab
         CosmeticData cachedCosmetics = apiCache.getCachedCosmetics(playerUuid);
         if (cachedCosmetics != null) {
             updateCosmeticsData(cachedCosmetics);
-        } else {
-            loadDefaultCosmetics();
+            return; // Use cached data (preloaded from game launch)
         }
-        
-        apiClient.getCosmetics(playerUuid)
-            .thenAccept(cosmetics -> {
-                if (cosmetics != null) {
-                    apiCache.cacheCosmetics(playerUuid, cosmetics);
-                    updateCosmeticsData(cosmetics);
-                } else {
-                    loadDefaultCosmetics();
-                }
-            })
-            .exceptionally(throwable -> {
-                BuildScape.getLogger().error("Failed to load cosmetics: " + throwable.getMessage());
-                loadDefaultCosmetics();
-                return null;
-            });
+
+        // No cache available - just load defaults and local config
+        // API calls only happen during game launch, not when opening tabs
+        loadDefaultCosmetics();
     }
     
     private void loadDefaultCosmetics() {
@@ -128,17 +112,8 @@ public class SupportersOnlyTab extends AbstractConfigTab {
             currentPlayerUuid = mc.player.getUUID();
         }
 
-        Set<String> defaultUnlocked;
-        if (hasFullAccess(currentPlayerUuid)) {
-            defaultUnlocked = new java.util.HashSet<>(allRegisteredCosmetics);
-            BuildScape.getLogger().info("Full-access UUID detected - unlocking all " + allRegisteredCosmetics.size() + " cosmetics");
-        } else if (playerUsername != null && playerUsername.equalsIgnoreCase("Dev")) {
-            defaultUnlocked = new java.util.HashSet<>(allRegisteredCosmetics);
-            BuildScape.getLogger().info("Dev access granted - unlocking all " + allRegisteredCosmetics.size() + " cosmetics");
-        } else {
-            defaultUnlocked = cosmeticManager.getUnlockedCosmetics(playerUsername);
-        }
-        
+        Set<String> defaultUnlocked = cosmeticManager.getUnlockedCosmetics(playerUsername);
+
         state.setUnlockedCosmetics(defaultUnlocked);
 
         if (panel1 != null) {
@@ -160,14 +135,14 @@ public class SupportersOnlyTab extends AbstractConfigTab {
 
         Set<String> unlocked = new java.util.HashSet<>(cosmetics.getUnlocked() != null ? cosmetics.getUnlocked() : new ArrayList<>());
 
-        if (hasFullAccess(currentPlayerUuid)) {
+        // Ensure default cosmetics are ALWAYS unlocked
+        unlocked.addAll(cosmeticManager.getDefaultCosmetics());
+
+        // If admin, unlock EVERYTHING
+        if (cosmetics.isAdmin()) {
             unlocked.addAll(allRegisteredCosmetics);
-            BuildScape.getLogger().debug("Full-access UUID detected - unlocking all cosmetics");
-        } else if (playerUsername != null && playerUsername.equalsIgnoreCase("Dev")) {
-            unlocked.addAll(allRegisteredCosmetics);
-            BuildScape.getLogger().debug("Dev access - unlocking all cosmetics");
         }
-        
+
         state.setUnlockedCosmetics(unlocked);
 
         List<String> allCosmetics = new ArrayList<>(allRegisteredCosmetics);
@@ -184,19 +159,31 @@ public class SupportersOnlyTab extends AbstractConfigTab {
             panel1.setAllCosmeticIds(allCosmetics);
         }
 
-        if (cosmetics.getEquipped() != null && !cosmetics.getEquipped().isEmpty()) {
-            state.setEquippedCosmetics(new java.util.HashSet<>(cosmetics.getEquipped()));
-        } else {
-            UUID storedUuid = state.getPlayerUuid();
-            if (storedUuid != null) {
-                state.setPlayerUuid(storedUuid);
+        // Use local equipped cosmetics if they exist, only fallback to API data if nothing locally equipped
+        UUID storedUuid = state.getPlayerUuid();
+        if (storedUuid == null) {
+            storedUuid = currentPlayerUuid;
+            state.setPlayerUuid(storedUuid);
+        }
+
+        // Load equipped from local config
+        Set<String> localEquipped = new java.util.HashSet<>();
+        if (storedUuid != null) {
+            java.util.Map<Integer, String> localCosmeticsMap = com.kingodogo.buildscape.config.CosmeticsConfig.get().getEquippedCosmetics(storedUuid);
+            if (localCosmeticsMap != null) {
+                localEquipped.addAll(localCosmeticsMap.values());
             }
+        }
+
+        // Only use API equipped data if local config is empty
+        if (!localEquipped.isEmpty()) {
+            state.setEquippedCosmetics(localEquipped);
+        } else if (cosmetics.getEquipped() != null && !cosmetics.getEquipped().isEmpty()) {
+            state.setEquippedCosmetics(new java.util.HashSet<>(cosmetics.getEquipped()));
         }
     }
     
-    private boolean hasFullAccess(UUID uuid) {
-        return uuid != null && FULL_ACCESS_UUIDS.contains(uuid);
-    }
+    // hasFullAccess removed - admin access is now handled by the API based on database role
     
     @Override
     public void render(PoseStack poseStack, int mouseX, int mouseY, float partialTick) {
